@@ -63,25 +63,11 @@ Here is a review of all the preliminary we'll use in this class:
 
 <font color=red>[Homework 1 DUE]</font>
 
-- **Lecture 3**: 1.13
+- **Lecture 3-4**: 1.13/15
   - Bias-Variance Trade-off of Kernel Smoothing Estimator, Curse of Dimensionality ([LTFP] Section 6)
   - Advanced Reading:
     - Xing Y, Song Q, Cheng G. [Benefit of interpolation in nearest neighbor algorithms](https://arxiv.org/abs/2202.11817). SIAM Journal on Mathematics of Data Science, 2022, 4(2): 935-956.
     - Chhor J, Sigalla S, Tsybakov A B. [Benign overfitting and adaptive nonparametric regression](https://link.springer.com/article/10.1007/s00440-024-01278-0). Probability Theory and Related Fields, 2024: 1-32.
-- **Lecture 4**: <font color=red>Concept</font> 1.15
-  - Diagram of Learning: Supervised, Unsupervised, Semi-supervised, Self-supervised, Generative AI
-  - spectral clustering and t-SNE
-  - Infomax and self-supervised learning
-  - Relationship between spectral clustering, t-SNE and self-supervised learning
-  - Suggested Reading:
-    - Zhou X, Belkin M. Semi-supervised learning by higher order regularization Proceedings of the fourteenth international conference on artificial intelligence and statistics. JMLR Workshop and Conference Proceedings, 2011: 892-900.
-    - Hjelm R D, Fedorov A, Lavoie-Marchildon S, et al. Learning deep representations by mutual information estimation and maximization. arXiv preprint arXiv:1808.06670, 2018.
-    - Linderman G C, Steinerberger S. Clustering with t-SNE, provably. SIAM journal on mathematics of data science, 2019, 1(2): 313-332.
-    - HaoChen J Z, Wei C, Gaidon A, et al. Provable guarantees for self-supervised deep learning with spectral contrastive loss. Advances in Neural Information Processing Systems, 2021, 34: 5000-5011.
-  - Advanced Reading:
-    - X. Cheng and N. Wu. "Eigen-convergence of Gaussian kernelized graph Laplacian by manifold heat interpolation". Applied and Computational Harmonic Analysis, 61, 132-190 (2022)
-    - Cai T T, Ma R. Theoretical foundations of t-sne for visualizing high-dimensional clustered data[J]. Journal of Machine Learning Research, 2022, 23(301): 1-54.
-
 
 
 <font color=red>[Homework 2 DUE]</font>
@@ -200,7 +186,18 @@ Here is a review of all the preliminary we'll use in this class:
   - Implicit Bias ([LTFP] Section 12.1)
   - Large Language Model
     - In-context Learning, Chain-of-thoughts and Circuit Theory, Alignment of AI
-  - Advacned Reading:
+   - Diagram of Learning: Supervised, Unsupervised, Semi-supervised, Self-supervised, Generative AI
+  - spectral clustering and t-SNE
+  - Infomax and self-supervised learning
+  - Relationship between spectral clustering, t-SNE and self-supervised learning
+  - Suggested Reading:
+    - Zhou X, Belkin M. Semi-supervised learning by higher order regularization Proceedings of the fourteenth international conference on artificial intelligence and statistics. JMLR Workshop and Conference Proceedings, 2011: 892-900.
+    - Hjelm R D, Fedorov A, Lavoie-Marchildon S, et al. Learning deep representations by mutual information estimation and maximization. arXiv preprint arXiv:1808.06670, 2018.
+    - Linderman G C, Steinerberger S. Clustering with t-SNE, provably. SIAM journal on mathematics of data science, 2019, 1(2): 313-332.
+    - HaoChen J Z, Wei C, Gaidon A, et al. Provable guarantees for self-supervised deep learning with spectral contrastive loss. Advances in Neural Information Processing Systems, 2021, 34: 5000-5011.
+  - Advanced Reading:
+    - X. Cheng and N. Wu. "Eigen-convergence of Gaussian kernelized graph Laplacian by manifold heat interpolation". Applied and Computational Harmonic Analysis, 61, 132-190 (2022)
+    - Cai T T, Ma R. Theoretical foundations of t-sne for visualizing high-dimensional clustered data[J]. Journal of Machine Learning Research, 2022, 23(301): 1-54.
     - Kim J, Nakamaki T, Suzuki T. Transformers are minimax optimal nonparametric in-context learner. arXiv preprint arXiv:2408.12186, 2024.
     - Von Oswald J, Niklasson E, Randazzo E, et al. Transformers learn in-context by gradient descent International Conference on Machine Learning. PMLR, 2023: 35151-35174.
     - Shen L, Mishra A, Khashabi D. Do pretrained Transformers Really Learn In-context by Gradient Descent?. arXiv preprint arXiv:2310.08540, 2023.
