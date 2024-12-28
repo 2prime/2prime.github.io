@@ -37,7 +37,8 @@ Here is a review of all the preliminary we'll use in this class:
   - Different notion of convergence in probability is useful but not required in our class. Our class will just do intuituive proof.
 
 ### Scheldue
-- **Lecture 1-2**: <font color=red>Concept</font> 1.6/1.8 [[Feedback for Lecture 1]](https://forms.gle/atExX4xTGnaghB6RA) [[Feedback for Lecture 2]](https://forms.gle/XcbcPrBbaswdMqNLA) 
+- **Lecture 1-2**: <font color=red>Concept</font> 1.6/1.8 [[slide]](https://2prime.github.io/files/IEMS402/402lec1and2.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec1and2new.pdf)
+[[Feedback for Lecture 1]](https://forms.gle/atExX4xTGnaghB6RA) [[Feedback for Lecture 2]](https://forms.gle/XcbcPrBbaswdMqNLA) 
   - Supervised Learning, Empirical Risk Minimization, Risk Decomposition ([LTFP] Section 2)
   - Deisgn of Loss function: Max Likelihood, Surrogate Loss
   - Difference between IEMS402 (Statistical Learning) and IEMS401 (Applied Statistics)
@@ -63,7 +64,8 @@ Here is a review of all the preliminary we'll use in this class:
 
 <font color=red>[Homework 1 DUE]</font>
 
-- **Lecture 3-4**: 1.13/15
+- **Lecture 3-4**: 1.13/15 [[slide]](https://2prime.github.io/files/IEMS402/402lec3and4.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec3and4new.pdf)
+[[Feedback for Lecture 1]](https://forms.gle/atExX4xTGnaghB6RA) [[Feedback for Lecture 2]](https://forms.gle/XcbcPrBbaswdMqNLA) 
   - Bias-Variance Trade-off of Kernel Smoothing Estimator, Curse of Dimensionality ([LTFP] Section 6)
   - Advanced Reading:
     - Xing Y, Song Q, Cheng G. [Benefit of interpolation in nearest neighbor algorithms](https://arxiv.org/abs/2202.11817). SIAM Journal on Mathematics of Data Science, 2022, 4(2): 935-956.
@@ -73,7 +75,7 @@ Here is a review of all the preliminary we'll use in this class:
 <font color=red>[Homework 2 DUE]</font>
 
 - **Lecture 5**: 1.20 <font color=red>[No Class]</font> (Martin Luther King Jr. Day)
-- **Lecture 6**: 1.22
+- **Lecture 6**: 1.22 [[slide]](https://2prime.github.io/files/IEMS402/402lec6.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec6new.pdf)
    - Asymptotic normality
    - Inverse function theorem, (Implicit) Delta Method
    - Moment Methods
