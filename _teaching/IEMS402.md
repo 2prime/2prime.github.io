@@ -70,7 +70,7 @@ Here is a review of all the preliminary we'll use in this class:
 <font color=red>[Homework 1 DUE]</font>
 
 - **Lecture 3-4**: 1.13/15 [[slide]](https://2prime.github.io/files/IEMS402/402lec3and4.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec3and4new.pdf)
-[[Feedback for Lecture 1]](https://forms.gle/atExX4xTGnaghB6RA) [[Feedback for Lecture 2]](https://forms.gle/XcbcPrBbaswdMqNLA) 
+[[Feedback for Lecture 3]](https://forms.gle/oqk687RQL37kJwVG6) [[Feedback for Lecture 4]](https://forms.gle/wGnELYYeLFojdmbi8) 
   - Bias-Variance Trade-off of Kernel Smoothing Estimator, Curse of Dimensionality ([LTFP] Section 6)
   - Advanced Reading:
     - Xing Y, Song Q, Cheng G. [Benefit of interpolation in nearest neighbor algorithms](https://arxiv.org/abs/2202.11817). SIAM Journal on Mathematics of Data Science, 2022, 4(2): 935-956.
