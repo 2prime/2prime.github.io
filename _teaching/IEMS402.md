@@ -12,6 +12,11 @@ location: "Evanston, IL"
 Required graduate course on mathematical foundations of data science. **Syllabus**:[[link]](https://docs.google.com/document/d/1n9GF09jiJ5Nfmd1dlQoMNsgoWvffcpU36zzZ-Bc5iug/edit?usp=sharing)
 
 
+**Time and Location**: Monday and Wednesday, 2:00-3:20, M228
+
+**Office Hour:** 3:30 - 4:30 Monday, M237, but I'll answer question on campuswire everynight before I go to bed.
+
+
 Objectives:
 ======
 This course provides foundational and advanced concepts in statistical learning theory, essential for analyzing complex data and making informed predictions. Students will delve into both asymptotic and non-asymptotic analyses of machine learning algorithms, addressing critical challenges such as model bias, variance, and robustness in uncertain environments. Toward the end of the course, students will apply these principles to modern machine learning contexts, including the scaling laws/benign overfitting of deep learning, generative AI, and language models. (e.g. Neural Tagent Kernel, Mean-Field Limit of Neural Network and In-context Learning)
