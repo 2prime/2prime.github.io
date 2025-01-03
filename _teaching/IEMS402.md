@@ -14,7 +14,7 @@ Required graduate course on mathematical foundations of data science. **Syllabus
 
 **Time and Location**: Monday and Wednesday, 2:00-3:20, M228
 
-**Office Hour:** 3:30 - 4:30 Monday, M237, but I'll answer question on campuswire everynight before I go to bed.
+**Office Hour:** 3:30 - 4:30 Monday, M237, but I'll answer question on [campuswire](https://campuswire.com/p/GFA6A52C6) everynight before I go to bed.
 
 
 Objectives:
