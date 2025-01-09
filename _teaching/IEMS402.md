@@ -42,7 +42,7 @@ Here is a review of all the preliminary we'll use in this class:
   - Different notion of convergence in probability is useful but not required in our class. Our class will just do intuituive proof.
 
 ### Scheldue
-- **Lecture 1-2**: <font color=red>Concept</font> 1.6/1.8 [[slide]](https://2prime.github.io/files/IEMS402/402lec1and2.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec1and2new.pdf)
+- **Lecture 1-2**: <font color=red>Concept</font> 1.6/1.8 [[slide]](https://2prime.github.io/files/IEMS402/402lec1and2.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec1and2fill.pdf)
 [[Feedback for Lecture 1]](https://forms.gle/atExX4xTGnaghB6RA) [[Feedback for Lecture 2]](https://forms.gle/XcbcPrBbaswdMqNLA) 
   - Supervised Learning, Empirical Risk Minimization, Risk Decomposition ([LTFP] Section 2)
   - Deisgn of Loss function: Max Likelihood, Surrogate Loss
