@@ -81,7 +81,7 @@ Here is a review of all the preliminary we'll use in this class:
 <font color=red>[Homework 2 DUE]</font>
 
 - **Lecture 5**: 1.20 <font color=red>[No Class]</font> (Martin Luther King Jr. Day)
-- **Lecture 6**: 1.22 [[slide]](https://2prime.github.io/files/IEMS402/402lec6.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec6new.pdf)
+- **Lecture 6**: 1.22 [[slide]](https://2prime.github.io/files/IEMS402/402lec5.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec5new.pdf)
    - Asymptotic normality
    - Inverse function theorem, (Implicit) Delta Method
    - Moment Methods
