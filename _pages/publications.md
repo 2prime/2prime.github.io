@@ -11,7 +11,7 @@ I just list selected publication here. For a full list, you can view on <u><a hr
 
 ### Selected Publication
 
-- Ruihan Xu, **Yiping Lu**. [Randomized Iterative Solver as Iterative Refinement: A Simple Fix Towards Backward Stability](https://2prime.github.io/files/SIRR.pdf), *Submitted*
+- Ruihan Xu, **Yiping Lu**. [Randomized Iterative Solver as Iterative Refinement: A Simple Fix Towards Backward Stability](https://2prime.github.io/files/SIRR.pdf), *Artificial Intelligence and Statistics (AISTATS), 2025*
 - **Yiping Lu**, Daozhe Lin, Qiang Du. [Which Spaces can be Embedded in $L_p$-type Reproducing Kernel Banach Space? A Characterization via Metric Entropy](https://2prime.github.io/files/EmbeddingRKBS_preprint.pdf), *Submitted*
 - **Yiping Lu**, Jiajin Li, Lexing Ying, Jose Blancet. [Synthetic Principal Component Design: Fast Covariate Balancing with Synthetic Controls](https://arxiv.org/pdf/2211.15241),  40th Conference on Uncertainty in Artificial Intelligence (UAI 2024) <font color='red'>[Oral]</font>.  
 - Haotian Ye, Ruichen Li, Yuntian Gu, **Yiping Lu**, Di He, Liwei Wang. [$O(N^2)$ Representation of General Continuous Anti-symmetric Function](https://arxiv.org/abs/2402.15167), *submitted*, 2024.
