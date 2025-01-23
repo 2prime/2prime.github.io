@@ -87,7 +87,7 @@ Here is a review of all the preliminary we'll use in this class:
    - Moment Methods
 <font color=red>[Homework 3 DUE]</font>
 
-- **Lecture 7**: 1.27
+- **Lecture 7**: 1.27 [[slide]](https://2prime.github.io/files/IEMS402/402lec6.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec6fill.pdf)
   - Influnce function, Fisher Information
   - Cramer-Rao Bound and Con of Unbiased Estimators (James-Stein estimator)
   - Sugessted Reading:
