@@ -80,14 +80,14 @@ Here is a review of all the preliminary we'll use in this class:
 
 <font color=red>[Homework 2 DUE]</font>
 
-- **Lecture 5**: 1.20 <font color=red>[No Class]</font> (Martin Luther King Jr. Day)
-- **Lecture 6**: 1.22 [[slide]](https://2prime.github.io/files/IEMS402/402lec5.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec5fill.pdf) [[Feedback of Lecture 5]](https://forms.gle/QNmnDfKCmuduUioS7)
+- **Lecture -**: 1.20 <font color=red>[No Class]</font> (Martin Luther King Jr. Day)
+- **Lecture 5**: 1.22 [[slide]](https://2prime.github.io/files/IEMS402/402lec5.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec5fill.pdf) [[Feedback of Lecture 5]](https://forms.gle/QNmnDfKCmuduUioS7)
    - Asymptotic normality
    - Inverse function theorem, (Implicit) Delta Method
    - Moment Methods
 <font color=red>[Homework 3 DUE]</font>
 
-- **Lecture 7**: 1.27 [[slide]](https://2prime.github.io/files/IEMS402/402lec6.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec6fill.pdf)
+- **Lecture 6**: 1.27 [[slide]](https://2prime.github.io/files/IEMS402/402lec6.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec6fill.pdf)
   - Influnce function, Fisher Information
   - Cramer-Rao Bound and Con of Unbiased Estimators (James-Stein estimator)
   - Sugessted Reading:
@@ -95,15 +95,15 @@ Here is a review of all the preliminary we'll use in this class:
     - Basu S, Pope P, Feizi S. [Influence functions in deep learning are fragile](https://arxiv.org/abs/2006.14651).
 
 
-- **Lecture 8**: 1.29
+- **Lecture 7**: 1.29
   - Concerntration Inequality
   - Application of Concerntration Inequality: Johnson-Lindenstrauss lemma
 
 <font color=red>[Homework 4 DUE]</font>
 
-- **Lecture 9**: 2.3
+- **Lecture 8**: 2.3
   - Generalization via Uniform Bound, Covering Number
-- **Lecture 10**: 2.5
+- **Lecture 9**: 2.5
   - Symmetrization, Rademacher complexity
   - Advanced Reading:
     - Kur G, Putterman E, Rakhlin A. [On the variance, admissibility, and stability of empirical risk minimization](https://arxiv.org/abs/2305.18508). Advances in Neural Information Processing Systems, 2024, 36.
@@ -112,7 +112,7 @@ Here is a review of all the preliminary we'll use in this class:
 
 <font color=red>[Homework 5 DUE]</font>
 
-- **Lecture 11**: 2.10 <font color=red>[Advanced Topic]</font>
+- **Lecture 10**: 2.10 <font color=red>[Advanced Topic]</font>
   - Generalization Theory of Neural Network [[Textbook](https://mjt.cs.illinois.edu/dlt/#two-rademacher-complexity-proofs-for-deep-networks)]
   - Other Ideas of Generalization:
     - PAC-Bayes, Algorithm Stability, ... 
@@ -121,23 +121,23 @@ Here is a review of all the preliminary we'll use in this class:
     - Bartlett, P.L., Foster, D.J. and Telgarsky, M., 2017, December. [Spectrally-normalized margin bounds for neural networks](https://arxiv.org/abs/1706.08498). In Proceedings of the 31st International Conference on Neural Information Processing Systems (pp. 6241-6250)
     - Jiang Y, Neyshabur B, Mobahi H, et al. [Fantastic generalization measures and where to find them](https://arxiv.org/abs/1912.02178). arXiv preprint arXiv:1912.02178, 2019.
     - Jiang Y, Nagarajan V, Baek C, et al. [Assessing generalization of SGD via disagreement](https://arxiv.org/abs/2106.13799). arXiv preprint arXiv:2106.13799, 2021.
-- **Lecture 12**: <font color=red>[Midterm]</font> 2.12
-- **Lecture 13**: 2.17
+- **Lecture -**: <font color=red>[Midterm]</font> 2.12
+- **Lecture 11**: 2.17
   - Ledoux-Talagrand Contraction Principle
   - Dudley's theorem
-- **Lecture 14**: 2.19 <font color=red>[Advanced Topic]</font>
+- **Lecture 12**: 2.19 <font color=red>[Advanced Topic]</font>
   - Localized Complexity
   - Non-parametric Least-square
   - Suggested Reading:
 <font color=red>[Homework 6 DUE]</font>
 
-- **Lecture 15**: 2.24
+- **Lecture 13**: 2.24
   - Reproducing Kernel Hilbert Space
   - Advanced Reading:
     - Haas M, Holzmüller D, Luxburg U, et al. Mind the spikes: Benign overfitting of kernels and neural networks in fixed dimension[J]. Advances in Neural Information Processing Systems, 2024, 36.
     - Schölpple M, Steinwart I. [Which Spaces can be Embedded in Reproducing Kernel Hilbert Spaces?](https://arxiv.org/abs/2312.14711) arXiv preprint arXiv:2312.14711, 2023.
     - Lu Y, Lin D, Du Q. [Which Spaces can be Embedded in Lp-type Reproducing Kernel Banach Space? A Characterization via Metric Entropy](https://arxiv.org/abs/2410.11116). arXiv preprint arXiv:2410.11116, 2024.
-- **Lecture 15**: 2.26
+- **Lecture 14**: 2.26
   - Distrbution Shift ([Stanford CS329D Machine Learning Under Distribution Shift](https://thashim.github.io/cs329D/))
   - Distributionally Robust Optimization
   - Suggested Reading:
