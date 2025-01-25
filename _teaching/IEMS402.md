@@ -95,7 +95,7 @@ Here is a review of all the preliminary we'll use in this class:
     - Basu S, Pope P, Feizi S. [Influence functions in deep learning are fragile](https://arxiv.org/abs/2006.14651).
 
 
-- **Lecture 7**: 1.29 [[slide]](https://2prime.github.io/files/IEMS402/402lec7.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec7fill.pdf) 
+- **Lecture 7**: 1.29 [[slide]](https://2prime.github.io/files/IEMS402/402lec7.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec7fill.pdf)  [[Feedback of Lecture 7]](https://forms.gle/SXTE6dHQzAQ6f62A8)
   - Concerntration Inequality
   - Application of Concerntration Inequality: Johnson-Lindenstrauss lemma
 
