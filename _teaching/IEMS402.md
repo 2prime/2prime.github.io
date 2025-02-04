@@ -101,9 +101,9 @@ Here is a review of all the preliminary we'll use in this class:
 
 <font color=red>[Homework 4 DUE]</font>
 
-- **Lecture 8**: 2.3  [[slide]](https://2prime.github.io/files/IEMS402/402lec8.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec8fill.pdf)  [[Feedback of Lecture 8]]([https://forms.gle/LA1hdb4nPgWvjLwW7](https://forms.gle/RtDeBFd6RSVCxs14A))
+- **Lecture 8**: 2.3  [[slide]](https://2prime.github.io/files/IEMS402/402lec8.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec8fill.pdf)  [[Feedback of Lecture 8]](https://forms.gle/RtDeBFd6RSVCxs14A)
   - Generalization via Uniform Bound, Covering Number
-- **Lecture 9**: 2.5 [[slide]](https://2prime.github.io/files/IEMS402/402lec9.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec9fill.pdf)
+- **Lecture 9**: 2.5 [[slide]](https://2prime.github.io/files/IEMS402/402lec9.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec9fill.pdf) [[Feedback of Lecture 9]](https://forms.gle/sUmDAMFFZtxd4wL39)
   - Symmetrization, Rademacher complexity
   - Advanced Reading:
     - Kur G, Putterman E, Rakhlin A. [On the variance, admissibility, and stability of empirical risk minimization](https://arxiv.org/abs/2305.18508). Advances in Neural Information Processing Systems, 2024, 36.
