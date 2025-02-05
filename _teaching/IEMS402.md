@@ -104,7 +104,7 @@ Here is a review of all the preliminary we'll use in this class:
 - **Lecture 8**: 2.3  [[slide]](https://2prime.github.io/files/IEMS402/402lec8.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec8fill.pdf)  [[Feedback of Lecture 8]](https://forms.gle/RtDeBFd6RSVCxs14A)
   - Generalization via Uniform Bound, Discretization Theorem,
   - Covering Number/Packing Number
-- **Lecture 9**: 2.5 [[slide]](https://2prime.github.io/files/IEMS402/402lec9.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec9fill.pdf) [[Feedback of Lecture 9]](https://forms.gle/sUmDAMFFZtxd4wL39)
+- **Lecture 9**: 2.5 [[slide]](https://2prime.github.io/files/IEMS402/402lec9.pdf) [[annotated slide]](https://drive.google.com/file/d/1DvAq03NYbTWr_6Vx0QrTvrk96rDqizc9/view?usp=sharing) [[Feedback of Lecture 9]](https://forms.gle/sUmDAMFFZtxd4wL39)
   - Midterm Review
   - Chaining
   - Symmetrization, Rademacher complexity
