@@ -105,6 +105,7 @@ Here is a review of all the preliminary we'll use in this class:
   - Generalization via Uniform Bound, Discretization Theorem,
   - Covering Number/Packing Number
 - **Lecture 9**: 2.5 [[slide]](https://2prime.github.io/files/IEMS402/402lec9.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec9fill.pdf) [[Feedback of Lecture 9]](https://forms.gle/sUmDAMFFZtxd4wL39)
+  - Midterm Review
   - Chaining
   - Symmetrization, Rademacher complexity
   - Advanced Reading:
@@ -115,7 +116,8 @@ Here is a review of all the preliminary we'll use in this class:
 <font color=red>[Homework 5 DUE]</font>
 
 - **Lecture 10**: 2.10 <font color=red>[Advanced Topic]</font>
-  - Generalization Theory of Neural Network [[Textbook](https://mjt.cs.illinois.edu/dlt/#two-rademacher-complexity-proofs-for-deep-networks)]
+  -  Ledoux-Talagrand Contraction Principle
+  -  Generalization Theory of Neural Network [[Textbook](https://mjt.cs.illinois.edu/dlt/#two-rademacher-complexity-proofs-for-deep-networks)]
   - Other Ideas of Generalization:
     - PAC-Bayes, Algorithm Stability, ... 
   - Suggested Reading:
@@ -125,16 +127,15 @@ Here is a review of all the preliminary we'll use in this class:
     - Jiang Y, Nagarajan V, Baek C, et al. [Assessing generalization of SGD via disagreement](https://arxiv.org/abs/2106.13799). arXiv preprint arXiv:2106.13799, 2021.
 - **Lecture -**: <font color=red>[Midterm]</font> 2.12
 - **Lecture 11**: 2.17
-  - Ledoux-Talagrand Contraction Principle
-  - Dudley's theorem
-- **Lecture 12**: 2.19 <font color=red>[Advanced Topic]</font>
   - Localized Complexity
   - Non-parametric Least-square
+- **Lecture 12**: 2.19 <font color=red>[Advanced Topic]</font>
+  - Reproducing Kernel Hilbert Space 1
   - Suggested Reading:
 <font color=red>[Homework 6 DUE]</font>
 
 - **Lecture 13**: 2.24
-  - Reproducing Kernel Hilbert Space
+  - Reproducing Kernel Hilbert Space 2
   - Advanced Reading:
     - Haas M, Holzmüller D, Luxburg U, et al. Mind the spikes: Benign overfitting of kernels and neural networks in fixed dimension[J]. Advances in Neural Information Processing Systems, 2024, 36.
     - Schölpple M, Steinwart I. [Which Spaces can be Embedded in Reproducing Kernel Hilbert Spaces?](https://arxiv.org/abs/2312.14711) arXiv preprint arXiv:2312.14711, 2023.
