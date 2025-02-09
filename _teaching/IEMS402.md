@@ -115,7 +115,7 @@ Here is a review of all the preliminary we'll use in this class:
 
 <font color=red>[Homework 5 DUE]</font>
 
-- **Lecture 10**: 2.10 <font color=red>[Advanced Topic]</font>
+- **Lecture 10**: 2.10 <font color=red>[Advanced Topic]</font> [[slide]](https://2prime.github.io/files/IEMS402/402lec10.pdf)
   -  Ledoux-Talagrand Contraction Principle
   -  Generalization Theory of Neural Network [[Textbook](https://mjt.cs.illinois.edu/dlt/#two-rademacher-complexity-proofs-for-deep-networks)]
   - Other Ideas of Generalization:
@@ -125,7 +125,7 @@ Here is a review of all the preliminary we'll use in this class:
     - Bartlett, P.L., Foster, D.J. and Telgarsky, M., 2017, December. [Spectrally-normalized margin bounds for neural networks](https://arxiv.org/abs/1706.08498). In Proceedings of the 31st International Conference on Neural Information Processing Systems (pp. 6241-6250)
     - Jiang Y, Neyshabur B, Mobahi H, et al. [Fantastic generalization measures and where to find them](https://arxiv.org/abs/1912.02178). arXiv preprint arXiv:1912.02178, 2019.
     - Jiang Y, Nagarajan V, Baek C, et al. [Assessing generalization of SGD via disagreement](https://arxiv.org/abs/2106.13799). arXiv preprint arXiv:2106.13799, 2021.
-- **Lecture -**: <font color=red>[Midterm]</font> 2.12
+- **Lecture -**: <font color=red>[Midterm]</font> 2.12 [[Practice Mid-Term Exam]](https://2prime.github.io/files/IEMS402/practicemidterm_IEMS402.pdf)
 - **Lecture 11**: 2.17
   - Localized Complexity
   - Non-parametric Least-square
