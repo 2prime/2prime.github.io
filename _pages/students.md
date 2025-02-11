@@ -41,13 +41,15 @@ I will dedicate 30 mins every week for junior PhD/master/undergraduate students,
 
 
 
-## Cooperating Undergraduate Students
+## Former Advisees
 
-- Class of 2022: [Wenlong Ji](https://scholar.google.com/citations?user=UW2Ji5MAAAAJ&hl=en) (PKU -> Stanford Statistics, neural collapse, [paper](https://arxiv.org/abs/2110.02796)), [Haoxuan Chen](https://haoxuanstevec00.github.io/) (Caltech -> Stanford ICME, minmax optimality of solving PDE, [paper](https://arxiv.org/abs/2110.06897))
-- Class of 2023: [Jikai Jin](https://scholar.google.com/citations?user=xQqZt2AAAAAJ&hl=en) (PKU -> Stanford ICME, minmax optimality of kernel operator learning, [paper](https://arxiv.org/abs/2209.14430))
-- Class of 2025: [Kaizhao Liu](https://drzfct.github.io/) (PKU-> ?, [paper](https://arxiv.org/abs/2404.19145)), [Hounam Wong](https://openreview.net/profile?id=~Honam_Wong1) (HKUST->?, [paper](https://arxiv.org/abs/2406.09194)), Ruihan Xu (SJTU->?, [paper](https://arxiv.org/abs/2410.11115))
-- Class of 2026: Wendao Wu (PKU->?, Machaine Learning Theory), Zexi Fan (PKU->?, machine learning for rare event and stochastic simulation)
-- Class of 2027:
+- [Wenlong Ji](https://scholar.google.com/citations?user=UW2Ji5MAAAAJ&hl=en) (PKU -> Stanford Statistics, neural collapse, [paper](https://arxiv.org/abs/2110.02796))
+- [Haoxuan Chen](https://haoxuanstevec00.github.io/) (Caltech -> Stanford ICME, minmax optimality of solving PDE, [paper](https://arxiv.org/abs/2110.06897))
+- [Jikai Jin](https://scholar.google.com/citations?user=xQqZt2AAAAAJ&hl=en) (PKU -> Stanford ICME, minmax optimality of kernel operator learning, [paper](https://arxiv.org/abs/2209.14430))
+- [Kaizhao Liu](https://drzfct.github.io/) (PKU-> ?, [paper](https://arxiv.org/abs/2404.19145)),
+- [Hounam Wong](https://openreview.net/profile?id=~Honam_Wong1) (HKUST->?, [paper](https://arxiv.org/abs/2406.09194))
+- Ruihan Xu (SJTU->UChicago, [paper](https://arxiv.org/abs/2410.11115))
+
 
 <!-- 2024: , -->
 
