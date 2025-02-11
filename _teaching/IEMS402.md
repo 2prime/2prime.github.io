@@ -115,7 +115,7 @@ Here is a review of all the preliminary we'll use in this class:
 
 <font color=red>[Homework 5 DUE]</font>
 
-- **Lecture 10**: 2.10 <font color=red>[Advanced Topic]</font> [[slide]](https://2prime.github.io/files/IEMS402/402lec10.pdf)
+- **Lecture 10**: 2.10 <font color=red>[Advanced Topic]</font> [[slide]](https://2prime.github.io/files/IEMS402/402lec10.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec10fill.pdf)
   -  Ledoux-Talagrand Contraction Principle
   -  Generalization Theory of Neural Network [[Textbook](https://mjt.cs.illinois.edu/dlt/#two-rademacher-complexity-proofs-for-deep-networks)]
   - Other Ideas of Generalization:
