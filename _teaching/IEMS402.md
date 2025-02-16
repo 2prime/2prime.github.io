@@ -108,10 +108,6 @@ Here is a review of all the preliminary we'll use in this class:
   - Midterm Review
   - Chaining
   - Symmetrization, Rademacher complexity
-  - Advanced Reading:
-    - Kur G, Putterman E, Rakhlin A. [On the variance, admissibility, and stability of empirical risk minimization](https://arxiv.org/abs/2305.18508). Advances in Neural Information Processing Systems, 2024, 36.
-    - Kur, Gil, et al. [Minimum Norm Interpolation Meets The Local Theory of Banach Spaces](https://openreview.net/forum?id=G4b32bKnBy). Forty-first International Conference on Machine Learning.
-    - Xu, Yunbei, and Assaf Zeevi. "Towards optimal problem dependent generalization error bounds in statistical learning theory." Mathematics of Operations Research (2024).
 
 <font color=red>[Homework 5 DUE]</font>
 
@@ -129,6 +125,12 @@ Here is a review of all the preliminary we'll use in this class:
 - **Lecture 11**: 2.17 [[note]](https://pages.cs.wisc.edu/~yudongchen/cs839_sp22/16-17_nonparametric_least_squares.pdf)
   - Localized Complexity
   - Non-parametric Least-square
+  - Another approach: normalized empirical process: [note](https://ibis.t.u-tokyo.ac.jp/suzuki/paper/note_ERM_generror.pdf)
+  - Third Approach: Xu, Yunbei, and Assaf Zeevi. "Towards optimal problem dependent generalization error bounds in statistical learning theory." Mathematics of Operations Research (2024).
+  - Advanced Reading:
+    - Kur G, Putterman E, Rakhlin A. [On the variance, admissibility, and stability of empirical risk minimization](https://arxiv.org/abs/2305.18508). Advances in Neural Information Processing Systems, 2024, 36.
+    - Kur, Gil, et al. [Minimum Norm Interpolation Meets The Local Theory of Banach Spaces](https://openreview.net/forum?id=G4b32bKnBy). Forty-first International Conference on Machine Learning.
+
 - **Lecture 12**: 2.19 <font color=red>[Advanced Topic]</font>
   - Reproducing Kernel Hilbert Space 1
   - Suggested Reading:
