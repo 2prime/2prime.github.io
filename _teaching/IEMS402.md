@@ -122,7 +122,7 @@ Here is a review of all the preliminary we'll use in this class:
     - Jiang Y, Neyshabur B, Mobahi H, et al. [Fantastic generalization measures and where to find them](https://arxiv.org/abs/1912.02178). arXiv preprint arXiv:1912.02178, 2019.
     - Jiang Y, Nagarajan V, Baek C, et al. [Assessing generalization of SGD via disagreement](https://arxiv.org/abs/2106.13799). arXiv preprint arXiv:2106.13799, 2021.
 - **Lecture -**: <font color=red>[Midterm]</font> 2.12 [[Practice Mid-Term Exam]](https://2prime.github.io/files/IEMS402/practicemidterm_IEMS402.pdf)
-- **Lecture 11**: 2.17 [[note]](https://pages.cs.wisc.edu/~yudongchen/cs839_sp22/16-17_nonparametric_least_squares.pdf)
+- **Lecture 11**: 2.17 [[slide]](https://2prime.github.io/files/IEMS402/402lec11.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec11fill.pdf) [[note]](https://pages.cs.wisc.edu/~yudongchen/cs839_sp22/16-17_nonparametric_least_squares.pdf)
   - Empirical method of Maurey [[note]](https://www.cs.utexas.edu/~ecprice/courses/sublinear/fa16/notes/lec13.pdf)
   - Localized Complexity
   - Non-parametric Least-square
