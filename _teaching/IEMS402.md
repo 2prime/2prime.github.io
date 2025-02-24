@@ -137,9 +137,11 @@ Here is a review of all the preliminary we'll use in this class:
   - Suggested Reading:
 <font color=red>[Homework 6 DUE]</font>
 
-- **Lecture 13**: 2.24
+- **Lecture 13**: 2.24  [[annotated note]](https://2prime.github.io/files/IEMS402/rkhs2.pdf) [[feedback]](https://forms.gle/t9asn9SxcDj3bR9w6)
   - Reproducing Kernel Hilbert Space 2
   - Advanced Reading:
+    - Muandet K, Fukumizu K, Sriperumbudur B, et al. Kernel mean embedding of distributions: A review and beyond. Foundations and Trends® in Machine Learning, 2017, 10(1-2): 1-141.
+    - Unser M. A representer theorem for deep neural networks[J]. Journal of Machine Learning Research, 2019, 20(110): 1-30.
     - Haas M, Holzmüller D, Luxburg U, et al. Mind the spikes: Benign overfitting of kernels and neural networks in fixed dimension[J]. Advances in Neural Information Processing Systems, 2024, 36.
     - Schölpple M, Steinwart I. [Which Spaces can be Embedded in Reproducing Kernel Hilbert Spaces?](https://arxiv.org/abs/2312.14711) arXiv preprint arXiv:2312.14711, 2023.
     - Lu Y, Lin D, Du Q. [Which Spaces can be Embedded in Lp-type Reproducing Kernel Banach Space? A Characterization via Metric Entropy](https://arxiv.org/abs/2410.11116). arXiv preprint arXiv:2410.11116, 2024.
