@@ -145,7 +145,7 @@ Here is a review of all the preliminary we'll use in this class:
     - Haas M, Holzmüller D, Luxburg U, et al. Mind the spikes: Benign overfitting of kernels and neural networks in fixed dimension[J]. Advances in Neural Information Processing Systems, 2024, 36.
     - Schölpple M, Steinwart I. [Which Spaces can be Embedded in Reproducing Kernel Hilbert Spaces?](https://arxiv.org/abs/2312.14711) arXiv preprint arXiv:2312.14711, 2023.
     - Lu Y, Lin D, Du Q. [Which Spaces can be Embedded in Lp-type Reproducing Kernel Banach Space? A Characterization via Metric Entropy](https://arxiv.org/abs/2410.11116). arXiv preprint arXiv:2410.11116, 2024.
-- **Lecture 14**: 2.26
+- **Lecture 14**: 2.26 [[slide]](https://2prime.github.io/files/IEMS402/402lec13.pdf) [[feedback]](https://forms.gle/poouGmAaZJHAbL2T8) 
   - Distrbution Shift ([Stanford CS329D Machine Learning Under Distribution Shift](https://thashim.github.io/cs329D/),[Columbia B9145: Topics in Trustworthy AI](https://hsnamkoong.github.io/assets/html/b9145/index.html))
   - Distributionally Robust Optimization
   - Suggested Reading:
