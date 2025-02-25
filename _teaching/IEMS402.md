@@ -146,7 +146,7 @@ Here is a review of all the preliminary we'll use in this class:
     - Schölpple M, Steinwart I. [Which Spaces can be Embedded in Reproducing Kernel Hilbert Spaces?](https://arxiv.org/abs/2312.14711) arXiv preprint arXiv:2312.14711, 2023.
     - Lu Y, Lin D, Du Q. [Which Spaces can be Embedded in Lp-type Reproducing Kernel Banach Space? A Characterization via Metric Entropy](https://arxiv.org/abs/2410.11116). arXiv preprint arXiv:2410.11116, 2024.
 - **Lecture 14**: 2.26
-  - Distrbution Shift ([Stanford CS329D Machine Learning Under Distribution Shift](https://thashim.github.io/cs329D/))
+  - Distrbution Shift ([Stanford CS329D Machine Learning Under Distribution Shift](https://thashim.github.io/cs329D/),[Columbia B9145: Topics in Trustworthy AI](https://hsnamkoong.github.io/assets/html/b9145/index.html))
   - Distributionally Robust Optimization
   - Suggested Reading:
     - [Toward a inductive modeling language for distribution shifts](https://hsnamkoong.github.io/assets/pdf/LiuWaCuNa24-slides.pdf)
@@ -156,6 +156,9 @@ Here is a review of all the preliminary we'll use in this class:
     - Duchi J, Namkoong H. Variance-based regularization with convex objectives. Journal of Machine Learning Research, 2019, 20(68): 1-55. (Neurips 2017 Best paper)
     - Duchi J C, Namkoong H. Learning models with uniform performance via distributionally robust optimization. The Annals of Statistics, 2021, 49(3): 1378-1406.
     - Hu W, Niu G, Sato I, et al. Does distributionally robust supervised learning give robust classifiers? International Conference on Machine Learning. PMLR, 2018: 2029-2037.
+    - Sagawa S, Koh P W, Hashimoto T B, et al. Distributionally robust neural networks for group shifts: On the importance of regularization for worst-case generalization[J]. arXiv preprint arXiv:1911.08731, 2019.
+    - Byrd J, Lipton Z. What is the effect of importance weighting in deep learning?[C]//International conference on machine learning. PMLR, 2019: 872-881.
+    - Lu Y, Ji W, Izzo Z, et al. Importance tempering: Group robustness for overparameterized models[J]. arXiv preprint arXiv:2209.08745, 2022.
 
 
 <font color=red>[Homework 7 DUE]</font>
