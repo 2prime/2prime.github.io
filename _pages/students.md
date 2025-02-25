@@ -48,7 +48,7 @@ I will dedicate 30 mins every week for junior PhD/master/undergraduate students,
 - [Jikai Jin](https://scholar.google.com/citations?user=xQqZt2AAAAAJ&hl=en) (PKU -> Stanford ICME, minmax optimality of kernel operator learning, [paper](https://arxiv.org/abs/2209.14430))
 - [Kaizhao Liu](https://drzfct.github.io/) (PKU-> ?, [paper](https://arxiv.org/abs/2404.19145)),
 - [Hounam Wong](https://openreview.net/profile?id=~Honam_Wong1) (HKUST->?, [paper](https://arxiv.org/abs/2406.09194))
-- Ruihan Xu (SJTU->UChicago, [paper](https://arxiv.org/abs/2410.11115)),[paper](https://arxiv.org/abs/2502.07993)
+- Ruihan Xu (SJTU->UChicago, [paper](https://arxiv.org/abs/2410.11115),[paper](https://arxiv.org/abs/2502.07993))
 
 
 <!-- 2024: , -->
