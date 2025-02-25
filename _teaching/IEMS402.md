@@ -132,7 +132,7 @@ Here is a review of all the preliminary we'll use in this class:
     - Kur G, Putterman E, Rakhlin A. [On the variance, admissibility, and stability of empirical risk minimization](https://arxiv.org/abs/2305.18508). Advances in Neural Information Processing Systems, 2024, 36.
     - Kur, Gil, et al. [Minimum Norm Interpolation Meets The Local Theory of Banach Spaces](https://openreview.net/forum?id=G4b32bKnBy). Forty-first International Conference on Machine Learning.
 
-- **Lecture 12**: 2.19  [[annotated note]](https://2prime.github.io/files/IEMS402/rkhs1.pdf) [[feedback]](https://forms.gle/t9asn9SxcDj3bR9w6) [[code for RKHS]](https://2prime.github.io/files/IEMS402/RKSH_IEMS402.pdf)
+- **Lecture 12**: 2.19  [[annotated note]](https://2prime.github.io/files/IEMS402/rkhs1.pdf) [[feedback]](https://forms.gle/t9asn9SxcDj3bR9w6) [[code for RKHS]](https://2prime.github.io/files/IEMS402/RKHS_IEMS402.pdf)
   - Reproducing Kernel Hilbert Space 1
   - Suggested Reading:
 <font color=red>[Homework 6 DUE]</font>
