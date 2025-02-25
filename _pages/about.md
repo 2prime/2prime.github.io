@@ -40,6 +40,7 @@ I am a tenure-track assistant professor at  [Industrial Engineering & Management
 > - First principle of the recent [MUON](https://github.com/MoonshotAI/Moonlight) optimizer.
 > - Hybrid numercial analysis and ML applications
 > - Statistical analysis of Scaling law
+> - LLM agents for Math 
 
 > **Research Interest**:
 > - Statistical Learning Theory, Deep Learning Theory
