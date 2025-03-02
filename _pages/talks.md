@@ -8,7 +8,7 @@ author_profile: true
 
 
 ## Scientific Machine Learning
-- Hybrid Scientific computing and Machine learning ([SNAPP Seminar](https://sites.google.com/view/snappseminar/past-seminars/fall-2024?authuser=0)) [slide](https://2prime.github.io/files/SCASMLslide.pdf)
+- Hybrid Scientific computing and Machine learning ([SNAPP Seminar, out of date](https://sites.google.com/view/snappseminar/past-seminars/fall-2024?authuser=0)) [new slide](https://2prime.github.io/files/debiasandprecondition.pdf) 
 - **<font color='red'>[*New*]</font> ** AAAI 2024 Tutorial: Recent advance in Physics-informed Machine Learning  [website](https://sites.google.com/view/aaai-2024-tutorial-piml/) [slide](https://2prime.github.io/files/SML/piml_aaai.pdf)
 - slide at CBMS deep learning for numerical PDE [pdf](https://2prime.github.io/files/CBMS_dlpde.pdf)
 - Statistical analysis of Machine Learning Solving PDE: [slide](https://2prime.github.io/files/mlpde.pdf)
