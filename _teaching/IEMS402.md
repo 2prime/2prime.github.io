@@ -163,9 +163,24 @@ Here is a review of all the preliminary we'll use in this class:
 
 <font color=red>[Homework 7 DUE]</font>
 
+- **Lecture ??**: 3.3 Skip due to SIAM CSE.
+
+- **Lecture 15**: 3.5 [[slide]](https://2prime.github.io/files/IEMS402/402lec15.pdf)
+  - Deep Learning Theory:  ([LTFP] Section 12.3, 12.5)
+    - Neural Tagent Kernel
+    - Mean-field Limit of Neural Network
+  - Suggested Reading:
+    -  Bach F. [Breaking the curse of dimensionality with convex neural networks](https://arxiv.org/abs/1412.8690). Journal of Machine Learning Research, 2017, 18(19): 1-53.
+    -  Chizat L, Oyallon E, Bach F. [On lazy training in differentiable programming](https://arxiv.org/abs/1812.07956). Advances in neural information processing systems, 2019, 32.
+  - Advanced Reading:
+    - Chizat L, Bach F. [On the global convergence of gradient descent for over-parameterized models using optimal transport](https://arxiv.org/abs/1805.09545). Advances in neural information processing systems, 2018, 31.
+    - Yang G, Hu E J, Babuschkin I, et al. [Tensor programs v: Tuning large neural networks via zero-shot hyperparameter transfer](https://arxiv.org/abs/2203.03466). arXiv preprint arXiv:2203.03466, 2022.
+      - Hayou S, Ghosh N, Yu B. Lora+: Efficient low rank adaptation of large models. arXiv preprint arXiv:2402.12354, 2024.
+      - Ishikawa S, Karakida R. On the Parameterization of Second-Order Optimization Effective Towards the Infinite Width. arXiv preprint arXiv:2312.12226, 2023.
+
 <font color=red>[Generative AI]</font>
 
-- **Lecture 15**: 3.3 <font color=red>[Advanced Topic]</font>
+- **Lecture 16**: 3.10 <font color=red>[Advanced Topic]</font>
   - Optimal Transport, Kantorovich Duality
   - Statistics of Optimal Transport and Smoothed Optimal Transport
   - Generative Models: GAN/Diffusion Model
@@ -185,25 +200,14 @@ Here is a review of all the preliminary we'll use in this class:
     - Albergo M S, Boffi N M, Vanden-Eijnden E. [Stochastic interpolants: A unifying framework for flows and diffusions](https://arxiv.org/abs/2303.08797). arXiv preprint arXiv:2303.08797, 2023.
 
 
-- **Lecture 16**: 3.5 <font color=red>[Advanced Topic]</font>
+- **Lecture 17**: 3.12 <font color=red>[Advanced Topic]</font>
   - Reinforcement Learning in Language Model Aligenment
   - Preference Optimization
  
 
 <font color=red>[Homework 8 DUE]</font>
 
-- **Lecture 17**: 3.10
-  - Deep Learning Theory:  ([LTFP] Section 12.3, 12.5)
-    - Neural Tagent Kernel
-    - Mean-field Limit of Neural Network
-  - Suggested Reading:
-    -  Bach F. [Breaking the curse of dimensionality with convex neural networks](https://arxiv.org/abs/1412.8690). Journal of Machine Learning Research, 2017, 18(19): 1-53.
-    -  Chizat L, Oyallon E, Bach F. [On lazy training in differentiable programming](https://arxiv.org/abs/1812.07956). Advances in neural information processing systems, 2019, 32.
-  - Advanced Reading:
-    - Chizat L, Bach F. [On the global convergence of gradient descent for over-parameterized models using optimal transport](https://arxiv.org/abs/1805.09545). Advances in neural information processing systems, 2018, 31.
-    - Yang G, Hu E J, Babuschkin I, et al. [Tensor programs v: Tuning large neural networks via zero-shot hyperparameter transfer](https://arxiv.org/abs/2203.03466). arXiv preprint arXiv:2203.03466, 2022.
-      - Hayou S, Ghosh N, Yu B. Lora+: Efficient low rank adaptation of large models. arXiv preprint arXiv:2402.12354, 2024.
-      - Ishikawa S, Karakida R. On the Parameterization of Second-Order Optimization Effective Towards the Infinite Width. arXiv preprint arXiv:2312.12226, 2023.
+
 
 - **Lecture 18**: 3.12 <font color=red>[Advanced Topic]</font>
   - Implicit Bias ([LTFP] Section 12.1)
