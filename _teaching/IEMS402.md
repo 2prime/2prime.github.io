@@ -166,9 +166,10 @@ Here is a review of all the preliminary we'll use in this class:
 - **Lecture ??**: 3.3 Skip due to SIAM CSE.
 
 - **Lecture 15**: 3.5 [[slide]](https://2prime.github.io/files/IEMS402/402lec15.pdf)
-  - Deep Learning Theory:  ([LTFP] Section 12.3, 12.5)
+  - Deep Learning Theory:  ([LTFP] Section 12.1 12.3, 12.5)
     - Neural Tagent Kernel
     - Mean-field Limit of Neural Network
+    - large margin implicit bias
   - Suggested Reading:
     -  Bach F. [Breaking the curse of dimensionality with convex neural networks](https://arxiv.org/abs/1412.8690). Journal of Machine Learning Research, 2017, 18(19): 1-53.
     -  Chizat L, Oyallon E, Bach F. [On lazy training in differentiable programming](https://arxiv.org/abs/1812.07956). Advances in neural information processing systems, 2019, 32.
@@ -203,14 +204,6 @@ Here is a review of all the preliminary we'll use in this class:
 - **Lecture 17**: 3.12 <font color=red>[Advanced Topic]</font>
   - Reinforcement Learning in Language Model Aligenment
   - Preference Optimization
- 
-
-<font color=red>[Homework 8 DUE]</font>
-
-
-
-- **Lecture 18**: 3.12 <font color=red>[Advanced Topic]</font>
-  - Implicit Bias ([LTFP] Section 12.1)
   - Large Language Model
     - In-context Learning, Chain-of-thoughts and Circuit Theory, Alignment of AI
    - Diagram of Learning: Supervised, Unsupervised, Semi-supervised, Self-supervised, Generative AI
