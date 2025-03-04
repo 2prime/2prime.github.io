@@ -41,6 +41,7 @@ I am a tenure-track assistant professor at  [Industrial Engineering & Management
 > - Theory-inspired and Physics-Informed Inference Time Scaling
 > - Hybrid numercial analysis and ML applications
 > - Statistical analysis of Scaling law
+> - Multiscale Structure of Gradient Descent
 > - LLM agents for Math 
 
 > **Research Interest**:
