@@ -165,7 +165,7 @@ Here is a review of all the preliminary we'll use in this class:
 
 - **Lecture ??**: 3.3 Skip due to SIAM CSE.
 
-- **Lecture 15**: 3.5 [[slide]](https://2prime.github.io/files/IEMS402/402lec15.pdf)
+- **Lecture 15**: 3.5 [[slide]](https://2prime.github.io/files/IEMS402/402lec14.pdf)
   - Deep Learning Theory:  ([LTFP] Section 12.1 12.3, 12.5)
     - Neural Tagent Kernel
     - Mean-field Limit of Neural Network
