@@ -181,7 +181,7 @@ Here is a review of all the preliminary we'll use in this class:
 
 <font color=red>[Generative AI]</font>
 
-- **Lecture 16**: 3.10 <font color=red>[Advanced Topic]</font> [[note2]](https://2prime.github.io/files/IEMS402/ot.pdf) [[note2]](https://people.math.ethz.ch/~afigalli/lecture-notes-pdf/An-introduction-to-optimal-transport-and-Wasserstein-gradient-flows.pdf)
+- **Lecture 16**: 3.10 <font color=red>[Advanced Topic]</font> [[note used in class]](https://2prime.github.io/files/IEMS402/ot.pdf) [[note2]](https://people.math.ethz.ch/~afigalli/lecture-notes-pdf/An-introduction-to-optimal-transport-and-Wasserstein-gradient-flows.pdf)
   - Optimal Transport, Kantorovich Duality
   - Statistics of Optimal Transport and Smoothed Optimal Transport
   - Generative Models: GAN/Diffusion Model
