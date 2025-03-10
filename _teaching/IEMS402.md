@@ -181,7 +181,7 @@ Here is a review of all the preliminary we'll use in this class:
 
 <font color=red>[Generative AI]</font>
 
-- **Lecture 16**: 3.10 <font color=red>[Advanced Topic]</font>
+- **Lecture 16**: 3.10 <font color=red>[Advanced Topic]</font> [[note]](https://people.math.ethz.ch/~afigalli/lecture-notes-pdf/An-introduction-to-optimal-transport-and-Wasserstein-gradient-flows.pdf)
   - Optimal Transport, Kantorovich Duality
   - Statistics of Optimal Transport and Smoothed Optimal Transport
   - Generative Models: GAN/Diffusion Model
