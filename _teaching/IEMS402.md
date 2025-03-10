@@ -145,7 +145,7 @@ Here is a review of all the preliminary we'll use in this class:
     - Haas M, Holzmüller D, Luxburg U, et al. Mind the spikes: Benign overfitting of kernels and neural networks in fixed dimension[J]. Advances in Neural Information Processing Systems, 2024, 36.
     - Schölpple M, Steinwart I. [Which Spaces can be Embedded in Reproducing Kernel Hilbert Spaces?](https://arxiv.org/abs/2312.14711) arXiv preprint arXiv:2312.14711, 2023.
     - Lu Y, Lin D, Du Q. [Which Spaces can be Embedded in Lp-type Reproducing Kernel Banach Space? A Characterization via Metric Entropy](https://arxiv.org/abs/2410.11116). arXiv preprint arXiv:2410.11116, 2024.
-- **Lecture 14**: 2.26 [[slide]](https://2prime.github.io/files/IEMS402/402lec13.pdf) [[feedback]](https://forms.gle/poouGmAaZJHAbL2T8) 
+- **Lecture 14**: 2.26 [[slide]](https://2prime.github.io/files/IEMS402/402lec13.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec13fill.pdf) [[feedback]](https://forms.gle/poouGmAaZJHAbL2T8) 
   - Distrbution Shift ([Stanford CS329D Machine Learning Under Distribution Shift](https://thashim.github.io/cs329D/),[Columbia B9145: Topics in Trustworthy AI](https://hsnamkoong.github.io/assets/html/b9145/index.html))
   - Distributionally Robust Optimization
   - Suggested Reading:
@@ -181,7 +181,7 @@ Here is a review of all the preliminary we'll use in this class:
 
 <font color=red>[Generative AI]</font>
 
-- **Lecture 16**: 3.10 <font color=red>[Advanced Topic]</font> [[note]](https://people.math.ethz.ch/~afigalli/lecture-notes-pdf/An-introduction-to-optimal-transport-and-Wasserstein-gradient-flows.pdf)
+- **Lecture 16**: 3.10 <font color=red>[Advanced Topic]</font> [[note2]](https://2prime.github.io/files/IEMS402/ot.pdf) [[note2]](https://people.math.ethz.ch/~afigalli/lecture-notes-pdf/An-introduction-to-optimal-transport-and-Wasserstein-gradient-flows.pdf)
   - Optimal Transport, Kantorovich Duality
   - Statistics of Optimal Transport and Smoothed Optimal Transport
   - Generative Models: GAN/Diffusion Model
