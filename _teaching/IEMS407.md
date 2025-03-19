@@ -16,7 +16,7 @@ Advanced graduate course on Uncertainty Quantification.
 ### Theortical Foundation
 - Optimal Transport, Wasserstein Gradient Flow, Sampling [[textbook]](https://chewisinho.github.io/main.pdf)
 - High Dimensional Probability [[textbook]](https://web.math.princeton.edu/~rvan/APC550.pdf)
-- Functional Inequalities and Sampling
+- Functional Inequalities and Sampling, optimization in probability space
 - Well-posed inverse problems; Bayesian posterior consistency; Bernstein Von Mises Theorem.
 
 ### Applications: Inverse Problems and Data Assimilation
