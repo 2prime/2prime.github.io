@@ -17,8 +17,10 @@ Advanced graduate course on Uncertainty Quantification.
 - Optimal Transport, Wasserstein Gradient Flow, Sampling [[textbook]](https://chewisinho.github.io/main.pdf)
 - High Dimensional Probability [[textbook]](https://web.math.princeton.edu/~rvan/APC550.pdf)
 - Functional Inequalities and Sampling, optimization in probability space
+- Probabilistic Numerics [[textbook]](https://www.probabilistic-numerics.org/assets/ProbabilisticNumerics.pdf)
 - Well-posed inverse problems; Bayesian posterior consistency; Bernstein Von Mises Theorem.
 
 ### Applications: Inverse Problems and Data Assimilation
-- Sampling: Importance sampling, (continuous-time) MCMC, diffusion model.
+- Sampling: Importance sampling, (continuous-time) MCMC, particle methods.
+- Neural ODE and diffusion model
 - Optimization: Maximum a posteriori (MAP) estimators, variational methods, approximation in Kullback-Liebler divergence, Kalman Filter.
