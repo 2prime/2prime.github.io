@@ -35,9 +35,16 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 **Textbook**: [ISL] James, Gareth, et al. An introduction to statistical learning.
 ####  Lecture 1: Introduction to Statistical Learning
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec1.pdf) [[annotated slide]](), **Reference**: ISL Section 2
+- Logistics
+- What is and why statistical learning?
+- Supervised Learning, Unsupervised learning, Reinforcement Learning
 
 ####  Lecture 2: Simple Linear Regression
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec2.pdf) [[annotated slide]](), **Reference**: ISL Section 3.1, 4.3
+- Simple Linear Regression and closed form of Least Square
+- Unbias and Varaince, Confidence Interval
+- log likelihood, logistic regression
+- Gradient descent and Newton methods
 
 ####  Lecture 3: Multiple Linear Regression
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec3.pdf) [[annotated slide]](), **Reference**: ISL Section 3.2,3.3
