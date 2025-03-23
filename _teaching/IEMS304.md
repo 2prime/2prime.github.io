@@ -21,13 +21,29 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 - Learn concept in regression and classification with nonlinearity, including maximum likelihood estimation, cross-validation, ridge and lasso.
 - Learn how to fit and interpret popular supervised learning models including trees, smoothers, nearest neighbors, random forests, and boosted trees.
 
+**Textbook**: [ISL] James, Gareth, et al. An introduction to statistical learning.
 
 ### Scheldue:
 ####  Lecture 1: Introduction to Statistical Learning
+**Slide**:[[pdf]]() [[annotated slide]](), **Reference**: ISL Section 2
+
 ####  Lecture 2: Simple Linear Regression
+**Slide**:[[pdf]]() [[annotated slide]](), **Reference**: ISL Section 3.1, 4.3
+
 ####  Lecture 3: Multiple Linear Regression
+**Slide**:[[pdf]]() [[annotated slide]](), **Reference**: ISL Section 3.2,3.3
+
 ####  Lecture 4: Model and Variable Selection, Shrinkage, and Multicollinearity
+**Slide**:[[pdf]]() [[annotated slide]](), **Reference**: ISL Section 6
+
 ####  Lecture 5: Basic Nonlinear regression/classification
+**Slide**:[[pdf]]() [[annotated slide]](), **Reference**: ISL Section 5.2,5.3,7
+
 ####  Lecture 6: Trees and Neural Network
+**Slide**:[[pdf]]() [[annotated slide]](), **Reference**: ISL Section 8, [[Stanford CS229 Section 7]](https://cs229.stanford.edu/main_notes.pdf)
+
 ####  Lecture 7: Ensemble/Committee Methods
+**Slide**:[[pdf]]() [[annotated slide]](), **Reference**: ISL Section 10
+
 ####  Lecture 8: Unsupervised Learning
+**Slide**:[[pdf]]() [[annotated slide]](), **Reference**: ISL Section 2
