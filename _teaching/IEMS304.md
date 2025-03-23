@@ -24,7 +24,7 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 ### Logistics
 **Time and Location:** Monday, Wednesday and Friday, 9.00 A.M.- 9.50 A.M. Tech L251
 
-**Office Hour:** Friday: 1 P.M.
+**Office Hour:** Friday: 1 P.M. Tech M237
 
 **TA Office Hour:**
 
