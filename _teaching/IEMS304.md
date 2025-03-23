@@ -34,31 +34,31 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 ### Scheldue:
 **Textbook**: [ISL] James, Gareth, et al. An introduction to statistical learning.
 ####  Lecture 1: Introduction to Statistical Learning
-**Slide**:[[pdf]]() [[annotated slide]](), **Reference**: ISL Section 2
+**Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec1.pdf) [[annotated slide]](), **Reference**: ISL Section 2
 
 ####  Lecture 2: Simple Linear Regression
-**Slide**:[[pdf]]() [[annotated slide]](), **Reference**: ISL Section 3.1, 4.3
+**Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec2.pdf) [[annotated slide]](), **Reference**: ISL Section 3.1, 4.3
 
 ####  Lecture 3: Multiple Linear Regression
-**Slide**:[[pdf]]() [[annotated slide]](), **Reference**: ISL Section 3.2,3.3
+**Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec3.pdf) [[annotated slide]](), **Reference**: ISL Section 3.2,3.3
 
 ####  Lecture 4: Model and Variable Selection, Shrinkage, and Multicollinearity
-**Slide**:[[pdf]]() [[annotated slide]](), **Reference**: ISL Section 6
+**Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec4.pdf) [[annotated slide]](), **Reference**: ISL Section 6
 
 #### Midterm
 **Cheatsheet**:
 
 ####  Lecture 5: Basic Nonlinear regression/classification
-**Slide**:[[pdf]]() [[annotated slide]](), **Reference**: ISL Section 5.2,5.3,7
+**Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec5.pdf) [[annotated slide]](), **Reference**: ISL Section 5.2,5.3,7
 
 ####  Lecture 6: Trees and Neural Network
-**Slide**:[[pdf]]() [[annotated slide]](), **Reference**: ISL Section 8.1, [[Stanford CS229 Section 7]](https://cs229.stanford.edu/main_notes.pdf)
+**Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec6.pdf) [[annotated slide]](), **Reference**: ISL Section 8.1, [[Stanford CS229 Section 7]](https://cs229.stanford.edu/main_notes.pdf)
 
 ####  Lecture 7: Ensemble/Committee Methods
-**Slide**:[[pdf]]() [[annotated slide]](), **Reference**: ISL Section 8.2
+**Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec7.pdf) [[annotated slide]](), **Reference**: ISL Section 8.2
 
 ####  Lecture 8: Unsupervised Learning
-**Slide**:[[pdf]]() [[annotated slide]](), **Reference**: ISL Section 10
+**Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec8.pdf) [[annotated slide]](), **Reference**: ISL Section 10
 
 
 ### ChatGPT
