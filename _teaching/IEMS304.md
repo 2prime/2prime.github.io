@@ -45,7 +45,7 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 ####  Lecture 4: Model and Variable Selection, Shrinkage, and Multicollinearity
 **Slide**:[[pdf]]() [[annotated slide]](), **Reference**: ISL Section 6
 
-### Midterm
+#### Midterm
 **Cheatsheet**:
 
 ####  Lecture 5: Basic Nonlinear regression/classification
