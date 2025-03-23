@@ -21,9 +21,18 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 - Learn concept in regression and classification with nonlinearity, including maximum likelihood estimation, cross-validation, ridge and lasso.
 - Learn how to fit and interpret popular supervised learning models including trees, smoothers, nearest neighbors, random forests, and boosted trees.
 
-**Textbook**: [ISL] James, Gareth, et al. An introduction to statistical learning.
+### Logistics
+**Time and Location:** Monday, Wednesday and Friday, 9.00 A.M.- 9.50 A.M. Tech L251
+
+**Office Hour:** Friday: 1 P.M.
+
+**TA Office Hour:**
+
+**ChatGPT Tutor:** The link here provides a Large Language Model agents that is specifically trained for this course.
+
 
 ### Scheldue:
+**Textbook**: [ISL] James, Gareth, et al. An introduction to statistical learning.
 ####  Lecture 1: Introduction to Statistical Learning
 **Slide**:[[pdf]]() [[annotated slide]](), **Reference**: ISL Section 2
 
@@ -54,6 +63,13 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 
 ### ChatGPT
 While the use of AI tools to aid in problem-solving is becoming increasingly prevalent, it is important to note that relying solely on AI to complete your homework is not in accordance with the expectations of this course. Submitting AI-generated solutions without proper acknowledgment is a violation of ethical guidelines and academic standards.
+
+### General Policies
+In general, we do not grant extensions on assignments/exams. There are several exceptions:
+
+- Medical Emergencies: If you are sick and unable to complete an assignment or attend class, please go to University Health Services. For minor illnesses, we expect grace days or our late penalties to provide sufficient accommodation. For medical emergencies (e.g. prolonged hospitalization), students may request an extension afterward by contacting their Student Liaison or Academic Advisor and having them reach out to the instructor on their behalf. Please plan ahead if possible.
+- Family/Personal Emergencies: If you have a family emergency (e.g. death in the family) or a personal emergency (e.g. mental health crisis), please contact your academic adviser or Counseling and Psychological Services (CaPS). In addition to offering support, they will reach out to the instructors for all your courses on your behalf to request an extension.
+- University-Approved Absences: If you are attending an out-of-town university-approved event (e.g. multi-day athletic/academic trip organized by the university), you may request an extension for the duration of the trip. You must provide confirmation of your attendance, usually from a faculty or staff organizer of the event.
 
 
 
