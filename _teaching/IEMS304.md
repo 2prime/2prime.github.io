@@ -43,10 +43,18 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 **Slide**:[[pdf]]() [[annotated slide]](), **Reference**: ISL Section 5.2,5.3,7
 
 ####  Lecture 6: Trees and Neural Network
-**Slide**:[[pdf]]() [[annotated slide]](), **Reference**: ISL Section 8, [[Stanford CS229 Section 7]](https://cs229.stanford.edu/main_notes.pdf)
+**Slide**:[[pdf]]() [[annotated slide]](), **Reference**: ISL Section 8.1, [[Stanford CS229 Section 7]](https://cs229.stanford.edu/main_notes.pdf)
 
 ####  Lecture 7: Ensemble/Committee Methods
-**Slide**:[[pdf]]() [[annotated slide]](), **Reference**: ISL Section 10
+**Slide**:[[pdf]]() [[annotated slide]](), **Reference**: ISL Section 8.2
 
 ####  Lecture 8: Unsupervised Learning
-**Slide**:[[pdf]]() [[annotated slide]](), **Reference**: ISL Section 2
+**Slide**:[[pdf]]() [[annotated slide]](), **Reference**: ISL Section 10
+
+
+### ChatGPT
+While the use of AI tools to aid in problem-solving is becoming increasingly prevalent, it is important to note that relying solely on AI to complete your homework is not in accordance with the expectations of this course. Submitting AI-generated solutions without proper acknowledgment is a violation of ethical guidelines and academic standards.
+
+
+
+
