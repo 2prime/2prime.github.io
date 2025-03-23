@@ -9,7 +9,7 @@ location: "Evanston, IL"
 ---
 
 
-Required undergraduate course on predictive modeling in data science. **Syllabus**: 
+Required undergraduate course on predictive modeling in data science. **Syllabus**:[[pdf]](https://2prime.github.io/files/IEMS304/SyllabusIEMS304.pdf)
 
 
 ### Objectives:
@@ -21,3 +21,13 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 - Learn concept in regression and classification with nonlinearity, including maximum likelihood estimation, cross-validation, ridge and lasso.
 - Learn how to fit and interpret popular supervised learning models including trees, smoothers, nearest neighbors, random forests, and boosted trees.
 
+
+### Scheldue:
+####  Lecture 1: Introduction to Statistical Learning
+####  Lecture 2: Simple Linear Regression
+####  Lecture 3: Multiple Linear Regression
+####  Lecture 4: Model and Variable Selection, Shrinkage, and Multicollinearity
+####  Lecture 5: Basic Nonlinear regression/classification
+####  Lecture 6: Trees and Neural Network
+####  Lecture 7: Ensemble/Committee Methods
+####  Lecture 8: Unsupervised Learning
