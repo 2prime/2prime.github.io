@@ -48,9 +48,17 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 
 ####  Lecture 3: Multiple Linear Regression
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec3.pdf) [[annotated slide]](), **Reference**: ISL Section 3.2,3.3
+- Multiple Linear Regression, Degree of Freedom
+- t-test, confidence interval
+- Categorical Predictor and interaction
+- Leverage and Influence
+-  Residual Diagnostics
 
 ####  Lecture 4: Model and Variable Selection, Shrinkage, and Multicollinearity
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec4.pdf) [[annotated slide]](), **Reference**: ISL Section 6
+- Model and Variable Selection,
+- Multicollinearity
+- James-Stein Estimator, Ridge Regression, Lasso, ISTA
 
 #### Midterm
 **Cheatsheet**:
