@@ -63,8 +63,10 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 #### Midterm
 **Cheatsheet**:
 
-####  Lecture 5: Basic Nonlinear regression/classification
+####  Lecture 5: Basic Nonlinear and Nonparametric regression/classification
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec5.pdf) [[annotated slide]](), **Reference**: ISL Section 5.2,5.3,7
+- K-Nearest Neighboor, nonlinear regression
+- Bootstrap and Conformal Prediction [[note]](https://www.stat.berkeley.edu/~ryantibs/statlearn-s23/lectures/conformal.pdf)
 
 ####  Lecture 6: Trees and Neural Network
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec6.pdf) [[annotated slide]](), **Reference**: ISL Section 8.1, [[Stanford CS229 Section 7]](https://cs229.stanford.edu/main_notes.pdf)
