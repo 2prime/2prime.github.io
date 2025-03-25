@@ -75,6 +75,7 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec7.pdf) [[annotated slide]](), **Reference**: ISL Section 8.2
 
 ####  Lecture 8: Unsupervised Learning
+- $k-$means, Spectral Clustering, PCA
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec8.pdf) [[annotated slide]](), **Reference**: ISL Section 10
 
 
