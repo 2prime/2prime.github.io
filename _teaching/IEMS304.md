@@ -64,7 +64,7 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 **Cheatsheet**:
 
 ####  Lecture 5: Basic Nonlinear and Nonparametric regression/classification
-**Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec5.pdf) [[annotated slide]](), **Reference**: ISL Section 5.2,5.3,7
+**Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec5.pdf) [[annotated slide]](), **Reference**: ISL Section 2.2,3.5,4.6.5, 5.2,5.3,7
 - K-Nearest Neighboor, nonlinear regression
 - Bootstrap and Conformal Prediction [[note]](https://www.stat.berkeley.edu/~ryantibs/statlearn-s23/lectures/conformal.pdf)
 
