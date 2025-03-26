@@ -70,6 +70,8 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 
 ####  Lecture 6: Trees and Neural Network
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec6.pdf) [[annotated slide]](), **Reference**: ISL Section 8.1, [[Stanford CS229 Section 7]](https://cs229.stanford.edu/main_notes.pdf)
+- Neural Network
+- Regression Tree, Classification Tree
 
 ####  Lecture 7: Ensemble/Committee Methods
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec7.pdf) [[annotated slide]](), **Reference**: ISL Section 8.2
