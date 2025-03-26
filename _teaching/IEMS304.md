@@ -30,7 +30,8 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 
 **ChatGPT Tutor:** The link here provides a Large Language Model agents that is specifically trained for this course.
 
-
+**Preliminary]**: [[Note]](https://2prime.github.io/files/IEMS304/IEMS304ReferenceGuide.pdf)
+ 
 ### Scheldue:
 **Textbook**: [ISL] James, Gareth, et al. An introduction to statistical learning.
 ####  Lecture 1: Introduction to Statistical Learning
