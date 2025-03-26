@@ -73,12 +73,14 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 - Neural Network
 - Regression Tree, Classification Tree
 
-####  Lecture 7: Ensemble/Committee Methods
-**Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec7.pdf) [[annotated slide]](), **Reference**: ISL Section 8.2
-
-####  Lecture 8: Unsupervised Learning
+####  Lecture 7: Unsupervised Learning
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec8.pdf) [[annotated slide]](), **Reference**: ISL Section 10
 - $k-$means, Spectral Clustering, PCA
+
+####  Lecture 8: Ensemble/Committee Methods
+**Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec7.pdf) [[annotated slide]](), **Reference**: ISL Section 8.2
+
+
 
 
 ### ChatGPT
