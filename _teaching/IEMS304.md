@@ -37,12 +37,14 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 - ISL: James, Gareth, et al. An introduction to statistical learning.
 - 229: [[Stanford CS229 Lecture Note]](https://cs229.stanford.edu/main_notes.pdf)
 ###  Lecture 1: Introduction to Statistical Learning
+(4.1,4.2,4.4)
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec1.pdf) [[annotated slide]](), **Reference**: ISL Section 2
 - Logistics
 - What is and why statistical learning?
 - Supervised Learning, Unsupervised learning, Reinforcement Learning
 
 ###  Lecture 2: Simple Linear Regression
+(4.7,4.9,4.11)
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec2.pdf) [[annotated slide]](), **Reference**: ISL Section 3.1, 4.3
 - Simple Linear Regression and closed form of Least Square
 - Unbias and Varaince, Confidence Interval
@@ -50,6 +52,7 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 - Gradient descent and Newton methods
 
 ###  Lecture 3: Multiple Linear Regression
+(4.14,4.16,4.18,4.23,4.25)
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec3.pdf) [[annotated slide]](), **Reference**: ISL Section 3.2,3.3
 - Multiple Linear Regression, Degree of Freedom
 - t-test, confidence interval
@@ -57,34 +60,52 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 - Leverage and Influence
 -  Residual Diagnostics
 
+### Midterm 1 (4.21)
+- Taxonomy of Learning, Bias and Variance Trade-off
+- Optimization
+- Linear Regression and Statistical Inference
+**Cheatsheet**:
+
 ###  Lecture 4: Model and Variable Selection, Shrinkage, and Multicollinearity
+(4.28,4.30,5.2,5.5)
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec4.pdf) [[annotated slide]](), **Reference**: ISL Section 6
 - Model and Variable Selection,
 - Multicollinearity
 - James-Stein Estimator, Ridge Regression, Lasso, ISTA
 
-### Midterm
-**Cheatsheet**:
+
 
 ###  Lecture 5: Basic Nonlinear and Nonparametric regression/classification
+(5.5,5.12,5.14)
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec5.pdf) [[annotated slide]](), **Reference**: ISL Section 2.2,3.5,4.6.5, 5.2,5.3,7
 - K-Nearest Neighboor, nonlinear regression
 - Bootstrap and Conformal Prediction [[note]](https://www.stat.berkeley.edu/~ryantibs/statlearn-s23/lectures/conformal.pdf)
 
+### Midterm 2 (5.09)
+- Taxonomy of Learning, Bias and Variance Trade-off
+- Optimization
+- Linear Regression and Statistical Inference
+**Cheatsheet**:
+
 ### Lecture 6: Trees and Neural Network
+(5.16,5.19,5.21)
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec6.pdf) [[annotated slide]](), **Reference**: ISL Section 8.1, 229 Section 7
 - Neural Network
 - Regression Tree, Classification Tree
 
 ###  Lecture 7: Unsupervised Learning
+(5.23,5.26,5.28)
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec8.pdf) [[annotated slide]](), **Reference**: ISL Section 10, 229 Section 10, 12
 - $k-$means, Spectral Clustering, PCA
 
 ###  Lecture 8: Ensemble/Committee Methods
+(5.30,6.2,6.4)
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec7.pdf) [[annotated slide]](), **Reference**: ISL Section 8.2
 
 
-
+### Final Review 
+(6.8)
+**Cheat Sheet**:
 
 ## ChatGPT
 While the use of AI tools to aid in problem-solving is becoming increasingly prevalent, it is important to note that relying solely on AI to complete your homework is not in accordance with the expectations of this course. Submitting AI-generated solutions without proper acknowledgment is a violation of ethical guidelines and academic standards.
