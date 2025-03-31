@@ -30,12 +30,12 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 
 **ChatGPT Tutor:** The link here provides a Large Language Model agents that is specifically trained for this course.
 
-**Preliminary]**: [[Note]](https://2prime.github.io/files/IEMS304/IEMS304ReferenceGuide.pdf)
+**Preliminary**: [[Note]](https://2prime.github.io/files/IEMS304/IEMS304ReferenceGuide.pdf)
  
 ## Scheldue:
 **Textbook**: 
-- [ISL] James, Gareth, et al. An introduction to statistical learning.
-- [[Stanford CS229 Lecture Note]](https://cs229.stanford.edu/main_notes.pdf)
+- ISL: James, Gareth, et al. An introduction to statistical learning.
+- 229: [[Stanford CS229 Lecture Note]](https://cs229.stanford.edu/main_notes.pdf)
 ###  Lecture 1: Introduction to Statistical Learning
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec1.pdf) [[annotated slide]](), **Reference**: ISL Section 2
 - Logistics
@@ -72,12 +72,12 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 - Bootstrap and Conformal Prediction [[note]](https://www.stat.berkeley.edu/~ryantibs/statlearn-s23/lectures/conformal.pdf)
 
 ### Lecture 6: Trees and Neural Network
-**Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec6.pdf) [[annotated slide]](), **Reference**: ISL Section 8.1, [[Stanford CS229 Section 7]](https://cs229.stanford.edu/main_notes.pdf)
+**Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec6.pdf) [[annotated slide]](), **Reference**: ISL Section 8.1, 229 Section 7
 - Neural Network
 - Regression Tree, Classification Tree
 
 ###  Lecture 7: Unsupervised Learning
-**Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec8.pdf) [[annotated slide]](), **Reference**: ISL Section 10
+**Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec8.pdf) [[annotated slide]](), **Reference**: ISL Section 10, 229 Section 10, 12
 - $k-$means, Spectral Clustering, PCA
 
 ###  Lecture 8: Ensemble/Committee Methods
