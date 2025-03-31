@@ -33,7 +33,9 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 **Preliminary]**: [[Note]](https://2prime.github.io/files/IEMS304/IEMS304ReferenceGuide.pdf)
  
 ## Scheldue:
-**Textbook**: [ISL] James, Gareth, et al. An introduction to statistical learning.
+**Textbook**: 
+- [ISL] James, Gareth, et al. An introduction to statistical learning.
+- [[Stanford CS229 Lecture Note]](https://cs229.stanford.edu/main_notes.pdf)
 ###  Lecture 1: Introduction to Statistical Learning
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec1.pdf) [[annotated slide]](), **Reference**: ISL Section 2
 - Logistics
