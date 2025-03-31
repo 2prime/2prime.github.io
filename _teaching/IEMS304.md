@@ -43,6 +43,10 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 - What is and why statistical learning?
 - Supervised Learning, Unsupervised learning, Reinforcement Learning
 
+#### Lab 1: Linear Algebra Review 
+(4.4)
+**Slide**: [[pdf]](https://cs229.stanford.edu/notes2022fall/linalg.pdf)
+
 ###  Lecture 2: Simple Linear Regression
 (4.7,4.9,4.11)
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec2.pdf) [[annotated slide]](), **Reference**: ISL Section 3.1, 4.3
@@ -50,6 +54,10 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 - Unbias and Varaince, Confidence Interval
 - log likelihood, logistic regression
 - Gradient descent and Newton methods
+
+#### Lab 2: Statistical Review
+(4.11)
+Reference: [[pdf]]( [[Note]](https://2prime.github.io/files/IEMS304/IEMS304ReferenceGuide.pdf))
 
 ###  Lecture 3: Multiple Linear Regression
 (4.14,4.16,4.18,4.23,4.25)
@@ -59,6 +67,8 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 - Categorical Predictor and interaction
 - Leverage and Influence
 -  Residual Diagnostics
+#### Lab 3: Linear Regression
+(4.18)
 
 ### Midterm 1 (4.21)
 - Taxonomy of Learning, Bias and Variance Trade-off
@@ -73,6 +83,8 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 - Multicollinearity
 - James-Stein Estimator, Ridge Regression, Lasso, ISTA
 
+#### Lab 4: Shrinkage
+(5.2)
 
 
 ###  Lecture 5: Basic Nonlinear and Nonparametric regression/classification
@@ -81,10 +93,11 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 - K-Nearest Neighboor, nonlinear regression
 - Bootstrap and Conformal Prediction [[note]](https://www.stat.berkeley.edu/~ryantibs/statlearn-s23/lectures/conformal.pdf)
 
+
 ### Midterm 2 (5.09)
-- Taxonomy of Learning, Bias and Variance Trade-off
-- Optimization
-- Linear Regression and Statistical Inference
+- Linear Regression
+- Model Selection
+- Shrinkage
 **Cheatsheet**:
 
 ### Lecture 6: Trees and Neural Network
@@ -93,10 +106,16 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 - Neural Network
 - Regression Tree, Classification Tree
 
+#### Lab 5: Nonlinear Regression
+(5.23)
+
 ###  Lecture 7: Unsupervised Learning
 (5.23,5.26,5.28)
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec8.pdf) [[annotated slide]](), **Reference**: ISL Section 10, 229 Section 10, 12
 - $k-$means, Spectral Clustering, PCA
+
+#### Lab 6: Unsupervised Learning
+(5.30)
 
 ###  Lecture 8: Ensemble/Committee Methods
 (5.30,6.2,6.4)
