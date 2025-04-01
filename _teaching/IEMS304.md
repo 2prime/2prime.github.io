@@ -48,8 +48,7 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 **Slide**: [[pdf]](https://cs229.stanford.edu/notes2022fall/linalg.pdf)
 
 #### Homework 1:
-Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework1.pdf), [[latex]]()
-Data: [[miles.csv]]()
+Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework1.pdf), [[latex]](), Data: [[miles.csv]]()
 
 ###  Lecture 2: Simple Linear Regression
 (4.7,4.9,4.11)
