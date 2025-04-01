@@ -45,7 +45,7 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 - Supervised Learning, Unsupervised learning, Reinforcement Learning
 
 #### Lab 1: Linear Algebra Review  (4.4)
-**Slide**: [[pdf]](https://cs229.stanford.edu/notes2022fall/linalg.pdf)
+Reference: [[pdf]]( [[Note]](https://2prime.github.io/files/IEMS304/IEMS304ReferenceGuide.pdf))
 
 #### Homework 1: (Due:4.11)
 Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework1.pdf), [[latex]](https://www.overleaf.com/read/hrjdgxcbrxkw#3c9a85), Data: [[miles.csv]](https://drive.google.com/file/d/1RHTCfHUYgMXP5uzeGqr53H9Hq4eZ2wJL/view?usp=sharing)
@@ -58,9 +58,10 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework1.pdf), 
 - log likelihood, logistic regression
 - Gradient descent and Newton methods
 
-#### Lab 2: Statistical Review
-(4.11)
-Reference: [[pdf]]( [[Note]](https://2prime.github.io/files/IEMS304/IEMS304ReferenceGuide.pdf))
+#### Lab 2: Statistical Review (4.11)
+**Slide**: [[pdf]](https://cs229.stanford.edu/notes2022fall/linalg.pdf)
+
+
 
 ###  Lecture 3: Multiple Linear Regression
 (4.14,4.16,4.18,4.23,4.25)
