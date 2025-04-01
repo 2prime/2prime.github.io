@@ -43,11 +43,10 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 - What is and why statistical learning?
 - Supervised Learning, Unsupervised learning, Reinforcement Learning
 
-#### Lab 1: Linear Algebra Review 
-(4.4)
+#### Lab 1: Linear Algebra Review  (4.4)
 **Slide**: [[pdf]](https://cs229.stanford.edu/notes2022fall/linalg.pdf)
 
-#### Homework 1:
+#### Homework 1: (Due:4.11)
 Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework1.pdf), [[latex]](), Data: [[miles.csv]]()
 
 ###  Lecture 2: Simple Linear Regression
