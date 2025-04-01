@@ -45,7 +45,7 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 - Supervised Learning, Unsupervised learning, Reinforcement Learning
 
 #### Lab 1: Linear Algebra Review  (4.4)
-Reference: [[pdf]]( [[Note]](https://2prime.github.io/files/IEMS304/IEMS304ReferenceGuide.pdf))
+**Reference:** [[pdf]]( [[Note]](https://2prime.github.io/files/IEMS304/IEMS304ReferenceGuide.pdf))
 
 #### Homework 1: (Due:4.11)
 Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework1.pdf), [[latex]](https://www.overleaf.com/read/hrjdgxcbrxkw#3c9a85), Data: [[miles.csv]](https://drive.google.com/file/d/1RHTCfHUYgMXP5uzeGqr53H9Hq4eZ2wJL/view?usp=sharing)
