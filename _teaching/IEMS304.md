@@ -24,7 +24,7 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 ## Logistics
 **Time and Location:** Monday, Wednesday and Friday, 9.00 A.M.- 9.50 A.M. Tech L251
 
-**Office Hour:** Friday: 1 P.M. Tech M237
+**Office Hour:** Monday 10 A.M. Tech M237
 
 **TA Office Hour:**
 
@@ -78,6 +78,7 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework1.pdf), 
 - Taxonomy of Learning, Bias and Variance Trade-off
 - Optimization
 - Linear Regression and Statistical Inference
+
 **Cheatsheet**:
 
 ###  Lecture 4: Model and Variable Selection, Shrinkage, and Multicollinearity
@@ -102,6 +103,7 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework1.pdf), 
 - Linear Regression
 - Model Selection
 - Shrinkage
+
 **Cheatsheet**:
 
 ### Lecture 6: Trees and Neural Network
