@@ -36,6 +36,7 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 **Textbook**: 
 - ISL: James, Gareth, et al. An introduction to statistical learning.
 - 229: [[Stanford CS229 Lecture Note]](https://cs229.stanford.edu/main_notes.pdf)
+  
 ###  Lecture 1: Introduction to Statistical Learning
 (4.1,4.2,4.4)
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec1.pdf) [[annotated slide]](), **Reference**: ISL Section 2
