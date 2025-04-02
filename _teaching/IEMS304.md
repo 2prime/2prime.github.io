@@ -43,6 +43,9 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 - Logistics
 - What is and why statistical learning?
 - Supervised Learning, Unsupervised learning, Reinforcement Learning
+**Reading**
+  - [[the bitter lesson]](http://www.incompleteideas.net/IncIdeas/BitterLesson.html)
+  - [[blog on generative models]](https://oecs.mit.edu/pub/oye8m8nz/release/4)
 
 #### Lab 1: Linear Algebra Review  (4.4)
 **Reference:** [[pdf]]( [[Note]](https://2prime.github.io/files/IEMS304/IEMS304ReferenceGuide.pdf))
