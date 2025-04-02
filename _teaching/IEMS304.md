@@ -43,6 +43,7 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 - Logistics
 - What is and why statistical learning?
 - Supervised Learning, Unsupervised learning, Reinforcement Learning
+
 **Reading**
   - [[the bitter lesson]](http://www.incompleteideas.net/IncIdeas/BitterLesson.html)
   - [[blog on generative models]](https://oecs.mit.edu/pub/oye8m8nz/release/4)
@@ -102,6 +103,8 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework1.pdf), 
 - K-Nearest Neighboor, nonlinear regression
 - Bootstrap and Conformal Prediction [[note]](https://www.stat.berkeley.edu/~ryantibs/statlearn-s23/lectures/conformal.pdf)
 
+**Readings**
+- [[Curse of Dimensionality in Classification]](https://www.visiondummy.com/2014/04/curse-dimensionality-affect-classification/)
 
 ### Midterm 2 (5.09)
 - Linear Regression
