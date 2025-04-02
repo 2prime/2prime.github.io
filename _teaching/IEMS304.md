@@ -71,6 +71,7 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework1.pdf), 
 - Categorical Predictor and interaction
 - Leverage and Influence
 -  Residual Diagnostics
+
 #### Lab 3: Linear Regression
 (4.18)
 
