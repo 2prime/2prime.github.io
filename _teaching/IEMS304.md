@@ -48,6 +48,7 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 **Reading**
   - [[the bitter lesson]](http://www.incompleteideas.net/IncIdeas/BitterLesson.html)
   - [[blog on generative models]](https://oecs.mit.edu/pub/oye8m8nz/release/4)
+  - [[bias-variance trade-off]](https://mlu-explain.github.io/bias-variance/)
 
 #### Lab 1: Linear Algebra Review  (4.4)
 **Reference:** [[pdf]]( [[Note]](https://2prime.github.io/files/IEMS304/IEMS304ReferenceGuide.pdf))
