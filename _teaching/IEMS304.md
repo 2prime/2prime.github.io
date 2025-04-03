@@ -38,7 +38,8 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 - 229: [[Stanford CS229 Lecture Note]](https://cs229.stanford.edu/main_notes.pdf)
   
 ###  Lecture 1: Introduction to Statistical Learning
-(4.1,4.2,4.4)
+(4.1,4.2,4.4) [[Feedback Form]](https://forms.gle/jfDxyZF5E2TD8T3i6)
+
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec1.pdf) [[annotated slide]](), **Reference**: ISL Section 2
 - Logistics
 - What is and why statistical learning?
@@ -55,7 +56,8 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework1.pdf), [[latex]](https://www.overleaf.com/read/hrjdgxcbrxkw#3c9a85), Data: [[miles.csv]](https://drive.google.com/file/d/1RHTCfHUYgMXP5uzeGqr53H9Hq4eZ2wJL/view?usp=sharing)
 
 ###  Lecture 2: Simple Linear Regression
-(4.7,4.9,4.11)
+(4.7,4.9,4.11)[[Feedback Form]]()
+
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec2.pdf) [[annotated slide]](), **Reference**: ISL Section 3.1, 4.3
 - Simple Linear Regression and closed form of Least Square
 - Unbias and Varaince, Confidence Interval
@@ -68,7 +70,8 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework1.pdf), 
 
 
 ###  Lecture 3: Multiple Linear Regression
-(4.14,4.16,4.18,4.23,4.25)
+(4.14,4.16,4.18,4.23,4.25) [[Feedback Form]]()
+
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec3.pdf) [[annotated slide]](), **Reference**: ISL Section 3.2,3.3
 - Multiple Linear Regression, Degree of Freedom
 - t-test, confidence interval
@@ -87,7 +90,8 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework1.pdf), 
 **Cheatsheet**:
 
 ###  Lecture 4: Model and Variable Selection, Shrinkage, and Multicollinearity
-(4.28,4.30,5.2,5.5)
+(4.28,4.30,5.2,5.5)[[Feedback Form]]()
+
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec4.pdf) [[annotated slide]](), **Reference**: ISL Section 6
 - Model and Variable Selection,
 - Multicollinearity
@@ -114,7 +118,8 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework1.pdf), 
 **Cheatsheet**:
 
 ### Lecture 6: Trees and Neural Network
-(5.16,5.19,5.21)
+(5.16,5.19,5.21)[[Feedback Form]]()
+
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec6.pdf) [[annotated slide]](), **Reference**: ISL Section 8.1, 229 Section 7
 - Neural Network
 - Regression Tree, Classification Tree
@@ -123,7 +128,8 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework1.pdf), 
 (5.23)
 
 ###  Lecture 7: Unsupervised Learning
-(5.23,5.26,5.28)
+(5.23,5.26,5.28)[[Feedback Form]]()
+
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec8.pdf) [[annotated slide]](), **Reference**: ISL Section 10, 229 Section 10, 12
 - $k-$means, Spectral Clustering, PCA
 
@@ -131,7 +137,8 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework1.pdf), 
 (5.30)
 
 ###  Lecture 8: Ensemble/Committee Methods
-(5.30,6.2,6.4)
+(5.30,6.2,6.4)[[Feedback Form]]()
+
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec7.pdf) [[annotated slide]](), **Reference**: ISL Section 8.2
 
 
