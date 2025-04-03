@@ -79,6 +79,8 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework1.pdf), 
 - Categorical Predictor and interaction
 - Leverage and Influence
 -  Residual Diagnostics
+**Reading**:
+- [[Linear Regression]](https://mlu-explain.github.io/linear-regression/)
 
 #### Lab 3: Linear Regression
 (4.18)
@@ -124,6 +126,10 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework1.pdf), 
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec6.pdf) [[annotated slide]](), **Reference**: ISL Section 8.1, 229 Section 7
 - Neural Network
 - Regression Tree, Classification Tree
+
+**Readings**
+-[[Decision Tree]](https://mlu-explain.github.io/decision-tree/)
+-[[Random Forest]](https://mlu-explain.github.io/random-forest/)
 
 #### Lab 5: Nonlinear Regression
 (5.23)
