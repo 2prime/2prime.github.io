@@ -40,7 +40,7 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 ###  Lecture 1: Introduction to Statistical Learning
 (4.1,4.2,4.4) [[Feedback Form]](https://forms.gle/jfDxyZF5E2TD8T3i6)
 
-**Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec1.pdf) [[annotated slide]](), **Reference**: ISL Section 2
+**Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec1.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS304/IEMS304lec1filled.pdf), **Reference**: ISL Section 2
 - Logistics
 - What is and why statistical learning?
 - Supervised Learning, Unsupervised learning, Reinforcement Learning
