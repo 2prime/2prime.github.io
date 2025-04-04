@@ -33,6 +33,7 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 **Preliminary**: [[Note]](https://2prime.github.io/files/IEMS304/IEMS304ReferenceGuide.pdf)
  
 ## Scheldue:
+[[Cheat Sheet and Sample Exam]](https://www.overleaf.com/read/rbzhmhqxmrdh#5df6dc)
 **Textbook**: 
 - ISL: James, Gareth, et al. An introduction to statistical learning.
 - 229: [[Stanford CS229 Lecture Note]](https://cs229.stanford.edu/main_notes.pdf)
