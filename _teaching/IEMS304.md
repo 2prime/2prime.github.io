@@ -71,7 +71,8 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework1.pdf), 
 #### Lab 2: Statistical Review (4.11)
 **Slide**: [[pdf]](https://cs229.stanford.edu/notes2022fall/linalg.pdf)
 
-
+#### Homework 2: (Due:4.18)
+Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework2.pdf), [[latex]](https://www.overleaf.com/read/sfpcfntxkbzx#90d554), 
 
 ###  Lecture 3: Multiple Linear Regression
 (4.14,4.16,4.18,4.23,4.25) [[Feedback Form]]()
