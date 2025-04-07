@@ -62,7 +62,7 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework1.pdf), 
 ###  Lecture 2: Simple Linear Regression
 (4.7,4.9,4.11)[[Feedback Form]]()
 
-**Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec2.pdf) [[annotated slide]](), **Reference**: ISL Section 3.1, 4.3
+**Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec2.pdf) [[annotated slide]](), [[additional note on math]](https://2prime.github.io/files/IEMS304/simplelinearregression.pdf) **Reference**: ISL Section 3.1, 4.3
 - Simple Linear Regression and closed form of Least Square
 - Unbias and Varaince, Confidence Interval
 - log likelihood, logistic regression
