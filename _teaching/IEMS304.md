@@ -60,7 +60,7 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework1.pdf), [[latex]](https://www.overleaf.com/read/hrjdgxcbrxkw#3c9a85), Data: [[miles.csv]](https://drive.google.com/file/d/1RHTCfHUYgMXP5uzeGqr53H9Hq4eZ2wJL/view?usp=sharing)
 
 ###  Lecture 2: Simple Linear Regression
-(4.7,4.9,4.11)[[Feedback Form]]()
+(4.7,4.9,4.11)[[Feedback Form]](https://forms.gle/ES25pNxWpWy5LzUM9)
 
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec2.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS304/IEMS304lec2filled.pdf), [[additional note on math]](https://2prime.github.io/files/IEMS304/simplelinearregression.pdf) **Reference**: ISL Section 3.1, 4.3
 - Simple Linear Regression and closed form of Least Square
@@ -75,7 +75,7 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework1.pdf), 
 Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework2.pdf), [[latex]](https://www.overleaf.com/read/sfpcfntxkbzx#90d554), 
 
 ###  Lecture 3: Multiple Linear Regression
-(4.14,4.16,4.18,4.23,4.25) [[Feedback Form]](https://forms.gle/ES25pNxWpWy5LzUM9)
+(4.14,4.16,4.18,4.23,4.25) [[Feedback Form]]()
 
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec3.pdf) [[annotated slide]](), **Reference**: ISL Section 3.2,3.3
 - Multiple Linear Regression, Degree of Freedom
