@@ -75,7 +75,7 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework1.pdf), 
 Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework2.pdf), [[latex]](https://www.overleaf.com/read/sfpcfntxkbzx#90d554), 
 
 ###  Lecture 3: Multiple Linear Regression
-(4.14,4.16,4.18,4.23,4.25) [[Feedback Form]]()
+(4.14,4.16,4.18,4.23,4.25) [[Feedback Form]](https://forms.gle/ES25pNxWpWy5LzUM9)
 
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec3.pdf) [[annotated slide]](), **Reference**: ISL Section 3.2,3.3
 - Multiple Linear Regression, Degree of Freedom
