@@ -53,8 +53,8 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
   - [[blog on generative models]](https://oecs.mit.edu/pub/oye8m8nz/release/4)
   - [[bias-variance trade-off]](https://mlu-explain.github.io/bias-variance/)
 
-#### Lab 1: Linear Algebra Review  (4.4)
-**Reference:** [[pdf]]( [[Note]](https://2prime.github.io/files/IEMS304/IEMS304ReferenceGuide.pdf))
+#### Lab 1: Statistical Review  (4.4)
+**Reference:** [[Note]](https://2prime.github.io/files/IEMS304/IEMS304ReferenceGuide.pdf)
 
 #### Homework 1: (Due:4.11)
 Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework1.pdf), [[latex]](https://www.overleaf.com/read/hrjdgxcbrxkw#3c9a85), Data: [[miles.csv]](https://drive.google.com/file/d/1RHTCfHUYgMXP5uzeGqr53H9Hq4eZ2wJL/view?usp=sharing)
@@ -68,7 +68,7 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework1.pdf), 
 - log likelihood, logistic regression
 - Gradient descent and Newton methods
 
-#### Lab 2: Statistical Review (4.11)
+#### Lab 2: Linear Algebra Review (4.11)
 **Slide**: [[pdf]](https://cs229.stanford.edu/notes2022fall/linalg.pdf)
 
 #### Homework 2: (Due:4.18)
