@@ -43,11 +43,11 @@ I will dedicate 30 mins every week for junior PhD/master/undergraduate students,
 
 ## Former Advisees
 
-- [Wenlong Ji](https://scholar.google.com/citations?user=UW2Ji5MAAAAJ&hl=en) (PKU -> Stanford Statistics, neural collapse, [paper](https://arxiv.org/abs/2110.02796))
-- [Haoxuan Chen](https://haoxuanstevec00.github.io/) (Caltech -> Stanford ICME, minmax optimality of solving PDE, [paper](https://arxiv.org/abs/2110.06897))
-- [Jikai Jin](https://scholar.google.com/citations?user=xQqZt2AAAAAJ&hl=en) (PKU -> Stanford ICME, minmax optimality of kernel operator learning, [paper](https://arxiv.org/abs/2209.14430))
-- [Kaizhao Liu](https://drzfct.github.io/) (PKU-> MIT Math, [paper](https://arxiv.org/abs/2404.19145)),
-- [Hounam Wong](https://openreview.net/profile?id=~Honam_Wong1) (HKUST->Stanford CS, [paper](https://arxiv.org/abs/2406.09194))
+- [Wenlong Ji](https://scholar.google.com/citations?user=UW2Ji5MAAAAJ&hl=en) (PKU -> Stanford Statistics Ph.D, neural collapse, [paper](https://arxiv.org/abs/2110.02796))
+- [Haoxuan Chen](https://haoxuanstevec00.github.io/) (Caltech -> Stanford ICME Ph.D, minmax optimality of solving PDE, [paper](https://arxiv.org/abs/2110.06897))
+- [Jikai Jin](https://scholar.google.com/citations?user=xQqZt2AAAAAJ&hl=en) (PKU -> Stanford ICME Ph.D, minmax optimality of kernel operator learning, [paper](https://arxiv.org/abs/2209.14430))
+- [Kaizhao Liu](https://drzfct.github.io/) (PKU-> MIT Math Ph.D, [paper](https://arxiv.org/abs/2404.19145)),
+- [Hounam Wong](https://openreview.net/profile?id=~Honam_Wong1) (HKUST->Upenn CS Ph.D, [paper](https://arxiv.org/abs/2406.09194))
 - Ruihan Xu (SJTU->UChicago, [paper](https://arxiv.org/abs/2410.11115),[paper](https://arxiv.org/abs/2502.07993))
 
 
