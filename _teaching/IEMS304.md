@@ -77,7 +77,7 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework2.pdf), 
 ###  Lecture 3: Multiple Linear Regression
 (4.14,4.16,4.18,4.23,4.25) [[Feedback Form]]()
 
-**Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec3.pdf) [[annotated slide]](), **Reference**: ISL Section 3.2,3.3
+**Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec3.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS304/IEMS304lec3filled.pdf), **Reference**: ISL Section 3.2,3.3
 - Multiple Linear Regression, Degree of Freedom
 - t-test, confidence interval
 - Categorical Predictor and interaction
