@@ -10,6 +10,8 @@ I just list selected publication here. For a full list, you can view on <u><a hr
 
 
 ### Selected Publication
+- Zexi Fan, Yan Sun, Shihao Yang, **Yiping Lu** [Physics-Informed Inference Time Scaling via
+Simulation-Calibrated Scientific Machine Learning](https://2prime.github.io/files/scasml_techreport.pdf), *submitted, 2025*
 - Ruihan Xu, **Yiping Lu**. [What is a Sketch-and-Precondition Derivation for Low-Rank Approximation? Inverse Power Error or Inverse Power Estimation?](https://arxiv.org/abs/2502.07993), *submitted, 2025*
 - Ruihan Xu, **Yiping Lu**. [Randomized Iterative Solver as Iterative Refinement: A Simple Fix Towards Backward Stability](https://2prime.github.io/files/SIRR.pdf), *Artificial Intelligence and Statistics (AISTATS), 2025*
 - **Yiping Lu**, Daozhe Lin, Qiang Du. [Which Spaces can be Embedded in $L_p$-type Reproducing Kernel Banach Space? A Characterization via Metric Entropy](https://2prime.github.io/files/EmbeddingRKBS_preprint.pdf), *Submitted*
