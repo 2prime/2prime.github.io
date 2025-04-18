@@ -64,7 +64,7 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework1.pdf), 
 
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec2.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS304/IEMS304lec2filled.pdf), [[additional note on math]](https://2prime.github.io/files/IEMS304/simplelinearregression.pdf) 
 
-[[application examples]](2prime.github.io/files/IEMS304/linear_regression_code.pdf) [[annotated slide]](2prime.github.io/files/IEMS304/linear_regression_code_filled.pdf)
+[[application examples]](https://2prime.github.io/files/IEMS304/linear_regression_code.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS304/linear_regression_code_filled.pdf)
 
 **Reference**: ISL Section 3.1, 4.3
 - Simple Linear Regression and closed form of Least Square
