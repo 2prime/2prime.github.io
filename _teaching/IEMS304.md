@@ -64,7 +64,6 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework1.pdf), 
 
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec2.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS304/IEMS304lec2filled.pdf), [[additional note on math]](https://2prime.github.io/files/IEMS304/simplelinearregression.pdf) 
 
-[[application examples]](https://2prime.github.io/files/IEMS304/linear_regression_code.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS304/linear_regression_code_filled.pdf)
 
 **Reference**: ISL Section 3.1, 4.3
 - Simple Linear Regression and closed form of Least Square
@@ -80,6 +79,8 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework2.pdf), 
 
 ###  Lecture 3: Multiple Linear Regression
 (4.14,4.16,4.18,4.23,4.25) [[Feedback Form]]()
+
+[[application examples]](https://2prime.github.io/files/IEMS304/linear_regression_code.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS304/linear_regression_code_filled.pdf)
 
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec3.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS304/IEMS304lec3filled.pdf), **Reference**: ISL Section 3.2,3.3
 - Multiple Linear Regression, Degree of Freedom
