@@ -91,20 +91,22 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework2.pdf), 
 **Reading**:
 - [[Linear Regression]](https://mlu-explain.github.io/linear-regression/)
 
-#### Lab 3: Linear Regression
-(4.18)
-
 ### Midterm 1 (4.21)
 - Taxonomy of Learning, Bias and Variance Trade-off
 - Optimization
 - Linear Regression and Statistical Inference
 
-**Cheatsheet**:
+#### Homework 2: (Due:5.2)
+Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework3.pdf), [[latex]](https://www.overleaf.com/read/krrjpgbfmfkt#6a9b05), [[data]]()
+
+
+#### Lab 3: Linear Regression
+(5.2)
 
 ###  Lecture 4: Model and Variable Selection, Shrinkage, and Multicollinearity
 (4.28,4.30,5.2,5.5)[[Feedback Form]]()
 
-**Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec4.pdf) [[annotated slide]](), **Reference**: ISL Section 6
+**Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec4.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS304/HW2_data.xls), **Reference**: ISL Section 6
 - Model and Variable Selection,
 - Multicollinearity
 - James-Stein Estimator, Ridge Regression, Lasso, ISTA
