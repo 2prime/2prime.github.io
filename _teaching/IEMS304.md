@@ -97,7 +97,7 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework2.pdf), 
 - Linear Regression and Statistical Inference
 
 #### Homework 2: (Due:5.2)
-Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework3.pdf), [[latex]](https://www.overleaf.com/read/krrjpgbfmfkt#6a9b05), [[data]]()
+Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework3.pdf), [[latex]](https://www.overleaf.com/read/krrjpgbfmfkt#6a9b05), [[data]](https://2prime.github.io/files/IEMS304/HW2_data.xls)
 
 
 #### Lab 3: Linear Regression
