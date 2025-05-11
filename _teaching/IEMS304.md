@@ -104,6 +104,12 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework3.pdf), 
 (5.2)
 
 
+### Midterm 2 (5.09)
+- Linear Regression
+- Model Selection
+- Shrinkage
+
+
 
 ###  Lecture 4: Model and Variable Selection, Shrinkage, and Multicollinearity
 (4.28,4.30,5.2,5.5)[[Feedback Form]]()
@@ -119,6 +125,8 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework3.pdf), 
 #### Homework 4: (Due:5.16)
 Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework4.pdf), [[latex]](https://www.overleaf.com/read/gdcsnhftfhbv#7d6dfd), [[data]](https://2prime.github.io/files/IEMS304/HW4_data.xls)
 
+#### Homework 5: (Due: 5.23)
+Homework: [[pdf]]() [[latex]](https://www.overleaf.com/read/hrkdhtqpnsyy#f612b7)
 
 ###  Lecture 5: Basic Nonlinear and Nonparametric regression/classification
 (5.5,5.12,5.14)
@@ -126,13 +134,12 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework4.pdf), 
 - K-Nearest Neighboor, nonlinear regression
 - Bootstrap and Conformal Prediction [[note]](https://www.stat.berkeley.edu/~ryantibs/statlearn-s23/lectures/conformal.pdf)
 
+#### Homework 6: (Due: 5.31)
+Homework: [[pdf]]() [[latex]]()
+
 **Readings**
 - [[Curse of Dimensionality in Classification]](https://www.visiondummy.com/2014/04/curse-dimensionality-affect-classification/)
 
-### Midterm 2 (5.09)
-- Linear Regression
-- Model Selection
-- Shrinkage
 
 **Cheatsheet**:
 
@@ -159,10 +166,6 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework4.pdf), 
 #### Lab 6: Unsupervised Learning
 (5.30)
 
-###  Lecture 8: Ensemble/Committee Methods
-(5.30,6.2,6.4)[[Feedback Form]]()
-
-**Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec7.pdf) [[annotated slide]](), **Reference**: ISL Section 8.2
 
 
 ### Final Review 
