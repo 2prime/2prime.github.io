@@ -96,12 +96,14 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework2.pdf), 
 - Optimization
 - Linear Regression and Statistical Inference
 
-#### Homework 2: (Due:5.2)
+#### Homework 3: (Due:5.2)
 Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework3.pdf), [[latex]](https://www.overleaf.com/read/krrjpgbfmfkt#6a9b05), [[data]](https://2prime.github.io/files/IEMS304/HW2_data.xls)
 
 
 #### Lab 3: Linear Regression
 (5.2)
+
+
 
 ###  Lecture 4: Model and Variable Selection, Shrinkage, and Multicollinearity
 (4.28,4.30,5.2,5.5)[[Feedback Form]]()
@@ -113,6 +115,9 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework3.pdf), 
 
 #### Lab 4: Shrinkage
 (5.2)
+
+#### Homework 4: (Due:5.16)
+Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework4.pdf), [[latex]](https://www.overleaf.com/read/gdcsnhftfhbv#7d6dfd), [[data]](https://2prime.github.io/files/IEMS304/HW4_data.xls)
 
 
 ###  Lecture 5: Basic Nonlinear and Nonparametric regression/classification
