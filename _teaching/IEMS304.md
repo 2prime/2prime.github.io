@@ -123,7 +123,7 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework3.pdf), 
 (5.2)
 
 #### Homework 4: (Due:5.16)
-Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework4.pdf), [[latex]](https://www.overleaf.com/read/gdcsnhftfhbv#7d6dfd), [[data]](https://2prime.github.io/files/IEMS304/HW4_data.xls)
+Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework4.pdf), [[latex]](https://www.overleaf.com/read/gdcsnhftfhbv#7d6dfd), [[data]](https://2prime.github.io/files/IEMS304/HW4_data.csv)
 
 #### Homework 5: (Due: 5.23)
 Homework: [[pdf]]() [[latex]](https://www.overleaf.com/read/hrkdhtqpnsyy#f612b7)
