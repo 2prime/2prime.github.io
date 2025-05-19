@@ -135,7 +135,7 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework5.pdf) [
 - Bootstrap and Conformal Prediction [[note]](https://www.stat.berkeley.edu/~ryantibs/statlearn-s23/lectures/conformal.pdf)
 
 #### Homework 6: (Due: 5.31)
-Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework6.pdf) [[latex]]()
+Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework6.pdf) [[latex]](https://www.overleaf.com/read/jmczjqssqywq#38a373) [[data HW6]](https://2prime.github.io/files/IEMS304/HW6_data.csv) [[spambase.txt]](https://2prime.github.io/files/IEMS304/spambase.txt)
 
 **Readings**
 - [[Curse of Dimensionality in Classification]](https://www.visiondummy.com/2014/04/curse-dimensionality-affect-classification/)
