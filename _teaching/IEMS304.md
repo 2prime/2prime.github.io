@@ -130,7 +130,7 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework5.pdf) [
 
 ###  Lecture 5: Basic Nonlinear and Nonparametric regression/classification
 (5.5,5.12,5.14)
-**Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec5.pdf) [[annotated slide]](), **Reference**: ISL Section 2.2,3.5,4.6.5, 5.2,5.3,7
+**Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec5.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS304/IEMS304lec5filled.pdf), **Reference**: ISL Section 2.2,3.5,4.6.5, 5.2,5.3,7
 - K-Nearest Neighboor, nonlinear regression
 - Bootstrap and Conformal Prediction [[note]](https://www.stat.berkeley.edu/~ryantibs/statlearn-s23/lectures/conformal.pdf)
 
