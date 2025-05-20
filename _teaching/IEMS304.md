@@ -114,7 +114,7 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework3.pdf), 
 ###  Lecture 4: Model and Variable Selection, Shrinkage, and Multicollinearity
 (4.28,4.30,5.2,5.5)[[Feedback Form]]()
 
-**Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec4.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS304/HW2_data.xls), **Reference**: ISL Section 6
+**Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec4.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS304/IEMS304lec4filled.pdf), **Reference**: ISL Section 6
 - Model and Variable Selection,
 - Multicollinearity
 - James-Stein Estimator, Ridge Regression, Lasso, ISTA
