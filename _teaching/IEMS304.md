@@ -160,7 +160,7 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework6.pdf) [
 ###  Lecture 7: Unsupervised Learning
 (5.23,5.26,5.28)[[Feedback Form]]()
 
-**Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec8.pdf) [[annotated slide]](), **Reference**: ISL Section 10, 229 Section 10, 12
+**Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec8.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS304/IEMS304lec8filled.pdf), **Reference**: ISL Section 10, 229 Section 10, 12
 - $k-$means, Spectral Clustering, PCA
 
 #### Lab 6: Unsupervised Learning
