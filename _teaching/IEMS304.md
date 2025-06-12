@@ -146,7 +146,7 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework6.pdf) [
 ### Lecture 6: Trees and Neural Network
 (5.16,5.19,5.21)[[Feedback Form]]()
 
-**Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec6.pdf) [[annotated slide]](), **Reference**: ISL Section 8.1, 229 Section 7
+**Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec6.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS304/IEMS304lec6filled.pdf), **Reference**: ISL Section 8.1, 229 Section 7
 - Neural Network
 - Regression Tree, Classification Tree
 
