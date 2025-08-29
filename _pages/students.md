@@ -40,6 +40,15 @@ redirect_from:
 I will dedicate 30 mins every week for junior PhD/master/undergraduate students, if you would like to chat about life, career plan, or research ideas related to AI/ML, feel free to email me to schedule a meeting. I encourage students from underrepresented groups to reach out and will prioritize these meetings. File the [form](https://docs.google.com/forms/d/e/1FAIpQLSc00PnFeISZXi-gcfQaJuSlnZl0i8w0KA0H9LBpL48wzb__rw/viewform?usp=sf_link).
 
 
+## Ph.D. Students
+- [Youheng Zhu](https://zhuyouheng.github.io/)
+- Kailai Chen
+
+## Undergrads
+- [Zexi Fan](https://francis-fan-create.github.io/) (Peking University): [paper](https://arxiv.org/abs/2504.16172)
+- [Weizhong Wang]() (Fudan University): A paper on manifold learning, a paper on particle filtering
+
+
 
 ## Former Advisees
 
