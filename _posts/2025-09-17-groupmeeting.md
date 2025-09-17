@@ -8,6 +8,6 @@ tags:
   - stochastic simulation
 ---
 
-Paper list and Scheldue for spring group meeting.
+In Fall 2025, the Scientific Machine Learning seminar will be held  xxx. Specific information about the format of each talk will be provided in the email announcement and posted below.  If you're interested in attending the seminar, please contact **Yiping Lu** (yiping.lu@northwestern.edu).
 
 ### Scheldue
