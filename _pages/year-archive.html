@@ -1,35 +1,11 @@
 ---
 layout: archive
 permalink: /year-archive/
-title: "Group Meeting"
+title: "SciML Seminar"
 author_profile: true
 redirect_from:
   - /wordpress/blog-posts/
 ---
 
-We run multiple mini-group meetings with a shared topic (Statistics, Stochastic Control, Stochastic Simulation, Machine Learning Theory). All current members and also prospective students who’d like to learn what we do are invited to join. 
 
-{% capture written_year %}'None'{% endcapture %}
-{% for post in site.posts %}
-  {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-  {% if year != written_year %}
-    <h2 id="{{ year | slugify }}" class="archive__subtitle">{{ year }}</h2>
-    {% capture written_year %}{{ year }}{% endcapture %}
-  {% endif %}
-  {% include archive-single.html %}
-{% endfor %}
-
-<h2>List of books that I'm interested in</h2>
-
-Basic Books:
-<ul>
-  <li><a href="https://www.cambridge.org/core/books/asymptotic-statistics/A3C7DAD3F7E66A1FA60E9C8FE132EE1D">Asymmptotic Statistics</a></li>
-  <li><a href="https://web.stanford.edu/class/stats311/lecture-notes.pdf">Information Theory and Statistics</a></li>
-  <li><a href="https://web.stanford.edu/~jduchi/PCMIConvex/Duchi16.pdf">Introductory Lectures on Stochastic Convex Optimization</a></li>
-</ul>
-Advanced books:
-<ul>
-  <li>Geometry of Banach Space:<a href="https://2prime.github.io/files/Absolutely_Summing_Operators.pdf">[Absolute summing operators]</a></li>
-  <li>Information-theoretic Methods for High-dimensional Statistics:<a href="https://2prime.github.io/files/it-stats.pdf">lecture note by Yihong Wu]</a></li>
-  <li>Deep Learning Theory <a href="2prime.github.io/files/dltheory.pdf">Book by Matus Telgarsky</a></li>
-</ul>
+The main purpose of this seminar is to build a community of SciML researchers at Northwestern University and provide a venue where students can share their work and informal ideas. We hope the short and fun talks will spark new discussions, encourage collaboration, and create opportunities for feedback. Beyond presenting, the seminar also serves as a space to learn new approaches, exchange insights, and discover ongoing projects, helping everyone broaden their perspectives in scientific machine learning.
