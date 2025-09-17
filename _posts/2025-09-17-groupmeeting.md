@@ -1,6 +1,6 @@
 ---
 title: '2025 Fall SCiML Seminar'
-date: 2025-09-17
+date: 2025-09-01
 permalink: /posts/2025/09/SciML/
 tags:
   - statistics
