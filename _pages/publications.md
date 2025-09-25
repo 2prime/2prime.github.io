@@ -10,7 +10,7 @@ I just list selected publication here. For a full list, you can view on <u><a hr
 
 
 ### Selected Publication
-- Jasen Lai, Sifan Wang, Chunmei Wang, **Yiping Lu**, Unveiling the Scaling Law of PINNs under Non-Euclidean Geometry
+- Jasen Lai, Sifan Wang, Chunmei Wang, **Yiping Lu**, Unveiling the Scaling Law of PINNs under Non-Euclidean Geometry, *submitted, 2025*
 
 <mark color='orange'>The first algorithm that enables a predictable scaling law for PINNs.</mark>
 
