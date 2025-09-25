@@ -45,6 +45,10 @@ Simulation-Calibrated Scientific Machine Learning](https://arxiv.org/abs/2504.16
 <mark color='orange'>The first mean-field type convergence results for deep nets. </mark>
 
 - Dinghuai Zhang\*, Tianyuan Zhang\*, **Yiping Lu** \*, Zhanxing Zhu, Bin Dong. "[You Only Propagate Once: Painless Adversarial Training Using Maximal Principle](https://arxiv.org/pdf/1905.00877)" (*equal contribution) 33rd Annual Conference on Neural Information Processing Systems (NeurIPS) 2019.
+  
+<mark color='orange'>Fast adversarial training algorithm based on control theory. </mark>
+
+
 - Zichao long\*, **Yiping Lu** \*, Xianzhong Ma\*, Bin Dong. "[PDE-Net:Learning PDEs From Data](https://arxiv.org/pdf/1710.09668)", Thirty-fifth International Conference on Machine Learning (ICML), 2018(*equal contribution)
 - **Yiping Lu**, Aoxiao Zhong, Quanzheng Li, Bin Dong. "[Beyond Finite Layer Neural Network:Bridging Deep Architects and Numerical Differential Equations](https://arxiv.org/pdf/1710.10121)" Thirty-fifth International Conference on Machine Learning (ICML), 2018
 
