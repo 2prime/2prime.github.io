@@ -31,7 +31,12 @@ Simulation-Calibrated Scientific Machine Learning](https://arxiv.org/abs/2504.16
 
 - Jikai Jin, **Yiping Lu**, Jose Blanchet, Lexing Ying [Minimax Optimal Kernel Operator Learning via Multilevel Training](https://arxiv.org/pdf/2209.14430) Eleventh  International Conference on Learning Representations(ICLR) 2023  <font color='red'>[Spotlight]</font> [[slides]](https://2prime.github.io/files/oplearning.pdf)
 - **Yiping Lu**, Haoxuan Chen, Jianfeng Lu, Lexing Ying, Jose Blanchet. [Machine Learning For Elliptic PDEs: Fast Rate Generalization Bound, Neural Scaling Law and Minimax Optimality](https://arxiv.org/pdf/2110.06897). 10th International Conference on Learning Representations(ICLR) 2022 [[slides]](https://2prime.github.io/files/mlpde.pdf)
-- Wenlong Ji, **Yiping Lu**, Yiliang Zhang, Zhun Deng, Weijie J Su. [An Unconstrained Layer-Peeled Perspective on Neural Collapse](https://arxiv.org/pdf/2110.02796). Tenth  International Conference on Learning Representations(ICLR) 2022 
+- **Yiping Lu**, Wenlong Ji, Zachary Izzo, Lexing Ying, [Importance Tempering: Group Robustness for Overparameterized Models](https://arxiv.org/pdf/2209.08745)
+- Wenlong Ji, **Yiping Lu**, Yiliang Zhang, Zhun Deng, Weijie J Su. [An Unconstrained Layer-Peeled Perspective on Neural Collapse](https://arxiv.org/pdf/2110.02796). Tenth  International Conference on Learning Representations(ICLR) 2022
+
+<mark color='orange'>Show that neural collapse is the implicit bias of Logistic loss and show why logisitic loss is bad for data imbalance.</mark>
+
+  
 - **Yiping Lu**, Chao Ma, Yulong Lu, Jianfeng Lu, Lexing Ying. "[A Mean-field Analysis of Deep ResNet and Beyond: Towards Provable Optimization Via Overparameterization From Depth](https://arxiv.org/pdf/2003.05508)" Thirty-seventh International Conference on Machine Learning (ICML), 2020
 
 <mark color='orange'>The first mean-field type convergence results for deep nets. </mark>
