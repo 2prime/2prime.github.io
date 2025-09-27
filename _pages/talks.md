@@ -7,6 +7,7 @@ author_profile: true
 
 
 ## Scientific Machine Learning
+- **<font color='red'>[*New*]</font> ** How to Scalse SciML at Training and Inference Time [slide](https://2prime.github.io/files/howtoscaleSCiML.pdf), [talk]()
 - **<font color='red'>[*New*]</font> ** Physics-informed inference time scaling via Hybrid Scientific computing and Machine learning [slide](https://2prime.github.io/files/debiasandprecondition.pdf), [talk](https://www.youtube.com/watch?v=orbGuqVLAp4)
 - **<font color='red'>[*New*]</font> ** AAAI 2024 Tutorial: Recent advance in Physics-informed Machine Learning  [website](https://sites.google.com/view/aaai-2024-tutorial-piml/) [slide](https://2prime.github.io/files/SML/piml_aaai.pdf)
 - slide at CBMS deep learning for numerical PDE [pdf](https://2prime.github.io/files/CBMS_dlpde.pdf)
