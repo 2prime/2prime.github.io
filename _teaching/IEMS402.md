@@ -42,7 +42,7 @@ Here is a review of all the preliminary we'll use in this class:
   - Different notion of convergence in probability is useful but not required in our class. Our class will just do intuituive proof.
 
 ### Scheldue
-- **Lecture 1-2**: <font color=red>Concept</font> 1.5/1.7 (<font color=red>1.7 will be recorded lecture for Yiping is attending JMM</font>)
+- **Lecture 1-2**: <font color=red>Concept</font> 1.5/1.7/1.12 (<font color=red>1.7 no class for Yiping is attending JMM</font>)
   - [[Lecture Notes]](https://2prime.github.io/files/IEMS_402_Note_lec1.pdf) [[slide]](https://2prime.github.io/files/IEMS402/402lec1and2.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec1and2fill.pdf)
 [[Feedback for Lecture 1]](https://forms.gle/atExX4xTGnaghB6RA) [[Feedback for Lecture 2]](https://forms.gle/XcbcPrBbaswdMqNLA) 
   - Supervised Learning, Empirical Risk Minimization, Risk Decomposition ([LTFP] Section 2)
@@ -71,7 +71,7 @@ Here is a review of all the preliminary we'll use in this class:
 
 <font color=red>[Homework 1 DUE]</font>
 
-- **Lecture 3-4**: 1.13/15 [[slide]](https://2prime.github.io/files/IEMS402/402lec3and4.pdf) [[annotated slide]](https://drive.google.com/file/d/1ysSPOXYRvPWdn_7enVEt9sECSNggTRZg/view?usp=sharing)
+- **Lecture 3-4**: 1.14/1.19(Martin Luther King Jr. Day <font color=red>no class </font>)/1.21 [[slide]](https://2prime.github.io/files/IEMS402/402lec3and4.pdf) [[annotated slide]](https://drive.google.com/file/d/1ysSPOXYRvPWdn_7enVEt9sECSNggTRZg/view?usp=sharing)
 [[Feedback for Lecture 3]](https://forms.gle/oqk687RQL37kJwVG6) [[Feedback for Lecture 4]](https://forms.gle/wGnELYYeLFojdmbi8) 
   - Bias-Variance Trade-off of Kernel Smoothing Estimator, Curse of Dimensionality ([LTFP] Section 6)
   - Advanced Reading:
@@ -81,14 +81,13 @@ Here is a review of all the preliminary we'll use in this class:
 
 <font color=red>[Homework 2 DUE]</font>
 
-- **Lecture -**: 1.20 <font color=red>[No Class]</font> (Martin Luther King Jr. Day)
-- **Lecture 5**: 1.22 [[slide]](https://2prime.github.io/files/IEMS402/402lec5.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec5fill.pdf) [[Feedback of Lecture 5]](https://forms.gle/QNmnDfKCmuduUioS7)
+- **Lecture 5**: 1.26 [[slide]](https://2prime.github.io/files/IEMS402/402lec5.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec5fill.pdf) [[Feedback of Lecture 5]](https://forms.gle/QNmnDfKCmuduUioS7)
    - Asymptotic normality
    - Inverse function theorem, (Implicit) Delta Method
    - Moment Methods
 <font color=red>[Homework 3 DUE]</font>
 
-- **Lecture 6**: 1.27 [[slide]](https://2prime.github.io/files/IEMS402/402lec6.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec6fill.pdf)  [[Feedback of Lecture 6]](https://forms.gle/LA1hdb4nPgWvjLwW7)
+- **Lecture 6**: 1.28 [[slide]](https://2prime.github.io/files/IEMS402/402lec6.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec6fill.pdf)  [[Feedback of Lecture 6]](https://forms.gle/LA1hdb4nPgWvjLwW7)
   - Influnce function, Fisher Information
   - Cramer-Rao Bound and Con of Unbiased Estimators (James-Stein estimator)
   - Sugessted Reading:
@@ -96,23 +95,23 @@ Here is a review of all the preliminary we'll use in this class:
     - Basu S, Pope P, Feizi S. [Influence functions in deep learning are fragile](https://arxiv.org/abs/2006.14651).
 
 
-- **Lecture 7**: 1.29 [[slide]](https://2prime.github.io/files/IEMS402/402lec7.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec7fill.pdf)  [[Feedback of Lecture 7]](https://forms.gle/SXTE6dHQzAQ6f62A8)
+- **Lecture 7**: 1.28 [[slide]](https://2prime.github.io/files/IEMS402/402lec7.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec7fill.pdf)  [[Feedback of Lecture 7]](https://forms.gle/SXTE6dHQzAQ6f62A8)
   - Concerntration Inequality
   - Application of Concerntration Inequality: Johnson-Lindenstrauss lemma
 
 <font color=red>[Homework 4 DUE]</font>
 
-- **Lecture 8**: 2.3  [[slide]](https://2prime.github.io/files/IEMS402/402lec8.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec8fill.pdf)  [[Feedback of Lecture 8]](https://forms.gle/RtDeBFd6RSVCxs14A)
+- **Lecture 8**: 2.2  [[slide]](https://2prime.github.io/files/IEMS402/402lec8.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec8fill.pdf)  [[Feedback of Lecture 8]](https://forms.gle/RtDeBFd6RSVCxs14A)
   - Generalization via Uniform Bound, Discretization Theorem,
   - Covering Number/Packing Number
-- **Lecture 9**: 2.5 [[slide]](https://2prime.github.io/files/IEMS402/402lec9.pdf) [[annotated slide]](https://drive.google.com/file/d/1DvAq03NYbTWr_6Vx0QrTvrk96rDqizc9/view?usp=sharing) [[Feedback of Lecture 9]](https://forms.gle/sUmDAMFFZtxd4wL39)
+- **Lecture 9**: 2.4 [[slide]](https://2prime.github.io/files/IEMS402/402lec9.pdf) [[annotated slide]](https://drive.google.com/file/d/1DvAq03NYbTWr_6Vx0QrTvrk96rDqizc9/view?usp=sharing) [[Feedback of Lecture 9]](https://forms.gle/sUmDAMFFZtxd4wL39)
   - Midterm Review
   - Chaining
   - Symmetrization, Rademacher complexity
 
 <font color=red>[Homework 5 DUE]</font>
 
-- **Lecture 10**: 2.10 <font color=red>[Advanced Topic]</font> [[slide]](https://2prime.github.io/files/IEMS402/402lec10.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec10fill.pdf)
+- **Lecture 10**: 2.09 <font color=red>[Advanced Topic]</font> [[slide]](https://2prime.github.io/files/IEMS402/402lec10.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec10fill.pdf)
   -  Ledoux-Talagrand Contraction Principle
   -  Generalization Theory of Neural Network [[Textbook](https://mjt.cs.illinois.edu/dlt/#two-rademacher-complexity-proofs-for-deep-networks)]
   - Other Ideas of Generalization:
@@ -122,8 +121,8 @@ Here is a review of all the preliminary we'll use in this class:
     - Bartlett, P.L., Foster, D.J. and Telgarsky, M., 2017, December. [Spectrally-normalized margin bounds for neural networks](https://arxiv.org/abs/1706.08498). In Proceedings of the 31st International Conference on Neural Information Processing Systems (pp. 6241-6250)
     - Jiang Y, Neyshabur B, Mobahi H, et al. [Fantastic generalization measures and where to find them](https://arxiv.org/abs/1912.02178). arXiv preprint arXiv:1912.02178, 2019.
     - Jiang Y, Nagarajan V, Baek C, et al. [Assessing generalization of SGD via disagreement](https://arxiv.org/abs/2106.13799). arXiv preprint arXiv:2106.13799, 2021.
-- **Lecture -**: <font color=red>[Midterm]</font> 2.12 [[Practice Mid-Term Exam]](https://2prime.github.io/files/IEMS402/practicemidterm_IEMS402.pdf)
-- **Lecture 11**: 2.17 [[slide]](https://2prime.github.io/files/IEMS402/402lec11.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec11fill.pdf) [[note]](https://pages.cs.wisc.edu/~yudongchen/cs839_sp22/16-17_nonparametric_least_squares.pdf) <font color=red>[Advanced Topic]</font>
+- **Lecture -**: <font color=red>[Midterm]</font> 2.11 [[Practice Mid-Term Exam]](https://2prime.github.io/files/IEMS402/practicemidterm_IEMS402.pdf)
+- **Lecture 11**: 2.16 [[slide]](https://2prime.github.io/files/IEMS402/402lec11.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec11fill.pdf) [[note]](https://pages.cs.wisc.edu/~yudongchen/cs839_sp22/16-17_nonparametric_least_squares.pdf) <font color=red>[Advanced Topic]</font>
   - Empirical method of Maurey [[note]](https://www.cs.utexas.edu/~ecprice/courses/sublinear/fa16/notes/lec13.pdf)
   - Localized Complexity
   - Non-parametric Least-square
@@ -133,12 +132,12 @@ Here is a review of all the preliminary we'll use in this class:
     - Kur G, Putterman E, Rakhlin A. [On the variance, admissibility, and stability of empirical risk minimization](https://arxiv.org/abs/2305.18508). Advances in Neural Information Processing Systems, 2024, 36.
     - Kur, Gil, et al. [Minimum Norm Interpolation Meets The Local Theory of Banach Spaces](https://openreview.net/forum?id=G4b32bKnBy). Forty-first International Conference on Machine Learning.
 
-- **Lecture 12**: 2.19  [[annotated note]](https://2prime.github.io/files/IEMS402/rkhs1.pdf) [[feedback]](https://forms.gle/t9asn9SxcDj3bR9w6) [[code for RKHS]](https://2prime.github.io/files/IEMS402/RKHS_IEMS402.pdf)
+- **Lecture 12**: 2.18  [[annotated note]](https://2prime.github.io/files/IEMS402/rkhs1.pdf) [[feedback]](https://forms.gle/t9asn9SxcDj3bR9w6) [[code for RKHS]](https://2prime.github.io/files/IEMS402/RKHS_IEMS402.pdf)
   - Reproducing Kernel Hilbert Space 1
   - Suggested Reading:
 <font color=red>[Homework 6 DUE]</font>
 
-- **Lecture 13**: 2.24  [[annotated note]](https://2prime.github.io/files/IEMS402/rkhs2.pdf) [[feedback]](https://forms.gle/t9asn9SxcDj3bR9w6)
+- **Lecture 13**: 2.23  [[annotated note]](https://2prime.github.io/files/IEMS402/rkhs2.pdf) [[feedback]](https://forms.gle/t9asn9SxcDj3bR9w6)
   - Reproducing Kernel Hilbert Space 2
   - Advanced Reading:
     - Muandet K, Fukumizu K, Sriperumbudur B, et al. Kernel mean embedding of distributions: A review and beyond. Foundations and Trends® in Machine Learning, 2017, 10(1-2): 1-141.
@@ -146,7 +145,7 @@ Here is a review of all the preliminary we'll use in this class:
     - Haas M, Holzmüller D, Luxburg U, et al. Mind the spikes: Benign overfitting of kernels and neural networks in fixed dimension[J]. Advances in Neural Information Processing Systems, 2024, 36.
     - Schölpple M, Steinwart I. [Which Spaces can be Embedded in Reproducing Kernel Hilbert Spaces?](https://arxiv.org/abs/2312.14711) arXiv preprint arXiv:2312.14711, 2023.
     - Lu Y, Lin D, Du Q. [Which Spaces can be Embedded in Lp-type Reproducing Kernel Banach Space? A Characterization via Metric Entropy](https://arxiv.org/abs/2410.11116). arXiv preprint arXiv:2410.11116, 2024.
-- **Lecture 14**: 2.26 [[slide]](https://2prime.github.io/files/IEMS402/402lec13.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec13fill.pdf) [[feedback]](https://forms.gle/poouGmAaZJHAbL2T8) 
+- **Lecture 14**: 2.25 [[slide]](https://2prime.github.io/files/IEMS402/402lec13.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec13fill.pdf) [[feedback]](https://forms.gle/poouGmAaZJHAbL2T8) 
   - Distrbution Shift ([Stanford CS329D Machine Learning Under Distribution Shift](https://thashim.github.io/cs329D/),[Columbia B9145: Topics in Trustworthy AI](https://hsnamkoong.github.io/assets/html/b9145/index.html))
   - Distributionally Robust Optimization
   - Suggested Reading:
@@ -164,9 +163,9 @@ Here is a review of all the preliminary we'll use in this class:
 
 <font color=red>[Homework 7 DUE]</font>
 
-- **Lecture ??**: 3.3 Skip due to SIAM CSE.
+- **Lecture ??**: 3.2 Skip due to SIAM CSE.
 
-- **Lecture 15**: 3.5 [[slide]](https://2prime.github.io/files/IEMS402/402lec14.pdf)  [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec14fill.pdf)
+- **Lecture 15**: 3.3 [[slide]](https://2prime.github.io/files/IEMS402/402lec14.pdf)  [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec14fill.pdf)
   - Deep Learning Theory:  ([LTFP] Section 12.1 12.3, 12.5)
     - Neural Tagent Kernel
     - Mean-field Limit of Neural Network
@@ -182,7 +181,7 @@ Here is a review of all the preliminary we'll use in this class:
 
 <font color=red>[Generative AI]</font>
 
-- **Lecture 16**: 3.10 <font color=red>[Advanced Topic]</font> [[note used in class]](https://2prime.github.io/files/IEMS402/ot.pdf) [[note2]](https://people.math.ethz.ch/~afigalli/lecture-notes-pdf/An-introduction-to-optimal-transport-and-Wasserstein-gradient-flows.pdf)
+- **Lecture 16**: 3.9 <font color=red>[Advanced Topic]</font> [[note used in class]](https://2prime.github.io/files/IEMS402/ot.pdf) [[note2]](https://people.math.ethz.ch/~afigalli/lecture-notes-pdf/An-introduction-to-optimal-transport-and-Wasserstein-gradient-flows.pdf)
   - Optimal Transport, Kantorovich Duality
   - Statistics of Optimal Transport and Smoothed Optimal Transport
   - Generative Models: GAN/Diffusion Model
@@ -202,7 +201,7 @@ Here is a review of all the preliminary we'll use in this class:
     - Albergo M S, Boffi N M, Vanden-Eijnden E. [Stochastic interpolants: A unifying framework for flows and diffusions](https://arxiv.org/abs/2303.08797). arXiv preprint arXiv:2303.08797, 2023.
 
 
-- **Lecture 17**: 3.12 <font color=red>[Advanced Topic]</font>
+- **Lecture 17**: 3.11 <font color=red>[Advanced Topic]</font>
   - Reinforcement Learning in Language Model Aligenment
   - Preference Optimization
   - Large Language Model
