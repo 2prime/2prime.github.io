@@ -71,7 +71,7 @@ Here is a review of all the preliminary we'll use in this class:
 
 <font color=red>[Homework 1 DUE]</font>
 
-- **Lecture 3-4**: 1.14/1.19(Martin Luther King Jr. Day <font color=red>no class </font>)/1.21 [[slide]](https://2prime.github.io/files/IEMS402/402lec3and4.pdf) [[annotated slide]](https://drive.google.com/file/d/1ysSPOXYRvPWdn_7enVEt9sECSNggTRZg/view?usp=sharing)
+- **Lecture 3-4**: 1.14/1.19(Martin Luther King Jr. Day <font color=red>no class </font>)/1.21 [[slide]](https://2prime.github.io/files/IEMS402/402lec3and4.pdf) [[annotated slide]](https://drive.google.com/file/d/1ysSPOXYRvPWdn_7enVEt9sECSNggTRZg/view?usp=sharing) [[lecture note]](https://2prime.github.io/files/IEMS_402_Note_lec3.pdf)
 [[Feedback for Lecture 3]](https://forms.gle/oqk687RQL37kJwVG6) [[Feedback for Lecture 4]](https://forms.gle/wGnELYYeLFojdmbi8) 
   - Bias-Variance Trade-off of Kernel Smoothing Estimator, Curse of Dimensionality ([LTFP] Section 6)
   - Advanced Reading:
