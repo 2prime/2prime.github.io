@@ -15,7 +15,7 @@ I just list selected publication here. For a full list, you can view on <u><a hr
 <mark color='orange'>The first algorithm that enables a predictable scaling law for PINNs.</mark>
 
 - Zexi Fan, Yan Sun, Shihao Yang, **Yiping Lu** [Physics-Informed Inference Time Scaling via
-Simulation-Calibrated Scientific Machine Learning](https://arxiv.org/abs/2504.16172), *submitted, 2025* [[slides]](https://2prime.github.io/files/scasml.pdf)
+Simulation-Calibrated Scientific Machine Learning](https://arxiv.org/abs/2504.16172), *ICLR, 2026* [[slides]](https://2prime.github.io/files/scasml.pdf)
 
 <mark color='orange'>The first inference time scaling algorithm for solving PDEs, which means you can improve the result at inference time without retraining/fine-tune the network.</mark>
 
