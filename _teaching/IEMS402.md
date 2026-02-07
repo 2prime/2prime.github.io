@@ -82,13 +82,15 @@ Here is a review of all the preliminary we'll use in this class:
 
 <font color=red>[Homework 2 DUE]</font>
 
-- **Lecture 5**: 1.26 [[slide]](https://2prime.github.io/files/IEMS402/402lec5.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec5fill.pdf) [[Feedback of Lecture 5]](https://forms.gle/QNmnDfKCmuduUioS7)
+- **Lecture 5**: 1.26
+  - [[Lecture Notes]](https://2prime.github.io/files/IEMS_402_Note_lec5.pdf) [[slide]](https://2prime.github.io/files/IEMS402/402lec5.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec5fill.pdf) [[Feedback of Lecture 5]](https://forms.gle/QNmnDfKCmuduUioS7)
    - Asymptotic normality
    - Inverse function theorem, (Implicit) Delta Method
    - Moment Methods
 <font color=red>[Homework 3 DUE]</font>
 
-- **Lecture 6**: 1.28 [[slide]](https://2prime.github.io/files/IEMS402/402lec6.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec6fill.pdf)  [[Feedback of Lecture 6]](https://forms.gle/LA1hdb4nPgWvjLwW7)
+- **Lecture 6**: 1.28
+  - [[Lecture Notes]](https://2prime.github.io/files/IEMS_402_Note_lec6.pdf)  [[slide]](https://2prime.github.io/files/IEMS402/402lec6.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec6fill.pdf)  [[Feedback of Lecture 6]](https://forms.gle/LA1hdb4nPgWvjLwW7)
   - Influnce function, Fisher Information
   - Cramer-Rao Bound and Con of Unbiased Estimators (James-Stein estimator)
   - Sugessted Reading:
@@ -96,16 +98,20 @@ Here is a review of all the preliminary we'll use in this class:
     - Basu S, Pope P, Feizi S. [Influence functions in deep learning are fragile](https://arxiv.org/abs/2006.14651).
 
 
-- **Lecture 7**: 1.28 [[slide]](https://2prime.github.io/files/IEMS402/402lec7.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec7fill.pdf)  [[Feedback of Lecture 7]](https://forms.gle/SXTE6dHQzAQ6f62A8)
+- **Lecture 7**: 1.28
+  - [[Lecture Notes]](https://2prime.github.io/files/IEMS_402_Note_lec7.pdf)  [[slide]](https://2prime.github.io/files/IEMS402/402lec7.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec7fill.pdf)  [[Feedback of Lecture 7]](https://forms.gle/SXTE6dHQzAQ6f62A8)
   - Concerntration Inequality
   - Application of Concerntration Inequality: Johnson-Lindenstrauss lemma
 
 <font color=red>[Homework 4 DUE]</font>
 
-- **Lecture 8**: 2.2  [[slide]](https://2prime.github.io/files/IEMS402/402lec8.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec8fill.pdf)  [[Feedback of Lecture 8]](https://forms.gle/RtDeBFd6RSVCxs14A)
+- **Lecture 8**: 2.2
+  - [[Lecture Notes]](https://2prime.github.io/files/IEMS_402_Note_lec8.pdf)  [[slide]](https://2prime.github.io/files/IEMS402/402lec8.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec8fill.pdf)  [[Feedback of Lecture 8]](https://forms.gle/RtDeBFd6RSVCxs14A)
   - Generalization via Uniform Bound, Discretization Theorem,
   - Covering Number/Packing Number
-- **Lecture 9**: 2.4 [[slide]](https://2prime.github.io/files/IEMS402/402lec9.pdf) [[annotated slide]](https://drive.google.com/file/d/1DvAq03NYbTWr_6Vx0QrTvrk96rDqizc9/view?usp=sharing) [[Feedback of Lecture 9]](https://forms.gle/sUmDAMFFZtxd4wL39)
+  - Empirical method of Maurey [[note]](https://www.cs.utexas.edu/~ecprice/courses/sublinear/fa16/notes/lec13.pdf)
+- **Lecture 9**: 2.4
+  - [[Lecture Notes]](https://2prime.github.io/files/IEMS_402_Note_lec9.pdf)  [[slide]](https://2prime.github.io/files/IEMS402/402lec9.pdf) [[annotated slide]](https://drive.google.com/file/d/1DvAq03NYbTWr_6Vx0QrTvrk96rDqizc9/view?usp=sharing) [[Feedback of Lecture 9]](https://forms.gle/sUmDAMFFZtxd4wL39)
   - Midterm Review
   - Chaining
   - Symmetrization, Rademacher complexity
