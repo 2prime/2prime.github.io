@@ -44,7 +44,7 @@ I will dedicate 30 mins every week for junior PhD/master/undergraduate students,
 - [Youheng Zhu](https://zhuyouheng.github.io/) (2026-, [[AISTATS2026]](https://openreview.net/forum?id=h0S9W11dM2),[[Sample Complexity of Inference Time Scaling]](https://www.arxiv.org/abs/2602.01381))
 
 ## Undergrads
-- [Zexi Fan](https://francis-fan-create.github.io/) (Peking University): [paper](https://arxiv.org/abs/2504.16172)
+- [Zexi Fan](https://francis-fan-create.github.io/) (Peking University): [[ICLR2026]](https://arxiv.org/abs/2504.16172)
 - [Weizhong Wang]() (Fudan University): A paper on manifold learning, a paper on particle filtering
 
 
