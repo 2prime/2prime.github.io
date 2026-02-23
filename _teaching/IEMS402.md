@@ -139,20 +139,7 @@ Here is a review of all the preliminary we'll use in this class:
     - Kur G, Putterman E, Rakhlin A. [On the variance, admissibility, and stability of empirical risk minimization](https://arxiv.org/abs/2305.18508). Advances in Neural Information Processing Systems, 2024, 36.
     - Kur, Gil, et al. [Minimum Norm Interpolation Meets The Local Theory of Banach Spaces](https://openreview.net/forum?id=G4b32bKnBy). Forty-first International Conference on Machine Learning.
 
-- **Lecture 12**: 2.18  [[annotated note]](https://2prime.github.io/files/IEMS402/rkhs1.pdf) [[feedback]](https://forms.gle/t9asn9SxcDj3bR9w6) [[code for RKHS]](https://2prime.github.io/files/IEMS402/RKHS_IEMS402.pdf)
-  - Reproducing Kernel Hilbert Space 1
-  - Suggested Reading:
-<font color=red>[Homework 6 DUE]</font>
-
-- **Lecture 13**: 2.23  [[annotated note]](https://2prime.github.io/files/IEMS402/rkhs2.pdf) [[feedback]](https://forms.gle/t9asn9SxcDj3bR9w6)
-  - Reproducing Kernel Hilbert Space 2
-  - Advanced Reading:
-    - Muandet K, Fukumizu K, Sriperumbudur B, et al. Kernel mean embedding of distributions: A review and beyond. Foundations and Trends® in Machine Learning, 2017, 10(1-2): 1-141.
-    - Unser M. A representer theorem for deep neural networks[J]. Journal of Machine Learning Research, 2019, 20(110): 1-30.
-    - Haas M, Holzmüller D, Luxburg U, et al. Mind the spikes: Benign overfitting of kernels and neural networks in fixed dimension[J]. Advances in Neural Information Processing Systems, 2024, 36.
-    - Schölpple M, Steinwart I. [Which Spaces can be Embedded in Reproducing Kernel Hilbert Spaces?](https://arxiv.org/abs/2312.14711) arXiv preprint arXiv:2312.14711, 2023.
-    - Lu Y, Lin D, Du Q. [Which Spaces can be Embedded in Lp-type Reproducing Kernel Banach Space? A Characterization via Metric Entropy](https://arxiv.org/abs/2410.11116). arXiv preprint arXiv:2410.11116, 2024.
-- **Lecture 14**: 2.25 [[slide]](https://2prime.github.io/files/IEMS402/402lec13.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec13fill.pdf) [[feedback]](https://forms.gle/poouGmAaZJHAbL2T8) 
+- **Lecture 12**: 2.18  [[slide]](https://2prime.github.io/files/IEMS402/402lec13.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec13fill.pdf) [[feedback]](https://forms.gle/poouGmAaZJHAbL2T8) 
   - Distrbution Shift ([Stanford CS329D Machine Learning Under Distribution Shift](https://thashim.github.io/cs329D/),[Columbia B9145: Topics in Trustworthy AI](https://hsnamkoong.github.io/assets/html/b9145/index.html))
   - Distributionally Robust Optimization
   - Suggested Reading:
@@ -167,28 +154,9 @@ Here is a review of all the preliminary we'll use in this class:
     - Byrd J, Lipton Z. What is the effect of importance weighting in deep learning?[C]//International conference on machine learning. PMLR, 2019: 872-881.
     - Lu Y, Ji W, Izzo Z, et al. Importance tempering: Group robustness for overparameterized models[J]. arXiv preprint arXiv:2209.08745, 2022.
 
+<font color=red>[Homework 6 DUE]</font>
 
-<font color=red>[Homework 7 DUE]</font>
-
-- **Lecture ??**: 3.2 Skip due to SIAM CSE.
-
-- **Lecture 15**: 3.3 [[slide]](https://2prime.github.io/files/IEMS402/402lec14.pdf)  [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec14fill.pdf)
-  - Deep Learning Theory:  ([LTFP] Section 12.1 12.3, 12.5)
-    - Neural Tagent Kernel
-    - Mean-field Limit of Neural Network
-    - large margin implicit bias
-  - Suggested Reading:
-    -  Bach F. [Breaking the curse of dimensionality with convex neural networks](https://arxiv.org/abs/1412.8690). Journal of Machine Learning Research, 2017, 18(19): 1-53.
-    -  Chizat L, Oyallon E, Bach F. [On lazy training in differentiable programming](https://arxiv.org/abs/1812.07956). Advances in neural information processing systems, 2019, 32.
-  - Advanced Reading:
-    - Chizat L, Bach F. [On the global convergence of gradient descent for over-parameterized models using optimal transport](https://arxiv.org/abs/1805.09545). Advances in neural information processing systems, 2018, 31.
-    - Yang G, Hu E J, Babuschkin I, et al. [Tensor programs v: Tuning large neural networks via zero-shot hyperparameter transfer](https://arxiv.org/abs/2203.03466). arXiv preprint arXiv:2203.03466, 2022.
-      - Hayou S, Ghosh N, Yu B. Lora+: Efficient low rank adaptation of large models. arXiv preprint arXiv:2402.12354, 2024.
-      - Ishikawa S, Karakida R. On the Parameterization of Second-Order Optimization Effective Towards the Infinite Width. arXiv preprint arXiv:2312.12226, 2023.
-
-<font color=red>[Generative AI]</font>
-
-- **Lecture 16**: 3.9 <font color=red>[Advanced Topic]</font> [[note used in class]](https://2prime.github.io/files/IEMS402/ot.pdf) [[note2]](https://people.math.ethz.ch/~afigalli/lecture-notes-pdf/An-introduction-to-optimal-transport-and-Wasserstein-gradient-flows.pdf)
+- **Lecture 13**: 2.22 <font color=red>[Advanced Topic]</font> [[note used in class]](https://2prime.github.io/files/IEMS402/ot.pdf) [[note2]](https://people.math.ethz.ch/~afigalli/lecture-notes-pdf/An-introduction-to-optimal-transport-and-Wasserstein-gradient-flows.pdf)
   - Optimal Transport, Kantorovich Duality
   - Statistics of Optimal Transport and Smoothed Optimal Transport
   - Generative Models: GAN/Diffusion Model
@@ -206,6 +174,39 @@ Here is a review of all the preliminary we'll use in this class:
     - Song Y, Sohl-Dickstein J, Kingma D P, et al. [Score-based generative modeling through stochastic differential equations](https://arxiv.org/abs/2011.13456). arXiv preprint arXiv:2011.13456, 2020.
     - Lipman Y, Chen R T Q, Ben-Hamu H, et al. [Flow matching for generative modeling](https://arxiv.org/abs/2210.02747). arXiv preprint arXiv:2210.02747, 2022.
     - Albergo M S, Boffi N M, Vanden-Eijnden E. [Stochastic interpolants: A unifying framework for flows and diffusions](https://arxiv.org/abs/2303.08797). arXiv preprint arXiv:2303.08797, 2023.
+
+
+- **Lecture 14**: 2.25 Computation in Distribution space and Geneartive AI
+
+
+<font color=red>[Homework 7 DUE]</font>
+
+- **Lecture ??**: 3.2  [[annotated note1]](https://2prime.github.io/files/IEMS402/rkhs1.pdf) [[annotated note2]](https://2prime.github.io/files/IEMS402/rkhs2.pdf) [[feedback]](https://forms.gle/t9asn9SxcDj3bR9w6)
+  - Reproducing Kernel Hilbert Spac
+  - Advanced Reading:
+    - Muandet K, Fukumizu K, Sriperumbudur B, et al. Kernel mean embedding of distributions: A review and beyond. Foundations and Trends® in Machine Learning, 2017, 10(1-2): 1-141.
+    - Unser M. A representer theorem for deep neural networks[J]. Journal of Machine Learning Research, 2019, 20(110): 1-30.
+    - Haas M, Holzmüller D, Luxburg U, et al. Mind the spikes: Benign overfitting of kernels and neural networks in fixed dimension[J]. Advances in Neural Information Processing Systems, 2024, 36.
+    - Schölpple M, Steinwart I. [Which Spaces can be Embedded in Reproducing Kernel Hilbert Spaces?](https://arxiv.org/abs/2312.14711) arXiv preprint arXiv:2312.14711, 2023.
+    - Lu Y, Lin D, Du Q. [Which Spaces can be Embedded in Lp-type Reproducing Kernel Banach Space? A Characterization via Metric Entropy](https://arxiv.org/abs/2410.11116). arXiv preprint arXiv:2410.11116, 2024.
+
+- **Lecture 15**: 3.3 [[slide]](https://2prime.github.io/files/IEMS402/402lec14.pdf)  [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec14fill.pdf)
+  - Deep Learning Theory:  ([LTFP] Section 12.1 12.3, 12.5)
+    - Neural Tagent Kernel
+    - Mean-field Limit of Neural Network
+    - large margin implicit bias
+  - Suggested Reading:
+    -  Bach F. [Breaking the curse of dimensionality with convex neural networks](https://arxiv.org/abs/1412.8690). Journal of Machine Learning Research, 2017, 18(19): 1-53.
+    -  Chizat L, Oyallon E, Bach F. [On lazy training in differentiable programming](https://arxiv.org/abs/1812.07956). Advances in neural information processing systems, 2019, 32.
+  - Advanced Reading:
+    - Chizat L, Bach F. [On the global convergence of gradient descent for over-parameterized models using optimal transport](https://arxiv.org/abs/1805.09545). Advances in neural information processing systems, 2018, 31.
+    - Yang G, Hu E J, Babuschkin I, et al. [Tensor programs v: Tuning large neural networks via zero-shot hyperparameter transfer](https://arxiv.org/abs/2203.03466). arXiv preprint arXiv:2203.03466, 2022.
+      - Hayou S, Ghosh N, Yu B. Lora+: Efficient low rank adaptation of large models. arXiv preprint arXiv:2402.12354, 2024.
+      - Ishikawa S, Karakida R. On the Parameterization of Second-Order Optimization Effective Towards the Infinite Width. arXiv preprint arXiv:2312.12226, 2023.
+
+<font color=red>[Generative AI]</font>
+
+- **Lecture 16**: 3.9
 
 
 - **Lecture 17**: 3.11 <font color=red>[Advanced Topic]</font>
