@@ -181,7 +181,7 @@ Here is a review of all the preliminary we'll use in this class:
 
 <font color=red>[Homework 7 DUE]</font>
 
-- **Lecture ??**: 3.2  [[annotated note1]](https://2prime.github.io/files/IEMS402/rkhs1.pdf) [[annotated note2]](https://2prime.github.io/files/IEMS402/rkhs2.pdf) [[feedback]](https://forms.gle/t9asn9SxcDj3bR9w6)
+- **Lecture 15**: 3.2  [[annotated note1]](https://2prime.github.io/files/IEMS402/rkhs1.pdf) [[annotated note2]](https://2prime.github.io/files/IEMS402/rkhs2.pdf) [[feedback]](https://forms.gle/t9asn9SxcDj3bR9w6)
   - Reproducing Kernel Hilbert Spac
   - Advanced Reading:
     - Muandet K, Fukumizu K, Sriperumbudur B, et al. Kernel mean embedding of distributions: A review and beyond. Foundations and Trends® in Machine Learning, 2017, 10(1-2): 1-141.
@@ -190,7 +190,7 @@ Here is a review of all the preliminary we'll use in this class:
     - Schölpple M, Steinwart I. [Which Spaces can be Embedded in Reproducing Kernel Hilbert Spaces?](https://arxiv.org/abs/2312.14711) arXiv preprint arXiv:2312.14711, 2023.
     - Lu Y, Lin D, Du Q. [Which Spaces can be Embedded in Lp-type Reproducing Kernel Banach Space? A Characterization via Metric Entropy](https://arxiv.org/abs/2410.11116). arXiv preprint arXiv:2410.11116, 2024.
 
-- **Lecture 15**: 3.3 [[slide]](https://2prime.github.io/files/IEMS402/402lec14.pdf)  [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec14fill.pdf)
+- **Lecture 16**: 3.3 [[slide]](https://2prime.github.io/files/IEMS402/402lec14.pdf)  [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec14fill.pdf)
   - Deep Learning Theory:  ([LTFP] Section 12.1 12.3, 12.5)
     - Neural Tagent Kernel
     - Mean-field Limit of Neural Network
@@ -206,10 +206,10 @@ Here is a review of all the preliminary we'll use in this class:
 
 <font color=red>[Generative AI]</font>
 
-- **Lecture 16**: 3.9
+- **Lecture 17**: 3.9
 
 
-- **Lecture 17**: 3.11 <font color=red>[Advanced Topic]</font>
+- **Lecture 18**: 3.11 <font color=red>[Advanced Topic]</font>
   - Reinforcement Learning in Language Model Aligenment
   - Preference Optimization
   - Large Language Model
