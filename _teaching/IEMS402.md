@@ -176,7 +176,7 @@ Here is a review of all the preliminary we'll use in this class:
     - Albergo M S, Boffi N M, Vanden-Eijnden E. [Stochastic interpolants: A unifying framework for flows and diffusions](https://arxiv.org/abs/2303.08797). arXiv preprint arXiv:2303.08797, 2023.
 
 
-- **Lecture 14**: 2.25 Computation in Distribution space and Geneartive AI
+- **Lecture 14**: 2.25 Computation in Distribution space and Geneartive AI [[lecture note]](https://2prime.github.io/files/IEMS402/particlesystem.pdf)
 
 
 <font color=red>[Homework 7 DUE]</font>
