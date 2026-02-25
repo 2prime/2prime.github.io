@@ -182,7 +182,7 @@ Here is a review of all the preliminary we'll use in this class:
 <font color=red>[Homework 7 DUE]</font>
 
 - **Lecture 15**: 3.2  [[annotated note1]](https://2prime.github.io/files/IEMS402/rkhs1.pdf) [[annotated note2]](https://2prime.github.io/files/IEMS402/rkhs2.pdf) [[feedback]](https://forms.gle/t9asn9SxcDj3bR9w6)
-  - Reproducing Kernel Hilbert Spac
+  - Reproducing Kernel Hilbert Space
   - Advanced Reading:
     - Muandet K, Fukumizu K, Sriperumbudur B, et al. Kernel mean embedding of distributions: A review and beyond. Foundations and Trends® in Machine Learning, 2017, 10(1-2): 1-141.
     - Unser M. A representer theorem for deep neural networks[J]. Journal of Machine Learning Research, 2019, 20(110): 1-30.
