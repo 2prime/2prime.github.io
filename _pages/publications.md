@@ -10,7 +10,7 @@ I just list selected publication here. For a full list, you can view on <u><a hr
 
 
 ### Selected Publication
-- Ruihan Xu, Jiajin Li, **Yiping Lu**, [On the Width Scaling of Neural Optimizers Under Matrix Operator Norms I: Row/Column Normalization and Hyperparameter Transfer](https://arxiv.org/abs/2603.09952)
+- Ruihan Xu, Jiajin Li, **Yiping Lu**, [On the Width Scaling of Neural Optimizers Under Matrix Operator Norms I: Row/Column Normalization and Hyperparameter Transfer](https://arxiv.org/abs/2603.09952) [[Slide]](https://2prime.github.io/files/MOGA.pdf)
 
 <mark color='orange'>L-smoothness analysis can infer learning rate transfer. A new row normlaized optimizer.</mark>
 
