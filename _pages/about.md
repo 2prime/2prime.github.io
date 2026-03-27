@@ -37,10 +37,10 @@ My lab <a href="https://scale-lab-northwestern.github.io/">Homepage</a> is onlin
 I am a tenure-track assistant professor at  [Industrial Engineering & Management Science](https://www.mccormick.northwestern.edu/industrial/) and [Engineering Sciences & Applied Mathematics](https://www.mccormick.northwestern.edu/applied-math/) (by courtesy), Northwestern University. Previously, I worked at [Courant Institute of Mathematical Sciences](https://cims.nyu.edu/dynamic/), New York University as a Courant instructor for one year. I received my Ph.D. degree in applied math from Stanford University in 2023 and my Bachelor’s degree in applied math from Peking University in 2019. The long-term goal of Yiping's research is to develop a hybrid scientific research discipline that combines <mark color='orange'>domain knowledge</mark> (differential equation, stochastic process, control,...), <mark color='orange'>machine learning</mark> and <mark color='orange'>(randomized) experiments</mark>. To this end, Yiping and his group are working on an interdisciplinary research approach across probability and statistics, machine learning, numerical algorithms, control theory, signal processing/inverse problem, and operations research. Yiping is among the first to work at the interface of deep learning and differential equation. Yiping was a recipient of the Conference on Parsimony and Learning (CPAL) Rising Star Award in 2024, the Rising Star in Data Science from the University of Chicago in 2022, the Stanford Interdisciplinary Graduate Fellowship and the SenseTime Scholarship in 2021 for undergraduates in AI in 2019. Yiping also served as Area Chair for top machine learning conference such as ICML, Neurips, ICLR and AISTATS.
 
 > Recent Projects:
-> - First principle of the recent [MUON](https://github.com/MoonshotAI/Moonlight) optimizer.
-> - Theory-inspired and Physics-Informed Inference Time Scaling
-> - Hybrid numercial analysis and ML applications
-> - Statistical analysis of Scaling law
+> - First principle of the recent [MUON](https://github.com/MoonshotAI/Moonlight) optimizer. [[Slide]](https://2prime.github.io/files/MOGA.pdf)
+> - [Theory-inspired](https://arxiv.org/abs/2602.01381) and [Physics-Informed](https://arxiv.org/abs/2504.16172) Inference Time Scaling, with application in Diffusion model
+> - Hybrid numercial analysis and ML applications [[slide]](https://2prime.github.io/files/debiasandprecondition.pdf)
+> - Statistical analysis of Scaling law [[slide]](https://2prime.github.io/files/howtoscaleSCiML.pdf)
 > - Multiscale Structure of Gradient Descent
 > - LLM agents for Math 
 
