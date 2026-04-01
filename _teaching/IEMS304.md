@@ -24,9 +24,9 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 ## Logistics
 **Time and Location:** Monday, Wednesday and Friday, 9.00 A.M.- 9.50 A.M. Tech L251
 
-**Office Hour:** Monday 10 A.M. Tech M237
+**Office Hour:** Monday 2 P.M. Tech M237
 
-**TA Office Hour:**
+**TA Office Hour:** Friday 4 P.M. Tech C135
 
 **ChatGPT Tutor:** The link here provides a Large Language Model agents that is specifically trained for this course.
 
@@ -41,7 +41,7 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 - 229: [[Stanford CS229 Lecture Note]](https://cs229.stanford.edu/main_notes.pdf)
   
 ###  Lecture 1: Introduction to Statistical Learning
-(4.1,4.2,4.4) [[Feedback Form]](https://forms.gle/jfDxyZF5E2TD8T3i6)
+(3.31,4.1,4.3) [[Feedback Form]](https://forms.gle/jfDxyZF5E2TD8T3i6)
 
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec1.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS304/IEMS304lec1filled.pdf), **Reference**: ISL Section 2
 - Logistics
@@ -53,14 +53,14 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
   - [[blog on generative models]](https://oecs.mit.edu/pub/oye8m8nz/release/4)
   - [[bias-variance trade-off]](https://mlu-explain.github.io/bias-variance/)
 
-#### Lab 1: Statistical Review  (4.4)
+#### Lab 1: Statistical Review  (4.3)
 **Reference:** [[Note]](https://2prime.github.io/files/IEMS304/IEMS304ReferenceGuide.pdf)
 
-#### Homework 1: (Due:4.11)
+#### Homework 1: (Due:4.10)
 Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework1.pdf), [[latex]](https://www.overleaf.com/read/hrjdgxcbrxkw#3c9a85), Data: [[miles.csv]](https://drive.google.com/file/d/1RHTCfHUYgMXP5uzeGqr53H9Hq4eZ2wJL/view?usp=sharing)
 
 ###  Lecture 2: Simple Linear Regression
-(4.7,4.9,4.11)[[Feedback Form]](https://forms.gle/ES25pNxWpWy5LzUM9)
+(4.6,4.8,4.10)[[Feedback Form]](https://forms.gle/ES25pNxWpWy5LzUM9)
 
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec2.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS304/IEMS304lec2filled.pdf), [[additional note on math]](https://2prime.github.io/files/IEMS304/simplelinearregression.pdf) 
 
@@ -71,10 +71,10 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework1.pdf), 
 - log likelihood, logistic regression
 - Gradient descent and Newton methods
 
-#### Lab 2: Linear Algebra Review (4.11)
+#### Lab 2: Linear Algebra Review (4.10)
 **Slide**: [[pdf]](https://cs229.stanford.edu/notes2022fall/linalg.pdf)
 
-#### Homework 2: (Due:4.18)
+#### Homework 2: (Due:4.17)
 Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework2.pdf), [[latex]](https://www.overleaf.com/read/sfpcfntxkbzx#90d554), 
 
 ###  Lecture 3: Multiple Linear Regression
