@@ -90,11 +90,12 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework2.pdf), 
 -  Residual Diagnostics
 **Reading**:
 - [[Linear Regression]](https://mlu-explain.github.io/linear-regression/)
-
-### Midterm 1 (4.21)
+  
+### Midterm 1 (4.24)
 - Taxonomy of Learning, Bias and Variance Trade-off
 - Optimization
 - Linear Regression and Statistical Inference
+
 
 #### Homework 3: (Due:5.2)
 Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework3.pdf), [[latex]](https://www.overleaf.com/read/krrjpgbfmfkt#6a9b05), [[data]](https://2prime.github.io/files/IEMS304/HW2_data.xls)
@@ -103,11 +104,6 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework3.pdf), 
 #### Lab 3: Linear Regression
 (5.2)
 
-
-### Midterm 2 (5.09)
-- Linear Regression
-- Model Selection
-- Shrinkage
 
 
 
@@ -133,6 +129,12 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework5.pdf) [
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec5.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS304/IEMS304lec5filled.pdf), **Reference**: ISL Section 2.2,3.5,4.6.5, 5.2,5.3,7
 - K-Nearest Neighboor, nonlinear regression
 - Bootstrap and Conformal Prediction [[note]](https://www.stat.berkeley.edu/~ryantibs/statlearn-s23/lectures/conformal.pdf)
+
+- ### Midterm 2 (5.15)
+- Linear Regression
+- Model Selection
+- Shrinkage
+
 
 #### Homework 6: (Due: 5.31)
 Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework6.pdf) [[latex]](https://www.overleaf.com/read/jmczjqssqywq#38a373) [[data HW6]](https://2prime.github.io/files/IEMS304/HW6_data.csv) [[spambase.txt]](https://2prime.github.io/files/IEMS304/spambase.txt) [[spambase_info.txt]](https://2prime.github.io/files/IEMS304/spambase_info.txt)
