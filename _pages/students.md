@@ -44,10 +44,9 @@ I will dedicate 30 mins every week for junior PhD/master/undergraduate students,
 - [Youheng Zhu](https://zhuyouheng.github.io/) (2026-, [[AISTATS2026]](https://openreview.net/forum?id=h0S9W11dM2),[[Sample Complexity of Inference Time Scaling]](https://www.arxiv.org/abs/2602.01381))
 
 ## Undergrads
-- [Zexi Fan](https://francis-fan-create.github.io/) (Peking University): [[ICLR2026]](https://arxiv.org/abs/2504.16172)
-- [Weizhong Wang]() (Fudan University): A paper on manifold learning, a paper on particle filtering
-
-
+- Alex Yi (Northwestern)
+- Zhaoyan Chen (FDU)
+- Max Wong (UChicago)
 
 ## Former Advisees
 
@@ -56,7 +55,11 @@ I will dedicate 30 mins every week for junior PhD/master/undergraduate students,
 - [Jikai Jin](https://scholar.google.com/citations?user=xQqZt2AAAAAJ&hl=en) (PKU -> Stanford ICME Ph.D, minmax optimality of kernel operator learning, [paper](https://arxiv.org/abs/2209.14430))
 - [Kaizhao Liu](https://drzfct.github.io/) (PKU-> MIT Math Ph.D, [paper](https://arxiv.org/abs/2404.19145)),
 - [Hounam Wong](https://openreview.net/profile?id=~Honam_Wong1) (HKUST->Upenn CS Ph.D, [paper](https://arxiv.org/abs/2406.09194))
-- Ruihan Xu (SJTU->UChicago, [paper](https://arxiv.org/abs/2410.11115),[paper](https://arxiv.org/abs/2502.07993))
+- [Ruihan Xu](https://ruihanxx.github.io/) (SJTU->UChicago Data Sceicen Ph.D, [paper](https://arxiv.org/abs/2410.11115),[paper](https://arxiv.org/abs/2502.07993))
+- [Weizhong Wan]() (FDU->Columbia IEOR Ph.D)
+- [Yifang Chen]() (NYU->UChicago Data Sceicen Ph.D)
+- [Zexi Fan](https://francis-fan-create.github.io/) (PKU->Columbia Applied Math Ph.D): [[ICLR2026]](https://arxiv.org/abs/2504.16172)
+- [Chenyang Wang]() (PKU->Northwestern IEMS Ph.D): [[ICML 2026]]()
 
 
 <!-- 2024: , -->
