@@ -82,8 +82,8 @@ My research aims to build a general theory and algorithmic framework for scalabl
 > 1. <font color='red'>[*New*]</font> Ruihan Xu, Jiajin Li, **Yiping Lu** On the Width Scaling of Neural Optimizers Under Matrix Operator Norms I: Row/Column Normalization and Hyperparameter Transfer
 
 ## Theory and Algorithms for Inference Time Scaling
-> 1. <font color='red'>[*New*]</font> JChenyang Wang, Weizhong Wang, Yinuo Ren, Jose Blanchet, **Yiping Lu** Simple Unbiased Derivative Free Inference-Time Scaling for Diffusion Models via Sequential Monte Carlo on Path Measures (ICML 2026)
-> 2. <font color='red'>[*New*]</font> JYouheng Zhu, **Yiping Lu** On the Power of (Approximate) Reward Models for Inference-Time Scaling (ICML 2026)
+> 1. <font color='red'>[*New*]</font> Chenyang Wang, Weizhong Wang, Yinuo Ren, Jose Blanchet, **Yiping Lu** Simple Unbiased Derivative Free Inference-Time Scaling for Diffusion Models via Sequential Monte Carlo on Path Measures (ICML 2026)
+> 2. <font color='red'>[*New*]</font>  Youheng Zhu, **Yiping Lu** On the Power of (Approximate) Reward Models for Inference-Time Scaling (ICML 2026)
 > 3. Lifu Wei, Yinuo Ren, Naichen Shi, **Yiping Lu** SURGE:Unbiased Data Assimilation for Diffusion Model via Particle Filtering (ICML 2026)
 > 4. <font color='red'>[*New*]</font> JZexi Fan, Yan Sun, Shihao Yang, **Yiping Lu** Physics-Informed Inference Time Scaling for Solving High-Dimensional PDE via Defect Correction (ICLR 2026)
 
