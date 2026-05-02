@@ -39,30 +39,19 @@ I am a tenure-track assistant professor at  [Industrial Engineering & Management
 > Recent Projects:
 > - First principle of the recent [MUON](https://github.com/MoonshotAI/Moonlight) optimizer. [[Slide]](https://2prime.github.io/files/MOGA.pdf)
 > - [Theory-inspired](https://arxiv.org/abs/2602.01381) and [Physics-Informed](https://arxiv.org/abs/2504.16172) Inference Time Scaling, with application in Diffusion model
-> - Hybrid numercial analysis and ML applications [[slide]](https://2prime.github.io/files/debiasandprecondition.pdf)
+> - Hybrid numercial analysis and ML applications in scientific applications [[slide]](https://2prime.github.io/files/debiasandprecondition.pdf)
 > - Statistical analysis of Scaling law [[slide]](https://2prime.github.io/files/howtoscaleSCiML.pdf)
 > - Multiscale Structure of Gradient Descent
 > - LLM agents for Math 
 
-> **Research Interest**:
-> - Statistical Learning Theory, Deep Learning Theory
-> - Functional analysis, Kernel Operator and Approximation Theory
-> - Stochastic Simulation, Monte Carlo Methods, Stochastic Control, Optimal Transport
-> - Robust Machine Learning, Uncertainty estimation, Model calibration
-> - *Application:*
->   - Scientific Machine Learning, AI4Science  (Scaling law, Hyrbid methods, ...) 
->   - Diffusion Process (Simulation free methods for control)
->   - Foundation models
 
 > **Advertisement** I am happy to host (remote) undergraduate/graduate visitors and looking for Ph.D. Students and Postdocs. Prospective Students see [here](https://2prime.github.io/students/). Summer Intern for 2025 can see [here](https://2prime.github.io/files/SummerIntern_Yiping.pdf). You can also find information about my research [here](https://2prime.github.io/research/) 
 
 **To anyone:** I would appreciate [(anonymous) feedback](https://docs.google.com/forms/d/e/1FAIpQLScCWSzTQGMVKhxDVSiCopYD740Txm-cMoxIh-dg08FcRKT-8Q/viewform?usp=sf_link) about anything!
 
 
-
 Here's my [<mark color='orange'>research statement</mark>](https://2prime.github.io/files/rs.pdf) and my latest [CV](https://www.overleaf.com/read/rmcykgwmwbcq#cbe18b).
 
-**Fine-grained research interest:** Scientific Machine Learning (AI4Science), Stochastic Simulation, Machine Learning Theory (RKHS, Empirical Process, Deep Learning), Inverse Problem, Robust Machine Learning
 
 **Contact**: yiping [dot] lu [at] northwestern [dot] edu
 
@@ -72,11 +61,39 @@ Here's my [<mark color='orange'>research statement</mark>](https://2prime.github
 
 # Research Interest and Highlights
 
+My research focuses on scaling laws in machine learning—understanding **when, why, and how machine-learning systems improve predictably as we scale resources, including data, model size, optimization effort, and inference-time computation.**
+
+In large language models, scaling has become a remarkably reliable principle: performance improves smoothly as we increase compute and data, often following simple power laws. This predictability fundamentally changes how we design learning systems, making it possible to forecast performance and allocate resources optimally. However, this kind of reliable scaling behavior is far from universal. In many settings—especially when models interact with complex structure, constraints, or long-horizon dynamics—scaling breaks down: optimization becomes unstable, hyperparameters stop transferring across model sizes, and accuracy plateaus despite increased compute.
+
+My research aims to build a general theory and algorithmic framework for scalable learning, in which increased resources provably and reliably lead to better performance. Rather than treating scaling as an empirical phenomenon, I study it as a principled question of **optimization geometry, statistical complexity, and resource allocation**.
+
+**1. Why Do Some Models Scale—and Others Don’t?** A central question in my work is understanding **what fundamentally limits scaling**. I study how approximation error, optimization difficulty, and statistical uncertainty interact as models grow wider, deeper, or are trained with more data. This includes identifying error floors, characterizing regimes where scaling laws hold, and explaining why naive scaling often fails. The goal is to move beyond ad-hoc heuristics and develop predictive scaling theories that apply across model classes.
+
+
+
+**2. Scaling-Aware Optimization and Geometry** As model size increases, the geometry of the loss landscape changes in ways that strongly affect optimization. Learning rates and optimizer hyperparameters that work well at small scale often fail at large scale. I study optimization from a **geometric perspective**, viewing modern optimizers as instances of steepest descent under different norms. This leads to **new scaling-aware optimization methods** whose convergence behavior and hyperparameter choices remain stable as width and depth increase. Ultimately, I aim to design optimizers whose performance scales smoothly with model size, rather than deteriorating.
+
+
+
+**3. Inference-Time Scaling: Trading Compute for Accuracy** Beyond training-time scaling, I am particularly interested in inference-time scaling—improving model performance by allocating more computation after training, without changing model parameters. Inspired by ideas from Monte Carlo simulation, control, and sequential decision-making, my work develops methods that use additional **inference-time compute to detect, correct, and reduce model error on the fly**. This establishes inference-time computation as a first-class scaling axis, alongside data and model size, and provides a principled way to trade compute for reliability.
+
+
+## Optimizer for Large Scale Language Models
+> 1. <font color='red'>[*New*]</font> Ruihan Xu, Jiajin Li, **Yiping Lu** On the Width Scaling of Neural Optimizers Under Matrix Operator Norms I: Row/Column Normalization and Hyperparameter Transfer
+
+## Theory and Algorithms for Inference Time Scaling
+> 1. <font color='red'>[*New*]</font> JChenyang Wang, Weizhong Wang, Yinuo Ren, Jose Blanchet, **Yiping Lu** Simple Unbiased Derivative Free Inference-Time Scaling for Diffusion Models via Sequential Monte Carlo on Path Measures (ICML 2026)
+> 2. <font color='red'>[*New*]</font> JYouheng Zhu, **Yiping Lu** On the Power of (Approximate) Reward Models for Inference-Time Scaling (ICML 2026)
+> 3. Lifu Wei, Yinuo Ren, Naichen Shi, **Yiping Lu** SURGE:Unbiased Data Assimilation for Diffusion Model via Particle Filtering (ICML 2026)
+> 4. <font color='red'>[*New*]</font> JZexi Fan, Yan Sun, Shihao Yang, **Yiping Lu** Physics-Informed Inference Time Scaling for Solving High-Dimensional PDE via Defect Correction (ICLR 2026)
+
+
 
 ## Debiasing Machine Learning Algorithm for Scientific Computing
 
-> 1. Kaizhao Liu, Jose Blanchet, Lexing Ying , Yiping Lu. Orthogonal Bootstrap: Efficient Simulation of Input Uncertainty, The Forty-first International Conference on Machine Learning (ICML), 2024.
-> 2. <font color='red'>[*New*]</font>  Jose Blanchet, Haoxuan Chen, **Yiping Lu**, Lexing Ying. When can Regression-Adjusted Control Variates Help? Rare Events, Sobolev Embedding and Minimax Optimality (alphabetical order) Neurips 2023
+> 1.Zexi Fan, Yan Sun, Shihao Yang, **Yiping Lu** Physics-Informed Inference Time Scaling for Solving High-Dimensional PDE via Defect Correction (ICLR 2026)
+> 2. Kaizhao Liu, Jose Blanchet, Lexing Ying , Yiping Lu. Orthogonal Bootstrap: Efficient Simulation of Input Uncertainty, The Forty-first International Conference on Machine Learning (ICML), 2024.
+> 3. <font color='red'>[*New*]</font>  Jose Blanchet, Haoxuan Chen, **Yiping Lu**, Lexing Ying. When can Regression-Adjusted Control Variates Help? Rare Events, Sobolev Embedding and Minimax Optimality (alphabetical order) Neurips 2023
 
 ## Experiment Design
 
@@ -86,8 +103,8 @@ Here's my [<mark color='orange'>research statement</mark>](https://2prime.github
 ## Algorithms and Statistics of Scientific Machine Learning
 
 
->  1.<font color='red'>[*New*]</font> Jikai Jin, **Yiping Lu**, Jose Blanchet, Lexing Ying Minimax Optimal Kernel Operator Learning via Multilevel Training ICLR 2023
->   
+>  1.Sifan Wang, Shawn Koohy,**Yiping Lu**, Paris Perdikaris When PINNs Go Wrong: Pseudo-Time Stepping Against Spurious Solutions 
+>  2.<font color='red'>[*New*]</font> Jikai Jin, **Yiping Lu**, Jose Blanchet, Lexing Ying Minimax Optimal Kernel Operator Learning via Multilevel Training ICLR 2023 
 >  2.**Yiping Lu**, Haoxuan Chen, Jianfeng Lu, Lexing Ying, Jose Blanchet. Machine Learning For Elliptic PDEs: Fast Rate Generalization Bound, Neural Scaling Law and Minimax Optimality. International Conference on Learning Representations(ICLR) 2022
 >
 >  3.**Yiping Lu**, Jose Blanchet,Lexing Ying. Sobolev Acceleration and Statistical Optimality for Learning Elliptic Equations via Gradient Descent. Neurips 2022
