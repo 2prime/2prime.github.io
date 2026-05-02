@@ -14,6 +14,11 @@ I just list selected publication here. For a full list, you can view on <u><a hr
 
 <mark color='orange'>L-smoothness analysis can infer learning rate transfer. A new row normlaized optimizer.</mark>
 
+- Chenyang Wang, Weizhong Wang, Yinuo Ren, Jose Blanchet, Yiping Lu Simple Unbiased Derivative Free Inference-Time Scaling for Diffusion Models via Sequential Monte Carlo on Path Measures (ICML 2026)
+
+
+- Youheng Zhu, Yiping Lu On the Power of (Approximate) Reward Models for Inference-Time Scaling (ICML 2026)
+
 - Jasen Lai, Sifan Wang, Chunmei Wang, **Yiping Lu**, Unveiling the Scaling Law of PINNs under Non-Euclidean Geometry, *submitted, 2025*
 
 <mark color='orange'>The first algorithm that enables a predictable scaling law for PINNs.</mark>
