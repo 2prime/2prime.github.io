@@ -168,7 +168,9 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework6.pdf) [
 #### Lab 6: Unsupervised Learning
 (5.30)
 
+### Lecture 8: GenAI
 
+**Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/genai.pdf)
 
 ### Final Review 
 (6.8)
