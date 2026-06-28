@@ -30,7 +30,6 @@ Simulation-Calibrated Scientific Machine Learning](https://arxiv.org/abs/2504.16
 
 - Ruihan Xu, **Yiping Lu**. [What is a Sketch-and-Precondition Derivation for Low-Rank Approximation? Inverse Power Error or Inverse Power Estimation?](https://arxiv.org/abs/2502.07993), *submitted, 2025* [[slides]](https://2prime.github.io/files/sketchandprecondition.pdf)
 - Ruihan Xu, **Yiping Lu**. [Randomized Iterative Solver as Iterative Refinement: A Simple Fix Towards Backward Stability](https://2prime.github.io/files/SIRR.pdf), *Artificial Intelligence and Statistics (AISTATS), 2025*
-- **Yiping Lu**, Daozhe Lin, Qiang Du. [Which Spaces can be Embedded in $L_p$-type Reproducing Kernel Banach Space? A Characterization via Metric Entropy](https://2prime.github.io/files/EmbeddingRKBS_preprint.pdf), *Submitted*
 - **Yiping Lu**, Jiajin Li, Lexing Ying, Jose Blancet. [Synthetic Principal Component Design: Fast Covariate Balancing with Synthetic Controls](https://arxiv.org/pdf/2211.15241),  40th Conference on Uncertainty in Artificial Intelligence (UAI 2024) <font color='red'>[Oral]</font>.
   
 <mark color='orange'>Links covariate balancing in causal inference with phase retrival in CroEM. Algorithmic idea is clustering is the largest eigenvector that separates data. The smallest eigenvector can help you to separate data into to similar group thus can be used for causal inference!</mark>
