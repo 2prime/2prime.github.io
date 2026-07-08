@@ -11,6 +11,7 @@ I just list selected publication here. For a full list, you can view on <u><a hr
 
 ### Selected Publication
 - **Yiping Lu**, Youheng Zhu, [An AI-Assisted Solution to the Signed BAR Conjecture: Uniqueness in the Harrison--Reiman Class and a Completely-S Class Obstruction](https://arxiv.org/abs/2607.03639)
+
 <mark color='orange'>We solved a 35 year old open problem with the help of GPT 5.5 pro. We construct counter examples for BAR uniquness in completely S class and proved the BAR uniquness in the HR class.</mark>
 
 - Ruihan Xu, Jiajin Li, **Yiping Lu**, [On the Width Scaling of Neural Optimizers Under Matrix Operator Norms I: Row/Column Normalization and Hyperparameter Transfer](https://arxiv.org/abs/2603.09952) [[Slide]](https://2prime.github.io/files/MOGA.pdf)
