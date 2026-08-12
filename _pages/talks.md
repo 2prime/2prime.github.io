@@ -5,6 +5,7 @@ permalink: /talks/
 author_profile: true
 ---
 
+- Machine learning theory and Math in the era of infinity GPUs [[Slide]](https://2prime.github.io/files/infGPU.pdf)
 
 ## Scientific Machine Learning
 -  **<font color='red'>[*New*]</font> ** Dimension Depednency of Neural Optimizers [[Slide]](https://2prime.github.io/files/MOGA.pdf)
