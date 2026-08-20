@@ -10,6 +10,9 @@ I just list selected publication here. For a full list, you can view on <u><a hr
 
 
 ### Selected Publication
+- **Yiping Lu**, [Quadratic mixing for the Lee--Sidford Dikin walk]()
+
+
 - Youheng zhu, **Yiping Lu**, [High-Dimensional Interpolators Can Be Fragile: Heavy Tails and High-Dimensional Large Deviations](https://arxiv.org/html/2607.09547v1)
 
 <mark color='orange'>We show that while high-dimensional interpolators are often benign on average, they remain fragile due to heavy-tailed risks and slower large deviation rates.
