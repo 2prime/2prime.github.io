@@ -32,7 +32,7 @@ description: "Selected publications by Yiping Lu in machine learning, scientific
         <button class="filter-button" type="button" data-filter="sciml" aria-pressed="false">Scientific ML</button>
         <button class="filter-button" type="button" data-filter="optimization" aria-pressed="false">Optimization</button>
         <button class="filter-button" type="button" data-filter="probability" aria-pressed="false">Probability</button>
-        <button class="filter-button" type="button" data-filter="robust" aria-pressed="false">Robustness</button>
+        <button class="filter-button" type="button" data-filter="robust" aria-pressed="false">ML Theory</button>
       </div>
     </div>
 
@@ -224,7 +224,7 @@ description: "Selected publications by Yiping Lu in machine learning, scientific
           <p class="paper-authors">Wenlong Ji, <strong>Yiping Lu</strong>, Yiliang Zhang, Zhun Deng, Weijie J. Su</p>
           <p class="paper-note">Optimization geometry behind neural collapse.</p>
         </div>
-        <span class="paper-tag">Robustness</span>
+        <span class="paper-tag">ML Theory</span>
       </article>
 
       <article class="paper" data-category="robust">
@@ -234,7 +234,7 @@ description: "Selected publications by Yiping Lu in machine learning, scientific
           <p class="paper-authors"><strong>Yiping Lu</strong>, Wenlong Ji, Zachary Izzo, Lexing Ying</p>
           <p class="paper-note">Learning under group imbalance in overparameterized models.</p>
         </div>
-        <span class="paper-tag">Robustness</span>
+        <span class="paper-tag">ML Theory</span>
       </article>
 
       <article class="paper" data-category="optimization sciml">
@@ -254,7 +254,7 @@ description: "Selected publications by Yiping Lu in machine learning, scientific
           <p class="paper-authors">Dinghuai Zhang, Tianyuan Zhang, <strong>Yiping Lu</strong>, Zhanxing Zhu, Bin Dong</p>
           <p class="paper-note">Control inspired acceleration for adversarial training.</p>
         </div>
-        <span class="paper-tag">Robustness</span>
+        <span class="paper-tag">ML Theory</span>
       </article>
 
       <article class="paper" data-category="sciml">
