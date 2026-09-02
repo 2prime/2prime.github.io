@@ -64,32 +64,36 @@ description: "Current students, supervised undergraduate researchers, thesis com
       </div>
       <div class="student-paper-list" aria-label="Research papers">
         <a class="student-paper-row" href="https://arxiv.org/abs/2603.03191" aria-label="Read A Covering Framework for Offline POMDPs Learning using Belief Space Metric">
-          <span class="student-paper-meta">AISTATS 2026</span>
+          <span class="student-paper-index">01</span>
           <span class="student-paper-content">
+            <span class="student-paper-meta">AISTATS 2026</span>
             <strong>Offline POMDP Learning</strong>
             <small>Uses belief space covering to mitigate the curse of horizon and memory in off policy evaluation.</small>
           </span>
           <span class="student-paper-arrow" aria-hidden="true">↗</span>
         </a>
         <a class="student-paper-row" href="https://arxiv.org/abs/2602.01381" aria-label="Read On the Power of Approximate Reward Models for Inference Time Scaling">
-          <span class="student-paper-meta">ICML 2026</span>
+          <span class="student-paper-index">02</span>
           <span class="student-paper-content">
+            <span class="student-paper-meta">ICML 2026</span>
             <strong>LLM Reasoning Theory</strong>
             <small>Shows when approximate reward models reduce the complexity of inference time scaling through sequential Monte Carlo.</small>
           </span>
           <span class="student-paper-arrow" aria-hidden="true">↗</span>
         </a>
         <a class="student-paper-row" href="https://arxiv.org/abs/2607.03639" aria-label="Read An AI Assisted Solution to the Signed BAR Conjecture">
-          <span class="student-paper-meta">AI for Mathematics</span>
+          <span class="student-paper-index">03</span>
           <span class="student-paper-content">
+            <span class="student-paper-meta">AI for Mathematics</span>
             <strong>Stochastic Networks and the Signed BAR Conjecture</strong>
             <small>Combines algebraic structure with AI assisted search to prove uniqueness and construct an obstruction.</small>
           </span>
           <span class="student-paper-arrow" aria-hidden="true">↗</span>
         </a>
         <a class="student-paper-row" href="https://arxiv.org/abs/2607.09547" aria-label="Read High Dimensional Interpolators Can Be Fragile">
-          <span class="student-paper-meta">High Dimensional Probability</span>
+          <span class="student-paper-index">04</span>
           <span class="student-paper-content">
+            <span class="student-paper-meta">High Dimensional Probability</span>
             <strong>Large Deviations and Heavy Tail Fragility</strong>
             <small>Develops a large deviation view of high dimensional interpolators beyond benign average case behavior.</small>
           </span>
