@@ -10,7 +10,32 @@
     <link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml">
     <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
     <script defer src="{{ '/assets/js/site.js' | relative_url }}"></script>
+    {% if page.mathjax %}
+      <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          TeX: { equationNumbers: { autoNumber: "all" } },
+          tex2jax: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            processEscapes: true
+          }
+        });
+      </script>
+      <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML"></script>
+    {% endif %}
     <script type="application/ld+json">
+      {% if page.collection == 'teaching' %}
+      {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": {{ page.course_title | default: page.title | jsonify }},
+        "description": {{ page.description | jsonify }},
+        "url": {{ page.url | absolute_url | jsonify }},
+        "provider": {
+          "@type": "CollegeOrUniversity",
+          "name": {{ page.venue | jsonify }}
+        }
+      }
+      {% else %}
       {
         "@context": "https://schema.org",
         "@type": "Person",
@@ -30,6 +55,7 @@
           "https://www.researchgate.net/profile/Yiping-Lu-5"
         ]
       }
+      {% endif %}
     </script>
   </head>
   <body class="page-{{ page.nav_key | default: 'home' }}">

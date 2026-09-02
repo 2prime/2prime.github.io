@@ -215,10 +215,12 @@ defaults:
       path: ""
       type: teaching
     values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
+      layout: course
+      nav_key: teaching
+      author_profile: false
+      share: false
+      comments: false
+      mathjax: true
   # _publications
   - scope:
       path: ""

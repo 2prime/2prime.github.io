@@ -1,0 +1,59 @@
+---
+layout: modern
+---
+
+<header class="course-hero">
+  <div class="shell">
+    <a class="course-back" href="{{ '/teaching/' | relative_url }}">← Teaching overview</a>
+    <div class="course-hero-grid">
+      <div class="course-hero-copy">
+        <span class="course-kicker">Course archive{% if page.term %} · {{ page.term }}{% endif %}</span>
+        <h1 id="course-title">{{ page.course_title | default: page.title }}</h1>
+        {% if page.course_code %}<p class="course-code">{{ page.course_code }}</p>{% endif %}
+      </div>
+      <dl class="course-facts">
+        {% if page.venue %}
+          <div>
+            <dt>Institution</dt>
+            <dd>{{ page.venue }}</dd>
+          </div>
+        {% endif %}
+        {% if page.type %}
+          <div>
+            <dt>Level</dt>
+            <dd>{{ page.type }}</dd>
+          </div>
+        {% endif %}
+        {% if page.term %}
+          <div>
+            <dt>Term</dt>
+            <dd>{{ page.term }}</dd>
+          </div>
+        {% endif %}
+        {% if page.location %}
+          <div>
+            <dt>Location</dt>
+            <dd>{{ page.location }}</dd>
+          </div>
+        {% endif %}
+      </dl>
+    </div>
+  </div>
+</header>
+
+<section class="course-section">
+  <div class="shell course-page-grid">
+    <aside class="course-sidebar" aria-label="Course page navigation">
+      <div class="course-sidebar-card">
+        <span class="course-sidebar-label">On this page</span>
+        <nav class="course-toc" aria-label="Course contents">
+          <a href="#course-content">Overview</a>
+        </nav>
+        <a class="course-all-link" href="{{ '/teaching/' | relative_url }}">All courses →</a>
+      </div>
+    </aside>
+    <article class="course-content" id="course-content" aria-labelledby="course-title">
+      {{ content }}
+    </article>
+  </div>
+</section>

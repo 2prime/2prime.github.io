@@ -1,5 +1,9 @@
 ---
 title: "Linear Algebra (MATH-UA 140, NYU)"
+course_title: "Linear Algebra"
+course_code: "MATH-UA 140"
+term: "Spring 2024"
+description: "Course materials for MATH-UA 140 Linear Algebra at NYU Courant, including lecture slides, notes, exercises, and exams."
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2024-linear-algebra
@@ -20,8 +24,7 @@ location: "New York"
 - Apply orthogonal projection to optimization (least-squares) problems;
 - Explore other topics (as time permits).
 
-Logistics
-======
+## Logistics
 
 **Time and Location**: Monday and Wednesday
 -  9:30 - 10:45 at RGSH 203 (Brooklyn) (Midterm: 3/13/2024 in class, Final: Mon 5/13/2024 8:00AM - 10:00AM Tandon, Jacobs Academic Bldg Room 475)
@@ -50,8 +53,7 @@ For longer discussions with TAs and to get help in person, we strongly encourage
 - Problem Sets 10%
 - Exams 70% ( Midterm: 3/13, Final Exam: 5/10(CAS) 5/13(Tandon))
 
-Syllabus
-======
+## Syllabus
 Gilbert Strang's course video: [link](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/video_galleries/video-lectures/)
 
 Cheat Sheet: [[link]](https://www.overleaf.com/read/jjbswyyqvzdx#8803d5), Practice Problem Sets :[[link]](https://web.mit.edu/18.06/www/psets.shtml), Past Exams from MIT: [[link]](https://web.mit.edu/18.06/www/old.shtml)
@@ -112,8 +114,7 @@ Cheat Sheet: [[link]](https://www.overleaf.com/read/jjbswyyqvzdx#8803d5), Practi
   - Tandon Session: Mon 5/13/2024 8:00AM - 10:00AM Tandon, Jacobs Academic Bldg Room 475
   - CAS Session: Fri 05/10/2024 12:00pm-14:00pm 	Cantor Film Center, Room 102
     
-Exams
-======
+## Exams
 - Midterm (3/13) [Morning Session](https://2prime.github.io/files/linear/midterm_16.pdf) [Afternoon Session](https://2prime.github.io/files/linear/midterm_24.pdf) [Makeup Exam](https://2prime.github.io/files/linear/midterm_makeup.pdf) 
 - Final (05/10) [Morning Session](https://2prime.github.io/files/linear/linear_final.pdf) 
 
@@ -123,14 +124,12 @@ Exams
 - [[Simple Note for PCA]](https://2prime.github.io/files/linear/NoteofPCA.pdf) [Another Note on PCA](https://web.mit.edu/18.06/www/Spring17/Statistics-and-PCA.pdf) [[Advanced Reading]](https://www.stat.cmu.edu/~cshalizi/uADA/12/lectures/ch18.pdf)  
 
 
-ChatGPT
-======
+## ChatGPT
 While the use of AI tools to aid in problem-solving is becoming increasingly prevalent, it is important to note that relying solely on AI to complete your homework is not in accordance with the expectations of this course. Submitting AI-generated solutions without proper acknowledgment is a violation of ethical guidelines and academic standards.
 
 I'm collecting questions that Chatgpt/Bard provides wrong answers. If you find one, please report here in [(anonymous) form](https://forms.gle/5CrsQVUfG614DJwGA). 
 
-General Policies
-======
+## General Policies
 
 In general, we do not grant extensions on assignments/exams. There are several exceptions:
 

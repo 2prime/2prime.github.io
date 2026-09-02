@@ -1,5 +1,9 @@
 ---
 title: "Statistical Learning for Data Analysis (IEMS-304, Northwestern)"
+course_title: "Statistical Learning for Data Analysis"
+course_code: "IEMS 304"
+term: "Spring 2026"
+description: "Course materials for IEMS 304 Statistical Learning for Data Analysis at Northwestern University, including lectures, labs, homework, and references."
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2024-SL-Da
@@ -32,7 +36,7 @@ Required undergraduate course on predictive modeling in data science. **Syllabus
 
 **Preliminary**: [[Note]](https://2prime.github.io/files/IEMS304/IEMS304ReferenceGuide.pdf)
  
-## Scheldue:
+## Schedule
 
 [[Cheat Sheet and Sample Exam]](https://www.overleaf.com/read/rbzhmhqxmrdh#5df6dc)
 
@@ -78,7 +82,7 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework1.pdf), 
 Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework2.pdf), [[latex]](https://www.overleaf.com/read/sfpcfntxkbzx#90d554), 
 
 ###  Lecture 3: Multiple Linear Regression
-(4.14,4.16,4.18,4.23,4.25) [[Feedback Form]]()
+(4.14,4.16,4.18,4.23,4.25) *Feedback form not archived*
 
 [[application examples]](https://2prime.github.io/files/IEMS304/linear_regression_code.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS304/linear_regression_code_filled.pdf)
 
@@ -108,7 +112,7 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework3.pdf), 
 
 
 ###  Lecture 4: Model and Variable Selection, Shrinkage, and Multicollinearity
-(4.28,4.30,5.2,5.5)[[Feedback Form]]()
+(4.28,4.30,5.2,5.5) *Feedback form not archived*
 
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec4.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS304/IEMS304lec4filled.pdf), **Reference**: ISL Section 6
 - Model and Variable Selection,
@@ -146,7 +150,7 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework6.pdf) [
 **Cheatsheet**:
 
 ### Lecture 6: Trees and Neural Network
-(5.16,5.19,5.21)[[Feedback Form]]()
+(5.16,5.19,5.21) *Feedback form not archived*
 
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec6.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS304/IEMS304lec6filled.pdf), **Reference**: ISL Section 8.1, 229 Section 7
 - Neural Network
@@ -160,7 +164,7 @@ Homework: [[pdf]](https://2prime.github.io/files/IEMS304/IEMS304homework6.pdf) [
 (5.23)
 
 ###  Lecture 7: Unsupervised Learning
-(5.23,5.26,5.28)[[Feedback Form]]()
+(5.23,5.26,5.28) *Feedback form not archived*
 
 **Slide**:[[pdf]](https://2prime.github.io/files/IEMS304/IEMS304lec8.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS304/IEMS304lec8filled.pdf), **Reference**: ISL Section 10, 229 Section 10, 12
 - $k-$means, Spectral Clustering, PCA
@@ -185,7 +189,4 @@ In general, we do not grant extensions on assignments/exams. There are several e
 - Medical Emergencies: If you are sick and unable to complete an assignment or attend class, please go to University Health Services. For minor illnesses, we expect grace days or our late penalties to provide sufficient accommodation. For medical emergencies (e.g. prolonged hospitalization), students may request an extension afterward by contacting their Student Liaison or Academic Advisor and having them reach out to the instructor on their behalf. Please plan ahead if possible.
 - Family/Personal Emergencies: If you have a family emergency (e.g. death in the family) or a personal emergency (e.g. mental health crisis), please contact your academic adviser or Counseling and Psychological Services (CaPS). In addition to offering support, they will reach out to the instructors for all your courses on your behalf to request an extension.
 - University-Approved Absences: If you are attending an out-of-town university-approved event (e.g. multi-day athletic/academic trip organized by the university), you may request an extension for the duration of the trip. You must provide confirmation of your attendance, usually from a faculty or staff organizer of the event.
-
-
-
 

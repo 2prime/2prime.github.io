@@ -1,5 +1,9 @@
 ---
 title: "Statistical Learning (IEMS-402, Northwestern)"
+course_title: "Statistical Learning"
+course_code: "IEMS 402"
+term: "Winter 2025"
+description: "Course materials for IEMS 402 Statistical Learning at Northwestern University, covering learning theory, modern machine learning, and generative AI."
 collection: teaching
 type: "Graduate course"
 permalink: /teaching/2025-Statistical-Learning
@@ -17,21 +21,19 @@ Required graduate course on mathematical foundations of data science. **Syllabus
 **Office Hour:** 3:30 - 4:30 Monday, M237, but I'll answer question on [campuswire](https://campuswire.com/p/GFA6A52C6) everynight before I go to bed.
 
 
-Objectives:
-======
+## Objectives
 This course provides foundational and advanced concepts in statistical learning theory, essential for analyzing complex data and making informed predictions. Students will delve into both asymptotic and non-asymptotic analyses of machine learning algorithms, addressing critical challenges such as model bias, variance, and robustness in uncertain environments. Toward the end of the course, students will apply these principles to modern machine learning contexts, including the scaling laws/benign overfitting of deep learning, generative AI, and language models. (e.g. Neural Tagent Kernel, Mean-Field Limit of Neural Network and In-context Learning)
 
 **ChatGPT Tutor:** The [[link]](https://chatgpt.com/g/g-IubmUPho0-iems-402-statistical-learning) here provides a Large Language Model agents that is specifically trained for this course.
 
 If you have a question, to get a response from the teaching staff quickly we strongly encourage you to post it to the class Piazza forum. For suggestions to improve Yiping's teaching, you can use the [(anonymous) form](https://forms.gle/9cddGRikoPMhHCRv8). You can also leave a private matter here. If you wish to contact me via email, kindly include the tag "[IEMS402]" in the subject line. This will help ensure that I do not overlook your message.
 
-Syllabus
-======
+## Syllabus
 ### Text Book
 - [[Learning Theory from First Principles]](https://www.di.ens.fr/~fbach/ltfp_book.pdf ) Francis Bach [LTFP]
 - [[Asymptotic Statistics]](https://www.cambridge.org/core/books/asymptotic-statistics/A3C7DAD3F7E66A1FA60E9C8FE132EE1D) A. W. van der Vaart [AS]
 
-### Prelinminary
+### Preliminary
 - Calculus, Linear Algebra
 - [IEMS 302 Probability](https://www.mccormick.northwestern.edu/industrial/academics/courses/descriptions/302.html)
 - Probability and Statistics: Strong Law of Large Numbers, [Central Limit Theorem](https://www.youtube.com/watch?v=yv9nLOD1QPE&t=3653s),  Big-O, little-o notation, 
@@ -41,7 +43,7 @@ Here is a review of all the preliminary we'll use in this class:
 - Probability and Optimization Review: [[link]](https://2prime.github.io/files/IEMS402/IEMS402ProbOptReview.pdf)
   - Different notion of convergence in probability is useful but not required in our class. Our class will just do intuituive proof.
 
-### Scheldue
+### Schedule
 - **Lecture 1-2**: <font color=red>Concept</font> 1.5/1.7/1.12 (<font color=red>1.7 no class for Yiping is attending JMM</font>)
   - [[Lecture Notes]](https://2prime.github.io/files/IEMS_402_Note_lec1.pdf) [[slide]](https://2prime.github.io/files/IEMS402/402lec1and2.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec1and2fill.pdf)
 [[Feedback for Lecture 1]](https://forms.gle/atExX4xTGnaghB6RA) [[Feedback for Lecture 2]](https://forms.gle/XcbcPrBbaswdMqNLA) 
@@ -83,14 +85,14 @@ Here is a review of all the preliminary we'll use in this class:
 <font color=red>[Homework 2 DUE]</font>
 
 - **Lecture 5**: 1.26
-  - [[Lecture Notes]](https://2prime.github.io/files/IEMS_402_Note_lec5.pdf) [[slide]](https://2prime.github.io/files/IEMS402/402lec5.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec5fill.pdf) [[Feedback of Lecture 5]](https://forms.gle/QNmnDfKCmuduUioS7)
+  - [[Lecture Notes]](https://2prime.github.io/files/IEMS402/IEMS_402_Note_lec5.pdf) [[slide]](https://2prime.github.io/files/IEMS402/402lec5.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec5fill.pdf) [[Feedback of Lecture 5]](https://forms.gle/QNmnDfKCmuduUioS7)
    - Asymptotic normality
    - Inverse function theorem, (Implicit) Delta Method
    - Moment Methods
 <font color=red>[Homework 3 DUE]</font>
 
 - **Lecture 6**: 1.28
-  - [[Lecture Notes]](https://2prime.github.io/files/IEMS_402_Note_lec6.pdf)  [[slide]](https://2prime.github.io/files/IEMS402/402lec6.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec6fill.pdf)  [[Feedback of Lecture 6]](https://forms.gle/LA1hdb4nPgWvjLwW7)
+  - [[Lecture Notes]](https://2prime.github.io/files/IEMS402/IEMS_402_Note_lec6.pdf)  [[slide]](https://2prime.github.io/files/IEMS402/402lec6.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec6fill.pdf)  [[Feedback of Lecture 6]](https://forms.gle/LA1hdb4nPgWvjLwW7)
   - Influnce function, Fisher Information
   - Cramer-Rao Bound and Con of Unbiased Estimators (James-Stein estimator)
   - Sugessted Reading:
@@ -99,19 +101,19 @@ Here is a review of all the preliminary we'll use in this class:
 
 
 - **Lecture 7**: 1.28
-  - [[Lecture Notes]](https://2prime.github.io/files/IEMS_402_Note_lec7.pdf)  [[slide]](https://2prime.github.io/files/IEMS402/402lec7.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec7fill.pdf)  [[Feedback of Lecture 7]](https://forms.gle/SXTE6dHQzAQ6f62A8)
+  - [[Lecture Notes]](https://2prime.github.io/files/IEMS402/IEMS_402_Note_lec7.pdf)  [[slide]](https://2prime.github.io/files/IEMS402/402lec7.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec7fill.pdf)  [[Feedback of Lecture 7]](https://forms.gle/SXTE6dHQzAQ6f62A8)
   - Concerntration Inequality
   - Application of Concerntration Inequality: Johnson-Lindenstrauss lemma
 
 <font color=red>[Homework 4 DUE]</font>
 
 - **Lecture 8**: 2.2
-  - [[Lecture Notes]](https://2prime.github.io/files/IEMS_402_Note_lec8.pdf)  [[slide]](https://2prime.github.io/files/IEMS402/402lec8.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec8fill.pdf)  [[Feedback of Lecture 8]](https://forms.gle/RtDeBFd6RSVCxs14A)
+  - [[Lecture Notes]](https://2prime.github.io/files/IEMS402/IEMS_402_Note_lec8.pdf)  [[slide]](https://2prime.github.io/files/IEMS402/402lec8.pdf) [[annotated slide]](https://2prime.github.io/files/IEMS402/402lec8fill.pdf)  [[Feedback of Lecture 8]](https://forms.gle/RtDeBFd6RSVCxs14A)
   - Generalization via Uniform Bound, Discretization Theorem,
   - Covering Number/Packing Number
   - Empirical method of Maurey [[note]](https://www.cs.utexas.edu/~ecprice/courses/sublinear/fa16/notes/lec13.pdf)
 - **Lecture 9**: 2.4
-  - [[Lecture Notes]](https://2prime.github.io/files/IEMS_402_Note_lec9.pdf)  [[slide]](https://2prime.github.io/files/IEMS402/402lec9.pdf) [[annotated slide]](https://drive.google.com/file/d/1DvAq03NYbTWr_6Vx0QrTvrk96rDqizc9/view?usp=sharing) [[Feedback of Lecture 9]](https://forms.gle/sUmDAMFFZtxd4wL39)
+  - [[Lecture Notes]](https://2prime.github.io/files/IEMS402/IEMS_402_Note_lec9.pdf)  [[slide]](https://2prime.github.io/files/IEMS402/402lec9.pdf) [[annotated slide]](https://drive.google.com/file/d/1DvAq03NYbTWr_6Vx0QrTvrk96rDqizc9/view?usp=sharing) [[Feedback of Lecture 9]](https://forms.gle/sUmDAMFFZtxd4wL39)
   - Midterm Review
   - Chaining
   - Symmetrization, Rademacher complexity
@@ -260,8 +262,7 @@ Here is a review of all the preliminary we'll use in this class:
 - [[Argmin Blog]](https://www.argmin.net/archive?sort=new)
 - [[Francis Bach's Blog]](https://francisbach.com/)
 
-General Policies
-======
+## General Policies
 
 In general, we do not grant extensions on assignments/exams. There are several exceptions:
 

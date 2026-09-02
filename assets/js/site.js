@@ -51,4 +51,19 @@
   });
 
   if (search) search.addEventListener('input', updatePapers);
+
+  const courseContent = document.querySelector('.course-content');
+  const courseToc = document.querySelector('.course-toc');
+
+  if (courseContent && courseToc) {
+    const headings = Array.from(courseContent.querySelectorAll(':scope > h1, :scope > h2'));
+
+    headings.forEach(function (heading, index) {
+      if (!heading.id) heading.id = 'course-section-' + (index + 1);
+      const link = document.createElement('a');
+      link.href = '#' + heading.id;
+      link.textContent = heading.textContent.trim();
+      courseToc.appendChild(link);
+    });
+  }
 })();

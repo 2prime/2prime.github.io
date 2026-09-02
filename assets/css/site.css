@@ -743,7 +743,7 @@ h3 {
 }
 
 .course-archive-link strong {
-  font-family: var(--display);
+  font-family: inherit;
   font-size: 1.2rem;
   line-height: 1.25;
 }
@@ -758,6 +758,285 @@ h3 {
 
 .section-action {
   margin-top: 2rem;
+}
+
+.course-hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(3.5rem, 7vw, 6.5rem) 0 clamp(4.5rem, 8vw, 7rem);
+  color: #fff;
+  background:
+    linear-gradient(rgba(87, 198, 212, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(87, 198, 212, 0.07) 1px, transparent 1px),
+    #0b101b;
+  background-size: 42px 42px;
+  border-bottom: 5px solid var(--pku);
+}
+
+.course-hero::after {
+  position: absolute;
+  right: -12rem;
+  bottom: -18rem;
+  width: 42rem;
+  height: 42rem;
+  content: "";
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(38, 86, 216, 0.46), transparent 66%);
+}
+
+.course-back {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  margin-bottom: clamp(3.5rem, 7vw, 6rem);
+  color: #aebbd0;
+  font-size: 0.82rem;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+
+.course-back:hover {
+  color: #fff;
+}
+
+.course-hero-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.42fr);
+  gap: clamp(3rem, 7vw, 7rem);
+  align-items: end;
+}
+
+.course-kicker {
+  display: block;
+  margin-bottom: 1.25rem;
+  color: #77d7e2;
+  font-size: 0.78rem;
+  font-weight: 850;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.course-hero h1 {
+  max-width: 900px;
+  margin-bottom: 1.2rem;
+  font-size: clamp(3rem, 6vw, 5.4rem);
+  overflow-wrap: anywhere;
+}
+
+.course-code {
+  margin-bottom: 0;
+  color: #cbd5e5;
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.course-facts {
+  margin: 0;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(14px);
+}
+
+.course-facts div {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: 1rem;
+  padding: 1rem 1.15rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.11);
+}
+
+.course-facts div:last-child {
+  border-bottom: 0;
+}
+
+.course-facts dt {
+  color: #8fa0b9;
+  font-size: 0.7rem;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.course-facts dd {
+  margin: 0;
+  color: #f3f6fb;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.course-section {
+  padding: clamp(4rem, 8vw, 7rem) 0;
+}
+
+.course-page-grid {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 820px);
+  gap: clamp(3rem, 7vw, 7rem);
+  justify-content: center;
+  align-items: start;
+}
+
+.course-sidebar {
+  position: sticky;
+  top: 108px;
+}
+
+.course-sidebar-card {
+  padding: 1.35rem;
+  background: var(--cloud);
+  border-top: 3px solid var(--blue);
+}
+
+.course-sidebar-label {
+  display: block;
+  margin-bottom: 0.9rem;
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 850;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.course-toc {
+  display: grid;
+  gap: 0.18rem;
+}
+
+.course-toc a {
+  padding: 0.38rem 0;
+  color: var(--ink-soft);
+  font-size: 0.86rem;
+  font-weight: 650;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.course-toc a:hover {
+  color: var(--blue);
+}
+
+.course-all-link {
+  display: inline-flex;
+  margin-top: 1.2rem;
+  padding-top: 1rem;
+  color: var(--pku);
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-decoration: none;
+  border-top: 1px solid var(--line);
+}
+
+.course-content {
+  min-width: 0;
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+  line-height: 1.78;
+}
+
+.course-content > p:first-child {
+  color: var(--ink);
+  font-size: 1.22rem;
+  line-height: 1.65;
+}
+
+.course-content h1,
+.course-content h2 {
+  margin: 4.5rem 0 1.35rem;
+  padding-top: 1.6rem;
+  color: var(--ink);
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
+  border-top: 1px solid var(--line-strong);
+  scroll-margin-top: 110px;
+}
+
+.course-content h1:first-child,
+.course-content h2:first-child {
+  margin-top: 0;
+}
+
+.course-content h3 {
+  margin: 3rem 0 1rem;
+  color: var(--ink);
+  font-size: clamp(1.28rem, 2.5vw, 1.65rem);
+  line-height: 1.28;
+}
+
+.course-content h4 {
+  margin: 2rem 0 0.75rem;
+  color: var(--pku);
+  font-size: 1rem;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+}
+
+.course-content p,
+.course-content ul,
+.course-content ol {
+  max-width: 75ch;
+}
+
+.course-content ul,
+.course-content ol {
+  padding-left: 1.35rem;
+}
+
+.course-content li + li {
+  margin-top: 0.42rem;
+}
+
+.course-content li::marker {
+  color: var(--blue);
+}
+
+.course-content a {
+  color: var(--blue-deep);
+  font-weight: 650;
+  overflow-wrap: anywhere;
+}
+
+.course-content a:hover {
+  color: var(--pku);
+}
+
+.course-content strong {
+  color: var(--ink);
+}
+
+.course-content hr {
+  margin: 3rem 0;
+  border: 0;
+  border-top: 1px solid var(--line);
+}
+
+.course-content blockquote {
+  margin: 2rem 0;
+  padding: 1.2rem 1.4rem;
+  color: var(--ink-soft);
+  background: var(--cloud);
+  border-left: 3px solid var(--pku);
+}
+
+.course-content table {
+  width: 100%;
+  margin: 2rem 0;
+  border-collapse: collapse;
+}
+
+.course-content th,
+.course-content td {
+  padding: 0.75rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--line);
+}
+
+.course-content font[color="red"] {
+  color: var(--pku);
+  font-weight: 750;
 }
 
 .arc {
@@ -1152,9 +1431,23 @@ h3 {
   }
 
   .page-intro-grid,
-  .section-head {
+  .section-head,
+  .course-hero-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+
+  .course-page-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .course-sidebar {
+    position: static;
+  }
+
+  .course-toc {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .arc {
@@ -1279,6 +1572,36 @@ h3 {
   .footer-bottom {
     flex-direction: column;
     gap: 0.4rem;
+  }
+
+  .course-hero {
+    padding: 2.5rem 0 4rem;
+  }
+
+  .course-back {
+    margin-bottom: 3rem;
+  }
+
+  .course-hero h1 {
+    font-size: clamp(2.6rem, 13vw, 4.4rem);
+  }
+
+  .course-facts div {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+
+  .course-toc {
+    grid-template-columns: 1fr;
+  }
+
+  .course-content {
+    font-size: 1rem;
+  }
+
+  .course-content h1,
+  .course-content h2 {
+    margin-top: 3.5rem;
   }
 }
 
