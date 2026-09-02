@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title and page.title != "Yiping Lu" %}{{ page.title }} · {% endif %}Yiping Lu</title>
+    <meta name="description" content="{{ page.description | default: 'Yiping Lu is an Assistant Professor at the Beijing International Center for Mathematical Research, Peking University.' }}">
+    <meta name="theme-color" content="#8c1d40">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml">
+    <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+    <script defer src="{{ '/assets/js/site.js' | relative_url }}"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Yiping Lu",
+        "url": "https://2prime.github.io/",
+        "image": "https://2prime.github.io/images/profile.png",
+        "jobTitle": "Assistant Professor",
+        "email": "mailto:yipinglu@bicmr.pku.edu.cn",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Beijing International Center for Mathematical Research, Peking University",
+          "url": "https://bicmr.pku.edu.cn/"
+        },
+        "sameAs": [
+          "https://scholar.google.com/citations?user=NmhvVBgAAAAJ",
+          "https://github.com/2prime",
+          "https://www.researchgate.net/profile/Yiping-Lu-5"
+        ]
+      }
+    </script>
+  </head>
+  <body class="page-{{ page.nav_key | default: 'home' }}">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="{{ '/' | relative_url }}" aria-label="Yiping Lu, home">
+          <span class="brand-mark" aria-hidden="true">YL</span>
+          <span class="brand-copy">
+            <strong>Yiping Lu</strong>
+            <small>BICMR · Peking University</small>
+          </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
+          <span></span><span></span><span></span>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+        <nav class="site-nav" id="site-navigation" aria-label="Primary navigation">
+          <a href="{{ '/research/' | relative_url }}"{% if page.nav_key == 'research' %} aria-current="page"{% endif %}>Research</a>
+          <a href="{{ '/publications/' | relative_url }}"{% if page.nav_key == 'publications' %} aria-current="page"{% endif %}>Publications</a>
+          <a href="{{ '/talks/' | relative_url }}"{% if page.nav_key == 'talks' %} aria-current="page"{% endif %}>Talks</a>
+          <a href="{{ '/teaching/' | relative_url }}"{% if page.nav_key == 'teaching' %} aria-current="page"{% endif %}>Teaching</a>
+          <a href="{{ '/bio/' | relative_url }}"{% if page.nav_key == 'bio' %} aria-current="page"{% endif %}>Biography</a>
+          <a class="nav-contact" href="mailto:yipinglu@bicmr.pku.edu.cn">Email</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div>
+          <a class="footer-name" href="{{ '/' | relative_url }}">Yiping Lu</a>
+          <p>Machine learning, scientific computing, probability, and numerical algorithms.</p>
+        </div>
+        <div>
+          <span class="footer-label">Affiliation</span>
+          <a href="https://bicmr.pku.edu.cn/">Beijing International Center for Mathematical Research</a>
+          <span>Peking University</span>
+        </div>
+        <div>
+          <span class="footer-label">Connect</span>
+          <a href="mailto:yipinglu@bicmr.pku.edu.cn">yipinglu@bicmr.pku.edu.cn</a>
+          <a href="https://scholar.google.com/citations?user=NmhvVBgAAAAJ">Google Scholar</a>
+          <a href="https://github.com/2prime">GitHub</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© {{ 'now' | date: '%Y' }} Yiping Lu</span>
+        <span>Scientific Computing and Learning</span>
+      </div>
+    </footer>
+  </body>
+</html>

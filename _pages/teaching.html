@@ -1,12 +1,91 @@
 ---
-layout: archive
-title: "Teaching"
+layout: modern
 permalink: /teaching/
-author_profile: true
+title: "Teaching"
+nav_key: teaching
+description: "Courses and teaching materials by Yiping Lu in uncertainty quantification, statistical learning, regression, and linear algebra."
 ---
 
-{% include base_path %}
+<header class="page-intro">
+  <div class="shell page-intro-grid">
+    <div>
+      <span class="page-number">04 · Teaching</span>
+      <h1>Mathematics that moves between theory and computation.</h1>
+    </div>
+    <p class="lede">
+      My courses connect rigorous mathematical foundations with modern computational practice,
+      emphasizing how assumptions, algorithms, and empirical behavior fit together.
+    </p>
+  </div>
+</header>
 
-{% for post in site.teaching reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+<section class="section">
+  <div class="shell">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Selected courses</div>
+        <h2>Recent teaching</h2>
+      </div>
+      <p>Course pages preserve lecture notes, assignments, and reference material from the original offerings.</p>
+    </div>
+    <div class="course-grid">
+      <article class="course-card">
+        <div class="course-meta">Northwestern · Spring 2026</div>
+        <h3>Uncertainty Quantification</h3>
+        <p>Variational inference, diffusion, Monte Carlo, Kalman methods, Langevin and Hamiltonian dynamics, rare events, and simulation based inference.</p>
+        <a class="text-link" href="/teaching/IEMS407/">Course materials</a>
+      </article>
+      <article class="course-card">
+        <div class="course-meta">Northwestern · Spring 2026</div>
+        <h3>Statistical Learning for Data Analysis</h3>
+        <p>Regression, uncertainty, resampling, model interpretation, and the statistical workflow from assumptions to diagnosis.</p>
+        <a class="text-link" href="/teaching/IEMS304/">Course materials</a>
+      </article>
+      <article class="course-card">
+        <div class="course-meta">Northwestern · 2025</div>
+        <h3>Statistical Learning</h3>
+        <p>Optimization, generalization, kernels, neural networks, generative models, and the mathematical foundations of modern learning.</p>
+        <a class="text-link" href="/teaching/IEMS402/">Course materials</a>
+      </article>
+      <article class="course-card">
+        <div class="course-meta">NYU · 2024</div>
+        <h3>Linear Algebra</h3>
+        <p>Linear systems, geometry, eigenvalues, singular values, least squares, and computational interpretations.</p>
+        <a class="text-link" href="/teaching/Linear_Algebra/">Course materials</a>
+      </article>
+      <article class="course-card">
+        <div class="course-meta">Graduate topics</div>
+        <h3>Mathematical Foundations of Generative AI</h3>
+        <p>Probability, stochastic processes, optimal transport, diffusion, sequential inference, and inference time computation.</p>
+      </article>
+      <article class="course-card">
+        <div class="course-meta">Graduate topics</div>
+        <h3>Scientific Machine Learning</h3>
+        <p>Approximation, PDE learning, operator learning, physics informed models, uncertainty quantification, and scaling laws.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-soft">
+  <div class="shell prose-grid">
+    <aside class="prose-sticky">
+      <div class="eyebrow">Teaching philosophy</div>
+      <h2>Derive, implement, diagnose.</h2>
+    </aside>
+    <div class="prose-main">
+      <div class="principle">
+        <h3>Start from a mathematical question</h3>
+        <p>Students should understand what a method estimates, what information it uses, and what can fundamentally go wrong before they memorize an algorithm.</p>
+      </div>
+      <div class="principle">
+        <h3>Connect proof to computation</h3>
+        <p>Derivations are paired with experiments that reveal scaling, stability, and approximation behavior. The computation is part of the argument.</p>
+      </div>
+      <div class="principle">
+        <h3>Make research ownership visible</h3>
+        <p>Open ended projects ask students to formulate a precise question, defend their evaluation, and explain what evidence would change their conclusion.</p>
+      </div>
+    </div>
+  </div>
+</section>

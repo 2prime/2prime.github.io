@@ -1,152 +1,215 @@
 ---
+layout: modern
 permalink: /
 title: "Yiping Lu"
-author_profile: true
-redirect_from: 
+nav_key: home
+description: "Yiping Lu is a tenure-track Assistant Professor at BICMR, Peking University, working across machine learning, scientific computing, probability, and numerical algorithms."
+redirect_from:
   - /about/
   - /about.html
 ---
-<style>
-#boxshadow {
-    border: 4px solid purple;
-    box-shadow: 5px 6px gray;
-    border-radius: 2mm;
-    background-color: white;
-}
 
-.half_highlight {
-background: linear-gradient(to top, #F9E79F  50%, transparent 50%);
-}
+<section class="hero">
+  <div class="shell hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow">Scientific Computing and Learning</div>
+      <h1>Yiping <span>Lu</span></h1>
+      <p class="hero-role">
+        I am a tenure-track assistant professor at
+        <a href="https://bicmr.pku.edu.cn/">Beijing International Center for Mathematical Research</a>,
+        Peking University.
+      </p>
+      <p class="hero-focus">
+        I develop mathematical foundations and scalable algorithms at the intersection of machine learning,
+        numerical computation, applied probability, and scientific discovery.
+      </p>
+      <div class="button-row">
+        <a class="button" href="/research/">Explore research</a>
+        <a class="button button-outline" href="mailto:yipinglu@bicmr.pku.edu.cn">yipinglu@bicmr.pku.edu.cn</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-label="Portrait of Yiping Lu">
+      <div class="portrait-frame">
+        <img src="/images/profile.png" alt="Illustrated portrait of Yiping Lu" width="1045" height="983">
+      </div>
+      <div class="coordinate-card">
+        <small>Current position</small>
+        <strong>Assistant Professor · BICMR · PKU</strong>
+      </div>
+    </div>
+  </div>
+</section>
 
-#boxshadow2 {
-    border: 4px solid IndianRed;
-    box-shadow: 5px 6px gray;
-    border-radius: 2mm;
-    background-color: white;
-}
-</style>
+<section aria-label="Academic profile">
+  <div class="signal-strip">
+    <div class="signal">
+      <small>Research</small>
+      <strong>Scaling laws for learning and inference</strong>
+    </div>
+    <div class="signal">
+      <small>Methods</small>
+      <strong>PDE · SDE · Control · Randomization</strong>
+    </div>
+    <div class="signal">
+      <small>Education</small>
+      <strong>Stanford PhD · PKU BS</strong>
+    </div>
+    <div class="signal">
+      <small>Community</small>
+      <strong>PKU SCALE Lab</strong>
+    </div>
+  </div>
+</section>
 
-<div id="boxshadow2">
-<center style="color: gray; font-size: 24px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
-My lab <a href="https://scale-lab-northwestern.github.io/">Homepage</a> is online! You can see more information there.
- </center>
-</div>
+<section class="section">
+  <div class="shell">
+    <div class="recruit-band">
+      <div>
+        <div class="eyebrow">Join the group</div>
+        <h2>Work with us</h2>
+      </div>
+      <p>
+        <strong>I am actively recruiting undergraduate students, graduate students, and postdocs to join my research group.
+        Interested candidates are encouraged to email yipinglu [at] bicmr.pku.edu.cn.</strong>
+      </p>
+      <a class="button" href="/bio/#join">Opportunities</a>
+    </div>
+  </div>
+</section>
 
+<section class="section section-soft" id="research-directions">
+  <div class="shell">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Research directions</div>
+        <h2>How can learning systems scale reliably?</h2>
+      </div>
+      <p>
+        My work treats scaling as a mathematical question about representation, geometry, simulation,
+        and resource allocation rather than an empirical slogan.
+      </p>
+    </div>
+    <div class="research-grid">
+      <article class="research-card">
+        <span class="card-index">01</span>
+        <h3>Inference Time Scaling</h3>
+        <p>Monte Carlo, control, and sequential methods that convert additional inference computation into reliable accuracy gains.</p>
+        <a href="/research/#inference">Read more →</a>
+      </article>
+      <article class="research-card">
+        <span class="card-index">02</span>
+        <h3>Scientific Machine Learning</h3>
+        <p>Structure preserving learning for PDEs, operator learning, uncertainty quantification, and simulation calibrated correction.</p>
+        <a href="/research/#sciml">Read more →</a>
+      </article>
+      <article class="research-card">
+        <span class="card-index">03</span>
+        <h3>Optimization and Reliability</h3>
+        <p>Width and depth stable optimization geometry, predictable hyperparameter transfer, and robust learning algorithms.</p>
+        <a href="/research/#optimization">Read more →</a>
+      </article>
+      <article class="research-card">
+        <span class="card-index">04</span>
+        <h3>Agentic Mathematical Reasoning</h3>
+        <p>Representations and search procedures that help AI systems discover, verify, and communicate mathematical structure.</p>
+        <a href="/research/#reasoning">Read more →</a>
+      </article>
+    </div>
+  </div>
+</section>
 
-<br/>
-I am a tenure-track assistant professor at [Beijing International Center for Mathematical Research](https://bicmr.pku.edu.cn/), Peking University. Previously, I worked as a tenure-track assistant professor at  [Industrial Engineering & Management Science](https://www.mccormick.northwestern.edu/industrial/) and [Engineering Sciences & Applied Mathematics](https://www.mccormick.northwestern.edu/applied-math/) (by courtesy), Northwestern University and as a Courant instructor at [Courant Institute of Mathematical Sciences](https://cims.nyu.edu/dynamic/), New York University. I received my Ph.D. degree in applied math from Stanford University in 2023 and my Bachelor’s degree in applied math from Peking University in 2019. The long-term goal of Yiping's research is to develop a hybrid scientific research discipline that combines <mark color='orange'>domain knowledge</mark> (differential equation, stochastic process, control,...), <mark color='orange'>machine learning</mark> and <mark color='orange'>(randomized) experiments</mark>. To this end, Yiping and his group are working on an interdisciplinary research approach across probability and statistics, machine learning, numerical algorithms, control theory, signal processing/inverse problem, and operations research. Yiping is among the first to work at the interface of deep learning and differential equation. Yiping was a recipient of the Conference on Parsimony and Learning (CPAL) Rising Star Award in 2024, the Rising Star in Data Science from the University of Chicago in 2022, the Stanford Interdisciplinary Graduate Fellowship and the SenseTime Scholarship in 2021 for undergraduates in AI in 2019. Yiping also served as Area Chair for top machine learning conference such as ICML, Neurips, ICLR and AISTATS.
+<section class="section">
+  <div class="shell">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Selected work</div>
+        <h2>Recent research signals</h2>
+      </div>
+      <p>
+        A selection spanning probability, generative inference, scientific machine learning,
+        and large scale optimization.
+      </p>
+    </div>
+    <div class="project-grid">
+      <article class="project-card">
+        <span class="card-index">01</span>
+        <div class="project-meta">Probability · 2026</div>
+        <h3>Signed BAR Conjecture</h3>
+        <p>Uniqueness in the Harrison–Reiman class and a completely S class obstruction for a longstanding problem in reflected Brownian motion.</p>
+        <a href="https://arxiv.org/abs/2607.03639" aria-label="Read Signed BAR paper">Paper ↗</a>
+      </article>
+      <article class="project-card">
+        <span class="card-index">02</span>
+        <div class="project-meta">Generative AI · 2026</div>
+        <h3>URGE</h3>
+        <p>Unbiased derivative free inference time scaling for diffusion models through sequential Monte Carlo on path measures.</p>
+        <a href="https://arxiv.org/abs/2605.17850" aria-label="Read URGE paper">Paper ↗</a>
+      </article>
+      <article class="project-card">
+        <span class="card-index">03</span>
+        <div class="project-meta">Optimization · 2026</div>
+        <h3>MOGA</h3>
+        <p>Matrix operator norm geometry explains width scaling, row and column normalization, and hyperparameter transfer.</p>
+        <a href="https://arxiv.org/abs/2603.09952" aria-label="Read MOGA paper">Paper ↗</a>
+      </article>
+      <article class="project-card">
+        <span class="card-index">04</span>
+        <div class="project-meta">AI for Science · ICLR 2026</div>
+        <h3>Simulation Calibrated Scientific ML</h3>
+        <p>Inference time defect correction improves high dimensional PDE solvers without retraining the learned model.</p>
+        <a href="https://arxiv.org/abs/2504.16172" aria-label="Read SCaSML paper">Paper ↗</a>
+      </article>
+      <article class="project-card">
+        <span class="card-index">05</span>
+        <div class="project-meta">Sampling · 2026</div>
+        <h3>Quadratic Mixing for Dikin Walk</h3>
+        <p>A sharper geometric analysis of the Lee–Sidford Dikin walk for sampling from high dimensional polytopes.</p>
+        <a href="/files/QuadraticDikinwalk.pdf" aria-label="Read Dikin walk paper">Paper ↗</a>
+      </article>
+      <article class="project-card">
+        <span class="card-index">06</span>
+        <div class="project-meta">Statistics · 2026</div>
+        <h3>Fragility of Interpolators</h3>
+        <p>Heavy tailed risk and high dimensional large deviations reveal failure modes hidden by benign average case behavior.</p>
+        <a href="https://arxiv.org/abs/2607.09547" aria-label="Read interpolator fragility paper">Paper ↗</a>
+      </article>
+    </div>
+    <div style="margin-top: 2rem">
+      <a class="text-link" href="/publications/">Browse selected publications</a>
+    </div>
+  </div>
+</section>
 
-**I am actively recruiting undergraduate students, graduate students, and postdocs to join my research group. Interested candidates are encouraged to email yipinglu [at] bicmr.pku.edu.cn.**
-
-> Recent Projects:
-> - First principle of the recent [MUON](https://github.com/MoonshotAI/Moonlight) optimizer. [[Slide]](https://2prime.github.io/files/MOGA.pdf)
-> - [Theory-inspired](https://arxiv.org/abs/2602.01381) and [Physics-Informed](https://arxiv.org/abs/2504.16172) Inference Time Scaling, with application in Diffusion model
-> - Hybrid numercial analysis and ML applications in scientific applications [[slide]](https://2prime.github.io/files/debiasandprecondition.pdf)
-> - Statistical analysis of Scaling law [[slide]](https://2prime.github.io/files/howtoscaleSCiML.pdf)
-> - Multiscale Structure of Gradient Descent
-> - LLM agents for Math 
-
-
-> **Advertisement** I am happy to host (remote) undergraduate/graduate visitors and looking for Ph.D. Students and Postdocs. Prospective Students see [here](https://2prime.github.io/students/). Summer Intern for 2025 can see [here](https://2prime.github.io/files/SummerIntern_Yiping.pdf). You can also find information about my research [here](https://2prime.github.io/research/) 
-
-**To anyone:** I would appreciate [(anonymous) feedback](https://docs.google.com/forms/d/e/1FAIpQLScCWSzTQGMVKhxDVSiCopYD740Txm-cMoxIh-dg08FcRKT-8Q/viewform?usp=sf_link) about anything!
-
-
-Here's my [<mark color='orange'>research statement</mark>](https://2prime.github.io/files/rs.pdf) and my latest [CV](https://www.overleaf.com/read/rmcykgwmwbcq#cbe18b).
-
-
-**Contact**: yiping [dot] lu [at] northwestern [dot] edu
-
-**Office**: 2145 Sheridan Road Technological Institute, M237, Evanston, IL 60208
-
-**<font color='red'>[*New*]</font> ** AAAI 2024 Tutorial: Recent advance in Physics-informed Machine Learning  [website](https://sites.google.com/view/aaai-2024-tutorial-piml/) [slide](https://2prime.github.io/files/SML/piml_aaai.pdf)
-
-# Research Interest and Highlights
-
-My research focuses on scaling laws in machine learning—understanding **when, why, and how machine-learning systems improve predictably as we scale resources, including data, model size, optimization effort, and inference-time computation.**
-
-In large language models, scaling has become a remarkably reliable principle: performance improves smoothly as we increase compute and data, often following simple power laws. This predictability fundamentally changes how we design learning systems, making it possible to forecast performance and allocate resources optimally. However, this kind of reliable scaling behavior is far from universal. In many settings—especially when models interact with complex structure, constraints, or long-horizon dynamics—scaling breaks down: optimization becomes unstable, hyperparameters stop transferring across model sizes, and accuracy plateaus despite increased compute.
-
-My research aims to build a general theory and algorithmic framework for scalable learning, in which increased resources provably and reliably lead to better performance. Rather than treating scaling as an empirical phenomenon, I study it as a principled question of **optimization geometry, statistical complexity, and resource allocation**.
-
-**1. Why Do Some Models Scale—and Others Don’t?** A central question in my work is understanding **what fundamentally limits scaling**. I study how approximation error, optimization difficulty, and statistical uncertainty interact as models grow wider, deeper, or are trained with more data. This includes identifying error floors, characterizing regimes where scaling laws hold, and explaining why naive scaling often fails. The goal is to move beyond ad-hoc heuristics and develop predictive scaling theories that apply across model classes.
-
-
-
-**2. Scaling-Aware Optimization and Geometry** As model size increases, the geometry of the loss landscape changes in ways that strongly affect optimization. Learning rates and optimizer hyperparameters that work well at small scale often fail at large scale. I study optimization from a **geometric perspective**, viewing modern optimizers as instances of steepest descent under different norms. This leads to **new scaling-aware optimization methods** whose convergence behavior and hyperparameter choices remain stable as width and depth increase. Ultimately, I aim to design optimizers whose performance scales smoothly with model size, rather than deteriorating.
-
-
-
-**3. Inference-Time Scaling: Trading Compute for Accuracy** Beyond training-time scaling, I am particularly interested in inference-time scaling—improving model performance by allocating more computation after training, without changing model parameters. Inspired by ideas from Monte Carlo simulation, control, and sequential decision-making, my work develops methods that use additional **inference-time compute to detect, correct, and reduce model error on the fly**. This establishes inference-time computation as a first-class scaling axis, alongside data and model size, and provides a principled way to trade compute for reliability.
-
-
-## Optimizer for Large Scale Language Models
-> 1. <font color='red'>[*New*]</font> Ruihan Xu, Jiajin Li, **Yiping Lu** On the Width Scaling of Neural Optimizers Under Matrix Operator Norms I: Row/Column Normalization and Hyperparameter Transfer
-
-## Theory and Algorithms for Inference Time Scaling
-> 1. <font color='red'>[*New*]</font> Chenyang Wang, Weizhong Wang, Yinuo Ren, Jose Blanchet, **Yiping Lu** Simple Unbiased Derivative Free Inference-Time Scaling for Diffusion Models via Sequential Monte Carlo on Path Measures (ICML 2026)
-> 2. <font color='red'>[*New*]</font>  Youheng Zhu, **Yiping Lu** On the Power of (Approximate) Reward Models for Inference-Time Scaling (ICML 2026)
-> 3. Lifu Wei, Yinuo Ren, Naichen Shi, **Yiping Lu** SURGE:Unbiased Data Assimilation for Diffusion Model via Particle Filtering (ICML 2026)
-> 4. <font color='red'>[*New*]</font> JZexi Fan, Yan Sun, Shihao Yang, **Yiping Lu** Physics-Informed Inference Time Scaling for Solving High-Dimensional PDE via Defect Correction (ICLR 2026)
-
-
-
-## Debiasing Machine Learning Algorithm for Scientific Computing
-
-> 1.Zexi Fan, Yan Sun, Shihao Yang, **Yiping Lu** Physics-Informed Inference Time Scaling for Solving High-Dimensional PDE via Defect Correction (ICLR 2026)
-> 2. Kaizhao Liu, Jose Blanchet, Lexing Ying , Yiping Lu. Orthogonal Bootstrap: Efficient Simulation of Input Uncertainty, The Forty-first International Conference on Machine Learning (ICML), 2024.
-> 3. <font color='red'>[*New*]</font>  Jose Blanchet, Haoxuan Chen, **Yiping Lu**, Lexing Ying. When can Regression-Adjusted Control Variates Help? Rare Events, Sobolev Embedding and Minimax Optimality (alphabetical order) Neurips 2023
-
-## Experiment Design
-
-> 1.<font color='red'>[*New*]</font> **Yiping Lu**, Jiajin Li, Lexing Ying, Jose Blancet. Synthetic Principal Component Design: Fast Covariate Balancing with Synthetic Controls, 40th Conference on Uncertainty in Artificial Intelligence (UAI 2024) (Oral)
-
-  
-## Algorithms and Statistics of Scientific Machine Learning
-
-
->  1.Sifan Wang, Shawn Koohy,**Yiping Lu**, Paris Perdikaris When PINNs Go Wrong: Pseudo-Time Stepping Against Spurious Solutions 
->  2.<font color='red'>[*New*]</font> Jikai Jin, **Yiping Lu**, Jose Blanchet, Lexing Ying Minimax Optimal Kernel Operator Learning via Multilevel Training ICLR 2023 
->  2.**Yiping Lu**, Haoxuan Chen, Jianfeng Lu, Lexing Ying, Jose Blanchet. Machine Learning For Elliptic PDEs: Fast Rate Generalization Bound, Neural Scaling Law and Minimax Optimality. International Conference on Learning Representations(ICLR) 2022
->
->  3.**Yiping Lu**, Jose Blanchet,Lexing Ying. Sobolev Acceleration and Statistical Optimality for Learning Elliptic Equations via Gradient Descent. Neurips 2022
->  
->  4.Zichao long*, **Yiping Lu** *, Xianzhong Ma*, Bin Dong. "PDE-Net:Learning PDEs From Data", Thirty-fifth International Conference on Machine Learning (ICML), 2018
-
-## Robust Machine Learning
-
->  1. Wenlong Ji, **Yiping Lu**, et al. An unconstrained layer-peeled perspective on neural collapse. ICLR 2022.
->
->  2. Dinghuai Zhang *, Tianyuan Zhang *,**Yiping Lu** *, Zhanxing Zhu, Bin Dong. "You Only Propagate Once: Painless Adversarial Training Using Maximal Principle." 33rd Annual Conference on Neural Information Processing Systems (NeurIPS) 2019 (*equal contribution) 
->  
->  3.  **Yiping Lu**, Wenlong Ji, Zach Izzo, et al. Importance Tempering: Group Robustness for Overparameterized Models. arXiv preprint arXiv:2209.08745, 2022.
- 
-## Optimal Control Formulation of Deep Learning
-
-
->  1. Yihang Chen, Fanghui Liu, **Yiping Lu**, Grigorios Chrysos, Volkan Cevher. Generalization Guarantees of Deep ResNets in the Mean-Field Regime, International Conference on Learning Representations(ICLR) 2024
->     
->  2.**Yiping Lu**, Chao Ma, Yulong Lu, Jianfeng Lu, Lexing Ying. "A Mean-field Analysis of Deep ResNet and Beyond: Towards Provable Optimization Via Overparameterization From Depth" Thirty-seventh International Conference on Machine Learning (ICML), 2020
->  
->  3.Dinghuai Zhang *, Tianyuan Zhang *,**Yiping Lu** *, Zhanxing Zhu, Bin Dong. "You Only Propagate Once: Painless Adversarial Training Using Maximal Principle." 33rd Annual Conference on Neural Information Processing Systems (NeurIPS) 2019 (*equal contribution) 
->  
->  4.**Yiping Lu** *, Aoxiao Zhong *, Quanzheng Li, Bin Dong. "Beyond Finite Layer Neural Network:Bridging Deep Architects and Numerical Differential Equations" Thirty-fifth International Conference on Machine Learning (ICML), 2018 (*equal contribution) 
-
-## Inverse Problem and Image Processing
-
-
->  1.Xiaoshuai Zhang*, **Yiping Lu** *, Jiaying Liu, Bin Dong. "Dynamically Unfolding Recurrent Restorer: A Moving Endpoint Control Method for Image Restoration" Seventh International Conference on Learning Representations(ICLR) 2019(*equal contribution) 
-> 
->  2.Bin Dong, Haochen Ju, **Yiping Lu**, Zuoqiang Shi. " CURE: Curvature Regularization For Missing Data Recovery." SIAM Journal on Imaging Science, 13(4), 2169-2188, 2020 (alphabetical order)
-
-
-
-
-My Erdos Number = 4
-
-> Yiping Lu -> Lexing Ying -> David L. Donoho -> Charles Kam-tai Chui -> Paul Erdős
-> 
-> Yiping Lu -> Jose H. Blanchet -> Martin I. Reiman -> Fan Chung -> Paul Erdős
-
-<br> 
-<br> 
+<section class="section section-soft">
+  <div class="shell">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Research arc</div>
+        <h2>From structure to scalable computation</h2>
+      </div>
+      <p>Each project moves through the same loop: expose structure, convert it into an algorithm, and test whether scaling becomes predictable.</p>
+    </div>
+    <div class="arc">
+      <div class="arc-step">
+        <small>Step 01</small>
+        <strong>Find the mathematical structure</strong>
+        <p>Start from PDEs, stochastic processes, control, geometry, or algebra.</p>
+      </div>
+      <div class="arc-step">
+        <small>Step 02</small>
+        <strong>Design the representation</strong>
+        <p>Choose coordinates and operators that preserve the structure that matters.</p>
+      </div>
+      <div class="arc-step">
+        <small>Step 03</small>
+        <strong>Build a scalable algorithm</strong>
+        <p>Use randomization, optimization, and simulation to turn theory into computation.</p>
+      </div>
+      <div class="arc-step">
+        <small>Step 04</small>
+        <strong>Prove and measure reliability</strong>
+        <p>Connect finite computation to accuracy, stability, and resource scaling.</p>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,81 +1,282 @@
 ---
-layout: archive
-title: "Publications"
+layout: modern
 permalink: /publications/
-author_profile: true
+title: "Publications"
+nav_key: publications
+description: "Selected publications by Yiping Lu in machine learning, scientific computing, optimization, probability, statistics, and numerical algorithms."
 ---
 
+<header class="page-intro">
+  <div class="shell page-intro-grid">
+    <div>
+      <span class="page-number">02 · Publications</span>
+      <h1>Selected papers and preprints.</h1>
+    </div>
+    <div>
+      <p class="lede">Research across generative inference, scientific machine learning, optimization, probability, and numerical algorithms.</p>
+      <p style="margin: 1.4rem 0 0"><a class="text-link" href="https://scholar.google.com/citations?user=NmhvVBgAAAAJ">Complete list on Google Scholar</a></p>
+    </div>
+  </div>
+</header>
 
-I just list selected publication here. For a full list, you can view on <u><a href="https://scale-lab-northwestern.github.io/publications/">my lab homepage</a></u> and <u><a href="https://scholar.google.com/citations?user=NmhvVBgAAAAJ">my Google Scholar profile</a>.</u>
+<section class="section">
+  <div class="shell">
+    <div class="publication-tools" aria-label="Publication filters">
+      <label>
+        <span class="sr-only">Search publications</span>
+        <input class="publication-search" type="search" placeholder="Search title, author, venue, or year">
+      </label>
+      <div class="filter-row">
+        <button class="filter-button" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter-button" type="button" data-filter="generative" aria-pressed="false">Generative AI</button>
+        <button class="filter-button" type="button" data-filter="sciml" aria-pressed="false">Scientific ML</button>
+        <button class="filter-button" type="button" data-filter="optimization" aria-pressed="false">Optimization</button>
+        <button class="filter-button" type="button" data-filter="probability" aria-pressed="false">Probability</button>
+        <button class="filter-button" type="button" data-filter="robust" aria-pressed="false">Robustness</button>
+      </div>
+    </div>
 
+    <div class="paper-list">
+      <article class="paper" data-category="probability optimization">
+        <div class="paper-year">2026</div>
+        <div>
+          <h3><a href="/files/QuadraticDikinwalk.pdf">Quadratic Mixing for the Lee–Sidford Dikin Walk</a></h3>
+          <p class="paper-authors"><strong>Yiping Lu</strong></p>
+          <p class="paper-note">High dimensional sampling and interior point geometry.</p>
+        </div>
+        <span class="paper-tag">Sampling</span>
+      </article>
 
-### Selected Publication
-- **Yiping Lu**, [Quadratic mixing for the Lee--Sidford Dikin walk](https://2prime.github.io/files/QuadraticDikinwalk.pdf)
+      <article class="paper" data-category="robust probability">
+        <div class="paper-year">2026</div>
+        <div>
+          <h3><a href="https://arxiv.org/abs/2607.09547">High Dimensional Interpolators Can Be Fragile: Heavy Tails and High Dimensional Large Deviations</a></h3>
+          <p class="paper-authors">Youheng Zhu, <strong>Yiping Lu</strong></p>
+          <p class="paper-note">Fragility hidden by benign average case behavior.</p>
+        </div>
+        <span class="paper-tag">Statistics</span>
+      </article>
 
+      <article class="paper" data-category="probability">
+        <div class="paper-year">2026</div>
+        <div>
+          <h3><a href="https://arxiv.org/abs/2607.03639">An AI Assisted Solution to the Signed BAR Conjecture</a></h3>
+          <p class="paper-authors"><strong>Yiping Lu</strong>, Youheng Zhu</p>
+          <p class="paper-note">Uniqueness in the Harrison–Reiman class and a completely S class obstruction.</p>
+        </div>
+        <span class="paper-tag">Probability</span>
+      </article>
 
-- Youheng zhu, **Yiping Lu**, [High-Dimensional Interpolators Can Be Fragile: Heavy Tails and High-Dimensional Large Deviations](https://arxiv.org/html/2607.09547v1)
+      <article class="paper" data-category="optimization">
+        <div class="paper-year">2026</div>
+        <div>
+          <h3><a href="https://arxiv.org/abs/2603.09952">On the Width Scaling of Neural Optimizers Under Matrix Operator Norms I</a></h3>
+          <p class="paper-authors">Ruihan Xu, Jiajin Li, <strong>Yiping Lu</strong></p>
+          <p class="paper-note">Row and column normalization, smoothness, and hyperparameter transfer. <a href="/files/MOGA.pdf">Slides</a></p>
+        </div>
+        <span class="paper-tag">Optimization</span>
+      </article>
 
-<mark color='orange'>We show that while high-dimensional interpolators are often benign on average, they remain fragile due to heavy-tailed risks and slower large deviation rates.
-Great work by my fantastic PhD student, Youheng!</mark>
+      <article class="paper" data-category="generative probability">
+        <div class="paper-year">ICML 2026</div>
+        <div>
+          <h3><a href="https://arxiv.org/abs/2605.17850">Simple Unbiased Derivative Free Inference Time Scaling for Diffusion Models via Sequential Monte Carlo on Path Measures</a></h3>
+          <p class="paper-authors">Chenyang Wang, Weizhong Wang, Yinuo Ren, Jose Blanchet, <strong>Yiping Lu</strong></p>
+          <p class="paper-note">Path space importance sampling and sequential Monte Carlo.</p>
+        </div>
+        <span class="paper-tag">Generative AI</span>
+      </article>
 
+      <article class="paper" data-category="generative">
+        <div class="paper-year">ICML 2026</div>
+        <div>
+          <h3><a href="https://arxiv.org/abs/2602.01381">On the Power of Approximate Reward Models for Inference Time Scaling</a></h3>
+          <p class="paper-authors">Youheng Zhu, <strong>Yiping Lu</strong></p>
+          <p class="paper-note">Quantifying when approximate rewards can reliably guide additional computation.</p>
+        </div>
+        <span class="paper-tag">Generative AI</span>
+      </article>
 
--  **Yiping Lu**, Youheng Zhu, [An AI-Assisted Solution to the Signed BAR Conjecture: Uniqueness in the Harrison--Reiman Class and a Completely-S Class Obstruction](https://arxiv.org/abs/2607.03639)
+      <article class="paper" data-category="generative probability">
+        <div class="paper-year">ICML 2026</div>
+        <div>
+          <h3><a href="https://arxiv.org/abs/2605.18745">SURGE: Unbiased Data Assimilation for Diffusion Models via Particle Filtering</a></h3>
+          <p class="paper-authors">Lifu Wei, Yinuo Ren, Naichen Shi, <strong>Yiping Lu</strong></p>
+          <p class="paper-note">Particle filtering for unbiased diffusion model data assimilation.</p>
+        </div>
+        <span class="paper-tag">Generative AI</span>
+      </article>
 
-<mark color='orange'>We solved a 35 year old open problem with the help of GPT 5.5 pro. We construct counter examples for BAR uniquness in completely S class and proved the BAR uniquness in the HR class.</mark>
+      <article class="paper" data-category="sciml probability">
+        <div class="paper-year">ICLR 2026</div>
+        <div>
+          <h3><a href="https://arxiv.org/abs/2504.16172">Physics Informed Inference Time Scaling via Simulation Calibrated Scientific Machine Learning</a></h3>
+          <p class="paper-authors">Zexi Fan, Yan Sun, Shihao Yang, <strong>Yiping Lu</strong></p>
+          <p class="paper-note">Defect correction for high dimensional PDE learning. <a href="/files/scasml.pdf">Slides</a></p>
+        </div>
+        <span class="paper-tag">Scientific ML</span>
+      </article>
 
-- Ruihan Xu, Jiajin Li, **Yiping Lu**, [On the Width Scaling of Neural Optimizers Under Matrix Operator Norms I: Row/Column Normalization and Hyperparameter Transfer](https://arxiv.org/abs/2603.09952) [[Slide]](https://2prime.github.io/files/MOGA.pdf)
+      <article class="paper" data-category="sciml optimization">
+        <div class="paper-year">2025</div>
+        <div>
+          <h3>Unveiling the Scaling Law of PINNs under Non Euclidean Geometry</h3>
+          <p class="paper-authors">Jasen Lai, Sifan Wang, Chunmei Wang, <strong>Yiping Lu</strong></p>
+          <p class="paper-note">A geometric route toward predictable scaling in physics informed neural networks.</p>
+        </div>
+        <span class="paper-tag">Scientific ML</span>
+      </article>
 
-<mark color='orange'>L-smoothness analysis can infer learning rate transfer. A new row normlaized optimizer.</mark>
+      <article class="paper" data-category="optimization">
+        <div class="paper-year">2025</div>
+        <div>
+          <h3><a href="https://arxiv.org/abs/2502.07993">What Is a Sketch and Precondition Derivation for Low Rank Approximation?</a></h3>
+          <p class="paper-authors">Ruihan Xu, <strong>Yiping Lu</strong></p>
+          <p class="paper-note">Inverse power error versus inverse power estimation. <a href="/files/sketchandprecondition.pdf">Slides</a></p>
+        </div>
+        <span class="paper-tag">Linear Algebra</span>
+      </article>
 
-- Chenyang Wang, Weizhong Wang, Yinuo Ren, Jose Blanchet, Yiping Lu Simple Unbiased Derivative Free Inference-Time Scaling for Diffusion Models via Sequential Monte Carlo on Path Measures (ICML 2026)
+      <article class="paper" data-category="optimization">
+        <div class="paper-year">AISTATS 2025</div>
+        <div>
+          <h3><a href="/files/SIRR.pdf">Randomized Iterative Solver as Iterative Refinement: A Simple Fix toward Backward Stability</a></h3>
+          <p class="paper-authors">Ruihan Xu, <strong>Yiping Lu</strong></p>
+          <p class="paper-note">A stability correction for randomized linear solvers.</p>
+        </div>
+        <span class="paper-tag">Linear Algebra</span>
+      </article>
 
+      <article class="paper" data-category="probability">
+        <div class="paper-year">ICML 2024</div>
+        <div>
+          <h3>Orthogonal Bootstrap: Efficient Simulation of Input Uncertainty</h3>
+          <p class="paper-authors">Kaizhao Liu, Jose Blanchet, Lexing Ying, <strong>Yiping Lu</strong></p>
+          <p class="paper-note">Sample efficient uncertainty quantification through orthogonalization.</p>
+        </div>
+        <span class="paper-tag">Uncertainty</span>
+      </article>
 
-- Youheng Zhu, Yiping Lu On the Power of (Approximate) Reward Models for Inference-Time Scaling (ICML 2026)
+      <article class="paper" data-category="probability optimization">
+        <div class="paper-year">UAI 2024 · Oral</div>
+        <div>
+          <h3><a href="https://arxiv.org/abs/2211.15241">Synthetic Principal Component Design: Fast Covariate Balancing with Synthetic Controls</a></h3>
+          <p class="paper-authors"><strong>Yiping Lu</strong>, Jiajin Li, Lexing Ying, Jose Blanchet</p>
+          <p class="paper-note">Spectral structure for balanced experiment design.</p>
+        </div>
+        <span class="paper-tag">Experiment Design</span>
+      </article>
 
-- Jasen Lai, Sifan Wang, Chunmei Wang, **Yiping Lu**, Unveiling the Scaling Law of PINNs under Non-Euclidean Geometry, *submitted, 2025*
+      <article class="paper" data-category="optimization robust">
+        <div class="paper-year">ICLR 2024 · Spotlight</div>
+        <div>
+          <h3><a href="https://openreview.net/forum?id=tMzPZTvz2H">Generalization Guarantees of Deep ResNets in the Mean Field Regime</a></h3>
+          <p class="paper-authors">Yihang Chen, Fanghui Liu, <strong>Yiping Lu</strong>, Grigorios Chrysos, Volkan Cevher</p>
+          <p class="paper-note">Mean field generalization theory for deep residual networks.</p>
+        </div>
+        <span class="paper-tag">Deep Learning</span>
+      </article>
 
-<mark color='orange'>The first algorithm that enables a predictable scaling law for PINNs.</mark>
+      <article class="paper" data-category="probability sciml">
+        <div class="paper-year">NeurIPS 2023</div>
+        <div>
+          <h3><a href="https://arxiv.org/abs/2305.16527">When Can Regression Adjusted Control Variates Help?</a></h3>
+          <p class="paper-authors">Jose Blanchet, Haoxuan Chen, <strong>Yiping Lu</strong>, Lexing Ying</p>
+          <p class="paper-note">Rare events, Sobolev embedding, and minimax optimality.</p>
+        </div>
+        <span class="paper-tag">Monte Carlo</span>
+      </article>
 
-- Zexi Fan, Yan Sun, Shihao Yang, **Yiping Lu** [Physics-Informed Inference Time Scaling via
-Simulation-Calibrated Scientific Machine Learning](https://arxiv.org/abs/2504.16172), *ICLR 2026* [[slides]](https://2prime.github.io/files/scasml.pdf)
+      <article class="paper" data-category="sciml">
+        <div class="paper-year">ICLR 2023 · Spotlight</div>
+        <div>
+          <h3><a href="https://arxiv.org/abs/2209.14430">Minimax Optimal Kernel Operator Learning via Multilevel Training</a></h3>
+          <p class="paper-authors">Jikai Jin, <strong>Yiping Lu</strong>, Jose Blanchet, Lexing Ying</p>
+          <p class="paper-note">Optimal rates for learning infinite dimensional operators. <a href="/files/oplearning.pdf">Slides</a></p>
+        </div>
+        <span class="paper-tag">Operator Learning</span>
+      </article>
 
-<mark color='orange'>The first inference time scaling algorithm for solving PDEs, which means you can improve the result at inference time without retraining/fine-tune the network.</mark>
+      <article class="paper" data-category="sciml">
+        <div class="paper-year">NeurIPS 2022</div>
+        <div>
+          <h3><a href="https://arxiv.org/abs/2205.07331">Sobolev Acceleration and Statistical Optimality for Learning Elliptic Equations via Gradient Descent</a></h3>
+          <p class="paper-authors"><strong>Yiping Lu</strong>, Jose Blanchet, Lexing Ying</p>
+          <p class="paper-note">How derivative information changes optimization and statistical rates.</p>
+        </div>
+        <span class="paper-tag">Scientific ML</span>
+      </article>
 
-- Ruihan Xu, **Yiping Lu**. [What is a Sketch-and-Precondition Derivation for Low-Rank Approximation? Inverse Power Error or Inverse Power Estimation?](https://arxiv.org/abs/2502.07993), *submitted, 2025* [[slides]](https://2prime.github.io/files/sketchandprecondition.pdf)
-- Ruihan Xu, **Yiping Lu**. [Randomized Iterative Solver as Iterative Refinement: A Simple Fix Towards Backward Stability](https://2prime.github.io/files/SIRR.pdf), *Artificial Intelligence and Statistics (AISTATS), 2025*
-- **Yiping Lu**, Jiajin Li, Lexing Ying, Jose Blancet. [Synthetic Principal Component Design: Fast Covariate Balancing with Synthetic Controls](https://arxiv.org/pdf/2211.15241),  40th Conference on Uncertainty in Artificial Intelligence (UAI 2024) <font color='red'>[Oral]</font>.
-  
-<mark color='orange'>Links covariate balancing in causal inference with phase retrival in CroEM. Algorithmic idea is clustering is the largest eigenvector that separates data. The smallest eigenvector can help you to separate data into to similar group thus can be used for causal inference!</mark>
+      <article class="paper" data-category="sciml">
+        <div class="paper-year">ICLR 2022</div>
+        <div>
+          <h3><a href="https://arxiv.org/abs/2110.06897">Machine Learning for Elliptic PDEs: Fast Rate Generalization Bound, Neural Scaling Law and Minimax Optimality</a></h3>
+          <p class="paper-authors"><strong>Yiping Lu</strong>, Haoxuan Chen, Jianfeng Lu, Lexing Ying, Jose Blanchet</p>
+          <p class="paper-note">Sample complexity and optimality for learning PDE solutions. <a href="/files/mlpde.pdf">Slides</a></p>
+        </div>
+        <span class="paper-tag">Scientific ML</span>
+      </article>
 
-- Haotian Ye, Ruichen Li, Yuntian Gu, **Yiping Lu**, Di He, Liwei Wang. [$O(N^2)$ Representation of General Continuous Anti-symmetric Function](https://arxiv.org/abs/2402.15167), *submitted*, 2024.
-- Yihang Chen, Fanghui Liu, **Yiping Lu**, Grigorios Chrysos, Volkan Cevher. [Generalization Guarantees of Deep ResNets in the Mean-Field Regime](https://openreview.net/forum?id=tMzPZTvz2H), International Conference on Learning Representations(ICLR) 2024, <font color='red'>[Spotlight]</font>
-- Jose Blanchet, Haoxuan Chen, **Yiping Lu**, Lexing Ying. [When can Regression-Adjusted Control Variates Help? Rare Events, Sobolev Embedding and Minimax Optimality](https://arxiv.org/abs/2305.16527) (alphabetical order) Thirty-seventh Conference on Neural Information Processing Systems (Neurips) 2023
+      <article class="paper" data-category="robust optimization">
+        <div class="paper-year">ICLR 2022</div>
+        <div>
+          <h3><a href="https://arxiv.org/abs/2110.02796">An Unconstrained Layer Peeled Perspective on Neural Collapse</a></h3>
+          <p class="paper-authors">Wenlong Ji, <strong>Yiping Lu</strong>, Yiliang Zhang, Zhun Deng, Weijie J. Su</p>
+          <p class="paper-note">Optimization geometry behind neural collapse.</p>
+        </div>
+        <span class="paper-tag">Robustness</span>
+      </article>
 
-<mark color='orange'>The optimal quadrature rule. We find out text-book algorithm is not optimal. Combine the function approximation quadrature rule and Monte Carlo is the optimal one. The optimality is also relates if the function has a finite variance tail. </mark>
+      <article class="paper" data-category="robust">
+        <div class="paper-year">2022</div>
+        <div>
+          <h3><a href="https://arxiv.org/abs/2209.08745">Importance Tempering: Group Robustness for Overparameterized Models</a></h3>
+          <p class="paper-authors"><strong>Yiping Lu</strong>, Wenlong Ji, Zachary Izzo, Lexing Ying</p>
+          <p class="paper-note">Learning under group imbalance in overparameterized models.</p>
+        </div>
+        <span class="paper-tag">Robustness</span>
+      </article>
 
-- Jikai Jin, **Yiping Lu**, Jose Blanchet, Lexing Ying [Minimax Optimal Kernel Operator Learning via Multilevel Training](https://arxiv.org/pdf/2209.14430) Eleventh  International Conference on Learning Representations(ICLR) 2023  <font color='red'>[Spotlight]</font> [[slides]](https://2prime.github.io/files/oplearning.pdf)
-- **Yiping Lu**, Haoxuan Chen, Jianfeng Lu, Lexing Ying, Jose Blanchet. [Machine Learning For Elliptic PDEs: Fast Rate Generalization Bound, Neural Scaling Law and Minimax Optimality](https://arxiv.org/pdf/2110.06897). 10th International Conference on Learning Representations(ICLR) 2022 [[slides]](https://2prime.github.io/files/mlpde.pdf)
-- **Yiping Lu**, Wenlong Ji, Zachary Izzo, Lexing Ying, [Importance Tempering: Group Robustness for Overparameterized Models](https://arxiv.org/pdf/2209.08745)
-- Wenlong Ji, **Yiping Lu**, Yiliang Zhang, Zhun Deng, Weijie J Su. [An Unconstrained Layer-Peeled Perspective on Neural Collapse](https://arxiv.org/pdf/2110.02796). Tenth  International Conference on Learning Representations(ICLR) 2022
+      <article class="paper" data-category="optimization sciml">
+        <div class="paper-year">ICML 2020</div>
+        <div>
+          <h3><a href="https://arxiv.org/abs/2003.05508">A Mean Field Analysis of Deep ResNet and Beyond</a></h3>
+          <p class="paper-authors"><strong>Yiping Lu</strong>, Chao Ma, Yulong Lu, Jianfeng Lu, Lexing Ying</p>
+          <p class="paper-note">Provable optimization through overparameterization from depth.</p>
+        </div>
+        <span class="paper-tag">Optimization</span>
+      </article>
 
-<mark color='orange'>Show that neural collapse is the implicit bias of Logistic loss and show why logisitic loss is bad for data imbalance.</mark>
+      <article class="paper" data-category="robust optimization">
+        <div class="paper-year">NeurIPS 2019</div>
+        <div>
+          <h3><a href="https://arxiv.org/abs/1905.00877">You Only Propagate Once: Painless Adversarial Training Using Maximal Principle</a></h3>
+          <p class="paper-authors">Dinghuai Zhang, Tianyuan Zhang, <strong>Yiping Lu</strong>, Zhanxing Zhu, Bin Dong</p>
+          <p class="paper-note">Control inspired acceleration for adversarial training.</p>
+        </div>
+        <span class="paper-tag">Robustness</span>
+      </article>
 
-  
-- **Yiping Lu**, Chao Ma, Yulong Lu, Jianfeng Lu, Lexing Ying. "[A Mean-field Analysis of Deep ResNet and Beyond: Towards Provable Optimization Via Overparameterization From Depth](https://arxiv.org/pdf/2003.05508)" Thirty-seventh International Conference on Machine Learning (ICML), 2020
+      <article class="paper" data-category="sciml">
+        <div class="paper-year">ICML 2018</div>
+        <div>
+          <h3><a href="https://arxiv.org/abs/1710.09668">PDE Net: Learning PDEs from Data</a></h3>
+          <p class="paper-authors">Zichao Long, <strong>Yiping Lu</strong>, Xianzhong Ma, Bin Dong</p>
+          <p class="paper-note">Learning differential operators and nonlinear dynamics from observations.</p>
+        </div>
+        <span class="paper-tag">Scientific ML</span>
+      </article>
 
-<mark color='orange'>The first mean-field type convergence results for deep nets. </mark>
-
-- Dinghuai Zhang\*, Tianyuan Zhang\*, **Yiping Lu** \*, Zhanxing Zhu, Bin Dong. "[You Only Propagate Once: Painless Adversarial Training Using Maximal Principle](https://arxiv.org/pdf/1905.00877)" (*equal contribution) 33rd Annual Conference on Neural Information Processing Systems (NeurIPS) 2019.
-  
-<mark color='orange'>Fast adversarial training algorithm based on control theory. </mark>
-
-
-- Zichao long\*, **Yiping Lu** \*, Xianzhong Ma\*, Bin Dong. "[PDE-Net:Learning PDEs From Data](https://arxiv.org/pdf/1710.09668)", Thirty-fifth International Conference on Machine Learning (ICML), 2018(*equal contribution)
-- **Yiping Lu**, Aoxiao Zhong, Quanzheng Li, Bin Dong. "[Beyond Finite Layer Neural Network:Bridging Deep Architects and Numerical Differential Equations](https://arxiv.org/pdf/1710.10121)" Thirty-fifth International Conference on Machine Learning (ICML), 2018
-
-<mark color='orange'>The first papers that considers the NN as approximation to the ODE/PDE. Residual connection = ODE, conv filter = PDE. </mark>
-
-
-<br> 
-<br> 
-
+      <article class="paper" data-category="sciml optimization">
+        <div class="paper-year">ICML 2018</div>
+        <div>
+          <h3><a href="https://arxiv.org/abs/1710.10121">Beyond Finite Layer Neural Networks: Bridging Deep Architectures and Numerical Differential Equations</a></h3>
+          <p class="paper-authors"><strong>Yiping Lu</strong>, Aoxiao Zhong, Quanzheng Li, Bin Dong</p>
+          <p class="paper-note">A differential equation view of deep network architecture.</p>
+        </div>
+        <span class="paper-tag">Deep Learning</span>
+      </article>
+    </div>
+    <p class="paper-empty" hidden>No publications match this search.</p>
+  </div>
+</section>

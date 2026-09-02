@@ -8,9 +8,9 @@
 # Site Settings
 locale                   : "en-US"
 title                    : "Yiping Lu"
-title_separator          : "-"
+title_separator          : "·"
 name                     : &name "Yiping Lu"
-description              : &description "personal description"
+description              : &description "Yiping Lu is an Assistant Professor at BICMR, Peking University, working across machine learning, scientific computing, probability, and numerical algorithms."
 url                      : https://2prime.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "2prime/2prime.github.io"
@@ -82,9 +82,9 @@ analytics:
 author:
   name             : "Yiping Lu"
   avatar           : "profile.png"
-  bio              : "Machine Learning, Numerical Algorithms, Applied Probability"
-  location         : #"2145 Sheridan Road Tech, M237"
-  employer         : "Northwestern University"
+  bio              : "Machine Learning, Scientific Computing, Numerical Algorithms, Applied Probability"
+  location         :
+  employer         : "Beijing International Center for Mathematical Research, Peking University"
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=NmhvVBgAAAAJ"
   email            : "yipinglu@bicmr.pku.edu.cn"
