@@ -708,6 +708,58 @@ h3 {
   font-weight: 750;
 }
 
+.course-archive-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.course-archive-link {
+  display: flex;
+  min-height: 190px;
+  padding: 1.6rem;
+  color: var(--ink);
+  text-decoration: none;
+  background: #fff;
+  flex-direction: column;
+  transition: color 180ms ease, background 180ms ease;
+}
+
+.course-archive-link:hover {
+  color: var(--blue);
+  background: var(--paper);
+}
+
+.course-archive-link span {
+  margin-bottom: 1.25rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.course-archive-link strong {
+  font-family: var(--display);
+  font-size: 1.2rem;
+  line-height: 1.25;
+}
+
+.course-archive-link small {
+  margin-top: auto;
+  padding-top: 1.5rem;
+  color: var(--blue);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.section-action {
+  margin-top: 2rem;
+}
+
 .arc {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1094,7 +1146,8 @@ h3 {
   .project-grid,
   .talk-grid,
   .course-grid,
-  .fact-grid {
+  .fact-grid,
+  .course-archive-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1162,6 +1215,7 @@ h3 {
   .talk-grid,
   .course-grid,
   .fact-grid,
+  .course-archive-grid,
   .arc {
     grid-template-columns: 1fr;
   }

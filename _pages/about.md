@@ -180,6 +180,46 @@ redirect_from:
   </div>
 </section>
 
+<section class="section" id="teaching">
+  <div class="shell">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Teaching archives</div>
+        <h2>Course materials</h2>
+      </div>
+      <p>
+        Lecture notes, assignments, and references from courses in uncertainty quantification,
+        statistical learning, and linear algebra.
+      </p>
+    </div>
+    <div class="course-archive-grid">
+      <a class="course-archive-link" href="/teaching/2026-UQ">
+        <span>Northwestern · IEMS 407</span>
+        <strong>Uncertainty Quantification</strong>
+        <small>Open course archive →</small>
+      </a>
+      <a class="course-archive-link" href="/teaching/2024-SL-Da">
+        <span>Northwestern · IEMS 304</span>
+        <strong>Statistical Learning for Data Analysis</strong>
+        <small>Open course archive →</small>
+      </a>
+      <a class="course-archive-link" href="/teaching/2025-Statistical-Learning">
+        <span>Northwestern · IEMS 402</span>
+        <strong>Statistical Learning</strong>
+        <small>Open course archive →</small>
+      </a>
+      <a class="course-archive-link" href="/teaching/2024-linear-algebra">
+        <span>NYU Courant · MATH-UA 140</span>
+        <strong>Linear Algebra</strong>
+        <small>Open course archive →</small>
+      </a>
+    </div>
+    <div class="section-action">
+      <a class="text-link" href="/teaching/">View teaching overview</a>
+    </div>
+  </div>
+</section>
+
 <section class="section section-soft">
   <div class="shell">
     <div class="section-head">
