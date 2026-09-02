@@ -398,10 +398,13 @@ h3 {
 
 .hero-visual {
   position: relative;
+  width: min(100%, 360px);
+  justify-self: end;
 }
 
 .portrait-frame {
   position: relative;
+  aspect-ratio: 1 / 1;
   padding: 1.1rem;
   background: #fff;
   border: 1px solid var(--line-strong);
@@ -434,7 +437,9 @@ h3 {
 }
 
 .portrait-frame img {
+  display: block;
   width: 100%;
+  height: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
 }
@@ -1061,7 +1066,8 @@ h3 {
   }
 
   .hero-visual {
-    width: min(82%, 560px);
+    width: min(72%, 360px);
+    justify-self: center;
     margin: 0 auto;
   }
 
@@ -1140,7 +1146,7 @@ h3 {
   }
 
   .hero-visual {
-    width: calc(100% - 1rem);
+    width: min(calc(100% - 3rem), 320px);
   }
 
   .coordinate-card {

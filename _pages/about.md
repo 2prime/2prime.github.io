@@ -48,7 +48,7 @@ redirect_from:
     </div>
     <div class="signal">
       <small>Methods</small>
-      <strong>PDE · SDE · Control · Randomization</strong>
+      <strong>Machine Learning Theory · Applied Probability · Computational Math</strong>
     </div>
     <div class="signal">
       <small>Education</small>
@@ -161,10 +161,10 @@ redirect_from:
       </article>
       <article class="project-card">
         <span class="card-index">05</span>
-        <div class="project-meta">Sampling · 2026</div>
-        <h3>Quadratic Mixing for Dikin Walk</h3>
-        <p>A sharper geometric analysis of the Lee–Sidford Dikin walk for sampling from high dimensional polytopes.</p>
-        <a href="/files/QuadraticDikinwalk.pdf" aria-label="Read Dikin walk paper">Paper ↗</a>
+        <div class="project-meta">LLM Reasoning Theory · 2026</div>
+        <h3>On the Power of Approximate Reward Models for Inference Time Scaling</h3>
+        <p>A theory of when approximate reward models reduce the complexity of long-horizon LLM reasoning from exponential to polynomial through SMC inference-time scaling.</p>
+        <a href="https://arxiv.org/abs/2602.01381" aria-label="Read approximate reward models paper">Paper ↗</a>
       </article>
       <article class="project-card">
         <span class="card-index">06</span>
