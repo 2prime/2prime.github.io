@@ -19,6 +19,25 @@ description: "Current students, supervised undergraduate researchers, thesis com
   </div>
 </header>
 
+<section class="section section-soft" id="join">
+  <div class="shell">
+    <div class="join-panel">
+      <div>
+        <div class="eyebrow" style="color: #8fb2ff">Open opportunities</div>
+        <h2>Undergraduate, graduate, and postdoctoral researchers</h2>
+        <p>
+          <strong style="color: #fff">I am actively recruiting undergraduate students, graduate students, and postdocs to join my research group.
+          Interested candidates are encouraged to email yipinglu [at] bicmr.pku.edu.cn.</strong>
+        </p>
+      </div>
+      <div>
+        <p style="margin-bottom: 1.5rem">Please include a concise description of your background, research interests, and the question you would most like to explore.</p>
+        <a class="button" href="mailto:yipinglu@bicmr.pku.edu.cn">Email Yiping</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section">
   <div class="shell">
     <div class="section-head">
@@ -43,27 +62,39 @@ description: "Current students, supervised undergraduate researchers, thesis com
           <span>Reasoning theory</span>
         </div>
       </div>
-      <div class="student-project-grid">
-        <article class="student-project">
-          <span>AISTATS 2026</span>
-          <h3>Sample Complexity and the Curse of Horizon for POMDPs</h3>
-        </article>
-        <article class="student-project">
-          <span>ICML 2026</span>
-          <h3>SMC Based LLM Inference Time Scaling</h3>
-        </article>
-        <article class="student-project">
-          <span>AI for Mathematics</span>
-          <h3><a href="https://arxiv.org/abs/2607.03639">The Signed BAR Conjecture</a></h3>
-        </article>
-        <article class="student-project">
-          <span>Large Deviations</span>
-          <h3><a href="https://arxiv.org/abs/2607.09547">Random Matrix Theory</a></h3>
-        </article>
-        <article class="student-project">
-          <span>Current Research</span>
-          <h3>Simulation Methods for Diffusion Models</h3>
-        </article>
+      <div class="student-paper-list" aria-label="Research papers">
+        <a class="student-paper-row" href="https://arxiv.org/abs/2603.03191" aria-label="Read A Covering Framework for Offline POMDPs Learning using Belief Space Metric">
+          <span class="student-paper-meta">AISTATS 2026</span>
+          <span class="student-paper-content">
+            <strong>Offline POMDP Learning</strong>
+            <small>Uses belief space covering to mitigate the curse of horizon and memory in off policy evaluation.</small>
+          </span>
+          <span class="student-paper-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="student-paper-row" href="https://arxiv.org/abs/2602.01381" aria-label="Read On the Power of Approximate Reward Models for Inference Time Scaling">
+          <span class="student-paper-meta">ICML 2026</span>
+          <span class="student-paper-content">
+            <strong>LLM Reasoning Theory</strong>
+            <small>Shows when approximate reward models reduce the complexity of inference time scaling through sequential Monte Carlo.</small>
+          </span>
+          <span class="student-paper-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="student-paper-row" href="https://arxiv.org/abs/2607.03639" aria-label="Read An AI Assisted Solution to the Signed BAR Conjecture">
+          <span class="student-paper-meta">AI for Mathematics</span>
+          <span class="student-paper-content">
+            <strong>Stochastic Networks and the Signed BAR Conjecture</strong>
+            <small>Combines algebraic structure with AI assisted search to prove uniqueness and construct an obstruction.</small>
+          </span>
+          <span class="student-paper-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="student-paper-row" href="https://arxiv.org/abs/2607.09547" aria-label="Read High Dimensional Interpolators Can Be Fragile">
+          <span class="student-paper-meta">High Dimensional Probability</span>
+          <span class="student-paper-content">
+            <strong>Large Deviations and Heavy Tail Fragility</strong>
+            <small>Develops a large deviation view of high dimensional interpolators beyond benign average case behavior.</small>
+          </span>
+          <span class="student-paper-arrow" aria-hidden="true">↗</span>
+        </a>
       </div>
     </article>
   </div>
@@ -194,25 +225,6 @@ description: "Current students, supervised undergraduate researchers, thesis com
           <li>Daozhe Lin</li>
         </ul>
       </article>
-    </div>
-  </div>
-</section>
-
-<section class="section section-soft" id="join">
-  <div class="shell">
-    <div class="join-panel">
-      <div>
-        <div class="eyebrow" style="color: #8fb2ff">Open opportunities</div>
-        <h2>Undergraduate, graduate, and postdoctoral researchers</h2>
-        <p>
-          <strong style="color: #fff">I am actively recruiting undergraduate students, graduate students, and postdocs to join my research group.
-          Interested candidates are encouraged to email yipinglu [at] bicmr.pku.edu.cn.</strong>
-        </p>
-      </div>
-      <div>
-        <p style="margin-bottom: 1.5rem">Please include a concise description of your background, research interests, and the question you would most like to explore.</p>
-        <a class="button" href="mailto:yipinglu@bicmr.pku.edu.cn">Email Yiping</a>
-      </div>
     </div>
   </div>
 </section>

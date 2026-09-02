@@ -1316,32 +1316,34 @@ h3 {
   border-radius: 999px;
 }
 
-.student-project-grid {
+.student-paper-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.student-paper-row {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  align-content: stretch;
-}
-
-.student-project {
-  min-height: 175px;
-  padding: clamp(1.5rem, 3vw, 2.2rem);
-  border-right: 1px solid var(--line);
+  grid-template-columns: 132px minmax(0, 1fr) 28px;
+  gap: 1.4rem;
+  align-items: center;
+  min-height: 118px;
+  padding: 1.35rem clamp(1.4rem, 3vw, 2.2rem);
+  color: var(--ink);
+  text-decoration: none;
   border-bottom: 1px solid var(--line);
+  transition: color 160ms ease, background 160ms ease;
 }
 
-.student-project:nth-child(2n) {
-  border-right: 0;
-}
-
-.student-project:last-child {
-  grid-column: 1 / -1;
-  border-right: 0;
+.student-paper-row:last-child {
   border-bottom: 0;
 }
 
-.student-project span {
-  display: block;
-  margin-bottom: 2.1rem;
+.student-paper-row:hover {
+  color: var(--blue-deep);
+  background: var(--cloud);
+}
+
+.student-paper-meta {
   color: var(--pku);
   font-size: 0.7rem;
   font-weight: 850;
@@ -1349,14 +1351,31 @@ h3 {
   text-transform: uppercase;
 }
 
-.student-project h3 {
-  margin-bottom: 0;
-  font-size: 1.05rem;
-  line-height: 1.4;
+.student-paper-content {
+  display: grid;
+  gap: 0.3rem;
 }
 
-.student-project h3 a {
-  text-decoration: none;
+.student-paper-content strong {
+  font-size: 1rem;
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+}
+
+.student-paper-content small {
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.student-paper-arrow {
+  color: var(--blue);
+  font-size: 1.1rem;
+  transition: transform 160ms ease;
+}
+
+.student-paper-row:hover .student-paper-arrow {
+  transform: translate(2px, -2px);
 }
 
 .student-timeline .timeline-item {
@@ -1701,21 +1720,15 @@ h3 {
     gap: 0.45rem;
   }
 
-  .student-project-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .student-project,
-  .student-project:nth-child(2n),
-  .student-project:last-child {
+  .student-paper-row {
+    grid-template-columns: minmax(0, 1fr) 24px;
+    gap: 0.65rem 1rem;
     min-height: 0;
-    border-right: 0;
-    border-bottom: 1px solid var(--line);
+    padding: 1.25rem;
   }
 
-  .student-project:last-child {
-    grid-column: auto;
-    border-bottom: 0;
+  .student-paper-meta {
+    grid-column: 1 / -1;
   }
 
   .student-timeline .timeline-item {
