@@ -14,7 +14,7 @@ main:
   - title: "Teaching"
     url: /teaching/    
     
-  - title: "Group"
+  - title: "Students"
     url: /students/
         
   - title: "SCiML Seminar"
@@ -23,7 +23,6 @@ main:
     
   - title: "CV"
     url: https://www.overleaf.com/read/swtsssgpcwnz#b5c621
-
 
 
 

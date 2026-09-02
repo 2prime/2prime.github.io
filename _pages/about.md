@@ -72,7 +72,7 @@ redirect_from:
         <strong>I am actively recruiting undergraduate students, graduate students, and postdocs to join my research group.
         Interested candidates are encouraged to email yipinglu [at] bicmr.pku.edu.cn.</strong>
       </p>
-      <a class="button" href="/bio/#join">Opportunities</a>
+      <a class="button" href="/students/#join">Students and opportunities</a>
     </div>
   </div>
 </section>

@@ -1263,6 +1263,142 @@ h3 {
   color: var(--ink-soft);
 }
 
+.student-profile {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.62fr) minmax(0, 1.38fr);
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--line-strong);
+  box-shadow: var(--shadow);
+}
+
+.student-profile-summary {
+  padding: clamp(2rem, 4vw, 3.5rem);
+  color: #fff;
+  background: var(--ink);
+}
+
+.student-status {
+  display: inline-block;
+  margin-bottom: 3rem;
+  padding: 0.35rem 0.6rem;
+  color: #b8c9ff;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid rgba(184, 201, 255, 0.45);
+  border-radius: 999px;
+}
+
+.student-profile-summary h3 {
+  margin-bottom: 0.55rem;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+}
+
+.student-affiliation {
+  margin-bottom: 2rem;
+  color: #c5cede;
+  font-weight: 650;
+}
+
+.student-topic-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.student-topic-list span {
+  padding: 0.38rem 0.62rem;
+  color: #dbe3f1;
+  font-size: 0.78rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+}
+
+.student-project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-content: stretch;
+}
+
+.student-project {
+  min-height: 175px;
+  padding: clamp(1.5rem, 3vw, 2.2rem);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.student-project:nth-child(2n) {
+  border-right: 0;
+}
+
+.student-project:last-child {
+  grid-column: 1 / -1;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.student-project span {
+  display: block;
+  margin-bottom: 2.1rem;
+  color: var(--pku);
+  font-size: 0.7rem;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.student-project h3 {
+  margin-bottom: 0;
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+.student-project h3 a {
+  text-decoration: none;
+}
+
+.student-timeline .timeline-item {
+  grid-template-columns: 180px minmax(0, 1fr);
+}
+
+.student-placement {
+  font-weight: 700;
+}
+
+.student-placement span {
+  margin-right: 0.55rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.student-result {
+  margin-top: 0.35rem !important;
+  color: var(--blue-deep) !important;
+  font-size: 0.9rem;
+}
+
+.committee-grid .fact-card {
+  min-height: 220px;
+}
+
+.student-name-list {
+  padding: 0;
+  margin: 2.2rem 0 0;
+  list-style: none;
+}
+
+.student-name-list li {
+  padding: 0.55rem 0;
+  font-size: 1.08rem;
+  font-weight: 750;
+  border-top: 1px solid var(--line);
+}
+
 .join-panel {
   display: grid;
   grid-template-columns: minmax(0, 0.75fr) minmax(300px, 0.55fr);
@@ -1417,7 +1553,8 @@ h3 {
   }
 
   .recruit-band,
-  .join-panel {
+  .join-panel,
+  .student-profile {
     grid-template-columns: 1fr;
   }
 
@@ -1562,6 +1699,27 @@ h3 {
   .timeline-item {
     grid-template-columns: 1fr;
     gap: 0.45rem;
+  }
+
+  .student-project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .student-project,
+  .student-project:nth-child(2n),
+  .student-project:last-child {
+    min-height: 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .student-project:last-child {
+    grid-column: auto;
+    border-bottom: 0;
+  }
+
+  .student-timeline .timeline-item {
+    grid-template-columns: 1fr;
   }
 
   .footer-grid {
