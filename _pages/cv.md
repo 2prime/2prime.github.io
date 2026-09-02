@@ -21,7 +21,7 @@ redirect_from:
         Peking University. His research spans machine learning, numerical algorithms, applied probability, PDEs, and control.
       </p>
       <div class="button-row" style="margin-top: 1.5rem">
-        <a class="button button-outline" href="https://www.overleaf.com/read/rmcykgwmwbcq#cbe18b">Current CV</a>
+        <a class="button button-outline" href="https://www.overleaf.com/read/swtsssgpcwnz#b5c621">Current CV</a>
         <a class="button button-outline" href="/files/rs.pdf">Research statement</a>
       </div>
     </div>
