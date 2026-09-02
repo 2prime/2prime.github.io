@@ -369,10 +369,11 @@ h3 {
 
 .hero h1 {
   margin: 0 0 0.5rem;
+  white-space: nowrap;
 }
 
 .hero h1 span {
-  display: block;
+  display: inline;
   color: transparent;
   -webkit-text-stroke: 1.5px var(--blue);
 }
