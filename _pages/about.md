@@ -56,7 +56,7 @@ redirect_from:
     </div>
     <div class="signal">
       <small>Lab</small>
-      <strong>SCALE Lab</strong>
+      <strong><a href="https://2prime.github.io/PKU-SCALE-Lab/">SCALE Lab</a></strong>
       <span>Scientific Computing And LEarning</span>
     </div>
   </div>
