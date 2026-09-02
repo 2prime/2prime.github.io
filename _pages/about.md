@@ -55,8 +55,9 @@ redirect_from:
       <strong>Stanford PhD · PKU BS</strong>
     </div>
     <div class="signal">
-      <small>Community</small>
-      <strong>PKU SCALE Lab</strong>
+      <small>Lab</small>
+      <strong>SCALE Lab</strong>
+      <span>Scientific Computing And LEarning</span>
     </div>
   </div>
 </section>
