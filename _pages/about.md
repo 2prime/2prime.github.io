@@ -13,7 +13,10 @@ redirect_from:
   <div class="shell hero-grid">
     <div class="hero-copy">
       <div class="eyebrow">Scientific Computing and Learning</div>
-      <h1>Yiping <span>Lu</span></h1>
+      <div class="hero-title-row">
+        <h1>Yiping <span>Lu</span></h1>
+        <a class="hero-cv-button" href="https://www.overleaf.com/read/swtsssgpcwnz#b5c621" target="_blank" rel="noopener noreferrer">CV</a>
+      </div>
       <p class="hero-role">
         I am a tenure-track assistant professor at
         <a href="https://bicmr.pku.edu.cn/">Beijing International Center for Mathematical Research</a>,
