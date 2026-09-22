@@ -367,6 +367,21 @@ h3 {
   padding: clamp(4rem, 8vh, 7rem) 0;
 }
 
+.page-home .hero-grid {
+  min-height: 0;
+  padding: clamp(3rem, 6vh, 4rem) 0;
+}
+
+.hero-office {
+  margin: 1rem 0 0;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+.home-recruitment {
+  padding: 1.5rem 0 3rem;
+}
+
 .hero h1 {
   margin: 0;
   font-size: clamp(3rem, 5.5vw, 5.25rem);
@@ -1600,6 +1615,10 @@ h3 {
     grid-template-columns: 1fr;
     min-height: 0;
     padding: 5rem 0 6.5rem;
+  }
+
+  .page-home .hero-grid {
+    padding: 3rem 0 5rem;
   }
 
   .hero-copy {

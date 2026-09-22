@@ -30,6 +30,7 @@ redirect_from:
         <a class="button" href="/research/">Explore research</a>
         <a class="button button-outline" href="mailto:yipinglu@bicmr.pku.edu.cn">yipinglu@bicmr.pku.edu.cn</a>
       </div>
+      <p class="hero-office"><strong>Office:</strong> No.78 Jingchunyuan 78105W-1</p>
     </div>
     <div class="hero-visual" aria-label="Portrait of Yiping Lu">
       <div class="portrait-frame">
@@ -39,6 +40,22 @@ redirect_from:
         <small>Current position</small>
         <strong>Assistant Professor · BICMR · PKU</strong>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="section home-recruitment">
+  <div class="shell">
+    <div class="recruit-band">
+      <div>
+        <div class="eyebrow">Join the group</div>
+        <h2>Work with us</h2>
+      </div>
+      <p>
+        <strong>I am actively recruiting undergraduate students, graduate students, and postdocs to join my research group.
+        Interested candidates are encouraged to email yipinglu [at] bicmr.pku.edu.cn.</strong>
+      </p>
+      <a class="button" href="/students/#join">Students and opportunities</a>
     </div>
   </div>
 </section>
@@ -61,22 +78,6 @@ redirect_from:
       <small>Lab</small>
       <strong><a href="https://2prime.github.io/PKU-SCALE-Lab/">SCALE Lab</a></strong>
       <span>Scientific Computing And LEarning</span>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="shell">
-    <div class="recruit-band">
-      <div>
-        <div class="eyebrow">Join the group</div>
-        <h2>Work with us</h2>
-      </div>
-      <p>
-        <strong>I am actively recruiting undergraduate students, graduate students, and postdocs to join my research group.
-        Interested candidates are encouraged to email yipinglu [at] bicmr.pku.edu.cn.</strong>
-      </p>
-      <a class="button" href="/students/#join">Students and opportunities</a>
     </div>
   </div>
 </section>
