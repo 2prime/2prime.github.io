@@ -645,7 +645,7 @@ p { margin-bottom: 1rem; }
 .course-all-link { display: inline-flex; margin-top: 1rem; padding-top: 0.85rem; color: var(--pku); font-size: 0.78rem; text-decoration: none; border-top: 1px solid var(--line); }
 .course-content { min-width: 0; color: var(--ink-soft); font-size: 1rem; line-height: 1.85; }
 .course-content > p:first-child { color: var(--ink); font-size: 1.05rem; line-height: 1.8; }
-.course-content h1, .course-content h2 { margin: 3rem 0 1.2rem; padding-top: 1.25rem; color: var(--ink); font-size: 1.85rem; border-top: 1px solid var(--line-strong); scroll-margin-top: 112px; }
+.course-content h1, .course-content h2 { margin: 3rem 0 1.2rem; padding-top: 1.25rem; color: var(--ink); font-size: 1.85rem; border-top: 1px solid var(--line-strong); }
 .course-content h1:first-child, .course-content h2:first-child { margin-top: 0; }
 .course-content h3 { margin: 2rem 0 1rem; font-size: 1.4rem; line-height: 1.35; }
 .course-content h4 { margin: 1.5rem 0 0.7rem; color: var(--pku); font-size: 0.96rem; font-weight: 500; }
