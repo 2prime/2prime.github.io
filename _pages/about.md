@@ -169,9 +169,9 @@ redirect_from:
           <div class="selected-work-list">
             <article class="selected-work">
               <div class="project-meta">Optimization · 2026</div>
-              <h4>MOGA</h4>
+              <h4>Scaling Neural Optimizers</h4>
               <p>Matrix operator norm geometry explains width scaling, row and column normalization, and hyperparameter transfer.</p>
-              <a href="https://arxiv.org/abs/2603.09952" aria-label="Read MOGA paper">Paper ↗</a>
+              <a href="https://arxiv.org/abs/2603.09952" aria-label="Read Scaling Neural Optimizers paper">Paper ↗</a>
             </article>
             <article class="selected-work">
               <div class="project-meta">Statistics · 2026</div>
