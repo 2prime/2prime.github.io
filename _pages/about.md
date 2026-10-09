@@ -100,86 +100,83 @@ redirect_from:
         <h3>Inference Time Scaling</h3>
         <p>Monte Carlo, control, and sequential methods that convert additional inference computation into reliable accuracy gains.</p>
         <a href="/research/#inference">Read more →</a>
+        <details class="selected-works">
+          <summary aria-label="Selected works: Inference Time Scaling">Selected works <span class="work-count">(2)</span></summary>
+          <div class="selected-work-list">
+            <article class="selected-work">
+              <div class="project-meta">Generative AI · 2026</div>
+              <h4>URGE</h4>
+              <p>Unbiased derivative free inference time scaling for diffusion models through sequential Monte Carlo on path measures.</p>
+              <a href="https://arxiv.org/abs/2605.17850" aria-label="Read URGE paper">Paper ↗</a>
+            </article>
+            <article class="selected-work">
+              <div class="project-meta">LLM Reasoning Theory · 2026</div>
+              <h4>On the Power of Approximate Reward Models for Inference Time Scaling</h4>
+              <p>A theory of when approximate reward models reduce the complexity of long-horizon LLM reasoning from exponential to polynomial through SMC inference-time scaling.</p>
+              <a href="https://arxiv.org/abs/2602.01381" aria-label="Read approximate reward models paper">Paper ↗</a>
+            </article>
+          </div>
+        </details>
       </article>
       <article class="research-card">
         <span class="card-index">02</span>
         <h3>Scientific Machine Learning</h3>
         <p>Structure preserving learning for PDEs, operator learning, uncertainty quantification, and simulation calibrated correction.</p>
         <a href="/research/#sciml">Read more →</a>
+        <details class="selected-works">
+          <summary aria-label="Selected works: Scientific Machine Learning">Selected works <span class="work-count">(1)</span></summary>
+          <div class="selected-work-list">
+            <article class="selected-work">
+              <div class="project-meta">AI for Science · ICLR 2026</div>
+              <h4>Simulation Calibrated Scientific ML</h4>
+              <p>Inference time defect correction improves high dimensional PDE solvers without retraining the learned model.</p>
+              <a href="https://arxiv.org/abs/2504.16172" aria-label="Read SCaSML paper">Paper ↗</a>
+            </article>
+          </div>
+        </details>
       </article>
       <article class="research-card">
         <span class="card-index">03</span>
         <h3>Optimization and Reliability</h3>
         <p>Width and depth stable optimization geometry, predictable hyperparameter transfer, and robust learning algorithms.</p>
         <a href="/research/#optimization">Read more →</a>
+        <details class="selected-works">
+          <summary aria-label="Selected works: Optimization and Reliability">Selected works <span class="work-count">(2)</span></summary>
+          <div class="selected-work-list">
+            <article class="selected-work">
+              <div class="project-meta">Optimization · 2026</div>
+              <h4>MOGA</h4>
+              <p>Matrix operator norm geometry explains width scaling, row and column normalization, and hyperparameter transfer.</p>
+              <a href="https://arxiv.org/abs/2603.09952" aria-label="Read MOGA paper">Paper ↗</a>
+            </article>
+            <article class="selected-work">
+              <div class="project-meta">Statistics · 2026</div>
+              <h4>Fragility of Interpolators</h4>
+              <p>Heavy tailed risk and high dimensional large deviations reveal failure modes hidden by benign average case behavior.</p>
+              <a href="https://arxiv.org/abs/2607.09547" aria-label="Read interpolator fragility paper">Paper ↗</a>
+            </article>
+          </div>
+        </details>
       </article>
       <article class="research-card">
         <span class="card-index">04</span>
         <h3>Agentic Mathematical Reasoning</h3>
         <p>Representations and search procedures that help AI systems discover, verify, and communicate mathematical structure.</p>
         <a href="/research/#reasoning">Read more →</a>
+        <details class="selected-works">
+          <summary aria-label="Selected works: Agentic Mathematical Reasoning">Selected works <span class="work-count">(1)</span></summary>
+          <div class="selected-work-list">
+            <article class="selected-work">
+              <div class="project-meta">Probability · 2026</div>
+              <h4>Signed BAR Conjecture</h4>
+              <p>Uniqueness in the Harrison–Reiman class and a completely S class obstruction for a longstanding problem in reflected Brownian motion.</p>
+              <a href="https://arxiv.org/abs/2607.03639" aria-label="Read Signed BAR paper">Paper ↗</a>
+            </article>
+          </div>
+        </details>
       </article>
     </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="shell">
-    <div class="section-head">
-      <div>
-        <div class="eyebrow">Selected work</div>
-        <h2>Recent research signals</h2>
-      </div>
-      <p>
-        A selection spanning probability, generative inference, scientific machine learning,
-        and large scale optimization.
-      </p>
-    </div>
-    <div class="project-grid">
-      <article class="project-card">
-        <span class="card-index">01</span>
-        <div class="project-meta">Probability · 2026</div>
-        <h3>Signed BAR Conjecture</h3>
-        <p>Uniqueness in the Harrison–Reiman class and a completely S class obstruction for a longstanding problem in reflected Brownian motion.</p>
-        <a href="https://arxiv.org/abs/2607.03639" aria-label="Read Signed BAR paper">Paper ↗</a>
-      </article>
-      <article class="project-card">
-        <span class="card-index">02</span>
-        <div class="project-meta">Generative AI · 2026</div>
-        <h3>URGE</h3>
-        <p>Unbiased derivative free inference time scaling for diffusion models through sequential Monte Carlo on path measures.</p>
-        <a href="https://arxiv.org/abs/2605.17850" aria-label="Read URGE paper">Paper ↗</a>
-      </article>
-      <article class="project-card">
-        <span class="card-index">03</span>
-        <div class="project-meta">Optimization · 2026</div>
-        <h3>MOGA</h3>
-        <p>Matrix operator norm geometry explains width scaling, row and column normalization, and hyperparameter transfer.</p>
-        <a href="https://arxiv.org/abs/2603.09952" aria-label="Read MOGA paper">Paper ↗</a>
-      </article>
-      <article class="project-card">
-        <span class="card-index">04</span>
-        <div class="project-meta">AI for Science · ICLR 2026</div>
-        <h3>Simulation Calibrated Scientific ML</h3>
-        <p>Inference time defect correction improves high dimensional PDE solvers without retraining the learned model.</p>
-        <a href="https://arxiv.org/abs/2504.16172" aria-label="Read SCaSML paper">Paper ↗</a>
-      </article>
-      <article class="project-card">
-        <span class="card-index">05</span>
-        <div class="project-meta">LLM Reasoning Theory · 2026</div>
-        <h3>On the Power of Approximate Reward Models for Inference Time Scaling</h3>
-        <p>A theory of when approximate reward models reduce the complexity of long-horizon LLM reasoning from exponential to polynomial through SMC inference-time scaling.</p>
-        <a href="https://arxiv.org/abs/2602.01381" aria-label="Read approximate reward models paper">Paper ↗</a>
-      </article>
-      <article class="project-card">
-        <span class="card-index">06</span>
-        <div class="project-meta">Statistics · 2026</div>
-        <h3>Fragility of Interpolators</h3>
-        <p>Heavy tailed risk and high dimensional large deviations reveal failure modes hidden by benign average case behavior.</p>
-        <a href="https://arxiv.org/abs/2607.09547" aria-label="Read interpolator fragility paper">Paper ↗</a>
-      </article>
-    </div>
-    <div style="margin-top: 2rem">
+    <div class="section-action">
       <a class="text-link" href="/publications/">Browse selected publications</a>
     </div>
   </div>
@@ -221,40 +218,6 @@ redirect_from:
     </div>
     <div class="section-action">
       <a class="text-link" href="/teaching/">View teaching overview</a>
-    </div>
-  </div>
-</section>
-
-<section class="section section-soft">
-  <div class="shell">
-    <div class="section-head">
-      <div>
-        <div class="eyebrow">Research arc</div>
-        <h2>From structure to scalable computation</h2>
-      </div>
-      <p>Each project moves through the same loop: expose structure, convert it into an algorithm, and test whether scaling becomes predictable.</p>
-    </div>
-    <div class="arc">
-      <div class="arc-step">
-        <small>Step 01</small>
-        <strong>Find the mathematical structure</strong>
-        <p>Start from PDEs, stochastic processes, control, geometry, or algebra.</p>
-      </div>
-      <div class="arc-step">
-        <small>Step 02</small>
-        <strong>Design the representation</strong>
-        <p>Choose coordinates and operators that preserve the structure that matters.</p>
-      </div>
-      <div class="arc-step">
-        <small>Step 03</small>
-        <strong>Build a scalable algorithm</strong>
-        <p>Use randomization, optimization, and simulation to turn theory into computation.</p>
-      </div>
-      <div class="arc-step">
-        <small>Step 04</small>
-        <strong>Prove and measure reliability</strong>
-        <p>Connect finite computation to accuracy, stability, and resource scaling.</p>
-      </div>
     </div>
   </div>
 </section>
