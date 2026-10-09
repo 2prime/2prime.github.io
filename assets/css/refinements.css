@@ -109,3 +109,70 @@
   .bio-section-nav { display: none; }
   .page-bio .bio-talk, .page-bio .recognition-grid .fact-card { break-inside: avoid; }
 }
+
+/* Teaching: institution sections and consistent, scannable course rows. */
+.teaching-school-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.6rem;
+  margin-top: 1.9rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+.teaching-school-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-height: 44px;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+  text-decoration: none;
+}
+.teaching-school-nav a::after { content: "↓"; color: var(--pku); }
+.teaching-school-nav a:hover { color: var(--pku); text-decoration: underline; }
+.page-teaching .teaching-school-head { margin-bottom: 1.5rem; }
+.page-teaching .school-course-list { grid-template-columns: 1fr; }
+.page-teaching .school-course-card {
+  display: grid;
+  grid-template-columns: 135px minmax(0, 1fr) 135px;
+  gap: 1.75rem;
+  align-items: start;
+  padding: 1.5rem 0;
+}
+.school-course-card .course-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin: 0;
+  padding-top: 0.25rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+}
+.school-course-code { color: var(--pku); font-weight: 600; }
+.school-course-copy { min-width: 0; }
+.school-course-copy h3 { margin-bottom: 0.5rem; font-size: 1.32rem; }
+.school-course-card .school-course-link {
+  justify-self: start;
+  min-height: 44px;
+  margin: 0;
+  font-size: 0.8rem;
+}
+@media (max-width: 820px) {
+  .page-teaching .school-course-card {
+    grid-template-columns: 125px minmax(0, 1fr);
+    gap: 0.35rem 1.3rem;
+  }
+  .school-course-card .school-course-link { grid-column: 2; }
+}
+@media (max-width: 600px) {
+  .teaching-school-nav { gap: 0.25rem 1.1rem; margin-top: 1.3rem; }
+  .teaching-school-nav a { font-size: 0.79rem; }
+  .page-teaching .school-course-card { grid-template-columns: 1fr; gap: 0.7rem; padding: 1.25rem 0; }
+  .school-course-card .course-meta { flex-direction: row; flex-wrap: wrap; gap: 0.4rem 1rem; padding-top: 0; }
+  .school-course-copy h3 { font-size: 1.27rem; }
+  .school-course-card .school-course-link { grid-column: 1; }
+}
+@media print {
+  .teaching-school-nav { display: none; }
+  .school-course-card { break-inside: avoid; }
+}

@@ -17,75 +17,89 @@ description: "Courses and teaching materials by Yiping Lu in uncertainty quantif
       emphasizing how assumptions, algorithms, and empirical behavior fit together.
     </p>
   </div>
+  <nav class="shell teaching-school-nav" aria-label="Teaching">
+    <a href="#northwestern">Northwestern University</a>
+    <a href="#nyu">New York University</a>
+    <a href="#graduate-topics">Graduate topics</a>
+  </nav>
 </header>
 
-<section class="section">
+<section class="section teaching-institution" id="northwestern" aria-labelledby="northwestern-heading">
   <div class="shell">
-    <div class="section-head">
+    <div class="section-head teaching-school-head">
       <div>
-        <div class="eyebrow">Selected courses</div>
-        <h2>Recent teaching</h2>
+        <div class="eyebrow">Course archive</div>
+        <h2 id="northwestern-heading">Northwestern University</h2>
       </div>
       <p>Course pages preserve lecture notes, assignments, and reference material from the original offerings.</p>
     </div>
-    <div class="course-grid">
-      <article class="course-card">
-        <div class="course-meta">Northwestern · Spring 2026</div>
-        <h3>Uncertainty Quantification</h3>
-        <p>Variational inference, diffusion, Monte Carlo, Kalman methods, Langevin and Hamiltonian dynamics, rare events, and simulation based inference.</p>
-        <a class="text-link" href="/teaching/2026-UQ">Course materials</a>
+    <div class="course-grid school-course-list">
+      <article class="course-card school-course-card">
+        <div class="course-meta"><span class="school-course-code">IEMS 407</span><span>Spring 2026</span></div>
+        <div class="school-course-copy">
+          <h3>Uncertainty Quantification</h3>
+          <p>Variational inference, diffusion, Monte Carlo, Kalman methods, Langevin and Hamiltonian dynamics, rare events, and simulation based inference.</p>
+        </div>
+        <a class="text-link school-course-link" href="/teaching/2026-UQ">Course materials</a>
       </article>
-      <article class="course-card">
-        <div class="course-meta">Northwestern · Spring 2026</div>
-        <h3>Statistical Learning for Data Analysis</h3>
-        <p>Regression, uncertainty, resampling, model interpretation, and the statistical workflow from assumptions to diagnosis.</p>
-        <a class="text-link" href="/teaching/2024-SL-Da">Course materials</a>
+      <article class="course-card school-course-card">
+        <div class="course-meta"><span class="school-course-code">IEMS 304</span><span>Spring 2026</span></div>
+        <div class="school-course-copy">
+          <h3>Statistical Learning for Data Analysis</h3>
+          <p>Regression, uncertainty, resampling, model interpretation, and the statistical workflow from assumptions to diagnosis.</p>
+        </div>
+        <a class="text-link school-course-link" href="/teaching/2024-SL-Da">Course materials</a>
       </article>
-      <article class="course-card">
-        <div class="course-meta">Northwestern · 2025</div>
-        <h3>Statistical Learning</h3>
-        <p>Optimization, generalization, kernels, neural networks, generative models, and the mathematical foundations of modern learning.</p>
-        <a class="text-link" href="/teaching/2025-Statistical-Learning">Course materials</a>
-      </article>
-      <article class="course-card">
-        <div class="course-meta">NYU · 2024</div>
-        <h3>Linear Algebra</h3>
-        <p>Linear systems, geometry, eigenvalues, singular values, least squares, and computational interpretations.</p>
-        <a class="text-link" href="/teaching/2024-linear-algebra">Course materials</a>
-      </article>
-      <article class="course-card">
-        <div class="course-meta">Graduate topics</div>
-        <h3>Mathematical Foundations of Generative AI</h3>
-        <p>Probability, stochastic processes, optimal transport, diffusion, sequential inference, and inference time computation.</p>
-      </article>
-      <article class="course-card">
-        <div class="course-meta">Graduate topics</div>
-        <h3>Scientific Machine Learning</h3>
-        <p>Approximation, PDE learning, operator learning, physics informed models, uncertainty quantification, and scaling laws.</p>
+      <article class="course-card school-course-card">
+        <div class="course-meta"><span class="school-course-code">IEMS 402</span><span>Winter 2025</span></div>
+        <div class="school-course-copy">
+          <h3>Statistical Learning</h3>
+          <p>Optimization, generalization, kernels, neural networks, generative models, and the mathematical foundations of modern learning.</p>
+        </div>
+        <a class="text-link school-course-link" href="/teaching/2025-Statistical-Learning">Course materials</a>
       </article>
     </div>
   </div>
 </section>
 
-<section class="section section-soft">
-  <div class="shell prose-grid">
-    <aside class="prose-sticky">
-      <div class="eyebrow">Teaching philosophy</div>
-      <h2>Derive, implement, diagnose.</h2>
-    </aside>
-    <div class="prose-main">
-      <div class="principle">
-        <h3>Start from a mathematical question</h3>
-        <p>Students should understand what a method estimates, what information it uses, and what can fundamentally go wrong before they memorize an algorithm.</p>
+<section class="section teaching-institution" id="nyu" aria-labelledby="nyu-heading">
+  <div class="shell">
+    <div class="section-head teaching-school-head">
+      <div>
+        <div class="eyebrow">Course archive</div>
+        <h2 id="nyu-heading">New York University</h2>
       </div>
-      <div class="principle">
-        <h3>Connect proof to computation</h3>
-        <p>Derivations are paired with experiments that reveal scaling, stability, and approximation behavior. The computation is part of the argument.</p>
+    </div>
+    <div class="course-grid school-course-list">
+      <article class="course-card school-course-card">
+        <div class="course-meta"><span class="school-course-code">MATH-UA 140</span><span>Spring 2024</span></div>
+        <div class="school-course-copy">
+          <h3>Linear Algebra</h3>
+          <p>Linear systems, geometry, eigenvalues, singular values, least squares, and computational interpretations.</p>
+        </div>
+        <a class="text-link school-course-link" href="/teaching/2024-linear-algebra">Course materials</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- These existing topics have no institution or offering term recorded. -->
+<section class="section" id="graduate-topics" aria-labelledby="graduate-topics-heading">
+  <div class="shell">
+    <div class="section-head teaching-school-head">
+      <div>
+        <h2 id="graduate-topics-heading">Graduate topics</h2>
       </div>
-      <div class="principle">
-        <h3>Make research ownership visible</h3>
-        <p>Open ended projects ask students to formulate a precise question, defend their evaluation, and explain what evidence would change their conclusion.</p>
-      </div>
+    </div>
+    <div class="course-grid">
+      <article class="course-card">
+        <h3>Mathematical Foundations of Generative AI</h3>
+        <p>Probability, stochastic processes, optimal transport, diffusion, sequential inference, and inference time computation.</p>
+      </article>
+      <article class="course-card">
+        <h3>Scientific Machine Learning</h3>
+        <p>Approximation, PDE learning, operator learning, physics informed models, uncertainty quantification, and scaling laws.</p>
+      </article>
     </div>
   </div>
 </section>
