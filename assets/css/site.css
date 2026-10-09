@@ -433,6 +433,21 @@ p { margin-bottom: 1rem; }
   margin-top: 0.35rem;
   padding: 0.25rem 0;
 }
+.research-card-wide { grid-column: 1 / -1; }
+.research-card-wide > p { max-width: 76ch; }
+@media (min-width: 821px) {
+  .research-card-wide .selected-work-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.75rem;
+    padding-top: 0.55rem;
+  }
+  .research-card-wide .selected-work {
+    min-width: 0;
+    padding: 0 0 0.25rem;
+    border-top: 0;
+  }
+}
 .project-grid { display: grid; grid-template-columns: 1fr; }
 .project-card {
   display: grid;

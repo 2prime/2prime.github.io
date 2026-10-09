@@ -3,7 +3,7 @@ layout: modern
 permalink: /research/
 title: "Research"
 nav_key: research
-description: "Research by Yiping Lu on inference time scaling, scientific machine learning, optimization, mathematical reasoning, probability, and randomized numerical algorithms."
+description: "Research by Yiping Lu on inference time scaling, scientific machine learning, optimization, mathematical reasoning, differential equations for machine learning, probability, and randomized numerical algorithms."
 ---
 
 <header class="page-intro">
@@ -106,15 +106,14 @@ description: "Research by Yiping Lu on inference time scaling, scientific machin
         </div>
       </div>
       <div class="principle">
-        <h3>Encoding physics into architectures</h3>
+        <h3>Discovering governing equations from data</h3>
         <p>
-          PDE Net learns differential operators as constrained convolution filters. Neural ODE viewpoints connect deep architectures to numerical discretization and optimal control.
-          These connections provide interpretable representations and expose the computational structure needed for analysis.
+          PDE Net learns differential operators as constrained convolution filters, combining numerical structure with data to identify governing equations.
+          PDE Net 2.0 adds a symbolic network to recover nonlinear PDE expressions from observed dynamics.
         </p>
         <div class="principle-links">
           <a href="https://arxiv.org/abs/1710.09668">PDE Net</a>
-          <a href="https://arxiv.org/abs/1710.10121">Neural differential equations</a>
-          <a href="https://arxiv.org/abs/2003.05508">Deep ResNet mean field analysis</a>
+          <a href="https://arxiv.org/abs/1812.04426">PDE Net 2.0</a>
         </div>
       </div>
       <div class="principle">
@@ -149,6 +148,16 @@ description: "Research by Yiping Lu on inference time scaling, scientific machin
           <a href="https://arxiv.org/abs/2603.09952">Matrix operator geometry</a>
           <a href="/files/MOGA.pdf">MOGA slides</a>
           <a href="/files/row_norm_pku.pdf">Dimension dependence of neural optimizers</a>
+        </div>
+      </div>
+      <div class="principle">
+        <h3>Feature geometry and neural collapse</h3>
+        <p>
+          I study the implicit bias of gradient flow through an unconstrained model of final layer features and classifiers.
+          The analysis links neural collapse to a minimum norm separation problem and characterizes the associated optimization landscape.
+        </p>
+        <div class="principle-links">
+          <a href="https://arxiv.org/abs/2110.02796">Neural collapse · ICLR 2022</a>
         </div>
       </div>
       <div class="principle">
@@ -189,6 +198,48 @@ description: "Research by Yiping Lu on inference time scaling, scientific machin
         </p>
         <div class="principle-links">
           <a href="https://arxiv.org/abs/2607.03639">Signed BAR paper</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-soft" id="differential-equations">
+  <div class="shell prose-grid">
+    <aside class="prose-sticky">
+      <div class="eyebrow">Direction 05</div>
+      <h2>Differential Equations for ML</h2>
+    </aside>
+    <div class="prose-main">
+      <p>Numerical differential equations, optimal control, and mean field limits provide principles for neural network architecture, efficient training, and optimization theory.</p>
+      <div class="principle">
+        <h3>Numerical methods for architecture design</h3>
+        <p>
+          Neural networks can be interpreted as numerical discretizations of differential equations.
+          Our work uses this connection to design linear multistep architectures and to explain their behavior through modified equations.
+        </p>
+        <div class="principle-links">
+          <a href="https://arxiv.org/abs/1710.10121">Neural differential equations</a>
+        </div>
+      </div>
+      <div class="principle">
+        <h3>Optimal control for efficient adversarial training</h3>
+        <p>
+          YOPO formulates adversarial training as a differential game and uses Pontryagin's maximum principle to organize adversarial updates.
+          Reusing information from a full network pass allows many updates to focus on the first layer, reducing the cost of adversarial training.
+        </p>
+        <div class="principle-links">
+          <a href="https://arxiv.org/abs/1905.00877">YOPO · NeurIPS 2019</a>
+        </div>
+      </div>
+      <div class="principle">
+        <h3>Continuous limits and optimization theory</h3>
+        <p>
+          I study optimization in deep residual networks through continuous limits and mean field descriptions of their parameters.
+          These tools provide conditions for convergence and clarify how overparameterization from depth changes the training problem.
+        </p>
+        <div class="principle-links">
+          <a href="https://arxiv.org/abs/2003.05508">Deep ResNet mean field analysis</a>
         </div>
       </div>
     </div>

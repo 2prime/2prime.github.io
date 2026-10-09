@@ -101,7 +101,7 @@ redirect_from:
         <p>Monte Carlo, control, and sequential methods that convert additional inference computation into reliable accuracy gains.</p>
         <a href="/research/#inference">Read more →</a>
         <details class="selected-works">
-          <summary aria-label="Selected works: Inference Time Scaling">Selected works <span class="work-count">(2)</span></summary>
+          <summary aria-label="Selected works (2): Inference Time Scaling">Selected works <span class="work-count">(2)</span></summary>
           <div class="selected-work-list">
             <article class="selected-work">
               <div class="project-meta">Generative AI · 2026</div>
@@ -124,13 +124,37 @@ redirect_from:
         <p>Structure preserving learning for PDEs, operator learning, uncertainty quantification, and simulation calibrated correction.</p>
         <a href="/research/#sciml">Read more →</a>
         <details class="selected-works">
-          <summary aria-label="Selected works: Scientific Machine Learning">Selected works <span class="work-count">(1)</span></summary>
+          <summary aria-label="Selected works (5): Scientific Machine Learning">Selected works <span class="work-count">(5)</span></summary>
           <div class="selected-work-list">
             <article class="selected-work">
               <div class="project-meta">AI for Science · ICLR 2026</div>
               <h4>Simulation Calibrated Scientific ML</h4>
               <p>Inference time defect correction improves high dimensional PDE solvers without retraining the learned model.</p>
               <a href="https://arxiv.org/abs/2504.16172" aria-label="Read SCaSML paper">Paper ↗</a>
+            </article>
+            <article class="selected-work">
+              <div class="project-meta">Equation Discovery · ICML 2018</div>
+              <h4>PDE Net: Learning PDEs from Data</h4>
+              <p>Learns differential operators and nonlinear dynamics through constrained convolution filters to identify PDEs from observed data.</p>
+              <a href="https://proceedings.mlr.press/v80/long18a.html" aria-label="Read PDE Net paper">Paper ↗</a>
+            </article>
+            <article class="selected-work">
+              <div class="project-meta">Equation Discovery · JCP 2019</div>
+              <h4>PDE Net 2.0</h4>
+              <p>Combines learnable differential operators with symbolic neural networks to recover explicit PDE models and predict their dynamics.</p>
+              <a href="https://arxiv.org/abs/1812.04426" aria-label="Read PDE Net 2.0 paper">Paper ↗</a>
+            </article>
+            <article class="selected-work">
+              <div class="project-meta">PDE Learning Theory · ICLR 2022</div>
+              <h4>Machine Learning for Elliptic PDEs</h4>
+              <p>Establishes sharp generalization bounds and minimax rates for PINNs and a modified Deep Ritz method in a prototype elliptic PDE setting.</p>
+              <a href="https://arxiv.org/abs/2110.06897" aria-label="Read elliptic PDE learning paper">Paper ↗</a>
+            </article>
+            <article class="selected-work">
+              <div class="project-meta">Operator Learning · ICLR 2023 Spotlight</div>
+              <h4>Minimax Optimal Kernel Operator Learning via Multilevel Training</h4>
+              <p>Develops minimax optimal rates and a multilevel algorithm for learning linear operators between infinite dimensional function spaces.</p>
+              <a href="https://arxiv.org/abs/2209.14430" aria-label="Read multilevel kernel operator learning paper">Paper ↗</a>
             </article>
           </div>
         </details>
@@ -141,7 +165,7 @@ redirect_from:
         <p>Width and depth stable optimization geometry, predictable hyperparameter transfer, and robust learning algorithms.</p>
         <a href="/research/#optimization">Read more →</a>
         <details class="selected-works">
-          <summary aria-label="Selected works: Optimization and Reliability">Selected works <span class="work-count">(2)</span></summary>
+          <summary aria-label="Selected works (3): Optimization and Reliability">Selected works <span class="work-count">(3)</span></summary>
           <div class="selected-work-list">
             <article class="selected-work">
               <div class="project-meta">Optimization · 2026</div>
@@ -155,6 +179,12 @@ redirect_from:
               <p>Heavy tailed risk and high dimensional large deviations reveal failure modes hidden by benign average case behavior.</p>
               <a href="https://arxiv.org/abs/2607.09547" aria-label="Read interpolator fragility paper">Paper ↗</a>
             </article>
+            <article class="selected-work">
+              <div class="project-meta">Feature Geometry · ICLR 2022</div>
+              <h4>An Unconstrained Layer Peeled Perspective on Neural Collapse</h4>
+              <p>Studies neural collapse through the implicit bias of gradient flow and the optimization geometry of an unconstrained model of features and classifiers.</p>
+              <a href="https://arxiv.org/abs/2110.02796" aria-label="Read neural collapse paper">Paper ↗</a>
+            </article>
           </div>
         </details>
       </article>
@@ -164,13 +194,42 @@ redirect_from:
         <p>Representations and search procedures that help AI systems discover, verify, and communicate mathematical structure.</p>
         <a href="/research/#reasoning">Read more →</a>
         <details class="selected-works">
-          <summary aria-label="Selected works: Agentic Mathematical Reasoning">Selected works <span class="work-count">(1)</span></summary>
+          <summary aria-label="Selected works (1): Agentic Mathematical Reasoning">Selected works <span class="work-count">(1)</span></summary>
           <div class="selected-work-list">
             <article class="selected-work">
               <div class="project-meta">Probability · 2026</div>
               <h4>Signed BAR Conjecture</h4>
               <p>Uniqueness in the Harrison–Reiman class and a completely S class obstruction for a longstanding problem in reflected Brownian motion.</p>
               <a href="https://arxiv.org/abs/2607.03639" aria-label="Read Signed BAR paper">Paper ↗</a>
+            </article>
+          </div>
+        </details>
+      </article>
+      <article class="research-card research-card-wide">
+        <span class="card-index">05</span>
+        <h3>Differential Equations for ML</h3>
+        <p>Numerical differential equations, optimal control, and mean field limits provide principles for neural network architecture, efficient training, and optimization theory.</p>
+        <a href="/research/#differential-equations">Read more →</a>
+        <details class="selected-works">
+          <summary aria-label="Selected works (3): Differential Equations for ML">Selected works <span class="work-count">(3)</span></summary>
+          <div class="selected-work-list">
+            <article class="selected-work">
+              <div class="project-meta">Network Architectures · ICML 2018</div>
+              <h4>Beyond Finite Layer Neural Networks</h4>
+              <p>Interprets neural architectures as numerical discretizations of differential equations and uses linear multistep methods to design more efficient residual networks.</p>
+              <a href="https://proceedings.mlr.press/v80/lu18d.html" aria-label="Read Beyond Finite Layer Neural Networks paper">Paper ↗</a>
+            </article>
+            <article class="selected-work">
+              <div class="project-meta">Optimal Control · NeurIPS 2019</div>
+              <h4>You Only Propagate Once (YOPO)</h4>
+              <p>Formulates adversarial training as a differential game and uses Pontryagin’s maximum principle to reduce repeated propagation through the full network.</p>
+              <a href="https://arxiv.org/abs/1905.00877" aria-label="Read You Only Propagate Once paper">Paper ↗</a>
+            </article>
+            <article class="selected-work">
+              <div class="project-meta">Optimization Theory · ICML 2020</div>
+              <h4>A Mean Field Analysis of Deep ResNet and Beyond</h4>
+              <p>Develops a continuum model of deep residual networks and establishes optimization guarantees through mean field analysis and overparameterization from depth.</p>
+              <a href="https://proceedings.mlr.press/v119/lu20b.html" aria-label="Read deep ResNet mean field paper">Paper ↗</a>
             </article>
           </div>
         </details>
