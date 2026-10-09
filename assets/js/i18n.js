@@ -6,7 +6,7 @@ sitemap: false
 /* Local, reversible translations. English copy remains in the page templates. */
 (function () {
   'use strict';
-  const ZH = {{ site.data.site_zh | jsonify }};
+  const ZH = Object.assign({}, {{ site.data.site_zh | jsonify }}, {{ site.data.bio_zh | jsonify }});
   const KEY = 'yiping-site-language';
   const switcher = document.querySelector('.language-switch');
   if (!switcher || !ZH) return;

@@ -28,28 +28,6 @@ redirect_from:
   </div>
 </header>
 
-<section class="section">
-  <div class="shell prose-grid">
-    <aside class="prose-sticky">
-      <div class="eyebrow">About</div>
-      <h2>A hybrid discipline for scientific discovery</h2>
-    </aside>
-    <div class="prose-main">
-      <div class="principle">
-        <p>
-          The long term goal of my research is to develop a scientific discipline that combines domain knowledge,
-          machine learning, numerical computation, and randomized experiments. I work across probability and statistics,
-          numerical analysis, control, optimization, inverse problems, and operations research.
-        </p>
-        <p>
-          A recurring theme is that structure determines scalability. Differential equations, stochastic processes,
-          operator geometry, and algebraic invariants tell us which representations and algorithms can remain stable as problems become larger or more complex.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="section section-soft">
   <div class="shell">
     <div class="section-head">
@@ -95,6 +73,77 @@ redirect_from:
           <p>School of Mathematical Sciences, Peking University</p>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-soft" id="selected-talks">
+  <div class="shell">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Academic talks</div>
+        <h2>Selected talks and tutorials</h2>
+      </div>
+      <p>Conference tutorials and university seminars, with dates and host locations.</p>
+    </div>
+    <div class="timeline">
+      <article class="timeline-item">
+        <div class="timeline-date"><time datetime="2026-04-14">14 Apr 2026</time></div>
+        <div>
+          <h3>University of Minnesota · IMA</h3>
+          <div class="project-meta"><span>Data Science Seminar</span><span>Minneapolis, USA · hybrid</span></div>
+          <p>Time Scaling via Stochastic Simulation: Guidance, Correction and Sequential Monte Carlo</p>
+          <a class="text-link" href="https://cse.umn.edu/ima/events/time-scaling-stochastic-simulation-guidance-correction-and-sequential-monte-carlo">Event details</a>
+        </div>
+      </article>
+      <article class="timeline-item">
+        <div class="timeline-date"><time datetime="2025-10-22">22 Oct 2025</time></div>
+        <div>
+          <h3>University of California, Riverside</h3>
+          <div class="project-meta"><span>PDE &amp; Applied Mathematics Seminar</span><span>Riverside, USA · online</span></div>
+          <p>Scaling Scientific Machine Learning: Integrating Theory and Numerics in Both Training and Inference</p>
+          <a class="text-link" href="https://lists.ucr.edu/pipermail/raise-seminar/2025-October/000048.html">Event details</a>
+        </div>
+      </article>
+      <article class="timeline-item">
+        <div class="timeline-date"><time datetime="2025-04-21">21 Apr 2025</time></div>
+        <div>
+          <h3>University of Utah</h3>
+          <div class="project-meta"><span>Applied Mathematics Seminar</span><span>Salt Lake City, USA</span></div>
+          <p>Two Tales, One Resolution: Physics-Informed Test Time Scaling and Precondition</p>
+          <a class="text-link" href="https://www.math.utah.edu/applied-math/seminar/Spring2025/index.html">Event details</a>
+        </div>
+      </article>
+      <article class="timeline-item">
+        <div class="timeline-date"><time datetime="2024-04-18">18 Apr 2024</time></div>
+        <div>
+          <h3>Georgia Institute of Technology</h3>
+          <div class="project-meta"><span>ISyE Statistics Seminar</span><span>Atlanta, USA</span></div>
+          <p>Simulation-Calibrated Scientific Machine Learning</p>
+          <a class="text-link" href="https://www.picenter.gatech.edu/events/calendar/day/2024/04/18/15293">Event details</a>
+        </div>
+      </article>
+      <article class="timeline-item">
+        <div class="timeline-date"><time datetime="2024-02">Feb 2024</time></div>
+        <div>
+          <h3>AAAI 2024</h3>
+          <div class="project-meta"><span>Conference tutorial</span><span>Vancouver, Canada · Vancouver Convention Centre</span></div>
+          <p>Recent Advances in Physics-Informed Machine Learning</p>
+          <a class="text-link" href="https://aaai.org/aaai-24-conference/aaai-24-tutorial-and-lab-list/">Event details</a>
+        </div>
+      </article>
+      <article class="timeline-item">
+        <div class="timeline-date"><time datetime="2023-10-10">10 Oct 2023</time></div>
+        <div>
+          <h3>Columbia University</h3>
+          <div class="project-meta"><span>Applied Mathematics Colloquium</span><span>New York, USA</span></div>
+          <p>Simulation-Calibrated Scientific Machine Learning</p>
+          <a class="text-link" href="https://www.apam.columbia.edu/physics-math/academics/seminars/applied-mathematics-colloquium">Event details</a>
+        </div>
+      </article>
+    </div>
+    <div class="section-action">
+      <a class="text-link" href="/talks/">Browse talk slides and recordings</a>
     </div>
   </div>
 </section>
