@@ -7,6 +7,10 @@ sitemap: false
 (function () {
   'use strict';
   const ZH = Object.assign({}, {{ site.data.site_zh | jsonify }}, {{ site.data.bio_zh | jsonify }});
+  // Disambiguate the U.S. Northwestern University throughout the Chinese site.
+  Object.keys(ZH).forEach(function (key) {
+    if (typeof ZH[key] === 'string') ZH[key] = ZH[key].replace(/(?:美国)?西北大学/g, '美国西北大学');
+  });
   const KEY = 'yiping-site-language';
   const switcher = document.querySelector('.language-switch');
   if (!switcher || !ZH) return;

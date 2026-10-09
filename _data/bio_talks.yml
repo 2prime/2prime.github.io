@@ -1,0 +1,101 @@
+[
+  {
+    "date": "2026-04-14",
+    "date_label": "14 Apr 2026",
+    "host": "University of Minnesota · IMA",
+    "series": "Data Science Seminar",
+    "location": "Minneapolis, USA · hybrid",
+    "title": "Time Scaling via Stochastic Simulation: Guidance, Correction and Sequential Monte Carlo",
+    "url": "https://cse.umn.edu/ima/events/time-scaling-stochastic-simulation-guidance-correction-and-sequential-monte-carlo"
+  },
+  {
+    "date": "2025-10-22",
+    "date_label": "22 Oct 2025",
+    "host": "University of California, Riverside",
+    "series": "PDE & Applied Mathematics Seminar",
+    "location": "Riverside, USA · online",
+    "title": "Scaling Scientific Machine Learning: Integrating Theory and Numerics in Both Training and Inference",
+    "url": "https://lists.ucr.edu/pipermail/raise-seminar/2025-October/000048.html"
+  },
+  {
+    "date": "2025-06-13",
+    "date_label": "13 Jun 2025",
+    "host": "Institute for Mathematical and Statistical Innovation (IMSI)",
+    "series": "Statistical and Computational Challenges in Probabilistic Scientific Machine Learning (SciML)",
+    "location": "Chicago, USA",
+    "title": "Two Tales, One Resolution: Physics-Informed Inference Time Scaling and Precondition",
+    "url": "https://www.imsi.institute/videos/two-tales-one-resolution-physics-informed-inference-time-scaling-and-precondition-2/"
+  },
+  {
+    "date": "2025-05-22",
+    "date_label": "22 May 2025",
+    "host": "Institute for Mathematical and Statistical Innovation (IMSI)",
+    "series": "Uncertainty Quantification and Machine Learning for Complex Physical Systems",
+    "location": "Chicago, USA",
+    "title": "Two Tales, One Resolution: Physics-Informed Inference Time Scaling and Precondition",
+    "url": "https://www.imsi.institute/videos/two-tales-one-resolution-physics-informed-inference-time-scaling-and-precondition/"
+  },
+  {
+    "date": "2025-04-21",
+    "date_label": "21 Apr 2025",
+    "host": "University of Utah",
+    "series": "Applied Mathematics Seminar",
+    "location": "Salt Lake City, USA",
+    "title": "Two Tales, One Resolution: Physics-Informed Test Time Scaling and Precondition",
+    "url": "https://www.math.utah.edu/applied-math/seminar/Spring2025/index.html"
+  },
+  {
+    "date": "2024-11-11",
+    "date_label": "11 Nov 2024",
+    "host": "SNAPP Seminar",
+    "series": "Seminars on New Advances in Applied Probability",
+    "location": "Online seminar",
+    "title": "Using Stochastic Simulation to Calibrate Machine Learning",
+    "url": "https://sites.google.com/view/snappseminar/past-seminars/fall-2024"
+  },
+  {
+    "date": "2024-04-18",
+    "date_label": "18 Apr 2024",
+    "host": "Georgia Institute of Technology",
+    "series": "ISyE Statistics Seminar",
+    "location": "Atlanta, USA",
+    "title": "Simulation-Calibrated Scientific Machine Learning",
+    "url": "https://www.picenter.gatech.edu/events/calendar/day/2024/04/18/15293"
+  },
+  {
+    "date": "2024-02",
+    "date_label": "Feb 2024",
+    "host": "AAAI 2024",
+    "series": "Conference tutorial",
+    "location": "Vancouver, Canada · Vancouver Convention Centre",
+    "title": "Recent Advances in Physics-Informed Machine Learning",
+    "url": "https://aaai.org/aaai-24-conference/aaai-24-tutorial-and-lab-list/"
+  },
+  {
+    "date": "2023-10-10",
+    "date_label": "10 Oct 2023",
+    "host": "Columbia University",
+    "series": "Applied Mathematics Colloquium",
+    "location": "New York, USA",
+    "title": "Simulation-Calibrated Scientific Machine Learning",
+    "url": "https://www.apam.columbia.edu/physics-math/academics/seminars/applied-mathematics-colloquium"
+  },
+  {
+    "date": "2023-02-24",
+    "date_label": "24 Feb 2023",
+    "host": "New York University · Courant Institute",
+    "series": "Computational Mathematics and Scientific Computing Seminar",
+    "location": "New York, USA · Warren Weaver Hall",
+    "title": "Machine Learning for Differential Equation Modeling: Statistics and Computation",
+    "url": "https://cims.nyu.edu/dynamic/calendars/seminars/computational-mathematics-and-scientific-computing-seminar/3683/"
+  },
+  {
+    "date": "2022",
+    "date_label": "2022",
+    "host": "University of Chicago · Data Science Institute",
+    "series": "Rising Stars in Data Science Workshop",
+    "location": "Chicago, USA",
+    "title": "Machine Learning for Differential Equations: Statistics, Optimization and Multilevel Learning",
+    "url": "https://datascience.uchicago.edu/research/postdoctoral-programs/rising-stars/2022/"
+  }
+]

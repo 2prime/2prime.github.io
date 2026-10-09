@@ -26,10 +26,14 @@ redirect_from:
         I develop mathematical foundations and scalable algorithms at the intersection of machine learning,
         numerical computation, applied probability, and scientific discovery.
       </p>
-      <div class="button-row">
-        <a class="button" href="/research/">Explore research</a>
-        <a class="button button-outline" href="mailto:yipinglu@bicmr.pku.edu.cn">yipinglu@bicmr.pku.edu.cn</a>
+      <div class="button-row hero-actions">
+        <a class="button" href="/research/"><span>Explore research</span><span aria-hidden="true">→</span></a>
+        <a class="button scholar-button" href="https://scholar.google.com/citations?user=NmhvVBgAAAAJ" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m2 9 10-5 10 5-10 5-10-5Z"/><path d="M6 11v6c3 2 9 2 12 0v-6M22 9v7"/></svg>
+          <span>Google Scholar</span>
+        </a>
       </div>
+      <p class="hero-contact"><a href="mailto:yipinglu@bicmr.pku.edu.cn">yipinglu@bicmr.pku.edu.cn</a></p>
       <p class="hero-office"><strong>Office:</strong> No.78 Jingchunyuan 78105W-1</p>
     </div>
     <div class="hero-visual" aria-label="Portrait of Yiping Lu">

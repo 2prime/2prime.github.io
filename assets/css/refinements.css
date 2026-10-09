@@ -1,0 +1,111 @@
+/* Focused refinements: homepage actions, biography navigation and talk archive. */
+.page-home .hero-actions {
+  gap: 0.65rem;
+  margin-top: 1.4rem;
+}
+.page-home .hero-actions .button {
+  min-height: 44px;
+  padding: 0.6rem 1rem;
+  gap: 0.6rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 4px;
+  font-size: 0.84rem;
+  line-height: 1.4;
+  text-decoration: none;
+}
+.page-home .hero-actions .button:hover {
+  background: var(--cloud);
+  border-color: var(--pku);
+}
+.page-home .hero-actions .scholar-button {
+  color: #fff;
+  background: var(--pku);
+  border-color: var(--pku);
+}
+.page-home .hero-actions .scholar-button:hover {
+  color: #fff;
+  background: var(--pku-deep);
+  border-color: var(--pku-deep);
+}
+.hero-actions svg { width: 18px; height: 18px; flex: 0 0 18px; }
+.hero-contact { margin: 0.8rem 0 0; font-size: 0.88rem; }
+.hero-contact a { text-decoration: none; overflow-wrap: anywhere; }
+.hero-contact a:hover { text-decoration: underline; }
+.page-home .hero-office { margin-top: 0.3rem; }
+.bio-section-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.6rem;
+  margin-top: 1.9rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+.bio-section-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-height: 36px;
+  color: var(--ink-soft);
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+.bio-section-nav a::after { content: "↓"; color: var(--pku); }
+.bio-section-nav a:hover { color: var(--pku); text-decoration: underline; }
+.page-bio .recognition-grid { gap: 1rem; }
+.page-bio .recognition-grid .fact-card {
+  padding: 1.35rem 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+.page-bio .recognition-grid .fact-card:nth-child(-n + 3) {
+  background: #f5f0ec;
+  border-top: 2px solid var(--pku);
+}
+.page-bio .recognition-grid h3 { font-size: 1.22rem; line-height: 1.4; }
+.page-bio .recognition-grid p { font-size: 0.86rem; line-height: 1.75; }
+.page-bio .bio-talk {
+  grid-template-columns: 112px minmax(0, 1fr) 110px;
+  gap: 1.5rem;
+  padding: 1.55rem 0;
+  align-items: start;
+}
+.bio-talk .timeline-date {
+  padding-top: 0.1rem;
+  font-size: 0.77rem;
+  font-variant-numeric: tabular-nums;
+}
+.bio-talk-copy { min-width: 0; }
+.page-bio .bio-talk h3 { margin-bottom: 0.45rem; font-size: 1.24rem; line-height: 1.4; }
+.page-bio .bio-talk .bio-talk-series {
+  margin: 0 0 0.55rem;
+  color: var(--pku);
+  font-size: 0.76rem;
+  line-height: 1.65;
+}
+.page-bio .bio-talk .bio-talk-title { font-size: 0.92rem; line-height: 1.75; }
+.page-bio .bio-talk .bio-talk-location {
+  margin-top: 0.5rem;
+  color: var(--muted);
+  font-size: 0.76rem;
+  line-height: 1.65;
+}
+.bio-talk-link { min-height: 36px; font-size: 0.75rem; justify-self: start; }
+@media (max-width: 820px) {
+  .page-bio .bio-talk { grid-template-columns: 105px minmax(0, 1fr); gap: 0.4rem 1.2rem; }
+  .bio-talk-link { grid-column: 2; margin-top: 0.35rem; }
+}
+@media (max-width: 600px) {
+  .page-home .hero-actions { margin-top: 1.15rem; }
+  .page-home .hero-actions .button { padding: 0.6rem 0.85rem; font-size: 0.8rem; }
+  .bio-section-nav { gap: 0.25rem 1.1rem; margin-top: 1.4rem; }
+  .bio-section-nav a { min-height: 44px; font-size: 0.77rem; }
+  .page-bio .recognition-grid { gap: 0.75rem; }
+  .page-bio .recognition-grid .fact-card { padding: 1.1rem; }
+  .page-bio .bio-talk { grid-template-columns: 1fr; gap: 0.5rem; padding: 1.25rem 0; }
+  .page-bio .bio-talk h3 { font-size: 1.2rem; }
+  .bio-talk-link { grid-column: 1; min-height: 40px; margin-top: 0; }
+}
+@media print {
+  .bio-section-nav { display: none; }
+  .page-bio .bio-talk, .page-bio .recognition-grid .fact-card { break-inside: avoid; }
+}
