@@ -9,7 +9,9 @@
     <link rel="canonical" href="{{ page.url | absolute_url }}">
     <link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml">
     <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}?v={{ site.time | date: '%s' }}">
-    <script defer src="{{ '/assets/js/site.js' | relative_url }}"></script>
+    <link rel="stylesheet" href="{{ '/assets/css/i18n.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+    <script defer src="{{ '/assets/js/site.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+    <script defer src="{{ '/assets/js/i18n.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
     {% if page.mathjax %}
       <script type="text/x-mathjax-config">
         MathJax.Hub.Config({
@@ -65,10 +67,6 @@
         <a class="institution-brand" href="{{ '/' | relative_url }}" aria-label="Home">
           <img src="{{ '/images/pku_bicmr_logo.png' | relative_url }}" alt="Peking University and Beijing International Center for Mathematical Research" width="580" height="100">
         </a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
-          <span></span><span></span><span></span>
-          <span class="sr-only">Toggle navigation</span>
-        </button>
         <nav class="site-nav" id="site-navigation" aria-label="Primary navigation">
           <a href="{{ '/research/' | relative_url }}"{% if page.nav_key == 'research' %} aria-current="page"{% endif %}>Research</a>
           <a href="{{ '/publications/' | relative_url }}"{% if page.nav_key == 'publications' %} aria-current="page"{% endif %}>Publications</a>
@@ -78,6 +76,16 @@
           <a href="{{ '/bio/' | relative_url }}"{% if page.nav_key == 'bio' %} aria-current="page"{% endif %}>Biography</a>
           <a class="nav-contact" href="mailto:yipinglu@bicmr.pku.edu.cn">Email</a>
         </nav>
+        <div class="header-controls">
+          <div class="language-switch" role="group" aria-label="Choose language" data-language-ui hidden>
+            <button type="button" data-site-lang="zh" lang="zh-CN" aria-label="切换为中文" aria-pressed="false">中文</button>
+            <button type="button" data-site-lang="en" lang="en" aria-label="Switch to English" aria-pressed="true">EN</button>
+          </div>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
+            <span></span><span></span><span></span>
+            <span class="sr-only">Toggle navigation</span>
+          </button>
+        </div>
       </div>
     </header>
 

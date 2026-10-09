@@ -30,7 +30,7 @@
 
     papers.forEach(function (paper) {
       const category = paper.dataset.category || '';
-      const haystack = paper.textContent.toLowerCase();
+      const haystack = [paper.textContent, paper.dataset.searchEn || '', paper.dataset.searchZh || ''].join(' ').toLowerCase();
       const categoryMatch = activeFilter === 'all' || category.split(' ').includes(activeFilter);
       const searchMatch = !query || haystack.includes(query);
       paper.hidden = !(categoryMatch && searchMatch);
@@ -51,6 +51,7 @@
   });
 
   if (search) search.addEventListener('input', updatePapers);
+  document.addEventListener('site:languagechange', updatePapers);
 
   const courseContent = document.querySelector('.course-content');
   const courseToc = document.querySelector('.course-toc');

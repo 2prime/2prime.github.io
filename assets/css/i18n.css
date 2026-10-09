@@ -1,0 +1,33 @@
+/* The language control stays visible independently of the mobile menu. */
+.header-inner { gap: 1rem; }
+.institution-brand { flex: 0 1 248px; }
+.site-nav { margin-left: auto; gap: 0.9rem; }
+.header-controls { display: flex; align-items: center; gap: 0.65rem; flex: 0 0 auto; }
+.language-switch { display: inline-flex; align-items: center; gap: 2px; padding: 2px; border: 1px solid var(--line); border-radius: 4px; }
+.language-switch button { display: inline-flex; align-items: center; justify-content: center; min-width: 38px; min-height: 34px; padding: 0.3rem 0.45rem; color: var(--ink-soft); font: inherit; font-size: 0.77rem; font-weight: 500; line-height: 1.4; background: transparent; border: 0; border-radius: 2px; cursor: pointer; }
+.language-switch button:hover { color: var(--pku); background: var(--cloud); }
+.language-switch button[aria-pressed="true"] { color: var(--pku); background: #f2e9e8; box-shadow: inset 0 -2px 0 var(--pku); }
+.language-switch button:focus-visible { outline: 2px solid var(--pku); outline-offset: 3px; }
+html[lang="zh-CN"] body { line-height: 1.85; }
+html[lang="zh-CN"] h1, html[lang="zh-CN"] h2, html[lang="zh-CN"] h3 { letter-spacing: 0; }
+html[lang="zh-CN"] .hero h1 { letter-spacing: 0.08em; }
+html[lang="zh-CN"] .eyebrow, html[lang="zh-CN"] .page-number { letter-spacing: 0.08em; }
+@media (max-width: 1020px) {
+  .header-inner { min-height: 72px; }
+  .institution-brand { width: 270px; flex: 0 1 270px; }
+  .header-controls { margin-left: auto; }
+  .nav-toggle { display: block; flex-shrink: 0; }
+  .site-nav { position: absolute; top: 100%; left: -2rem; right: -2rem; display: none; flex-direction: column; align-items: stretch; gap: 0; margin-left: 0; padding: 0.5rem 2rem 1rem; background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line-strong); max-height: calc(100vh - 76px); overflow-y: auto; }
+  .site-nav.is-open { display: flex; }
+  .site-nav a { min-height: 44px; padding: 0.6rem 0; font-size: 0.9rem; }
+  .site-nav .nav-contact { padding-left: 0; border-left: 0; }
+}
+@media (max-width: 600px) {
+  .header-inner { min-height: 68px; gap: 0.6rem; }
+  .institution-brand { width: auto; flex: 0 1 235px; }
+  .header-controls { gap: 0.4rem; }
+  .language-switch button { min-width: 34px; min-height: 36px; padding: 0.2rem 0.35rem; }
+  .nav-toggle { width: 38px; height: 42px; padding: 8px; }
+  .site-nav { left: -1.25rem; right: -1.25rem; padding: 0.5rem 1.25rem 1rem; }
+}
+@media print { .header-controls { display: none; } }
