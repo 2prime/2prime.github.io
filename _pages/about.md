@@ -248,10 +248,6 @@ redirect_from:
         <div class="eyebrow">Teaching archives</div>
         <h2>Course materials</h2>
       </div>
-      <p>
-        Lecture notes, assignments, and references from courses in uncertainty quantification,
-        statistical learning, and linear algebra.
-      </p>
     </div>
     <div class="course-archive-grid">
       <a class="course-archive-link" href="/teaching/2026-UQ">
