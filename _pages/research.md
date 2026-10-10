@@ -19,38 +19,6 @@ description: "Research by Yiping Lu on inference time scaling, scientific machin
   </div>
 </header>
 
-<section class="section">
-  <div class="shell prose-grid">
-    <aside class="prose-sticky">
-      <div class="eyebrow">The scaling lens</div>
-      <h2>One question, several computational worlds</h2>
-    </aside>
-    <div class="prose-main">
-      <div class="principle">
-        <h3>Why do some models scale while others stall?</h3>
-        <p>
-          Scaling fails when approximation, optimization, statistical uncertainty, or simulation error becomes the hidden bottleneck.
-          I aim to identify that bottleneck mathematically and redesign the algorithm so that added resources improve the quantity we actually care about.
-        </p>
-      </div>
-      <div class="principle">
-        <h3>What should be preserved?</h3>
-        <p>
-          Physical laws, operator geometry, stochastic dynamics, and algebraic identities are not auxiliary information.
-          They determine the representation, metric, and estimator. Preserving them often turns an unstable black box into a controllable computational method.
-        </p>
-      </div>
-      <div class="principle">
-        <h3>How should theory meet computation?</h3>
-        <p>
-          The objective is not a bound in isolation. A useful theory should identify the right algorithm, predict its scaling behavior,
-          and survive high dimensional experiments. This loop connects my work in machine learning, numerical analysis, and probability.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="section section-soft" id="inference">
   <div class="shell prose-grid">
     <aside class="prose-sticky">
