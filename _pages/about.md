@@ -38,7 +38,7 @@ redirect_from:
     </div>
     <div class="hero-visual" aria-label="Portrait of Yiping Lu">
       <div class="portrait-frame">
-        <img src="/images/profile.png" alt="Illustrated portrait of Yiping Lu" width="1045" height="983">
+        <img src="/images/profile-photo.webp" alt="Portrait of Yiping Lu" width="640" height="640">
       </div>
       <div class="coordinate-card">
         <small>Current position</small>
