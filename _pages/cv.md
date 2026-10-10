@@ -16,11 +16,7 @@ redirect_from:
       <h1>Mathematics, computation, and learning.</h1>
     </div>
     <div>
-      <p class="lede">
-        Yiping Lu is a tenure-track Assistant Professor at the Beijing International Center for Mathematical Research,
-        Peking University. His research spans machine learning, numerical algorithms, applied probability, PDEs, and control.
-      </p>
-      <div class="button-row" style="margin-top: 1.5rem">
+      <div class="button-row">
         <a class="button button-outline" href="https://www.overleaf.com/read/swtsssgpcwnz#b5c621">Current CV</a>
         <a class="button button-outline" href="/files/rs.pdf">Research statement</a>
       </div>

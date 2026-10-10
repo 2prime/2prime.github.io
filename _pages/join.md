@@ -12,10 +12,6 @@ description: "Current students, supervised undergraduate researchers, thesis com
       <span class="page-number">06 · Students</span>
       <h1>Students and mentoring.</h1>
     </div>
-    <p class="lede">
-      Research grows through close collaboration, careful mathematics, and ownership of difficult questions.
-      This page records current advising, undergraduate research mentoring, and thesis committee service.
-    </p>
   </div>
 </header>
 
@@ -115,9 +111,6 @@ description: "Current students, supervised undergraduate researchers, thesis com
         <div class="eyebrow">Research mentoring</div>
         <h2>Supervised undergraduate researchers</h2>
       </div>
-      <p>
-        Research year, undergraduate institution, next position, and publication outcome are listed from the current CV.
-      </p>
     </div>
 
     <div class="timeline student-timeline">
