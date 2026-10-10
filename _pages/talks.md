@@ -12,10 +12,6 @@ description: "Selected research talks, tutorials, and lecture slides by Yiping L
       <span class="page-number">03 · Talks</span>
       <h1>Ideas in public.</h1>
     </div>
-    <p class="lede">
-      Selected talks and tutorials on scaling, scientific machine learning, numerical algorithms,
-      optimization, and the mathematics of deep learning.
-    </p>
   </div>
 </header>
 
@@ -26,7 +22,6 @@ description: "Selected research talks, tutorials, and lecture slides by Yiping L
         <div class="eyebrow">Featured</div>
         <h2>Current research program</h2>
       </div>
-      <p>Talks that give the fastest route into the group’s present research agenda.</p>
     </div>
     <div class="talk-grid">
       <article class="talk-card">

@@ -13,7 +13,7 @@ redirect_from:
   <div class="shell page-intro-grid">
     <div>
       <span class="page-number">05 · Biography</span>
-      <h1>Mathematics, computation, and learning.</h1>
+      <h1>CV</h1>
     </div>
     <div>
       <div class="button-row">
