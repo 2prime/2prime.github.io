@@ -7,15 +7,12 @@ description: "Research by Yiping Lu on inference time scaling, scientific machin
 ---
 
 <header class="page-intro">
-  <div class="shell page-intro-grid">
-    <div>
-      <span class="page-number">01 · Research</span>
-      <h1>Structure makes scaling possible.</h1>
+  <div class="shell">
+    <span class="page-number">01 · Research</span>
+    <h1>Structure makes scaling possible.</h1>
+    <div class="research-intro-block">
+      <p>I study when more data, model capacity, optimization effort, or inference computation can be converted into predictable improvements.</p>
     </div>
-    <p class="lede">
-      I study when more data, model capacity, optimization effort, or inference computation can be converted into predictable improvements.
-      The common language is mathematics: differential equations, stochastic processes, control, geometry, and randomization.
-    </p>
   </div>
 </header>
 

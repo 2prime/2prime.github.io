@@ -524,6 +524,18 @@ p { margin-bottom: 1rem; }
   align-items: end;
 }
 .page-intro h1 { font-size: clamp(2.25rem, 4vw, 3rem); }
+.research-intro-block {
+  margin-top: 1.5rem;
+  padding: 1.2rem 1.5rem;
+  background: var(--cloud);
+  border-left: 2px solid var(--pku);
+}
+.research-intro-block p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 1rem;
+  line-height: 1.85;
+}
 .page-number { margin-bottom: 0.85rem; }
 .prose-grid {
   display: grid;

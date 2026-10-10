@@ -13,7 +13,6 @@ description: "Selected publications by Yiping Lu in machine learning, scientific
       <h1>Selected papers and preprints.</h1>
     </div>
     <div>
-      <p class="lede">Research across generative inference, scientific machine learning, optimization, probability, and numerical algorithms.</p>
       <p style="margin: 1.4rem 0 0"><a class="text-link" href="https://scholar.google.com/citations?user=NmhvVBgAAAAJ">Complete list on Google Scholar</a></p>
     </div>
   </div>
