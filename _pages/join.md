@@ -55,6 +55,10 @@ description: "Current students, supervised undergraduate researchers, thesis com
         <span class="student-status">Since September 2025</span>
         <h3>Youheng Zhu</h3>
         <p class="student-affiliation">Northwestern University</p>
+        <p class="button-row student-profile-links">
+          <a class="text-link" href="https://zhuyouheng.github.io/" target="_blank" rel="noopener noreferrer">Personal homepage</a>
+          <a class="text-link" href="https://scholar.google.com/citations?user=wJdhKGoAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+        </p>
         <div class="student-topic-list" aria-label="Research interests">
           <span>Sequential Monte Carlo</span>
           <span>Stochastic simulation</span>
