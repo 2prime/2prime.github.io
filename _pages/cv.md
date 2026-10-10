@@ -64,14 +64,14 @@ redirect_from:
         <div class="timeline-date">2019 · 2023</div>
         <div>
           <h3>PhD · Computational and Mathematical Engineering</h3>
-          <p>Stanford University · advised by Lexing Ying and Jose Blanchet</p>
+          <p><span>Stanford University · Advisors:</span> <a href="https://web.stanford.edu/~lexing/" target="_blank" rel="noopener noreferrer">Lexing Ying</a>, <a href="https://joseblanchet.com/" target="_blank" rel="noopener noreferrer">Jose Blanchet</a></p>
         </div>
       </div>
       <div class="timeline-item">
         <div class="timeline-date">2015 · 2019</div>
         <div>
           <h3>BS · Applied Mathematics</h3>
-          <p>School of Mathematical Sciences, Peking University</p>
+          <p><span>School of Mathematical Sciences, Peking University · Advisors:</span> <a href="https://faculty.bicmr.pku.edu.cn/~dongbin/" target="_blank" rel="noopener noreferrer">Bin Dong</a>, <a href="http://www.liweiwang-pku.com/" target="_blank" rel="noopener noreferrer">Liwei Wang</a></p>
         </div>
       </div>
     </div>
@@ -85,7 +85,6 @@ redirect_from:
         <div class="eyebrow">Recognition</div>
         <h2>Honors and service</h2>
       </div>
-      <p>Selected recognition and professional service across machine learning and applied mathematics.</p>
     </div>
     <div class="fact-grid recognition-grid">
       <article class="fact-card">
@@ -129,7 +128,6 @@ redirect_from:
         <div class="eyebrow">Academic talks</div>
         <h2>Selected talks and tutorials</h2>
       </div>
-      <p>Conference tutorials and university seminars, with dates and host locations.</p>
     </div>
     <div class="timeline bio-talk-list">
       {% for talk in site.data.bio_talks %}
