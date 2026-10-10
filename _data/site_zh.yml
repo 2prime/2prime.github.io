@@ -44,7 +44,6 @@
   "SCALE Lab": "SCALE 实验室",
   "Research directions": "研究方向",
   "How can learning systems scale reliably?": "如何让学习系统可靠地扩展？",
-  "My work treats scaling as a mathematical question about representation, geometry, simulation, and resource allocation rather than an empirical slogan.": "我将规模扩展视为关于表示、几何、模拟与资源分配的数学问题，而非仅凭经验的口号。",
   "I develop mathematical foundations and scalable algorithms at the intersection of machine learning, numerical computation, applied probability, and scientific discovery.": "我的研究结合机器学习、数值计算、应用概率与科学发现，发展数学基础与可扩展算法。",
   "Inference Time Scaling": "推理时扩展",
   "Inference time scaling": "推理时扩展",

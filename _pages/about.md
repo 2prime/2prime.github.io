@@ -93,10 +93,6 @@ redirect_from:
         <div class="eyebrow">Research directions</div>
         <h2>How can learning systems scale reliably?</h2>
       </div>
-      <p>
-        My work treats scaling as a mathematical question about representation, geometry, simulation,
-        and resource allocation rather than an empirical slogan.
-      </p>
     </div>
     <div class="research-grid">
       <article class="research-card">
