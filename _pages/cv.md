@@ -36,7 +36,6 @@ redirect_from:
         <div class="eyebrow">Appointments and education</div>
         <h2>Academic path</h2>
       </div>
-      <p>Training in applied mathematics, scientific computing, probability, and machine learning.</p>
     </div>
     <div class="timeline">
       <div class="timeline-item">
