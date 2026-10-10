@@ -46,7 +46,7 @@ description: "Current students, supervised undergraduate researchers, thesis com
         <h2>PhD student</h2>
       </div>
       <p>
-        Work at the intersection of applied probability, stochastic simulation, and the mathematical theory of inference time reasoning.
+        We use applied probability, stochastic simulation, and computational mathematics to accelerate and improve generative AI algorithms.
       </p>
     </div>
 

@@ -28,3 +28,10 @@ Advanced graduate course on Uncertainty Quantification.
 - Sampling: Importance sampling, (continuous-time) MCMC, particle methods.
 - Neural ODE and diffusion model
 - Optimization: Maximum a posteriori (MAP) estimators, variational methods, approximation in Kullback-Liebler divergence, Kalman Filter.
+
+### Application: Generative AI
+
+1. Diffusion Models
+2. Flow Matching
+3. Discrete Diffusion Models
+4. Inference Time Scaling
