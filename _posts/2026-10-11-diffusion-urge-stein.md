@@ -266,7 +266,25 @@ $$
 \frac{\mathbb E[ZH(Y)]}{\mathbb E[H(Y)]}.
 $$
 
-分子告诉我们价值偏向哪个方向，分母负责把价值归一化。通过 Stein 恒等式，这个平均位移等于高斯平滑后价值的对数梯度，再乘上 $$h\sigma\sigma^\top$$。因此，上式既有引导的含义，又只包含函数值。
+<aside class="blog-key-insight" aria-labelledby="stein-rejection-guidance" markdown="1">
+<h4 id="stein-rejection-guidance">Stein 引理：拒绝采样与梯度引导的等价联系</h4>
+
+**按价值接受候选，与加入相应的梯度引导，在平均漂移上等价。**
+
+从基础高斯提议 $$Y=\mu+\sqrt h\,\sigma Z$$ 出发。若价值有已知上界 $$0<H\le M$$，就以 $$H(Y)/M$$ 的概率接受，拒绝后重新抽样。这就是拒绝采样（rejection sampling）；接受后的分布，恰好是“基础转移概率 × 价值”归一化后的结果。
+
+令 $$G_h(\mu)=\mathbb E[H(\mu+\sqrt h\,\sigma Z)]$$，Stein 恒等式给出
+
+$$
+\mathbb E[Y\mid\mathrm{accept}]
+=\mu+h\sigma\sigma^\top\nabla_\mu\log G_h(\mu).
+$$
+
+**左边通过接受或拒绝筛选候选，右边显现出梯度引导。**这里精确出现的是高斯平滑后的价值 $$G_h$$；小步长时，其对数梯度趋近于通常的 $$\nabla\log H$$。Stein 引理由此把“按价值筛选”与“沿梯度引导”联系起来。
+
+公式在冻结 $$\sigma$$、满足高斯分部积分及求导与期望交换条件下成立。接下来的 $$K$$ 个候选按价值选择，是对这一理想倾斜分布的有限查询近似，归一化比值仍有误差。[［2，§3、Proposition 6，式 (23)］](#ref_stein)
+
+</aside>
 
 实现思路也随之清楚了：**用 $$K$$ 次查询的平均，替换公式里的期望；再把归一化权重变成选择概率。**构造这批查询时，我们还要保留两个对称候选的一个关键性质：所有方向加起来恰好为零。
 

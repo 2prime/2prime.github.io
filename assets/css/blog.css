@@ -37,6 +37,10 @@
 .blog-prose li + li { margin-top: 0.35rem; }
 .blog-prose blockquote { margin: 1.6rem 0; padding: 0.9rem 1.25rem; background: var(--cloud); border-left: 2px solid var(--pku); }
 .blog-prose blockquote > :last-child { margin-bottom: 0; }
+.blog-prose .blog-key-insight { margin: 2rem 0; padding: 1.4rem 1.5rem; border: 1px solid var(--pku); border-left-width: 4px; border-radius: 3px; background: #f2e9e8; scroll-margin-top: 110px; }
+.blog-prose .blog-key-insight h4 { margin: 0 0 0.85rem; color: var(--pku); font-size: 1.2rem; font-weight: 600; line-height: 1.6; }
+.blog-prose .blog-key-insight .MathJax_Display { font-size: 0.94em; }
+.blog-prose .blog-key-insight > :last-child { margin-bottom: 0; padding-top: 0.85rem; border-top: 1px solid #d9babe; font-size: 0.88rem; line-height: 1.8; }
 .blog-prose pre, .blog-writing-tips pre { max-width: 100%; padding: 1.1rem; overflow-x: auto; background: var(--cloud); border: 1px solid var(--line); border-radius: 2px; font-size: 0.83rem; line-height: 1.65; }
 .blog-prose code, .blog-writing-tips code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; }
 .blog-prose :not(pre) > code { padding: 0.12em 0.3em; background: var(--cloud); font-size: 0.88em; overflow-wrap: anywhere; }
@@ -100,6 +104,7 @@
   .blog-card h3 { font-size: 1.35rem; }
   .blog-editor-fields { grid-template-columns: minmax(0, 1fr); }
   .blog-prose { font-size: 0.96rem; }
+  .blog-prose .blog-key-insight { padding: 1.1rem; }
   .blog-heading-row > a { min-height: 40px; align-items: center; }
 }
 @media (prefers-reduced-motion: reduce) { .blog-card { transition: none; } }
