@@ -12,7 +12,7 @@ layout: modern
         {% if page.course_code %}<p class="course-code">{{ page.course_code }}</p>{% endif %}
       </div>
       <dl class="course-facts">
-        {% if page.venue %}
+        {% if page.venue and page.show_institution != false %}
           <div>
             <dt>Institution</dt>
             <dd>{{ page.venue }}</dd>
@@ -57,4 +57,5 @@ layout: modern
     </article>
   </div>
 </section>
+
 
