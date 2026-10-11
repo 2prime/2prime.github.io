@@ -250,12 +250,13 @@ redirect_from:
 
 <section class="section" id="blog">
   <div class="shell home-blog">
-    <div class="blog-heading-row">
+    <div class="blog-heading-row magi-home-heading">
       <div>
-        <div class="eyebrow">Blog</div>
-        <h2>Latest posts</h2>
+        <div class="eyebrow">SCALE Lab · Research notes</div>
+        <h2 class="magi-home-wordmark" translate="no">MAGI</h2>
+        <p class="magi-home-description">Understanding generative AI through mathematics.</p>
       </div>
-      <a class="text-link" href="{{ '/blog/' | relative_url }}">All posts</a>
+      <a class="text-link" data-blog-link href="{{ '/blog/' | relative_url }}">All posts</a>
     </div>
     <div class="blog-grid">
       {% for post in site.posts limit: 3 %}
@@ -302,3 +303,4 @@ redirect_from:
     </div>
   </div>
 </section>
+

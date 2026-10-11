@@ -9,7 +9,7 @@ sitemap: false
 
 <header class="page-intro">
   <div class="shell">
-    <a class="blog-back" href="{{ '/blog/' | relative_url }}">← All posts</a>
+    <a class="blog-back magi-back" data-blog-link href="{{ '/blog/' | relative_url }}" translate="no">← MAGI</a>
     <span class="eyebrow">Markdown + LaTeX</span>
     <h1>Write a post</h1>
     <p class="blog-intro">Your draft stays in this browser. Publishing opens GitHub, where you sign in and confirm the commit.</p>
@@ -79,3 +79,4 @@ $$</code></pre>
 </section>
 <script defer src="{{ '/assets/js/blog/markdown-it.min.js' | relative_url }}"></script>
 <script defer src="{{ '/assets/js/blog-editor.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+

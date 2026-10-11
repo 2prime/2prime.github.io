@@ -4,7 +4,10 @@ layout: modern
 
 <header class="page-intro blog-post-header">
   <div class="shell">
-    <a class="blog-back" data-blog-link href="{{ '/blog/' | relative_url }}">← All posts</a>
+    <div class="magi-post-topline">
+      <a class="blog-back magi-back" data-blog-link href="{{ '/blog/' | relative_url }}" translate="no">← MAGI</a>
+      <span class="magi-file-label" aria-hidden="true" translate="no">RESEARCH FILE / {{ page.date | date: '%Y.%m' }}</span>
+    </div>
     <div class="blog-post-meta">
       <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y.%m.%d' }}</time>
       <span aria-hidden="true">·</span><span>Yiping Lu</span>
@@ -38,4 +41,5 @@ layout: modern
     <a class="blog-edit-link" href="https://github.com/{{ site.repository }}/edit/master/{{ page.path }}" target="_blank" rel="noopener noreferrer">Edit on GitHub</a>
   </div>
 </section>
+
 

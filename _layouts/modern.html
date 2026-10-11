@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{{ '/assets/css/refinements.css' | relative_url }}?v={{ site.time | date: '%s' }}">
     {% if page.nav_key == 'home' or page.nav_key == 'blog' %}
     <link rel="stylesheet" href="{{ '/assets/css/blog.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+    <link rel="stylesheet" href="{{ '/assets/css/magi.css' | relative_url }}?v={{ site.time | date: '%s' }}">
     {% endif %}
     <script defer src="{{ '/assets/js/site.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
     <script defer src="{{ '/assets/js/i18n.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
@@ -92,7 +93,7 @@
           <a href="{{ '/students/' | relative_url }}"{% if page.nav_key == 'students' %} aria-current="page"{% endif %}>Students</a>
           <a href="{{ '/talks/' | relative_url }}"{% if page.nav_key == 'talks' %} aria-current="page"{% endif %}>Talks</a>
           <a href="{{ '/teaching/' | relative_url }}"{% if page.nav_key == 'teaching' %} aria-current="page"{% endif %}>Teaching</a>
-          <a href="{{ '/blog/' | relative_url }}"{% if page.nav_key == 'blog' %} aria-current="page"{% endif %}>Blog</a>
+          <a href="{{ '/blog/' | relative_url }}" aria-label="MAGI blog" translate="no"{% if page.nav_key == 'blog' %} aria-current="page"{% endif %}>MAGI</a>
           <a href="{{ '/bio/' | relative_url }}"{% if page.nav_key == 'bio' %} aria-current="page"{% endif %}>Biography</a>
           <a class="nav-contact" href="mailto:yipinglu@bicmr.pku.edu.cn">Email</a>
         </nav>
@@ -140,3 +141,4 @@
     </footer>
   </body>
 </html>
+
