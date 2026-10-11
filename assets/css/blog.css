@@ -47,6 +47,15 @@
 .blog-prose th, .blog-prose td { padding: 0.65rem 0.85rem; text-align: left; border-bottom: 1px solid var(--line); }
 .blog-prose th { color: var(--ink); background: var(--cloud); }
 .blog-prose img { height: auto; margin: 1.5rem auto; }
+.blog-prose .blog-figure { margin: 2rem 0; }
+.blog-prose .blog-figure a { display: block; }
+.blog-prose .blog-figure img { display: block; width: 100%; height: auto; margin: 0; border: 1px solid var(--line); border-radius: 3px; }
+.blog-prose .blog-figure figcaption { margin-top: 0.75rem; color: var(--muted); font-size: 0.84rem; line-height: 1.8; }
+.blog-prose .blog-details { margin: 1.75rem 0; padding: 1rem 1.25rem; border: 1px solid var(--line); border-radius: 3px; background: var(--cloud); }
+.blog-prose .blog-details summary { color: var(--pku); cursor: pointer; font-weight: 600; line-height: 1.7; }
+.blog-prose .blog-details[open] summary { margin-bottom: 1rem; }
+.blog-prose .blog-details > :last-child { margin-bottom: 0; }
+.blog-prose .blog-details .MathJax_Display { font-size: 0.9em; }
 .blog-prose hr { margin: 2.5rem 0; border: 0; border-top: 1px solid var(--line); }
 .blog-prose .MathJax_Display { max-width: 100%; overflow-x: auto; overflow-y: hidden; padding: 0.5rem 0; }
 .blog-prose .MathJax { color: var(--ink); }
@@ -55,6 +64,7 @@
 .blog-sidebar a { color: var(--muted); font-size: 0.78rem; line-height: 1.6; text-decoration: none; }
 .blog-sidebar a:hover { color: var(--pku); }
 .blog-sidebar .blog-toc-subsection { padding-left: 0.65rem; font-size: 0.74rem; }
+@media (min-width: 821px) { .blog-sidebar { max-height: calc(100vh - 150px); overflow-y: auto; } }
 .blog-post-footer { display: flex; flex-wrap: wrap; gap: 1rem 2rem; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
 .blog-editor-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 1.5rem; margin-bottom: 1.75rem; }
 .blog-field-wide { grid-column: 1 / -1; }

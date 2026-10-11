@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="680" viewBox="0 0 960 680" role="img" aria-labelledby="two_queries-title two_queries-desc" lang="zh-CN">
+  <title id="two_queries-title">两次函数值查询，也能产生方向</title>
+  <desc id="two_queries-desc">教学示例。候选点关于均值 μ 对称，位移为正负根号 h 乘以 σZ。若 H 正为四、H 负为一，则分别以百分之八十与百分之二十的概率选择，并非每次都选择高价值点。此给定查询对的平均位移为零点六倍正向位移。对称平均 S 等于两个函数值的均值；在平滑小步长展开中，相反的一阶扰动相互抵消。</desc>
+  <defs>
+    <style>text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', 'FandolHei', sans-serif; font-weight: 400; text-rendering: optimizeLegibility; }</style>
+    <marker id="arrow-red" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11 Z" fill="#842c36" />
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11 Z" fill="#526b60" />
+    </marker>
+    <marker id="arrow-slate" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11 Z" fill="#4f5551" />
+    </marker>
+    <marker id="arrow-muted" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11 Z" fill="#696b65" />
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="960" height="680" fill="#fcfbf8" rx="0" ry="0" />
+  <line x1="48" y1="57" x2="86" y2="57" stroke="#842c36" stroke-width="3" stroke-linecap="round" />
+  <text x="102" y="65" fill="#842c36" font-size="24" text-anchor="start">04  对称双查询</text>
+  <text x="48" y="113" fill="#292a28" font-size="34" text-anchor="start">两次函数值查询，也能产生方向</text>
+  <text x="48" y="157" fill="#4f5551" font-size="28" text-anchor="start">先提出两个对称候选，再按价值比例随机选择。</text>
+  <text x="480" y="208" fill="#696b65" font-size="24" text-anchor="middle">以下数值只用于说明抽样概率</text>
+  <text x="183" y="252" fill="#4f5551" font-size="32" text-anchor="middle">H⁻ = 1</text>
+  <text x="777" y="252" fill="#842c36" font-size="32" text-anchor="middle">H⁺ = 4</text>
+  <rect x="82" y="274" width="204" height="44" fill="#f3f1ec" rx="4" ry="4" />
+  <rect x="675" y="274" width="204" height="44" fill="#f2e9e8" rx="4" ry="4" />
+  <text x="184" y="305" fill="#4f5551" font-size="25" text-anchor="middle">选择概率 20%</text>
+  <text x="777" y="305" fill="#842c36" font-size="25" text-anchor="middle">选择概率 80%</text>
+  <line x1="145" y1="363" x2="815" y2="363" stroke="#dedcd5" stroke-width="3" stroke-linecap="round" />
+  <circle cx="184" cy="363" r="12" fill="#4f5551" />
+  <circle cx="480" cy="363" r="9" fill="#292a28" />
+  <circle cx="776" cy="363" r="12" fill="#842c36" />
+  <text x="184" y="345" fill="#4f5551" font-size="28" text-anchor="middle">Y⁻</text>
+  <text x="480" y="341" fill="#292a28" font-size="30" text-anchor="middle">μ</text>
+  <text x="776" y="345" fill="#842c36" font-size="28" text-anchor="middle">Y⁺</text>
+  <line x1="461" y1="397" x2="207" y2="397" stroke="#696b65" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-muted)" />
+  <line x1="499" y1="397" x2="753" y2="397" stroke="#842c36" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-red)" />
+  <text x="333" y="435" fill="#4f5551" font-size="28" text-anchor="middle">−√h σZ</text>
+  <text x="628" y="435" fill="#842c36" font-size="28" text-anchor="middle">+√h σZ</text>
+  <text x="184" y="486" fill="#4f5551" font-size="28" text-anchor="middle">μ = x + h b(x)</text>
+  <line x1="480" y1="474" x2="658" y2="474" stroke="#842c36" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow-red)" />
+  <text x="663" y="514" fill="#842c36" font-size="26" text-anchor="middle">本组候选的平均位移：0.6 √h σZ</text>
+  <rect x="48" y="548" width="864" height="105" fill="#f3f1ec" rx="4" ry="4" />
+  <text x="480" y="591" fill="#292a28" font-size="31" text-anchor="middle">S = (H⁺ + H⁻) / 2</text>
+  <text x="480" y="632" fill="#4f5551" font-size="27" text-anchor="middle">平滑小步长下，相反的一阶波动相互抵消。</text>
+</svg>

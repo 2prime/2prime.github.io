@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="650" viewBox="0 0 960 650" role="img" aria-labelledby="target-title target-desc" lang="zh-CN">
+  <title id="target-title">从原始生成，到偏好分布</title>
+  <desc id="target-desc">教学示例，不是论文实验。只有书和书加电脑的原始概率分别为百分之八十与百分之二十。将它们乘以正偏好权重一与四后，加权质量均为零点八，归一化后两类的目标概率均为百分之五十。</desc>
+  <defs>
+    <style>text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', 'FandolHei', sans-serif; font-weight: 400; text-rendering: optimizeLegibility; }</style>
+    <marker id="arrow-red" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11 Z" fill="#842c36" />
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11 Z" fill="#526b60" />
+    </marker>
+    <marker id="arrow-slate" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11 Z" fill="#4f5551" />
+    </marker>
+    <marker id="arrow-muted" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11 Z" fill="#696b65" />
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="960" height="650" fill="#fcfbf8" rx="0" ry="0" />
+  <line x1="48" y1="57" x2="86" y2="57" stroke="#842c36" stroke-width="3" stroke-linecap="round" />
+  <text x="102" y="65" fill="#842c36" font-size="24" text-anchor="start">01  教学示例</text>
+  <text x="48" y="113" fill="#292a28" font-size="34" text-anchor="start">从原始生成，到偏好分布</text>
+  <text x="48" y="157" fill="#4f5551" font-size="28" text-anchor="start">先乘正的偏好权重，再把总概率归一化。</text>
+  <text x="156" y="211" fill="#696b65" font-size="26" text-anchor="middle">生成结果</text>
+  <text x="382" y="211" fill="#696b65" font-size="26" text-anchor="middle">原始概率 p</text>
+  <text x="568" y="211" fill="#696b65" font-size="26" text-anchor="middle">偏好权重 φ</text>
+  <text x="805" y="211" fill="#696b65" font-size="26" text-anchor="middle">目标概率 π</text>
+  <rect x="48" y="234" width="864" height="142" fill="#f3f1ec" rx="4" ry="4" />
+  <rect x="48" y="395" width="864" height="142" fill="#f3f1ec" rx="4" ry="4" />
+  <path d="M 114 259.35 Q 135.0 249.9 156.0 261.45 Q 177.0 249.9 198.0 259.35 L 198.0 311.85 Q 177.0 302.4 156.0 313.95 Q 135.0 302.4 114 311.85 Z" stroke="#4f5551" stroke-width="2.5" fill="#fcfbf8" stroke-linejoin="round" stroke-linecap="round" />
+  <line x1="156.0" y1="261.45" x2="156.0" y2="313.95" stroke="#4f5551" stroke-width="2.5" stroke-linecap="round" />
+  <path d="M 124.5 275.1 Q 135.0 273.0 146.55 277.20000000000005" stroke="#4f5551" stroke-width="1.7" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+  <path d="M 165.45 277.20000000000005 Q 177.0 273.0 187.5 275.1" stroke="#4f5551" stroke-width="1.7" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+  <path d="M 124.5 285.6 Q 135.0 283.5 146.55 287.70000000000005" stroke="#4f5551" stroke-width="1.7" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+  <path d="M 165.45 287.70000000000005 Q 177.0 283.5 187.5 285.6" stroke="#4f5551" stroke-width="1.7" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+  <path d="M 124.5 296.1 Q 135.0 294.0 146.55 298.20000000000005" stroke="#4f5551" stroke-width="1.7" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+  <path d="M 165.45 298.20000000000005 Q 177.0 294.0 187.5 296.1" stroke="#4f5551" stroke-width="1.7" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+  <text x="156" y="354" fill="#292a28" font-size="28" text-anchor="middle">只有书</text>
+  <path d="M 80 427.02 Q 97.2 419.28 114.4 428.74 Q 131.6 419.28 148.8 427.02 L 148.8 470.02 Q 131.6 462.28 114.4 471.74 Q 97.2 462.28 80 470.02 Z" stroke="#4f5551" stroke-width="2.5" fill="#fcfbf8" stroke-linejoin="round" stroke-linecap="round" />
+  <line x1="114.4" y1="428.74" x2="114.4" y2="471.74" stroke="#4f5551" stroke-width="2.5" stroke-linecap="round" />
+  <path d="M 88.6 439.92 Q 97.2 438.2 106.66 441.64000000000004" stroke="#4f5551" stroke-width="1.7" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+  <path d="M 122.14 441.64000000000004 Q 131.6 438.2 140.2 439.92" stroke="#4f5551" stroke-width="1.7" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+  <path d="M 88.6 448.52 Q 97.2 446.79999999999995 106.66 450.24" stroke="#4f5551" stroke-width="1.7" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+  <path d="M 122.14 450.24 Q 131.6 446.79999999999995 140.2 448.52" stroke="#4f5551" stroke-width="1.7" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+  <path d="M 88.6 457.12 Q 97.2 455.4 106.66 458.84000000000003" stroke="#4f5551" stroke-width="1.7" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+  <path d="M 122.14 458.84000000000003 Q 131.6 455.4 140.2 457.12" stroke="#4f5551" stroke-width="1.7" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+  <rect x="172.28" y="422" width="64.4" height="41.4" fill="#eaf0ec" stroke="#526b60" stroke-width="2.5" rx="3" ry="3" />
+  <path d="M 172.28 463.4 L 164 472.6 L 244.96 472.6 L 236.68 463.4 Z" stroke="#526b60" stroke-width="2.5" fill="#fcfbf8" stroke-linejoin="round" stroke-linecap="round" />
+  <line x1="191.6" y1="467.08" x2="217.36" y2="467.08" stroke="#526b60" stroke-width="1.5" stroke-linecap="round" />
+  <text x="156" y="514" fill="#292a28" font-size="28" text-anchor="middle">书和电脑</text>
+  <text x="382" y="321" fill="#4f5551" font-size="40" text-anchor="middle">80%</text>
+  <text x="469" y="318" fill="#696b65" font-size="32" text-anchor="middle">×</text>
+  <text x="568" y="321" fill="#842c36" font-size="40" text-anchor="middle">1</text>
+  <line x1="653" y1="308" x2="701" y2="308" stroke="#696b65" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow-muted)" />
+  <text x="805" y="321" fill="#842c36" font-size="40" text-anchor="middle">50%</text>
+  <text x="382" y="482" fill="#4f5551" font-size="40" text-anchor="middle">20%</text>
+  <text x="469" y="479" fill="#696b65" font-size="32" text-anchor="middle">×</text>
+  <text x="568" y="482" fill="#842c36" font-size="40" text-anchor="middle">4</text>
+  <line x1="653" y1="469" x2="701" y2="469" stroke="#696b65" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow-muted)" />
+  <text x="805" y="482" fill="#842c36" font-size="40" text-anchor="middle">50%</text>
+  <text x="480" y="588" fill="#292a28" font-size="32" text-anchor="middle">0.8 × 1 = 0.2 × 4 = 0.8</text>
+  <text x="480" y="627" fill="#4f5551" font-size="26" text-anchor="middle">两类加权质量相同，归一化后各占 50%。</text>
+</svg>
