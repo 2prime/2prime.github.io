@@ -512,22 +512,69 @@ $$
 
 ## 9. 实验里，哪些现象最能说明问题？
 
-### 两个对称候选，为什么值得认真对待
+先看 URGE 原论文的两个问题：采样分布有没有更接近目标？多放一些粒子，生成结果有没有随之改善？再看 Stein 稿件如何进一步检验候选之间的关系与完整路径校正。
 
-先看一个可控的布朗运动实验。稿件比较了中心化查询与独立查询，指标是 adjusted NESS，用来衡量归一化常数估计的效率。图 7 来自论文原图。[［2，§5.1、Figure 2］](#ref_stein)
+<h3 id="urge-experiments">URGE：先在“知道正确答案”的分布上检验</h3>
+
+想检查校正是否有效，最直接的办法，是选一个能够算出目标分布的任务。URGE 使用了一个 30 维、含 40 个分量的高斯混合模型。加上二次奖励后，偏好调整后的目标分布仍有解析表达，因此可以把采样结果与正确答案直接比较。[［1，§4.1、附录 C］](#ref_urge)
+
+这组实验使用 8192 个粒子、500 个离散步，ESS 低于粒子数的 80% 时重采样。FK Steering 与 URGE 都使用引导函数 $$G=r$$ 和重采样；原论文 Table 2 中，URGE 报告的是 5 个随机种子的平均结果。下面节选两种方法的对比。[［1，Table 2、附录 C］](#ref_urge)
+
+| 方法 | MMD ↓ | SWD ↓ | 均值误差 ↓ | 协方差误差 ↓ |
+| :--- | ---: | ---: | ---: | ---: |
+| FK Steering | 0.07 | 0.85 | 4.86 | 198.20 |
+| URGE | 0.06 | 0.62 | 3.20 | 181.31 |
+
+四项都是越小越好。MMD 与 SWD 衡量分布差异；其中，SWD 可以理解为把高维点云从许多方向投影，再比较各个方向的一维分布。均值误差看点云的中心位置，协方差误差看它的散开程度与各方向之间的关系。
+
+**在这组可以核对正确答案的实验中，URGE 的采样分布更接近奖励调整后的目标。**例如，SWD 从 0.85 降到 0.62，均值误差从 4.86 降到 3.20。这为前面介绍的路径权重校正提供了实验支持；有限样本下误差更小，并不等于实验已经证明了采样无偏。
+
+### URGE：相同粒子数下，生成结果有什么变化？
+
+回到文生图。URGE 原论文在 50 个提示词上进行比较，每个提示词使用 3 个随机种子。采样采用 100 步 DDIM，噪声参数为 1，CFG 强度为 7.5，每隔 20 步重采样。下表节选 Table 4 中都使用 4 个粒子的三种方法。[［1，§4.3、Table 4、附录 C］](#ref_urge)
+
+| 方法，均为 4 个粒子 | CLIP ↑ | HPS ↑ | ImageReward ↑ | GenEval ↑ |
+| :--- | ---: | ---: | ---: | ---: |
+| FK Steering | 0.2901 | 0.2849 | 0.8397 | 0.7200 |
+| FK Steering 加梯度引导 | 0.2899 | 0.2839 | 0.7906 | 0.7467 |
+| URGE | 0.2997 | 0.2927 | 0.9955 | 0.7800 |
+
+这些指标都是越大越好。CLIP 看图像与文字的语义匹配，HPS 与 ImageReward 是学习得到的偏好评分，GenEval 检查提示词要求的物体等条件是否满足。与 FK Steering 相比，URGE 的 ImageReward 从 **0.8397 提高到 0.9955**，GenEval 从 **0.7200 提高到 0.7800**。同样的粒子数下，如何引导、如何计算路径权重，确实会影响最后的结果；相同粒子数与步数并不代表实测运行时间完全相同。
+
+如果继续增加粒子呢？图 7 是原论文的粒子数扩展实验，分别使用 SD v1.5 和 SDXL。在测试的 $$N=2,3,4,6,8$$ 下，URGE 的 ImageReward 持续上升，多数配置也高于 FK Steering；但 SD v1.5 的 $$N=2$$ 和 SDXL 的 $$N=6$$ 是例外。**更多粒子在这组实验中带来了持续收益，这是经验结果，不能直接推广为所有任务上的单调性保证。**该图使用 10 个提示词，与上表的 50 个提示词评测范围不同。[［1，§4.3、Figure 3］](#ref_urge)
+
+<figure class="blog-figure">
+  <a href="/images/blog/diffusion_urge_stein/urge_particle_scaling.webp">
+    <img src="/images/blog/diffusion_urge_stein/urge_particle_scaling.webp" alt="URGE 原论文 Figure 3：左右分别为 SD v1.5 和 SDXL，横轴展示基础模型、DPO 及粒子数 2、3、4、6、8，纵轴为 ImageReward；红柱表示 FK Steering，蓝柱表示 URGE。URGE 随测试粒子数增加持续上升，但并非每个配置都超过 FK。" width="1400" height="500" loading="lazy">
+  </a>
+  <figcaption>图 7 · 更多粒子带来的实际收益。摘自 URGE 原论文 Figure 3，保留原图的两面板、坐标、图例与基准线。该实验在 10 个提示词上比较 ImageReward，不与上表的汇总数值直接对齐。点击图片可放大查看。</figcaption>
+</figure>
+
+这些分数对应什么样的视觉变化？图 8 从原论文 Table 5 中选出“牙刷与单板滑雪板”和“马与长颈鹿”两组提示词，三列都使用 SD v1.5。观察时，重点看两个物体有没有同时出现，以及它们是否被混成了一个物体。例如，第一行的 FK 结果把牙刷与滑雪板的外形混在一起，URGE 的例子则能分别辨认出两类物体。[［1，Table 5］](#ref_urge)
+
+<figure class="blog-figure">
+  <a href="/images/blog/diffusion_urge_stein/urge_image_examples.webp">
+    <img src="/images/blog/diffusion_urge_stein/urge_image_examples.webp" alt="URGE 原论文的两组文生图结果。三列依次为基础 SD v1.5、FK Steering 四粒子和 URGE 四粒子；两行提示词分别为牙刷与单板滑雪板、马与长颈鹿。比较两个物体是否同时出现，以及物体外形是否混在一起。" width="1680" height="1610" loading="lazy">
+  </a>
+  <figcaption>图 8 · 节选自 URGE 原论文 Table 5。基础模型为 SD v1.5，FK Steering 与 URGE 均使用 4 个粒子。六张原始生成图片未作改动，仅重新排版并添加中文标签。个别例子提供直观理解，整体效果应结合上面的汇总指标阅读。原图按 CC BY 4.0 许可使用。</figcaption>
+</figure>
+
+### Stein：两个对称候选，为什么值得认真对待
+
+接着看 Stein 稿件的可控布朗运动实验。稿件比较了中心化查询与独立查询，指标是 adjusted NESS，用来衡量归一化常数估计的效率。图 9 来自论文原图。[［2，§5.1、Figure 2］](#ref_stein)
 
 <figure class="blog-figure">
   <a href="/images/blog/diffusion_urge_stein/centering_experiment.webp">
     <img src="/images/blog/diffusion_urge_stein/centering_experiment.webp" alt="论文布朗运动实验：两个中心化候选的归一化常数估计效率随步数增加而提高；独立候选需要更大的候选池才能接近相同效率。" width="1032" height="429" loading="lazy">
   </a>
-  <figcaption>图 7 · 中心化对权重估计效率的影响。摘自 Stein Guidance 稿件 Figure 2。左图固定两个候选，右图增加独立候选数量；指标衡量归一化常数估计效率，不是图像质量或 MH 独立样本数。</figcaption>
+  <figcaption>图 9 · 中心化对权重估计效率的影响。摘自 Stein Guidance 稿件 Figure 2。左图固定两个候选，右图增加独立候选数量；指标衡量归一化常数估计效率，不是图像质量或 MH 独立样本数。</figcaption>
 </figure>
 
 在受扰动的价值函数、$$n=192$$ 的设置下，两个中心化候选达到 92.76%；两个独立候选为 31.40%。独立候选增加到 128 和 256 时，分别达到 92.38% 和 92.81%。
 
 这个实验支持的是一个具体结论：**在该设置中，精心安排候选之间的关系，可以比单纯增加候选数量更有效地稳定权重。**这些百分比不意味着所有任务都能获得相同比例的加速。
 
-### 引导之后，路径校正还贡献了什么
+### Stein：引导之后，路径校正还贡献了什么
 
 稿件还固定了 Hopper 任务上的扩散策略和 critic，研究采样出的动作分数分布是否接近预定目标。三个目标分别希望把 30%、60%、80% 的概率质量分配到原策略中 critic 分数最高的 10% 动作。
 
@@ -543,13 +590,13 @@ $$
 
 ### 回到开头：一本书和一台电脑
 
-图 8 展示同一个 Stable Diffusion v1.5 骨干上的双物体提示词例子。除了“书和电脑”，还包括“刀和斑马”“电脑和胡萝卜”“餐桌和熊”。观察时可以问两个朴素的问题：两个物体都出现了吗？它们是否仍是可辨认的独立物体？[［2，§5.3、Table 3］](#ref_stein)
+图 10 展示同一个 Stable Diffusion v1.5 骨干上的双物体提示词例子。除了“书和电脑”，还包括“刀和斑马”“电脑和胡萝卜”“餐桌和熊”。观察时可以问两个朴素的问题：两个物体都出现了吗？它们是否仍是可辨认的独立物体？[［2，§5.3、Table 3］](#ref_stein)
 
 <figure class="blog-figure">
   <a href="/images/blog/diffusion_urge_stein/image_examples.webp">
     <img src="/images/blog/diffusion_urge_stein/image_examples.webp" alt="Stein Guidance 论文的四组双物体提示词原始生成例子，对比 FK Steering、SVDD、URGE，以及两个和四个候选的 Stein 引导。" width="1110" height="1200" loading="lazy">
   </a>
-  <figcaption>图 8 · 论文中的实际生成例子，摘自 Stein Guidance 稿件 Table 3。Stein 每张图使用 11 条完整提议；图中粒子方法使用 4 个粒子。该展示说明这些提示词上的可观察差异，不是严格等算力的全面排名。点击图片可放大查看。</figcaption>
+  <figcaption>图 10 · 论文中的实际生成例子，摘自 Stein Guidance 稿件 Table 3。Stein 每张图使用 11 条完整提议；图中粒子方法使用 4 个粒子。该展示说明这些提示词上的可观察差异，不是严格等算力的全面排名。点击图片可放大查看。</figcaption>
 </figure>
 
 这些图像把抽象的“偏好”变成了肉眼能理解的问题。它们也提醒我们，单个示例、分布误差与固定算力下的整体表现，是不同层次的证据，应当分别阅读。
@@ -568,4 +615,4 @@ URGE 说明，保留路径可以让校正权重更容易计算。Stein Guidance 
 
 <p id="ref_stein"><strong>［2］Stein Guidance。</strong><em>Stein Guidance without Gradients: Discretization Uniform Diffusion Inference Time Scaling beyond Particle SMC.</em> 2026 年研究稿。本文依据该稿的 Theorem 1、§3、Theorem 4、§5，以及附录中的 Proposition 6、Theorem 11、Theorem 12 和 Proposition 22。理论结论与实验数值均按本文所依据的稿件版本表述。</p>
 
-图 1 至图 6 为本文绘制的教学示意图；图 7 与图 8 摘自 Stein Guidance 稿件的 Figure 2 与 Table 3。文中的两类结果概率、候选价值与 MH 接受示例为解释算法而设置；实验数值均在相应段落注明出处。
+图 1 至图 6 为本文绘制的教学示意图；图 7 与图 8 分别来自 URGE 原论文的 Figure 3 与 Table 5，按 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 许可使用，图 8 仅作选图、排版与中文标签处理；图 9 与图 10 摘自 Stein Guidance 稿件的 Figure 2 与 Table 3。文中的两类结果概率、候选价值与 MH 接受示例为解释算法而设置；实验数值均在相应段落注明出处。
