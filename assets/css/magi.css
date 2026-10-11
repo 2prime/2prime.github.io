@@ -1,96 +1,118 @@
-/* MAGI Blog: the site's paper and PKU red, with terminal accents confined to the illustration. */
-:root {
-  --magi-screen: #131a16;
-  --magi-amber: #e4b16d;
-  --magi-mint: #abd9bc;
-  --magi-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
-}
-.magi-intro { position: relative; padding: 3.1rem 0 2.5rem; background: var(--paper); border-bottom: 1px solid var(--line); }
-.magi-hero { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); align-items: center; gap: clamp(2rem, 5vw, 4rem); }
+/* MAGI's three-computer geometry, expressed in the existing academic palette. */
+:root { --magi-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace; }
+.magi-intro { padding: 2.8rem 0 0; border-bottom: 0; background: var(--paper); }
+.magi-console { position: relative; padding: 1.15rem 2.15rem 1.25rem; border: 1px solid var(--line-strong); background: var(--paper); }
+.magi-console::before { position: absolute; top: -1px; left: -1px; width: 32px; height: 4px; background: var(--pku); content: ""; }
+.magi-console::after { position: absolute; top: -1px; right: -1px; width: 29px; height: 29px; background: linear-gradient(45deg, transparent 48%, var(--line-strong) 49%, var(--line-strong) 51%, var(--paper) 52%); content: ""; pointer-events: none; }
+.magi-console-topline { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding-bottom: 0.85rem; border-bottom: 1px solid var(--line); color: var(--muted); font: 0.64rem/1.5 var(--magi-mono); letter-spacing: 0.08em; }
+.magi-console-topline b { margin-right: 0.6rem; color: var(--pku); font-size: 0.88rem; }
+.magi-hero { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); align-items: center; gap: clamp(2rem, 4vw, 3.4rem); padding: 2.1rem 0 1.8rem; }
 .magi-copy, .magi-figure { min-width: 0; }
-.magi-copy .magi-kicker { margin-bottom: 1.1rem; color: var(--pku); }
-.page-intro .magi-wordmark { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.3rem 1rem; margin: 0 0 1.2rem; color: var(--pku); font-family: var(--serif); font-size: clamp(4.2rem, 7.5vw, 6.3rem); font-weight: 700; line-height: 0.95; letter-spacing: -0.04em; }
-.magi-wordmark .magi-blog-label { color: var(--ink); font-size: 0.32em; font-weight: 400; letter-spacing: -0.02em; }
-html[lang="zh-CN"] .page-intro .magi-wordmark { letter-spacing: -0.04em; }
-.magi-expansion { margin: 0 0 1.05rem; padding: 0.1rem 0 0.1rem 0.85rem; border-left: 2px solid #b6948c; color: var(--ink); font-size: clamp(0.9rem, 1.5vw, 1rem); line-height: 1.65; }
+.magi-copy .magi-kicker { margin-bottom: 1rem; color: var(--green); font-size: 0.62rem; }
+.page-intro .magi-wordmark { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.3rem 0.85rem; margin: 0 0 1.25rem; color: var(--pku); font-family: var(--serif); font-size: clamp(4.2rem, 7.5vw, 6.2rem); font-weight: 700; line-height: 0.95; letter-spacing: -0.05em; }
+.magi-wordmark .magi-blog-label { color: var(--ink); font-size: 0.3em; font-weight: 400; letter-spacing: -0.02em; }
+html[lang="zh-CN"] .page-intro .magi-wordmark { letter-spacing: -0.05em; }
+.magi-expansion { margin: 0 0 1.1rem; padding: 0.1rem 0 0.1rem 0.9rem; border-left: 3px solid var(--pku); color: var(--ink); font-size: clamp(0.88rem, 1.4vw, 0.98rem); line-height: 1.7; }
 .magi-expansion strong { color: var(--pku); font-weight: 700; }
-.magi-description { margin: 0; color: var(--ink-soft); font-size: 0.88rem; line-height: 1.8; }
-.magi-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1.5rem; margin-top: 1.45rem; }
-.magi-actions .text-link { min-height: 44px; font-size: 0.8rem; }
-.magi-actions .magi-button::after { content: "↓"; }
+.magi-description { margin: 0; color: var(--ink-soft); font-size: 0.86rem; line-height: 1.8; }
+.magi-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1.4rem; margin-top: 1.6rem; }
+.magi-actions .text-link { min-height: 44px; font-size: 0.78rem; }
+.magi-actions .magi-button { padding: 0.55rem 0.85rem; border: 1px solid var(--pku); }
+.magi-actions .magi-button::after { content: "↓"; padding-left: 0.3rem; }
+.magi-actions .magi-button:hover { color: var(--paper); background: var(--pku); text-decoration: none; }
+.magi-console-rule { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 5px; height: 4px; }
+.magi-console-rule span { background: var(--line); }
+.magi-console-rule span:first-child { background: var(--pku); }
+.magi-console-rule span:nth-child(2) { background: var(--green); }
 
-/* A small, self-contained MAGI display beside the editorial masthead. */
+/* Three chamfered units around the central MAGI core. No neon palette. */
 .magi-figure { width: 100%; max-width: 460px; margin: 0; }
-.magi-frame { position: relative; padding: 10px; background: var(--magi-screen); border: 1px solid #818576; }
-.magi-frame::before, .magi-frame::after { position: absolute; width: 17px; height: 17px; content: ""; pointer-events: none; }
-.magi-frame::before { top: -3px; left: -3px; border-top: 2px solid var(--pku); border-left: 2px solid var(--pku); }
-.magi-frame::after { right: -3px; bottom: -3px; border-right: 2px solid var(--pku); border-bottom: 2px solid var(--pku); }
-.magi-frame-label { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.3rem; padding: 0 0.1rem 0.55rem; color: var(--magi-amber); font: 0.57rem/1.5 var(--magi-mono); letter-spacing: 0.025em; }
-.magi-image-link { display: block; background: #000; }
-.magi-image-link img { display: block; width: 100%; height: auto; }
-.magi-image-link:focus-visible { outline-color: var(--magi-mint); outline-offset: 3px; }
-.magi-units { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin-top: 0.6rem; }
-.magi-units span { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.25rem; padding: 0.5rem 0.2rem; color: var(--magi-mint); background: #253a2e; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%); }
-.magi-units b { font: 700 0.85rem/1.2 var(--magi-mono); }
-.magi-units em { font: 0.51rem/1.5 var(--magi-mono); font-style: normal; }
-.magi-figure figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.25rem 0.75rem; margin-top: 0.8rem; color: var(--muted); font-size: 0.65rem; line-height: 1.7; }
-.magi-figure figcaption a { color: var(--muted); text-underline-offset: 0.25em; }
-.magi-figure figcaption .magi-origin { flex-basis: 100%; font-size: 0.69rem; }
-.magi-figure figcaption a:hover { color: var(--pku); }
+.magi-frame { padding: 0.55rem 0.65rem 0.2rem; border: 1px solid var(--line); background-color: var(--paper); background-image: linear-gradient(#dedcd538 1px, transparent 1px), linear-gradient(90deg, #dedcd538 1px, transparent 1px); background-size: 24px 24px; }
+.magi-frame-label { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.3rem; color: var(--muted); font: 0.54rem/1.5 var(--magi-mono); letter-spacing: 0.04em; }
+.magi-diagram { display: block; width: 100%; height: auto; overflow: visible; }
+.magi-diagram text { text-anchor: middle; }
+.magi-diagram-guides { stroke: var(--line); stroke-width: 1; }
+.magi-diagram-links { stroke: var(--pku); stroke-width: 3; }
+.magi-node-outline { fill: var(--cloud); stroke: var(--pku); stroke-width: 1.5; }
+.magi-node-balthasar .magi-node-outline { fill: var(--paper); stroke: var(--green); }
+.magi-node-rule { fill: none; stroke: var(--pku); stroke-width: 3; }
+.magi-node-balthasar .magi-node-rule { stroke: var(--green); }
+.magi-node-name { fill: var(--ink); font-family: var(--magi-mono); font-size: 15px; letter-spacing: 0.7px; }
+.magi-node-number { fill: var(--pku); font-family: var(--serif); font-size: 52px; font-weight: 700; letter-spacing: -2px; }
+.magi-node-balthasar .magi-node-number { fill: var(--green); }
+.magi-diagram-core path { fill: var(--pku); }
+.magi-core-title { fill: var(--paper); font-family: var(--serif); font-size: 23px; font-weight: 700; letter-spacing: -0.5px; }
+.magi-core-label { fill: var(--paper); font-family: var(--magi-mono); font-size: 8px; letter-spacing: 2px; }
+.magi-reference { display: grid; grid-template-columns: 84px minmax(0, 1fr); align-items: center; gap: 0.85rem; margin-top: 0.85rem; }
+.magi-reference-image { display: block; padding: 3px; border: 1px solid var(--line); }
+.magi-reference-image img { display: block; width: 100%; height: auto; }
+.magi-origin { display: block; color: var(--ink-soft); font-size: 0.65rem; line-height: 1.65; text-decoration: none; }
+.magi-origin:hover { color: var(--pku); text-decoration: underline; }
+.magi-image-source { display: inline-block; margin-top: 0.2rem; color: var(--muted); font-size: 0.6rem; text-underline-offset: 0.25em; }
 
-/* Familiar article cards, with quiet file numbers and small bracket details. */
-.magi-archive { padding: 2.5rem 0 3rem; scroll-margin-top: 100px; background: var(--paper); }
+/* Research files retain the same paper, type and reading contrast as the site. */
+.magi-archive { padding: 2.6rem 0 3rem; scroll-margin-top: 100px; background: var(--paper); }
 .magi-archive-heading { display: flex; justify-content: space-between; align-items: end; gap: 1rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--line); }
 .magi-section-label { display: block; margin-bottom: 0.45rem; color: var(--pku); font: 0.6rem/1.5 var(--magi-mono); letter-spacing: 0.07em; }
+.magi-section-label::before { display: inline-block; width: 16px; height: 3px; margin-right: 0.5rem; background: var(--pku); content: ""; vertical-align: middle; }
 .magi-archive-heading h2 { margin: 0; color: var(--ink); font-size: clamp(1.65rem, 2.7vw, 2.15rem); font-weight: 400; }
-.magi-archive-total { color: #79776d; font: 400 1.6rem/1 var(--magi-mono); }
+.magi-archive-total { padding: 0.4rem 0 0.4rem 1.25rem; border-left: 1px solid var(--line); color: var(--green); font: 400 1.65rem/1 var(--magi-mono); }
 .magi-archive .blog-tools { margin-bottom: 1.5rem; }
-.magi-archive .blog-tools input { border-radius: 0; border-left: 2px solid var(--pku); }
-.magi-archive .blog-card { padding: 1.65rem 1.75rem; border: 1px solid var(--line); border-radius: 0; background: var(--paper); }
+.magi-archive .blog-tools input { border-radius: 0; border-left: 3px solid var(--green); background: var(--paper); }
+.magi-archive .blog-result-count { font-family: var(--magi-mono); font-size: 0.7rem; }
+.magi-archive .blog-card, .home-blog .blog-card { --magi-card-line: var(--line-strong); padding: 1.65rem 1.75rem; border: 1px solid var(--magi-card-line); border-radius: 0; background: var(--paper); }
+.magi-archive .blog-card::before, .home-blog .blog-card::before { position: absolute; top: -1px; left: -1px; width: 20px; height: 20px; border-top: 2px solid var(--pku); border-left: 2px solid var(--pku); content: ""; pointer-events: none; }
+.magi-archive .blog-card::after, .home-blog .blog-card::after { position: absolute; top: -1px; right: -1px; width: 20px; height: 20px; background: linear-gradient(45deg, transparent 47%, var(--magi-card-line) 49%, var(--magi-card-line) 51%, var(--paper) 53%); content: ""; pointer-events: none; }
 .magi-archive .blog-card:only-child { grid-column: 1 / -1; }
 .magi-archive .blog-card:only-child h3 { max-width: 42ch; font-size: clamp(1.4rem, 2.7vw, 1.75rem); }
 .magi-archive .blog-card:only-child .blog-card-summary { max-width: 90ch; }
-.magi-archive .blog-card::before, .home-blog .blog-card::before { position: absolute; top: -1px; left: -1px; width: 14px; height: 14px; border-top: 2px solid var(--pku); border-left: 2px solid var(--pku); content: ""; pointer-events: none; }
-.magi-card-index { position: absolute; top: 1.75rem; right: 1.75rem; color: var(--muted); font: 0.59rem/1.5 var(--magi-mono); }
+.magi-card-index { position: absolute; top: 1.7rem; right: 1.75rem; padding-bottom: 0.25rem; border-bottom: 2px solid var(--pku); color: var(--pku); font: 0.59rem/1.5 var(--magi-mono); }
 .magi-archive .blog-card-meta { min-height: 1.5em; padding-right: 6rem; }
 .magi-archive .blog-card h3 { font-weight: 400; }
 .magi-archive .blog-card-bottom { padding-top: 0.9rem; border-top: 1px solid var(--line); }
 .magi-archive .blog-tags span, .home-blog .blog-tags span { border-radius: 0; }
-.magi-archive .blog-card:hover, .magi-archive .blog-card:focus-within { background: var(--cloud); border-color: var(--pku); }
+.magi-archive .blog-card-arrow { display: grid; place-items: center; flex-shrink: 0; width: 32px; height: 32px; border: 1px solid var(--line); }
+.magi-archive .blog-card:hover, .magi-archive .blog-card:focus-within, .home-blog .blog-card:hover, .home-blog .blog-card:focus-within { --magi-card-line: var(--pku); background: var(--cloud); border-color: var(--pku); }
 
-/* Article and homepage typography follow the original academic design. */
+/* Small echoes of the control-panel geometry on article and homepage headings. */
 .blog-post-header { background: var(--paper); }
-.magi-post-topline { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0.5rem 1.5rem; margin-bottom: 1.6rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--line); }
+.magi-post-topline { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0.5rem 1.5rem; margin-bottom: 1.6rem; padding: 0.65rem 0.85rem; border: 1px solid var(--line); border-left: 3px solid var(--pku); background: var(--cloud); }
 .magi-back { font-family: var(--serif); font-size: 1rem; font-weight: 600; }
 .magi-post-topline .blog-back { margin-bottom: 0; color: var(--pku); }
-.magi-file-label { color: var(--muted); font: 0.6rem/1.6 var(--magi-mono); letter-spacing: 0.04em; }
+.magi-file-label { color: var(--green); font: 0.6rem/1.6 var(--magi-mono); letter-spacing: 0.04em; }
 .blog-post-header .blog-tags span { border-radius: 0; }
-.page-blog .blog-sidebar { border-left-color: #b6948c; }
-.magi-home-heading { align-items: end; }
+.page-blog .blog-sidebar { border-left-color: var(--pku); }
+.magi-home-heading { position: relative; align-items: end; padding-bottom: 1.2rem; border-bottom: 1px solid var(--line); }
+.magi-home-heading::after { position: absolute; bottom: -1px; left: 0; width: 72px; height: 3px; background: var(--pku); content: ""; }
 .home-blog .magi-home-wordmark { color: var(--pku); font-family: var(--serif); font-size: 2.65rem; font-weight: 700; line-height: 1.1; letter-spacing: -0.04em; }
 .magi-home-wordmark .magi-blog-label { margin-left: 0.25rem; color: var(--ink); font-size: 0.65em; font-weight: 400; letter-spacing: -0.02em; }
 .magi-home-description { margin: 0.65rem 0 0; color: var(--ink-soft); font-size: 0.86rem; }
-.home-blog .blog-card { border-radius: 0; }
 
-@media (max-width: 760px) {
-  .magi-intro { padding: 2rem 0; }
+@media (max-width: 820px) {
   .magi-hero { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
-  .page-intro .magi-wordmark { font-size: clamp(4.2rem, 12vw, 5.5rem); }
-  .magi-archive { padding-top: 2rem; }
+  .magi-figure { max-width: 480px; }
+  .page-intro .magi-wordmark { font-size: clamp(4.2rem, 12vw, 6rem); }
 }
-@media (max-width: 420px) {
-  .magi-frame { padding: 7px; }
-  .magi-frame-label { font-size: 0.5rem; }
-  .magi-units span { flex-direction: column; gap: 0.15rem; }
-  .magi-units em { font-size: 0.5rem; }
-  .magi-archive .blog-card { padding: 1.2rem; }
-  .magi-card-index { top: 1.3rem; right: 1.2rem; font-size: 0.55rem; }
+@media (max-width: 600px) {
+  .magi-intro { padding-top: 1.6rem; }
+  .magi-console { padding: 1rem 1.2rem; }
+  .magi-hero { padding: 1.8rem 0 1.5rem; }
+  .magi-copy .magi-kicker { font-size: 0.58rem; }
+  .page-intro .magi-wordmark { gap: 0.25rem 0.65rem; font-size: clamp(3.45rem, 11vw, 4.8rem); }
+  .magi-expansion { font-size: 0.85rem; }
+  .magi-reference { grid-template-columns: 72px minmax(0, 1fr); gap: 0.65rem; }
+  .magi-frame { padding: 0.5rem 0.35rem 0; }
+  .magi-frame-label { font-size: 0.48rem; }
+  .magi-archive { padding-top: 2rem; }
+  .magi-archive .blog-card, .home-blog .blog-card { padding: 1.25rem; }
+  .magi-card-index { top: 1.3rem; right: 1.25rem; font-size: 0.53rem; }
   .magi-archive .blog-card-meta { padding-right: 5rem; }
 }
 @media print {
-  .magi-actions, .magi-frame-label, .magi-units, .magi-file-label, .magi-section-label, .magi-archive-total, .magi-card-index { display: none; }
+  .magi-actions, .magi-console-topline, .magi-frame-label, .magi-file-label, .magi-section-label, .magi-archive-total, .magi-card-index, .magi-console-rule { display: none; }
+  .magi-console { padding: 1rem; }
   .magi-hero { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
   .page-intro .magi-wordmark { font-size: 3.5rem; }
   .magi-archive .blog-card-meta { padding-right: 0; }
-  .magi-frame { border: 1px solid #777; background: transparent; }
+  .magi-frame { background: transparent; }
 }

@@ -9,7 +9,9 @@ nav_key: blog
 ---
 
 <header class="page-intro magi-intro">
-  <div class="shell magi-hero">
+  <div class="shell magi-console">
+    <div class="magi-console-topline" aria-hidden="true" translate="no"><span><b>07</b> / BLOG</span><span>SCALE LAB</span></div>
+    <div class="magi-hero">
     <div class="magi-copy">
       <span class="page-number magi-kicker">SCALE Lab · Research notes</span>
       <h1 class="magi-wordmark" translate="no">MAGI <span class="magi-blog-label">Blog</span></h1>
@@ -22,14 +24,46 @@ nav_key: blog
     </div>
     <figure class="magi-figure">
       <div class="magi-frame">
-        <div class="magi-frame-label" aria-hidden="true" translate="no"><span>MAGI / ORIGINAL INTERFACE</span><span>01 · 02 · 03</span></div>
-        <a class="magi-image-link" href="https://wiki.evageeks.org/Magi" target="_blank" rel="noopener noreferrer" aria-label="Learn about the MAGI system in Evangelion">
-          <img src="{{ '/images/blog/magi-system.jpg' | relative_url }}" alt="The MAGI interface in Evangelion, with Balthasar, Casper, and Melchior arranged around the central MAGI label." width="700" height="394" decoding="async" fetchpriority="high">
-        </a>
-        <div class="magi-units" aria-hidden="true" translate="no"><span><b>01</b><em>MELCHIOR</em></span><span><b>02</b><em>BALTHASAR</em></span><span><b>03</b><em>CASPER</em></span></div>
+        <div class="magi-frame-label" aria-hidden="true" translate="no"><span>MAGI / THREE MINDS</span><span>01 · 02 · 03</span></div>
+        <svg class="magi-diagram" viewBox="0 0 480 330" role="img" aria-label="MAGI system: Melchior, Balthasar, and Casper" xmlns="http://www.w3.org/2000/svg">
+          <g class="magi-diagram-guides" fill="none">
+            <circle cx="240" cy="179" r="133" />
+            <circle cx="240" cy="179" r="144" stroke-dasharray="2 7" />
+            <path d="M240 4V322M8 165H472" stroke-dasharray="3 7" />
+          </g>
+          <g class="magi-diagram-links" fill="none"><path d="M240 143V168M177 214L187 204M293 204L303 214" /></g>
+          <g class="magi-node magi-node-balthasar">
+            <path class="magi-node-outline" d="M166 20H314V108L276 143H204L166 108Z" />
+            <path class="magi-node-rule" d="M181 32H217M223 32H233" />
+            <text class="magi-node-name" x="240" y="55">BALTHASAR</text>
+            <text class="magi-node-number" x="240" y="108">02</text>
+          </g>
+          <g class="magi-node magi-node-casper">
+            <path class="magi-node-outline" d="M25 184H150L177 214V280L150 307H25Z" />
+            <path class="magi-node-rule" d="M39 196H75M81 196H91" />
+            <text class="magi-node-name" x="100" y="224">CASPER</text>
+            <text class="magi-node-number" x="100" y="278">03</text>
+          </g>
+          <g class="magi-node magi-node-melchior">
+            <path class="magi-node-outline" d="M330 184H455V307H330L303 280V214Z" />
+            <path class="magi-node-rule" d="M403 196H439M387 196H397" />
+            <text class="magi-node-name" x="380" y="224">MELCHIOR</text>
+            <text class="magi-node-number" x="380" y="278">01</text>
+          </g>
+          <g class="magi-diagram-core">
+            <path d="M213 168H267L293 204L267 240H213L187 204Z" />
+            <text class="magi-core-title" x="240" y="205">MAGI</text>
+            <text class="magi-core-label" x="240" y="223">SYSTEM</text>
+          </g>
+        </svg>
       </div>
-      <figcaption><span>MAGI system · Evangelion</span><a href="https://www.are.na/block/7193088" target="_blank" rel="noopener noreferrer">Image source</a><a class="magi-origin" href="https://wiki.evageeks.org/Magi" target="_blank" rel="noopener noreferrer">Named after the MAGI system in Evangelion</a></figcaption>
+      <figcaption class="magi-reference">
+        <a class="magi-reference-image" href="{{ '/images/blog/magi-system.jpg' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="View original MAGI interface"><img src="{{ '/images/blog/magi-system.jpg' | relative_url }}" alt="The MAGI interface in Evangelion, with Balthasar, Casper, and Melchior arranged around the central MAGI label." width="700" height="394" decoding="async"></a>
+        <div><a class="magi-origin" href="https://wiki.evageeks.org/Magi" target="_blank" rel="noopener noreferrer">Named after the MAGI system in Evangelion</a><a class="magi-image-source" href="https://www.are.na/block/7193088" target="_blank" rel="noopener noreferrer">Image source</a></div>
+      </figcaption>
     </figure>
+    </div>
+    <div class="magi-console-rule" aria-hidden="true"><span></span><span></span><span></span></div>
   </div>
 </header>
 
