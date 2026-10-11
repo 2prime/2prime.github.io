@@ -12,26 +12,29 @@ sitemap: false
     <a class="blog-back magi-back" data-blog-link href="{{ '/blog/' | relative_url }}" translate="no">← MAGI</a>
     <span class="eyebrow">Markdown + LaTeX</span>
     <h1>Write a post</h1>
-    <p class="blog-intro">Your draft stays in this browser. Publishing opens GitHub, where you sign in and confirm the commit.</p>
+    <p class="blog-intro">Write freely. Guest articles are published only after approval through Yiping Lu's BICMR email.</p>
   </div>
 </header>
 
 <section class="section">
   <div class="shell">
     <noscript><p>Enable JavaScript to use the editor, or create a Markdown file directly in <a href="https://github.com/2prime/2prime.github.io/tree/master/_posts">_posts on GitHub</a>.</p></noscript>
-    <form class="blog-editor" id="blog-editor" data-repository="{{ site.repository }}" hidden>
+    <form class="blog-editor" id="blog-editor" data-repository="{{ site.repository }}" data-submission-api="https://magi-submissions.yplu.chatgpt.site" hidden>
+      <div class="blog-submission-info"><span class="eyebrow">Guest contribution</span><p>Submit for email review, or publish directly with an authorized GitHub connection.</p><p id="blog-service-status" role="status" translate="no">Checking submission service…</p></div>
       <div class="blog-editor-fields">
         <label class="blog-field-wide"><span>Title</span><input name="title" required maxlength="180" placeholder="Write your title"></label>
+        <label><span>Author name</span><input name="author" required maxlength="80" autocomplete="name" placeholder="Your public byline"></label>
+        <label><span>Contact email</span><input name="email" type="email" maxlength="254" autocomplete="email" aria-describedby="blog-email-help"><small id="blog-email-help">Only used for review. Never included in the public article.</small></label>
         <label class="blog-field-wide"><span>Summary</span><textarea name="description" rows="2" maxlength="320" placeholder="A short introduction for the article card"></textarea></label>
         <label><span>Date</span><input name="date" type="date" required></label>
-        <label><span>URL name</span><input name="slug" pattern="[a-z0-9]+(-[a-z0-9]+)*" required maxlength="100" placeholder="my-research-note" aria-describedby="blog-slug-help"><small id="blog-slug-help">Use lowercase English letters, numbers, and hyphens.</small></label>
+        <label><span>URL name</span><input name="slug" pattern="[a-z0-9]+(-[a-z0-9]+)*" required maxlength="80" placeholder="my-research-note" aria-describedby="blog-slug-help"><small id="blog-slug-help">Use lowercase English letters, numbers, and hyphens.</small></label>
         <label><span>Tags</span><input name="tags" placeholder="Separate tags with commas" maxlength="240"></label>
         <label><span>Article language</span><select name="lang"><option value="zh-CN">Chinese</option><option value="en">English</option></select></label>
       </div>
       <div class="blog-editor-panes">
         <div class="blog-editor-source">
           <label class="blog-pane-label" for="blog-body">Markdown</label>
-          <textarea name="body" id="blog-body" required spellcheck="false" aria-describedby="blog-math-help" translate="no">## 研究笔记
+          <textarea name="body" id="blog-body" required maxlength="60000" spellcheck="false" aria-describedby="blog-math-help" translate="no">## 研究笔记
 
 在这里开始写作。可以使用 **粗体**、[链接](https://2prime.github.io/) 和 LaTeX 公式。
 
@@ -49,17 +52,30 @@ $$
 </textarea>
         </div>
         <div class="blog-editor-preview">
-          <span class="blog-pane-label" id="preview-label">Preview</span>
+          <label class="blog-pane-label" id="preview-label" for="blog-preview-language">Preview <select id="blog-preview-language"><option value="primary">Main text</option><option value="english">English version</option></select></label>
           <article class="blog-prose" id="blog-preview" aria-labelledby="preview-label" translate="no"></article>
         </div>
       </div>
+      <details class="blog-writing-tips blog-translation-fields">
+        <summary>Optional English version</summary>
+        <div class="blog-editor-fields">
+          <label class="blog-field-wide"><span>English title</span><input name="title_en" maxlength="180"></label>
+          <label class="blog-field-wide"><span>English summary</span><textarea name="description_en" rows="2" maxlength="320"></textarea></label>
+          <label class="blog-field-wide"><span>English Markdown</span><textarea name="body_en" rows="12" maxlength="60000" spellcheck="false" translate="no"></textarea></label>
+        </div>
+        <p>For bilingual posts, use Chinese as the main language and fill in both the English title and body.</p>
+      </details>
+      <label class="blog-honeypot" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
       <div class="blog-editor-actions">
-        <button class="button" type="submit">Publish on GitHub</button>
+        <button class="button" type="submit" id="blog-submit-review" disabled>Submit for review</button>
         <button class="button button-outline" type="button" id="blog-download">Download Markdown</button>
+        <button class="button button-outline" type="button" id="blog-email">Send by email</button>
         <span class="blog-save-status" id="blog-save-status" role="status" translate="no"></span>
       </div>
       <p class="blog-publish-status" id="blog-publish-status" role="status" translate="no"></p>
-      <p class="blog-editor-note">No public article is created until you confirm in GitHub.</p>
+      <div class="blog-receipt" id="blog-receipt" hidden translate="no"></div>
+      <p class="blog-editor-note">Submission does not publish your article. Keep your private status link to check feedback and send revisions.</p>
+      <details class="blog-writing-tips"><summary>Owner publishing</summary><p>An authorized GPT or a GitHub collaborator can publish directly. Repository permissions determine who can publish.</p><button class="button button-outline" type="button" id="blog-github">Publish on GitHub</button></details>
     </form>
     <details class="blog-writing-tips tex2jax_ignore" open>
       <summary>Writing tips</summary>
@@ -80,3 +96,4 @@ $$</code></pre>
 <script defer src="{{ '/assets/js/blog/markdown-it.min.js' | relative_url }}"></script>
 <script defer src="{{ '/assets/js/blog-editor.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
 
+<script defer src="{{ '/assets/js/blog-submissions.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>

@@ -6,6 +6,7 @@
     <title>{% if page.title and page.title != "Yiping Lu" %}{{ page.title | escape }} · {% endif %}Yiping Lu</title>
     <meta name="description" content="{{ page.description | default: 'Yiping Lu is an Assistant Professor at the Beijing International Center for Mathematical Research, Peking University.' | escape }}">
     <meta name="theme-color" content="#8c1d40">
+    {% if page.submission_digest %}<meta name="magi-submission" content="{{ page.submission_digest | escape }}">{% endif %}
     <link rel="canonical" href="{{ page.url | absolute_url }}">
     <link rel="icon" href="{{ '/images/bicmr-favicon.png' | relative_url }}?v=bicmr1" type="image/png" sizes="48x48">
     <link rel="icon" href="{{ '/favicon.svg' | relative_url }}?v=bicmr1" type="image/svg+xml" sizes="any">
@@ -38,24 +39,24 @@
       {
         "@context": "https://schema.org",
         "@type": "Course",
-        "name": {{ page.course_title | default: page.title | jsonify }},
-        "description": {{ page.description | jsonify }},
-        "url": {{ page.url | absolute_url | jsonify }},
+        "name": {{ page.course_title | default: page.title | jsonify | replace: '<', '\u003c' | replace: '>', '\u003e' | replace: '&', '\u0026' }},
+        "description": {{ page.description | jsonify | replace: '<', '\u003c' | replace: '>', '\u003e' | replace: '&', '\u0026' }},
+        "url": {{ page.url | absolute_url | jsonify | replace: '<', '\u003c' | replace: '>', '\u003e' | replace: '&', '\u0026' }},
         "provider": {
           "@type": "CollegeOrUniversity",
-          "name": {{ page.venue | jsonify }}
+          "name": {{ page.venue | jsonify | replace: '<', '\u003c' | replace: '>', '\u003e' | replace: '&', '\u0026' }}
         }
       }
       {% elsif page.collection == 'posts' %}
       {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": {{ page.title | jsonify }},
-        "description": {{ page.description | default: page.excerpt | strip_html | strip | jsonify }},
-        "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
-        "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }},
-        "url": {{ page.url | absolute_url | jsonify }},
-        "author": { "@type": "Person", "name": "Yiping Lu", "url": "https://2prime.github.io/" }
+        "headline": {{ page.title | jsonify | replace: '<', '\u003c' | replace: '>', '\u003e' | replace: '&', '\u0026' }},
+        "description": {{ page.description | default: page.excerpt | strip_html | strip | jsonify | replace: '<', '\u003c' | replace: '>', '\u003e' | replace: '&', '\u0026' }},
+        "datePublished": {{ page.date | date_to_xmlschema | jsonify | replace: '<', '\u003c' | replace: '>', '\u003e' | replace: '&', '\u0026' }},
+        "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify | replace: '<', '\u003c' | replace: '>', '\u003e' | replace: '&', '\u0026' }},
+        "url": {{ page.url | absolute_url | jsonify | replace: '<', '\u003c' | replace: '>', '\u003e' | replace: '&', '\u0026' }},
+        "author": { "@type": "Person", "name": {{ page.author | default: site.author.name | jsonify | replace: '<', '\u003c' | replace: '>', '\u003e' | replace: '&', '\u0026' }} }
       }
       {% else %}
       {

@@ -10,7 +10,7 @@ layout: modern
     </div>
     <div class="blog-post-meta">
       <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y.%m.%d' }}</time>
-      <span aria-hidden="true">·</span><span>Yiping Lu</span>
+      <span aria-hidden="true">·</span><span translate="no">{{ page.author | default: site.author.name | escape }}</span>
     </div>
     <h1 id="post-title" lang="{% if page.title_en %}en{% else %}{{ page.lang | default: 'en' }}{% endif %}"{% if page.title_en %} data-blog-en="{{ page.title_en | escape }}" data-blog-zh="{{ page.title | escape }}"{% endif %} translate="no">{{ page.title_en | default: page.title | escape }}</h1>
     {% if page.description %}<p class="blog-post-description" lang="{% if page.description_en %}en{% else %}{{ page.lang | default: 'en' }}{% endif %}"{% if page.description_en %} data-blog-en="{{ page.description_en | escape }}" data-blog-zh="{{ page.description | escape }}"{% endif %} translate="no">{{ page.description_en | default: page.description | escape }}</p>{% endif %}

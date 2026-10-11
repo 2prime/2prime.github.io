@@ -5,7 +5,7 @@
   var preview = document.getElementById('blog-preview');
   var status = document.getElementById('blog-save-status');
   var publishStatus = document.getElementById('blog-publish-status');
-  var fields = ['title', 'description', 'date', 'slug', 'tags', 'lang', 'body'];
+  var fields = ['title', 'author', 'email', 'description', 'date', 'slug', 'tags', 'lang', 'body', 'title_en', 'description_en', 'body_en'];
   var storageKey = 'yiping-blog-draft-v1';
   var saveState = 'ready';
   var renderVersion = 0;
@@ -172,7 +172,9 @@
       preview.textContent = copy('预览组件未加载，仍可下载并发布 Markdown。', 'Preview could not load. You can still download and publish Markdown.');
       return;
     }
-    var html = markdown.render(canonicalMath(field('body').value));
+    var english = document.getElementById('blog-preview-language').value === 'english';
+    var html = markdown.render(canonicalMath(field(english ? 'body_en' : 'body').value));
+    preview.lang = english ? 'en' : field('lang').value;
     function replacePreview() {
       if (version !== renderVersion) return;
       if (window.MathJax && MathJax.Hub) {
@@ -197,11 +199,15 @@
     var tags = data.tags.split(/[,，]/).map(function (tag) { return tag.trim(); }).filter(Boolean);
     return [
       '---', 'title: ' + JSON.stringify(data.title.trim()),
+      'author: ' + JSON.stringify(data.author.trim()),
       'date: ' + data.date,
       'description: ' + JSON.stringify(data.description.trim()),
       'tags: ' + JSON.stringify(tags),
       'lang: ' + JSON.stringify(data.lang),
-      'permalink: /blog/' + data.slug + '/', '---', '', canonicalMath(data.body.trim()), ''
+      'permalink: /blog/' + data.slug + '/',
+      data.body_en ? 'title_en: ' + JSON.stringify(data.title_en.trim()) : '',
+      data.body_en ? 'description_en: ' + JSON.stringify(data.description_en.trim()) : '',
+      '---', '', data.body_en ? '<div data-blog-language="zh" lang="zh-CN" markdown="1" hidden>\n\n' + canonicalMath(data.body.trim()) + '\n\n</div>\n<div data-blog-language="en" lang="en" markdown="1">\n\n' + canonicalMath(data.body_en.trim()) + '\n\n</div>' : canonicalMath(data.body.trim()), ''
     ].join('\n');
   }
   function filename() { return field('date').value + '-' + field('slug').value + '.md'; }
@@ -231,7 +237,7 @@
     save();
     download();
   });
-  form.addEventListener('submit', function (event) {
+  document.getElementById('blog-github').addEventListener('click', function (event) {
     event.preventDefault();
     if (!form.reportValidity()) return;
     save();
@@ -246,6 +252,8 @@
     }
     window.open(url, '_blank', 'noopener,noreferrer');
   });
+  window.blogEditor = { values: values, save: save, download: download, documentText: documentText, restore: function (data) { fields.forEach(function (name) { if (typeof data[name] === 'string') field(name).value = data[name]; }); if (Array.isArray(data.tags)) field('tags').value = data.tags.join(', '); field('slug').dataset.edited = 'true'; save(); render(); } };
+  document.getElementById('blog-preview-language').addEventListener('change', render);
   window.addEventListener('pagehide', save);
   document.addEventListener('visibilitychange', function () { if (document.hidden) save(); });
   document.addEventListener('site:languagechange', showStatus);

@@ -1,4 +1,13 @@
 /* Blog uses the existing paper, type, and PKU red design tokens. */
+.blog-submission-info { padding:1.25rem 1.5rem; margin-bottom:1.75rem; border:1px solid var(--line); background:var(--cloud); }
+.blog-submission-info p { margin:.5rem 0 0; font-size:.87rem; }
+.blog-submission-info [role="status"] { color:var(--muted); font-size:.8rem; }
+.blog-editor button:disabled { opacity:.5; cursor:not-allowed; }
+.blog-receipt { border:1px solid var(--line-strong); padding:1.25rem; margin:1.5rem 0; }
+.blog-receipt p { margin:.75rem 0; font-size:.82rem; color:var(--muted); }
+.blog-honeypot { position:absolute; left:-10000px; width:1px; height:1px; overflow:hidden; }
+.blog-editor .blog-pane-label select { width:auto; padding:.1rem .4rem; margin-left:.7rem; font-size:.72rem; }
+.blog-editor textarea[name="body_en"] { font-family:"SFMono-Regular",Consolas,monospace; }
 .blog-heading-row { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 1rem 2rem; }
 .blog-heading-row h2 { margin-bottom: 0; }
 .blog-intro { max-width: 64ch; margin: 1rem 0 0; color: var(--ink-soft); font-size: 0.95rem; }
