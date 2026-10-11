@@ -1,0 +1,142 @@
+---
+title: "Seminar on Machine Learning Theory and Algorithms"
+course_title: "Seminar on Machine Learning Theory and Algorithms"
+course_label: "Research seminar"
+term: "Fall 2026"
+description: "This seminar explores generalization, generative modeling, reasoning, post training, scaling laws, and optimization. We study the mathematical questions behind machine learning phenomena and how theory can inform algorithm design. Reading and discussion aim to build a coherent view of a research area and identify questions for further work."
+collection: "teaching"
+layout: "course"
+nav_key: "teaching"
+type: "Research seminar"
+permalink: "/teaching/2026-ML-Theory-Seminar"
+venue: "BICMR, Peking University"
+date: "2026-10-12"
+bilingual: true
+mathjax: false
+---
+
+<p>This seminar explores generalization, generative modeling, reasoning, post training, scaling laws, and optimization. We study the mathematical questions behind machine learning phenomena and how theory can inform algorithm design. Reading and discussion aim to build a coherent view of a research area and identify questions for further work.</p>
+
+<div class="button-row seminar-downloads">
+  <a class="button" href="/files/2026-ML-Theory-Seminar/syllabus.pdf">Full syllabus · PDF, 20 pages</a>
+  <a class="button button-outline" href="/files/2026-ML-Theory-Seminar/lecture01-notes.pdf">Lecture 1 notes · PDF, 51 pages</a>
+</div>
+<p class="seminar-caption">Both PDFs are in Chinese.</p>
+
+<h2 id="lecture-1">Lecture 1 · Foundations of Machine Learning Theory</h2>
+<div class="seminar-session">
+  <p class="seminar-session-date"><time datetime="2026-10-12T18:40:00+08:00">Monday, 12 October 2026</time></p>
+  <p>18:40 to 20:30 · Beijing time</p>
+  <p>Room 225, Siyuan Hall (四元厅)</p>
+  <p>Speaker: Yiping Lu</p>
+</div>
+<p>How can finite data reveal an unknown function? We begin with risk decomposition, examine the difficulty of approximation in high dimensions, and develop tools for concentration and generalization. Mean estimation, localized complexity, and kernel methods then show how a more precise analysis improves statistical guarantees. Proofs emphasize the purpose of each step, the key transformation, and the passage from intuition to a rigorous argument.</p>
+<h3>Lecture outline</h3>
+<ol class="seminar-outline">
+  <li>
+    <h4>Risk decomposition: identifying the sources of error</h4>
+    <p>Distinguish population risk from empirical risk, separate approximation limitations from estimation error, and locate optimization error within an empirical risk minimization bound.</p>
+    <p class="seminar-keywords">Population risk, empirical risk, and excess risk under squared loss; Risk decomposition and the basic ERM comparison; How risk decomposition differs from the decomposition into bias and variance.</p>
+  </li>
+  <li>
+    <h4>The curse of dimensionality: corners, distances, and approximation</h4>
+    <p>Use a cube and its inscribed ball to understand why volume moves away from the central region. Then study normalized random distances as sums of coordinate contributions and connect this geometry to approximation of smooth functions.</p>
+    <p class="seminar-keywords">2ᵈ vertices and regions outside the inscribed ball: counting versus volume; Distance concentration for random vertices and continuous random points; Grid counting, local polynomials, and the role of smoothness.</p>
+  </li>
+  <li>
+    <h4>Concentration inequalities: from moments to exponential tails</h4>
+    <p>Follow a single proof strategy based on adjustable transformations, moving from low moments to exponential moments. Understand how independence turns bounds for individual variables into concentration of sample averages.</p>
+    <p class="seminar-keywords">Markov → Chebyshev → higher moments → moment generating functions and Chernoff bounds; Independent sums, subgaussian bounds, and Hoeffding's inequality; How Bernstein's inequality retains variance information.</p>
+  </li>
+  <li>
+    <h4>Generalization: controlling an entire function class</h4>
+    <p>A learner selects a function using the data, so a bound for one fixed function is insufficient. Coverings, random signs, and random sparsification provide complementary ways to measure the size of a class.</p>
+    <p class="seminar-keywords">Uniform bounds, union bounds, and covering numbers; Rademacher complexity, symmetrization, and contraction for losses; Maurey's empirical method: constructing covers by random sparsification.</p>
+  </li>
+  <li>
+    <h4>Localized complexity: seeing curvature through mean estimation</h4>
+    <p>Compare a global complexity bound with the explicit solution of the same mean estimation problem. Express the excess loss under squared loss as a quadratic cost plus a random linear perturbation, then retain the shrinking local fluctuations to recover the correct rate.</p>
+    <p class="seminar-rate"><span>Parameter error: the global bound gives</span> <var>n</var><sup>−1/4</sup><span>; the explicit solution and local analysis give</span> <var>n</var><sup>−1/2</sup>.</p>
+    <p class="seminar-keywords">Mean estimation as an example of a loose global bound; Curvature of squared loss, local variance, and the ERM basic inequality; The intuition behind a critical radius and a return to the mean example.</p>
+  </li>
+  <li>
+    <h4>Kernel smoothing: estimating a function from nearby data</h4>
+    <p>View nonparametric regression as local averaging. Separate smoothing bias from the noise due to a finite number of nearby observations, and relate bandwidth selection to dimension.</p>
+    <p class="seminar-keywords">Local averages, neighborhood sample counts, and random denominators; Balancing bandwidth dependent bias and variance; Smoothness, dimension, and rates of nonparametric estimation.</p>
+  </li>
+  <li>
+    <h4>RKHS: from nonlinear features to function space geometry</h4>
+    <p>Start with nonlinear features and the dual of ridge regression to derive predictions that depend only on inner products. Transfer the parameter norm to a space of functions to motivate the reproducing property, the representer theorem, and kernel ridge regression.</p>
+    <p class="seminar-keywords">Feature maps, ridge regression duality, and the computational motivation for kernels; Continuous point evaluation, the reproducing property, and concrete kernels; The representer theorem, kernel ridge regression, and spectral shrinkage.</p>
+  </li>
+</ol>
+
+<h2 id="seminar-topics">Seminar topics</h2>
+<p>Learning theory provides a common foundation for two main tracks, diffusion models and language models, with shared topics in scaling laws and optimization. The following routes guide reading and topic selection.</p>
+<ol class="seminar-topics">
+  <li>
+    <h3 id="learning-theory">Learning Theory and Generalization</h3>
+    <span class="seminar-topic-role">Common foundation</span>
+    <p>Study generalization in overparameterized models through approximation, statistical, and optimization error, connecting RKHS, kernel regression, neural tangent kernels, and feature learning.</p>
+    <p class="seminar-keywords">Begin with random labels and lazy training, connect kernel spectra to compute optimal scaling, and continue to mean field training and effective dynamics of high dimensional SGD.</p>
+  </li>
+  <li>
+    <h3 id="diffusion-models">Diffusion Models</h3>
+    <span class="seminar-topic-role">Main track</span>
+    <p>Starting from distributional geometry and sampling, study training, generalization, and inference time adaptation in continuous and discrete diffusion models, distinguishing estimation, discretization, and particle approximation errors.</p>
+    <p class="seminar-keywords">Wasserstein geometry and gradient flows; sampling algorithms and complexity; training and generalization; discrete diffusion; inference time guidance and particle methods.</p>
+  </li>
+  <li>
+    <h3 id="language-models">Language Models</h3>
+    <span class="seminar-topic-role">Main track</span>
+    <p>Study training dynamics and internal mechanisms, in context learning and reasoning, inference time scaling, and post training. Distinguish expressivity, learnability through training, causal mechanisms, and statistical generalization.</p>
+    <p class="seminar-keywords">Training dynamics and interpretability; theories of in context learning and reasoning; inference time scaling and verification; preference learning, self improvement, online exploration, and curriculum learning.</p>
+  </li>
+  <li>
+    <h3 id="scaling-laws">Scaling Laws of Neural Networks and Data</h3>
+    <span class="seminar-topic-role">Shared topic</span>
+    <p>Examine how model size, data, and compute budgets affect performance, alongside stochastic limits of networks, conditional language entropy, long range dependence, ambiguity, and the tails of synthetic data.</p>
+    <p class="seminar-keywords">Move from empirical scaling laws and compute allocation to kernel spectra and solvable models, then study width and depth limits of networks and the statistical structure of data.</p>
+  </li>
+  <li>
+    <h3 id="optimizers">Neural Network Optimizers</h3>
+    <span class="seminar-topic-role">Shared topic</span>
+    <p>Understand Adafactor, Shampoo, SOAP, and Muon through matrix preconditioning and optimization geometry, comparing convergence conditions, compute and memory costs, implicit bias, width scaling, and hyperparameter transfer.</p>
+    <p class="seminar-keywords">Adafactor and matrix preconditioning; SOAP and Muon; optimization geometry and implicit bias; width scaling and hyperparameter transfer.</p>
+  </li>
+</ol>
+<p>The reading list is a starting point for choosing a topic. Participants should seek additional literature around their interests and discuss questions, related papers, and new ideas during preparation. The full syllabus contains the complete reading list, suggested selections, and discussion questions.</p>
+
+<h2 id="organization">How the seminar works</h2>
+<h3>Background and format</h3>
+<p>A background in probability, linear algebra, mathematical analysis, and machine learning is recommended. Additional prerequisites can be developed as needed for the chosen topic.</p>
+<p>Yiping Lu will lead the introductory sessions. Subsequent meetings center on student presentations and group discussion. Participants are encouraged to prepare a presentation on one research direction; topics and presentation order will reflect participants’ interests and connections between subjects.</p>
+<p>Times, rooms, and presentation order for later meetings will be announced as topics are arranged.</p>
+<h3>Preparing a presentation</h3>
+<p>Discuss the topic and main papers with Yiping Lu in advance. Aim to study two or three main papers closely alongside four or five related papers; a larger topic may span several presentations. Share paper links and a short reading guide before the presentation, and confirm its scope.</p>
+<ol class="seminar-preparation">
+  <li>Question and motivation: explain the phenomenon, research question, and why it matters.</li>
+  <li>Research context: connect the main papers to related work and explain their approaches and contributions.</li>
+  <li>Results and assumptions: specify the setting, error criteria, and complexity dependence, distinguishing theorems, approximate analyses, and empirical observations.</li>
+  <li>Core method: explain a key proof, algorithmic construction, or experimental design.</li>
+  <li>Limitations and next questions: examine the assumptions and comparisons, and propose a concrete question for further investigation.</li>
+</ol>
+<p>Participants may also suggest topics for introductory presentations by Yiping Lu, including applied probability, stochastic simulation and sampling, scientific machine learning, inference algorithms, and neural network optimizers.</p>
+<p><span>Discuss a topic with Yiping Lu:</span> <a href="mailto:yipinglu@bicmr.pku.edu.cn">yipinglu@bicmr.pku.edu.cn</a></p>
+
+<h2 id="materials">Materials and further reading</h2>
+<ol class="seminar-materials">
+  <li><a href="/files/2026-ML-Theory-Seminar/syllabus.pdf">Full syllabus · PDF, 20 pages</a><p>Seminar overview, presentation guidance, reading routes, and the complete bibliography.</p></li>
+  <li><a href="/files/2026-ML-Theory-Seminar/lecture01-notes.pdf">Lecture 1 notes · PDF, 51 pages</a><p>The complete first lecture notes, with motivating examples, geometric figures, theorem statements, and proofs that explain the key ideas.</p></li>
+  <li><a href="https://2prime.github.io/teaching/2025-Statistical-Learning">Reference course: Statistical Learning (IEMS 402)</a></li>
+</ol>
+<details class="seminar-reading">
+  <summary>Optional technical reading in the notes</summary>
+  <p>The notes include complete proofs. The following technical developments are intended for further reading after the main ideas of the lecture.</p>
+  <ol>
+    <li>Chaining and coverings at multiple scales</li>
+    <li>The full probabilistic argument for critical radii and local spectral analysis in RKHS</li>
+    <li>Nonparametric minimax lower bounds from localized bump functions</li>
+    <li>Detailed derivations of Gaussian concentration, Green functions, and the space induced by a positive semidefinite kernel</li>
+  </ol>
+</details>

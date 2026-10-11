@@ -6,7 +6,7 @@ sitemap: false
 /* Local, reversible translations. English copy remains in the page templates. */
 (function () {
   'use strict';
-  const ZH = Object.assign({}, {{ site.data.site_zh | jsonify }}, {{ site.data.bio_zh | jsonify }}, {{ site.data.students_zh | jsonify }}, {{ site.data.blog_zh | jsonify }});
+  const ZH = Object.assign({}, {{ site.data.site_zh | jsonify }}, {{ site.data.bio_zh | jsonify }}, {{ site.data.students_zh | jsonify }}, {{ site.data.blog_zh | jsonify }}, {{ site.data.seminar_zh | jsonify }});
   // Disambiguate the U.S. Northwestern University throughout the Chinese site.
   Object.keys(ZH).forEach(function (key) {
     if (typeof ZH[key] === 'string') ZH[key] = ZH[key].replace(/(?:美国)?西北大学/g, '美国西北大学');
@@ -19,7 +19,8 @@ sitemap: false
   const attributes = [];
   const originalTitle = document.title;
   const normalize = text => text.replace(/\s+/g, ' ').trim();
-  const excluded = 'script, style, noscript, textarea, pre, code, svg, .paper h3, .paper-authors, .selected-work h4, .student-paper-content strong, .student-name-list, .course-content, .course-toc a:not([href="#course-content"]), [data-language-ui], [translate="no"]';
+  const archivalCourse = '.course-content:not([data-course-bilingual]), .course-toc:not([data-course-bilingual]) a:not([href="#course-content"])';
+  const excluded = 'script, style, noscript, textarea, pre, code, svg, .paper h3, .paper-authors, .selected-work h4, .student-paper-content strong, .student-name-list, ' + archivalCourse + ', [data-language-ui], [translate="no"]';
 
   function translate(text) {
     const key = normalize(text);
@@ -58,7 +59,7 @@ sitemap: false
   }
 
   document.querySelectorAll('[aria-label], [alt], [placeholder], [title]').forEach(function (element) {
-    if (element.closest('[data-language-ui], .course-content')) return;
+    if (element.closest('[data-language-ui], ' + archivalCourse)) return;
     ['aria-label', 'alt', 'placeholder', 'title'].forEach(function (name) {
       if (!element.hasAttribute(name)) return;
       const en = element.getAttribute(name);
@@ -121,7 +122,8 @@ sitemap: false
     buttons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.siteLang === language)));
     switcher.setAttribute('aria-label', language === 'zh' ? '选择语言' : 'Choose language');
     // Archival course notes and paper titles intentionally keep their original language.
-    document.querySelectorAll('.paper h3, .paper-authors, .selected-work h4, .student-paper-content strong, .course-content, .course-toc a:not([href="#course-content"])').forEach(element => element.setAttribute('lang', 'en'));
+    document.querySelectorAll('.paper h3, .paper-authors, .selected-work h4, .student-paper-content strong, ' + archivalCourse).forEach(element => element.setAttribute('lang', 'en'));
+    document.querySelectorAll('.course-content[data-course-bilingual], .course-toc[data-course-bilingual]').forEach(element => element.setAttribute('lang', language === 'zh' ? 'zh-CN' : 'en'));
     if (remember) {
       try { window.localStorage.setItem(KEY, language); } catch (error) { /* Storage may be disabled. */ }
       try {
@@ -143,4 +145,5 @@ sitemap: false
   }
   switcher.hidden = false;
 })();
+
 

@@ -7,7 +7,7 @@ layout: modern
     <a class="course-back" href="{{ '/teaching/' | relative_url }}">← Teaching overview</a>
     <div class="course-hero-grid">
       <div class="course-hero-copy">
-        <span class="course-kicker">Course archive{% if page.term %} · {{ page.term }}{% endif %}</span>
+        <span class="course-kicker"><span>{{ page.course_label | default: 'Course archive' }}</span>{% if page.term %} · <span>{{ page.term }}</span>{% endif %}</span>
         <h1 id="course-title">{{ page.course_title | default: page.title }}</h1>
         {% if page.course_code %}<p class="course-code">{{ page.course_code }}</p>{% endif %}
       </div>
@@ -46,14 +46,15 @@ layout: modern
     <aside class="course-sidebar" aria-label="Course page navigation">
       <div class="course-sidebar-card">
         <span class="course-sidebar-label">On this page</span>
-        <nav class="course-toc" aria-label="Course contents">
+        <nav class="course-toc" aria-label="Course contents"{% if page.bilingual %} data-course-bilingual{% endif %}>
           <a href="#course-content">Overview</a>
         </nav>
         <a class="course-all-link" href="{{ '/teaching/' | relative_url }}">All courses →</a>
       </div>
     </aside>
-    <article class="course-content" id="course-content" aria-labelledby="course-title">
+    <article class="course-content" id="course-content" aria-labelledby="course-title"{% if page.bilingual %} data-course-bilingual{% endif %}>
       {{ content }}
     </article>
   </div>
 </section>
+
