@@ -253,7 +253,7 @@ redirect_from:
     <div class="blog-heading-row magi-home-heading">
       <div>
         <div class="eyebrow">SCALE Lab · Research notes</div>
-        <h2 class="magi-home-wordmark" translate="no">MAGI</h2>
+        <h2 class="magi-home-wordmark" translate="no">MAGI <span class="magi-blog-label">Blog</span></h2>
         <p class="magi-home-description">Understanding generative AI through mathematics.</p>
       </div>
       <a class="text-link" data-blog-link href="{{ '/blog/' | relative_url }}">All posts</a>
