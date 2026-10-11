@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="680" viewBox="0 0 960 680" role="img" aria-labelledby="outer_mh-title outer_mh-desc" lang="en">
+  <title id="outer_mh-title">Independent proposals, sequential correction</title>
+  <desc id="outer_mh-desc">Independent complete proposals are generated in parallel, then processed by MH in sequence. Rejection retains the old path and weight. Chain outputs remain correlated.</desc>
+  <defs>
+    <style>text { font-family: Arial, Helvetica, sans-serif; font-weight: 400; text-rendering: optimizeLegibility; }</style>
+    <marker id="arrow-red" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11 Z" fill="#842c36" />
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11 Z" fill="#526b60" />
+    </marker>
+    <marker id="arrow-slate" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11 Z" fill="#4f5551" />
+    </marker>
+    <marker id="arrow-muted" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11 Z" fill="#696b65" />
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="960" height="680" fill="#fcfbf8" rx="0" ry="0" />
+  <line x1="48" y1="57" x2="86" y2="57" stroke="#842c36" stroke-width="3" stroke-linecap="round" />
+  <text x="102" y="65" fill="#842c36" font-size="24" text-anchor="start">06  MH ON COMPLETE PATHS</text>
+  <text x="48" y="113" fill="#292a28" font-size="30" text-anchor="start">Independent proposals, sequential correction</text>
+  <text x="48" y="157" fill="#4f5551" font-size="23" text-anchor="start">Compare new and old path weights, then accept or retain.</text>
+  <rect x="48" y="180" width="864" height="148" fill="#f3f1ec" rx="4" ry="4" />
+  <text x="80" y="237" fill="#526b60" font-size="29" text-anchor="start">Generate</text>
+  <text x="80" y="281" fill="#526b60" font-size="29" text-anchor="start">in parallel</text>
+  <path d="M 279 211 C 330 221 370 201 421 212 S 507 221 550 209 S 638 201 703 211" stroke="#69797e" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+  <circle cx="279" cy="211" r="5" fill="#69797e" />
+  <circle cx="703" cy="211" r="6" fill="#69797e" />
+  <text x="765" y="220" fill="#69797e" font-size="28" text-anchor="start">R = 1</text>
+  <path d="M 279 254 C 330 244 370 264 421 255 S 507 244 550 252 S 638 264 703 254" stroke="#526b60" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+  <circle cx="279" cy="254" r="5" fill="#526b60" />
+  <circle cx="703" cy="254" r="6" fill="#526b60" />
+  <text x="765" y="263" fill="#526b60" font-size="28" text-anchor="start">R = 3</text>
+  <path d="M 279 297 C 330 306 370 288 421 298 S 507 306 550 295 S 638 288 703 297" stroke="#887358" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+  <circle cx="279" cy="297" r="5" fill="#887358" />
+  <circle cx="703" cy="297" r="6" fill="#887358" />
+  <text x="765" y="306" fill="#887358" font-size="28" text-anchor="start">R = …</text>
+  <text x="48" y="374" fill="#292a28" font-size="28" text-anchor="start">Sequential MH updates</text>
+  <text x="912" y="374" fill="#696b65" font-size="24" text-anchor="end">Illustrative acceptance decisions</text>
+  <text x="320" y="422" fill="#4f5551" font-size="27" text-anchor="middle">New R = 1</text>
+  <text x="320" y="457" fill="#842c36" font-size="28" text-anchor="middle">α = 1/2</text>
+  <text x="640" y="422" fill="#4f5551" font-size="27" text-anchor="middle">New R = 3</text>
+  <text x="640" y="457" fill="#526b60" font-size="28" text-anchor="middle">α = 1</text>
+  <rect x="64" y="479" width="176" height="86" fill="#f2e9e8" stroke="#842c36" stroke-width="1.5" rx="4" ry="4" />
+  <text x="152" y="514" fill="#842c36" font-size="26" text-anchor="middle">Path A</text>
+  <text x="152" y="550" fill="#842c36" font-size="31" text-anchor="middle">R = 2</text>
+  <rect x="392" y="479" width="176" height="86" fill="#f2e9e8" stroke="#842c36" stroke-width="1.5" rx="4" ry="4" />
+  <text x="480" y="514" fill="#842c36" font-size="26" text-anchor="middle">Path A</text>
+  <text x="480" y="550" fill="#842c36" font-size="31" text-anchor="middle">R = 2</text>
+  <rect x="720" y="479" width="176" height="86" fill="#eaf0ec" stroke="#526b60" stroke-width="1.5" rx="4" ry="4" />
+  <text x="808" y="514" fill="#526b60" font-size="26" text-anchor="middle">Path B</text>
+  <text x="808" y="550" fill="#526b60" font-size="31" text-anchor="middle">R = 3</text>
+  <line x1="256" y1="522" x2="375" y2="522" stroke="#842c36" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-red)" />
+  <line x1="584" y1="522" x2="703" y2="522" stroke="#526b60" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-teal)" />
+  <text x="320" y="578" fill="#842c36" font-size="26" text-anchor="middle">Reject</text>
+  <text x="640" y="578" fill="#526b60" font-size="26" text-anchor="middle">Accept</text>
+  <text x="48" y="625" fill="#292a28" font-size="23" text-anchor="start">On rejection, retain the old path and its weight.</text>
+  <text x="48" y="663" fill="#4f5551" font-size="24" text-anchor="start">Consecutive MH outputs remain correlated.</text>
+</svg>

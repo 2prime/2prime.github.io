@@ -23,20 +23,47 @@
   }
   var content = document.getElementById('post-content');
   var sidebar = document.querySelector('[data-blog-toc]');
-  if (content && sidebar) {
-    var headings = Array.from(content.querySelectorAll('h2, h3'));
+  var previousBody = null;
+  function refreshArticle(reprocessMath) {
+    var body = content.querySelector('[data-blog-language]:not([hidden])') || content;
+    var headings = Array.from(body.querySelectorAll('h2, h3'));
+    var prefix = body.getAttribute('data-blog-language') || 'post';
+    headings.forEach(function (heading, index) {
+      if (!heading.id) heading.id = prefix + '-section-' + (index + 1);
+    });
+    if (previousBody && previousBody !== body && window.location.hash) {
+      var oldId;
+      try { oldId = decodeURIComponent(window.location.hash.slice(1)); } catch (error) { oldId = ''; }
+      var oldTargets = Array.from(previousBody.querySelectorAll('h2, h3, h4, [id^="ref_"]'));
+      var newTargets = Array.from(body.querySelectorAll('h2, h3, h4, [id^="ref_"]'));
+      var index = oldTargets.findIndex(function (element) { return element.id === oldId; });
+      if (index >= 0 && newTargets[index] && newTargets[index].id) {
+        try { window.history.replaceState(window.history.state, '', window.location.pathname + window.location.search + '#' + newTargets[index].id); } catch (error) { /* Content switching does not require history access. */ }
+      }
+    }
+    var nav = sidebar.querySelector('nav');
+    nav.replaceChildren();
     if (headings.length > 1) {
-      headings.forEach(function (heading, index) {
-        if (!heading.id) heading.id = 'section-' + (index + 1);
+      headings.forEach(function (heading) {
         var link = document.createElement('a');
         link.href = '#' + heading.id;
         link.textContent = heading.textContent;
         link.setAttribute('translate', 'no');
-        link.lang = content.lang;
+        link.lang = body.lang;
         if (heading.tagName === 'H3') link.className = 'blog-toc-subsection';
-        sidebar.querySelector('nav').appendChild(link);
+        nav.appendChild(link);
       });
-      sidebar.hidden = false;
+    }
+    sidebar.hidden = headings.length < 2;
+    previousBody = body;
+    if (reprocessMath && window.MathJax && window.MathJax.Hub) {
+      window.MathJax.Hub.Queue(['Reprocess', window.MathJax.Hub, body]);
     }
   }
+  if (content && sidebar) {
+    refreshArticle(false);
+    document.addEventListener('site:languagechange', function () { refreshArticle(true); });
+    document.addEventListener('blog:mathready', function () { refreshArticle(true); });
+  }
 })();
+

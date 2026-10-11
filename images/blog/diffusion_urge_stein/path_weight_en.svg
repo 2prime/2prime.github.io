@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="660" viewBox="0 0 960 660" role="img" aria-labelledby="path_weight-title path_weight-desc" lang="en">
+  <title id="path_weight-title">Different paths can reach the same endpoint</title>
+  <desc id="path_weight-desc">Two schematic paths share an initial and final state, but have different intermediate states and potentially different base to proposal probability ratios.</desc>
+  <defs>
+    <style>text { font-family: Arial, Helvetica, sans-serif; font-weight: 400; text-rendering: optimizeLegibility; }</style>
+    <marker id="arrow-red" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11 Z" fill="#842c36" />
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11 Z" fill="#526b60" />
+    </marker>
+    <marker id="arrow-slate" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11 Z" fill="#4f5551" />
+    </marker>
+    <marker id="arrow-muted" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11 Z" fill="#696b65" />
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="960" height="660" fill="#fcfbf8" rx="0" ry="0" />
+  <line x1="48" y1="57" x2="86" y2="57" stroke="#842c36" stroke-width="3" stroke-linecap="round" />
+  <text x="102" y="65" fill="#842c36" font-size="24" text-anchor="start">02  PATH WEIGHTS</text>
+  <text x="48" y="113" fill="#292a28" font-size="30" text-anchor="start">Different paths can reach the same endpoint</text>
+  <text x="48" y="157" fill="#4f5551" font-size="23" text-anchor="start">Retain the actual path and compute its weight.</text>
+  <text x="480" y="193" fill="#696b65" font-size="25" text-anchor="middle">Compare base P with proposal Q at every step.</text>
+  <path d="M 110 338 C 170 250 236 299 301 275 S 424 227 494 271 S 611 255 676 290 S 781 286 850 338" stroke="#526b60" stroke-width="4" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+  <path d="M 110 338 C 172 438 231 377 301 419 S 425 368 494 414 S 612 397 676 444 S 798 397 850 338" stroke="#842c36" stroke-width="4" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+  <circle cx="301" cy="275" r="7" fill="#fcfbf8" stroke="#526b60" stroke-width="3" />
+  <circle cx="494" cy="271" r="7" fill="#fcfbf8" stroke="#526b60" stroke-width="3" />
+  <circle cx="676" cy="290" r="7" fill="#fcfbf8" stroke="#526b60" stroke-width="3" />
+  <circle cx="301" cy="419" r="7" fill="#fcfbf8" stroke="#842c36" stroke-width="3" />
+  <circle cx="494" cy="414" r="7" fill="#fcfbf8" stroke="#842c36" stroke-width="3" />
+  <circle cx="676" cy="444" r="7" fill="#fcfbf8" stroke="#842c36" stroke-width="3" />
+  <circle cx="110" cy="338" r="12" fill="#292a28" />
+  <circle cx="850" cy="338" r="12" fill="#292a28" />
+  <text x="110" y="383" fill="#292a28" font-size="28" text-anchor="middle">x₀</text>
+  <text x="850" y="383" fill="#292a28" font-size="28" text-anchor="middle">x<tspan baseline-shift="sub" font-size="21">T</tspan>
+    <tspan baseline-shift="baseline" />
+  </text>
+  <text x="70" y="251" fill="#526b60" font-size="27" text-anchor="start">Path A</text>
+  <text x="168" y="486" fill="#842c36" font-size="27" text-anchor="start">Path B</text>
+  <text x="242" y="254" fill="#526b60" font-size="25" text-anchor="middle">P₁ / Q₁</text>
+  <text x="404" y="228" fill="#526b60" font-size="25" text-anchor="middle">P₂ / Q₂</text>
+  <text x="621" y="252" fill="#526b60" font-size="25" text-anchor="middle">…</text>
+  <text x="230" y="444" fill="#842c36" font-size="25" text-anchor="middle">P₁ / Q₁</text>
+  <text x="422" y="487" fill="#842c36" font-size="25" text-anchor="middle">P₂ / Q₂</text>
+  <text x="681" y="487" fill="#842c36" font-size="25" text-anchor="middle">…</text>
+  <rect x="48" y="522" width="864" height="95" fill="#f3f1ec" rx="4" ry="4" />
+  <text x="185" y="579" fill="#292a28" font-size="31" text-anchor="start">R = φ(x<tspan baseline-shift="sub" font-size="23">T</tspan>
+    <tspan baseline-shift="baseline">) ×</tspan>
+  </text>
+  <text x="644" y="559" fill="#292a28" font-size="28" text-anchor="middle">P(path)</text>
+  <line x1="520" y1="572" x2="770" y2="572" stroke="#292a28" stroke-width="1.5" stroke-linecap="round" />
+  <text x="644" y="605" fill="#292a28" font-size="28" text-anchor="middle">Q(path)</text>
+  <text x="480" y="649" fill="#4f5551" font-size="23" text-anchor="middle">Equal terminal rewards can still have different path ratios.</text>
+</svg>

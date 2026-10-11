@@ -31,6 +31,7 @@
 .blog-prose h3 { margin: 2rem 0 0.8rem; font-size: 1.3rem; }
 .blog-prose h4 { margin: 1.5rem 0 0.6rem; color: var(--ink); }
 .blog-prose > :first-child { margin-top: 0; }
+.blog-prose [data-blog-language] > :first-child { margin-top: 0; }
 .blog-prose strong { color: var(--ink); font-weight: 600; }
 .blog-prose a { overflow-wrap: anywhere; }
 .blog-prose ul, .blog-prose ol { padding-left: 1.5rem; }
@@ -109,3 +110,4 @@
 }
 @media (prefers-reduced-motion: reduce) { .blog-card { transition: none; } }
 @media print { .blog-sidebar, .blog-edit-link, .blog-tools { display: none; } .blog-reading-grid { display: block; } .blog-card { break-inside: avoid; } }
+

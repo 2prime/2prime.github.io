@@ -72,6 +72,29 @@ sitemap: false
     attributes.forEach(item => { item.element.setAttribute(item.name, item[language]); });
   }
 
+  function applyBlog(language) {
+    const lang = language === 'zh' ? 'zh-CN' : 'en';
+    document.querySelectorAll('[data-blog-en][data-blog-zh]').forEach(function (element) {
+      element.textContent = element.getAttribute('data-blog-' + language);
+      element.lang = lang;
+    });
+    document.querySelectorAll('[data-blog-language]').forEach(function (element) {
+      element.hidden = element.getAttribute('data-blog-language') !== language;
+    });
+    const article = document.getElementById('post-content');
+    if (article && article.querySelector('[data-blog-language]')) article.lang = lang;
+    const title = document.querySelector('#post-title[data-blog-en]');
+    if (title) document.title = title.textContent + (language === 'zh' ? ' · 陆一平' : ' · Yiping Lu');
+    const description = document.querySelector('.blog-post-description[data-blog-en]');
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (description && metaDescription) metaDescription.content = description.textContent;
+    document.querySelectorAll('[data-blog-link]').forEach(function (link) {
+      const url = new URL(link.getAttribute('href'), window.location.href);
+      url.searchParams.set('lang', language);
+      link.setAttribute('href', url.pathname + url.search + url.hash);
+    });
+  }
+
   // Keep both language indexes available to the existing publication search.
   const papers = Array.from(document.querySelectorAll('.paper'));
   papers.forEach(paper => { paper.dataset.searchEn = paper.textContent; });
@@ -94,6 +117,7 @@ sitemap: false
     document.documentElement.lang = language === 'zh' ? 'zh-CN' : 'en';
     const pageTitle = originalTitle.replace(/ · Yiping Lu$/, '');
     document.title = language === 'en' ? originalTitle : (pageTitle === 'Yiping Lu' ? '陆一平' : (ZH[pageTitle] || pageTitle) + ' · 陆一平');
+    applyBlog(language);
     buttons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.siteLang === language)));
     switcher.setAttribute('aria-label', language === 'zh' ? '选择语言' : 'Choose language');
     // Archival course notes and paper titles intentionally keep their original language.
@@ -119,3 +143,4 @@ sitemap: false
   }
   switcher.hidden = false;
 })();
+
