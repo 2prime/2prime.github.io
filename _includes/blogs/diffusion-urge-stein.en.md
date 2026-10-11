@@ -21,7 +21,7 @@ This retains the model’s original preferences while making highly rewarded out
 
 <figure class="blog-figure">
   <a href="/images/blog/diffusion_urge_stein/target_en.svg"><img src="/images/blog/diffusion_urge_stein/target_en.svg" alt="The base probabilities of a book alone and a book with a laptop are 80% and 20%. Multiplying by preference weights 1 and 4 gives target probabilities of 50% each." width="960" height="650"></a>
-  <figcaption>Figure 1 · Multiply by preference, then normalize. These probabilities and weights are teaching examples, not experimental results. Click any figure to enlarge it.</figcaption>
+  <figcaption>Figure 1 · How preference changes probabilities. The base model produces a book alone or a book with a laptop with probabilities 80% and 20%. Multiplying by weights 1 and 4 gives equal weighted mass and target probabilities of 50% each. These teaching values illustrate the target distribution. Click any figure to enlarge it.</figcaption>
 </figure>
 
 This sampling objective is related to finding the highest scoring image, but they are different objectives. Generating independent images and keeping the best generally does not sample from $$\pi$$. All claims about correct sampling below refer to this specific distributional target.
@@ -48,7 +48,7 @@ Guidance changes how the model moves. Many paths can reach the same endpoint, so
 
 <figure class="blog-figure">
   <a href="/images/blog/diffusion_urge_stein/path_weight_en.svg"><img src="/images/blog/diffusion_urge_stein/path_weight_en.svg" alt="Two paths reach the same endpoint but can have different ratios between their base and proposal transition probabilities." width="960" height="660" loading="lazy"></a>
-  <figcaption>Figure 2 · The same endpoint can have different path weights. The curves are schematic; vertical position does not represent image quality.</figcaption>
+  <figcaption>Figure 2 · Two paths can reach the same endpoint while having different ratios of base to proposal transition probabilities along the way. Multiplying those ratios and the terminal preference compensates for the change in sampling probability caused by guidance. Curve height does not represent image quality.</figcaption>
 </figure>
 
 In discrete time, let $$P_k$$ be the base transition density and $$Q_k$$ the actual proposal density. Assume the same initial distribution and the support conditions needed for the probability ratio. For a generated path, record
@@ -66,11 +66,27 @@ URGE’s path weights avoid additional Hessian, score, or PDE residual calculati
 
 ## 4. Many paths may already belong to one family
 
-SMC repeatedly copies particles with large weights and removes those with small weights. This directs computation toward promising regions, but copying also means that **different particles may share increasingly long generation histories**.
+SMC repeatedly copies particles with large weights and removes those with small weights. A copy inherits the particle’s current state and the history that produced it. **The number of particles still on screen and the amount of independent early exploration they retain are different quantities.**
 
-Imagine four people solving a problem. Every so often, each chooses a draft according to its score and continues from it. After several rounds, there are still four answers on the table, yet all may descend from one early draft. Later exploration can differ, but the lost early diversity does not automatically return.
+Imagine four people solving a problem. Every so often, each chooses a draft according to its score and continues from it. After several rounds, four answers may remain on the table, yet all descend from one early draft. Later work can differ while still inheriting the same crucial early choice.
 
-The usual ESS statistic measures how uniform the current weights are; it does not remember ancestry. Equal weights and $$\mathrm{ESS}=N$$ therefore do not establish independence of the $$N$$ particles. Can we increase denoising depth without also increasing this dependence? [[2, §1, Appendix E]](#ref_stein_en)
+<figure class="blog-figure">
+  <a href="/images/blog/diffusion_urge_stein/genealogy_en.svg"><img src="/images/blog/diffusion_urge_stein/genealogy_en.svg" alt="On the left, two rounds of copying reduce four ancestral families A, B, C, D to descendants of A, although each column still contains four particles. On the right, four complete proposals use independent randomness." width="960" height="670" loading="lazy"></a>
+  <figcaption>Figure 3 · Four particles remain, but the number of ancestral families falls from four to two to one. Letters and colors on the left identify early ancestors; edges show inheritance. Each complete proposal on the right is generated separately, without copying across paths. Descendants on the left can add independent future noise, but they have already inherited the randomness in their shared prefix.</figcaption>
+</figure>
+
+Follow the left panel: the first round retains descendants of A and C, losing the early exploration of B and D. The second retains only family A. The four particles can occupy different positions while still depending on the same early random history. On the right, four complete generations each use their own random numbers, preserving four independent opportunities to explore.
+
+A simple model shows why this matters for statistical precision. Write the final outcomes as $$X_T^{(i)}=A+\varepsilon_i$$: $$A$$ is the inherited random prefix, while the later noises $$\varepsilon_i$$ are independent, identically distributed, and independent of $$A$$. Averaging $$N$$ descendants gives
+
+$$
+\operatorname{Var}\!\left(\frac1N\sum_{i=1}^N X_T^{(i)}\right)
+=\operatorname{Var}(A)+\frac{\operatorname{Var}(\varepsilon_1)}N.
+$$
+
+**Averaging reduces independent noise from the later stages, but it does not average away the early error inherited by everyone.** This additive model illustrates correlation; it is not a representation of every diffusion process.
+
+ESS measures only how uniform the current weights are. Resampling usually resets them to equal values, so $$\mathrm{ESS}=N$$ can hold even when all four particles belong to family A. ESS does not track the family tree and cannot establish independence. Increasing denoising depth can create more opportunities for ancestral merging if it also increases the number of resampling rounds. [[2, §1, Appendix E]](#ref_stein_en)
 
 <details class="blog-details" markdown="1">
 <summary>A rigorous example: resampling at every step can accumulate error with depth</summary>
@@ -92,14 +108,14 @@ Total variation measures the largest difference between the probabilities that t
 
 A natural alternative is **sequential rejection sampling**: propose a move from the current state, then accept or reject according to the candidate’s value. On rejection, retain your own prefix and retry only this step, instead of copying another path’s history.
 
-Given a known valid bound $$0<H_{k+1}(y)\le M_k(x)$$, draw $$Y$$ from the base transition $$P_k(x,\cdot)$$ and accept with probability $$H_{k+1}(Y)/M_k(x)$$. Repeat until accepted, then advance. **Independent repetitions of this complete procedure have no shared ancestry across paths**. This is the mechanism on the right below. [[3, p. 57]](#ref_slides_en)
+Given a known valid bound $$0<H_{k+1}(y)\le M_k(x)$$, draw $$Y$$ from the base transition $$P_k(x,\cdot)$$ and accept with probability $$H_{k+1}(Y)/M_k(x)$$. Repeat until accepted, then advance. **Independent repetitions of this complete procedure have no shared ancestry across paths**. This is the mechanism on the right below.
 
 <figure class="blog-figure">
   <div style="display:flex;flex-wrap:wrap;gap:0.8rem;">
-    <a href="/images/blog/diffusion_urge_stein/ppt_child_rejection_en.svg" style="flex:1 1 18rem;min-width:0;overflow:hidden;aspect-ratio:205/102;" aria-label="Enlarge: SMC copies parent particles"><img src="/images/blog/diffusion_urge_stein/ppt_child_rejection_en.svg" alt="Left panel from the slides: SMC copies parent particles across paths, so descendants share history." width="1230" height="306" loading="lazy" style="width:200%;max-width:none;margin:0;border:0;border-radius:0;"></a>
+    <a href="/images/blog/diffusion_urge_stein/ppt_child_rejection_en.svg" style="flex:1 1 18rem;min-width:0;overflow:hidden;aspect-ratio:205/102;" aria-label="Enlarge: SMC copies parent particles"><img src="/images/blog/diffusion_urge_stein/ppt_child_rejection_en.svg" alt="Left panel: SMC copies parent particles across paths, so descendants share history." width="1230" height="306" loading="lazy" style="width:200%;max-width:none;margin:0;border:0;border-radius:0;"></a>
     <a href="/images/blog/diffusion_urge_stein/ppt_child_rejection_en.svg" style="flex:1 1 18rem;min-width:0;overflow:hidden;aspect-ratio:205/102;" aria-label="Enlarge: retry only your own next step"><img src="/images/blog/diffusion_urge_stein/ppt_child_rejection_en.svg" alt="Right panel: rejection retains the current prefix and retries only the current step." width="1230" height="306" loading="lazy" style="width:200%;max-width:none;margin:0;border:0;border-radius:0;transform:translateX(-50%);"></a>
   </div>
-  <figcaption>Figure 3 · Original vector diagram from page 57 of <em>Diffusion Overview</em>, with English labels. Nodes and edges are retained, and the panels stack on narrow screens. The left borrows another path’s prefix; the right retries only its own next step. Independently repeating the right procedure avoids shared ancestry across paths. Steps within one path are still dependent.</figcaption>
+  <figcaption>Figure 4 · How two selection mechanisms handle unsuccessful attempts. SMC on the left can copy another particle’s prefix, giving several descendants the same history. Rejection on the right keeps its own current state and retries only the next step. Independent repetitions avoid shared ancestry across paths, while steps within each path remain dependent.</figcaption>
 </figure>
 
 This also differs from the outer MH correction introduced later. Here, rejection concerns one substep; outer MH accepts or retains an entire path.
@@ -117,7 +133,7 @@ $$
 
 **Intermediate judgments are provisional entries: add one now, subtract it next time**. They need not equal the true future value for the correct unnormalized target to depend only on the terminal preference. This is an identity for the weights, not a claim that finite particle SMC is exact. [[2, Appendix E.2]](#ref_stein_en)
 
-Local rejection alone behaves differently. Each step normalizes candidate values into probabilities. Its denominator is the true average next value from the current state, which need not equal the current approximate prediction. **Adjacent value terms can still cancel, but the ratios left by disagreement between prediction and actual average usually do not**. [[2, §3, equations (10)–(11)]](#ref_stein_en) [[3, p. 58]](#ref_slides_en)
+Local rejection alone behaves differently. Each step normalizes candidate values into probabilities. Its denominator is the true average next value from the current state, which need not equal the current approximate prediction. **Adjacent value terms can still cancel, but the ratios left by disagreement between prediction and actual average usually do not**. [[2, §3, equations (10)–(11)]](#ref_stein_en)
 
 A two step teaching example makes this clear. The base model chooses routes A and B with equal probability. Each route then reaches its own distinct endpoint, and both terminal preferences equal 1, so the target should assign each route half the mass. But an intermediate predictor gives A a value of 9 and B a value of 1:
 
@@ -162,43 +178,57 @@ The difficulty is that $$G_k$$ is itself an integral and is usually unavailable 
 
 </details>
 
-### Another cost of explicit guidance: where do derivatives enter?
+### Another cost of explicit guidance: why can correction need second derivatives?
 
-Another route changes the drift directly to $$b+a\nabla\log H$$, with $$a=\sigma\sigma^\top$$, and then corrects the complete path. **Guidance needs first derivatives. Computing correction through a Bellman or PDE residual also introduces time derivatives and second spatial derivatives**. [[3, p. 59]](#ref_slides_en)
+Start with steering. Changing the drift to $$b+a\nabla\log H$$, where $$a=\sigma\sigma^\top$$, asks which direction increases the value at the current point. That requires a first derivative. But $$H$$ is approximate. After generating a complete path, we still need to ask: **how much did these intermediate judgments distort its sampling probability, and what weight should determine whether we keep it?**
 
-Why another derivative? To compare the prediction now with the average prediction after a random step, we need to account for how noise interacts with curvature. In one dimension, temporarily ignoring time dependence and drift, smoothness gives
+The discrete correction above already gives a clue: each step leaves a factor $$G_k/H_k$$, with $$G_k=P_kH_{k+1}$$. The numerator is the actual average next value after a step of the base dynamics; the denominator is the current prediction of the future. Exact values make them agree. Their discrepancy for approximate values is the Bellman defect that must be accumulated along the path.
+
+**Why does computing this average involve a second derivative?** A random step can move left or right. The first order changes cancel on averaging, but curvature that bends both sides up or down remains. Temporarily ignoring time and drift, the one dimensional Taylor expansion is
 
 $$
-\mathbb E[H(x+\sqrt h Z)]
-=H(x)+\frac h2 H''(x)+o(h),\qquad Z\sim N(0,1).
+H(x+\sqrt h Z)
+=H(x)+\sqrt h\,H'(x)Z+\frac h2 H''(x)Z^2+\cdots,
+\qquad Z\sim N(0,1).
 $$
 
-**Both a hilltop and a valley can have zero slope. A random step to either side decreases the average value at the hilltop and increases it in the valley**. The gradient alone cannot distinguish these situations; the second derivative describes the curvature. The full residual also includes time evolution and the base drift.
+Since $$\mathbb EZ=0$$ and $$\mathbb EZ^2=1$$, under suitable smoothness and integrability,
+
+$$
+\mathbb E[H(x+\sqrt h Z)]-H(x)
+=\frac h2 H''(x)+o(h).
+$$
+
+For example, take $$H_+(x)=e^{cx^2}$$ and $$H_-(x)=e^{-cx^2}$$ with $$c>0$$. At $$x=0$$, both have value 1 and gradient 0, giving the same instantaneous guidance. Yet one is a valley and the other a hilltop. After a small random step, their average values become $$1+ch+O(h^2)$$ and $$1-ch+O(h^2)$$, respectively. **Identical values and gradients can require opposite local probability corrections. Curvature supplies the missing information.**
+
+Restoring time evolution, base drift, and multidimensional noise gives the relative defect per unit time:
+
+$$
+\mathcal E_t(x)
+=\frac{\partial_tH_t+b_t\cdot\nabla H_t
++\tfrac12\operatorname{tr}(a_t\nabla^2H_t)}{H_t}(x).
+$$
+
+The three terms describe changes due to time, base drift, and the interaction of noise with curvature. The last contracts the Hessian with the noise covariance. Computing it need not require storing the full Hessian, but it still requires second spatial derivative information.
+
+**How does this enter the final accept or reject decision?** For a fixed initial state, $$H_T=\phi$$, positive and sufficiently smooth $$H$$, and a valid change of measure, the continuous time proposal with drift $$b+a\nabla\log H$$ has unnormalized complete path correction weight
+
+$$
+R_H=H_0(x_0)\exp\!\left(\int_0^T\mathcal E_t(X_t)\,dt\right).
+$$
+
+The terminal preference is already included through $$H_T=\phi$$. The exponential accumulates probability corrections along the whole path and enters the MH ratio of new and old path weights. A valid weight bound also permits complete path rejection sampling. **The acceptance formula is simple; computing its path weight is the challenge. Along the residual route, the gradient provides guidance, while time and second spatial derivatives enter correction.** In discrete time, the counterpart is the accumulated $$\log(G_k/H_k)$$ above. [[2, §4, equation (11)]](#ref_stein_en)
 
 <details class="blog-details" markdown="1">
-<summary>The full residual, and an alternative that avoids Hessians</summary>
+<summary>How can URGE avoid explicit Hessians?</summary>
 
-For a fixed initial state, $$H_T=\phi$$, sufficiently smooth $$H>0$$, and a valid change of measure, define the base generator
+The expression above rewrites a path probability ratio as a value function residual. URGE retains the actual drift and noise increments and computes correction directly through the Girsanov path ratio, avoiding explicit time derivatives and Hessians. If its drift uses $$\nabla\log H$$, constructing the proposal still requires value gradients. **Higher derivatives are a cost of evaluating the residual directly, not an unavoidable cost of every correction method.** [[1, §2.2–2.4]](#ref_urge_en)
 
-$$
-\mathcal L_t f=b_t\cdot\nabla f+\tfrac12\operatorname{tr}(a_t\nabla^2f).
-$$
-
-For continuous time guidance $$a_t\nabla\log H_t$$, Itô’s formula and Girsanov’s change of measure give the path correction, in our notation,
-
-$$
-R_H=H_0(x_0)\exp\!\left(\int_0^T\mathcal E_t(X_t)\,dt\right),
-\qquad
-\mathcal E_t=\frac{(\partial_t+\mathcal L_t)H_t}{H_t}.
-$$
-
-Evaluating this residual directly requires $$\partial_tH$$, $$\nabla H$$, and $$\nabla^2H$$. It corresponds to the discrete path contribution $$\log(G_k/H_k)$$. [[2, §4, equation (11)]](#ref_stein_en) [[3, pp. 58–59]](#ref_slides_en)
-
-**Higher derivatives are not required by every rejection correction**. URGE’s Girsanov path expression uses the actual drift and noise to avoid explicit Hessians and PDE residuals. If the drift itself uses $$\nabla\log H$$, however, value gradients are still needed. These are different computational routes to the required correction information. [[1, §2.2–2.4]](#ref_urge_en)
+A continuous time identity also does not make an arbitrary discretization exact. An implementation needs correction weights matched to its actual discrete proposal.
 
 </details>
 
-Our goal is now clear: **avoid copying across paths, allow imperfect values, and use only function values for both guidance and correction**. Start with the smallest possible operation: try one candidate on each side.
+We therefore need two mechanisms designed together: **use function values to steer toward promising regions, while keeping a probability account that can also be computed from function values.** The next section starts with two symmetric candidates and shows how the same queries can serve both purposes.
 
 ## 6. Warm up: two symmetric candidates are a finite difference
 
@@ -212,7 +242,7 @@ If the right candidate has value 11 and the left has value 9, sampling in propor
 
 <figure class="blog-figure">
   <a href="/images/blog/diffusion_urge_stein/two_queries_en.svg"><img src="/images/blog/diffusion_urge_stein/two_queries_en.svg" alt="Candidates at 0.1 to either side have values 9 and 11. Their central difference slope is 10. Selection probabilities of 45% and 55% produce an average rightward displacement of 0.01." width="960" height="820" loading="lazy"></a>
-  <figcaption>Figure 4 · A finite difference becomes a selection probability. These are teaching values. Each draw selects just one candidate; 0.01 is the average displacement.</figcaption>
+  <figcaption>Figure 5 · Candidate values 9 and 11 give selection probabilities of 45% and 55%. Each draw moves to one candidate, but repeated draws have an average displacement of 0.01 to the right. The difference between two queried values supplies the direction without evaluating a value gradient. Numbers are illustrative.</figcaption>
 </figure>
 
 Where is the finite difference? Over a distance of $$0.2$$, value increases by $$2$$, so the slope is $$10$$. Write $$H^\pm=H(\mu\pm\delta)$$. The exact mean displacement is
@@ -299,7 +329,7 @@ $$
 
 <figure class="blog-figure">
   <a href="/images/blog/diffusion_urge_stein/centered_pool_en.svg"><img src="/images/blog/diffusion_urge_stein/centered_pool_en.svg" alt="Two opposite candidates extend to five directions whose sum is zero. Values are queried in parallel, and one candidate is randomly selected." width="960" height="860" loading="lazy"></a>
-  <figcaption>Figure 5 · From a symmetric pair to a centered pool. Directions are schematic; the algorithm uses centered Gaussians. The red point is the selected candidate, not the weighted mean.</figcaption>
+  <figcaption>Figure 6 · Two opposite candidates extend to five balanced candidates whose directions sum to zero. Query their values in parallel, then select one in proportion to value. The red point is the selected candidate. Centering also cancels first order noise in the average value, stabilizing the normalizer estimate used for correction. Arrows show the geometry; actual directions are centered Gaussians.</figcaption>
 </figure>
 
 Given a candidate pool $$U$$, the mean displacement is exactly
@@ -354,7 +384,7 @@ On acceptance, move to the new path. On rejection, retain the old path and its o
 
 <figure class="blog-figure">
   <a href="/images/blog/diffusion_urge_stein/outer_mh_en.svg"><img src="/images/blog/diffusion_urge_stein/outer_mh_en.svg" alt="Complete proposals are independently generated and processed by MH using new and old path weights. Rejection retains the old path and weight." width="960" height="680" loading="lazy"></a>
-  <figcaption>Figure 6 · Complete proposals can be generated in parallel; acceptance decisions are processed sequentially. The displayed weights and decisions are teaching examples.</figcaption>
+  <figcaption>Figure 7 · Generate complete proposals separately, then compare new and old path weights one proposal at a time. Acceptance replaces the path; rejection retains the old path and its weight. Proposals can therefore be generated independently in parallel, while successive MH outputs may repeat and remain correlated. Weights and decisions are illustrative.</figcaption>
 </figure>
 
 **Proposal paths are independent; consecutive outputs from one MH chain remain correlated**. A finite number of updates also leaves initialization error. Independent outputs require independent repetitions of the full procedure. With a known valid bound on the complete path weight, rejection of entire paths can instead give independent exact samples from the finite grid target. Here we focus on outer MH with a fixed computation budget. [[2, Algorithm 2, Appendix G.2]](#ref_stein_en)
@@ -447,20 +477,20 @@ CLIP measures semantic agreement between image and text. HPS and ImageReward are
 
 This evaluation uses 100 DDIM steps, noise parameter 1, CFG scale 7.5, and resampling every 20 steps. [[1, Appendix C]](#ref_urge_en)
 
-The scaling figure below compares SD v1.5 and SDXL on 10 prompts, so it should not be equated directly with the 50 prompt aggregate above. Across the tested $$N=2,3,4,6,8$$, URGE’s ImageReward increases and exceeds FK Steering in most configurations. Exceptions are $$N=2$$ for SD v1.5 and $$N=6$$ for SDXL. This is an observed trend in the experiment, not a universal monotonicity guarantee. [[1, Figure 3]](#ref_urge_en)
+The scaling figure below compares SD v1.5 and SDXL on 10 prompts, so it should not be equated directly with the 50 prompt aggregate above. Across the tested $$N=2,3,4,6,8$$, URGE’s ImageReward increases and exceeds FK Steering in most configurations. Exceptions are $$N=2$$ for SD v1.5 and $$N=6$$ for SDXL. This is an observed trend in the experiment, not a universal monotonicity guarantee. 
 
 </details>
 
 <figure class="blog-figure">
-  <a href="/images/blog/diffusion_urge_stein/urge_particle_scaling.webp"><img src="/images/blog/diffusion_urge_stein/urge_particle_scaling.webp" alt="Figure 3 from URGE: ImageReward versus particle count for SD v1.5 and SDXL. URGE improves across the tested range but does not exceed FK Steering in every configuration." width="1400" height="500" loading="lazy"></a>
-  <figcaption>Figure 7 · Practical gains from more particles. Figure 3 of <a href="#ref_urge_en">[1]</a>, retaining the original axes, legends, and baselines. Evaluation uses 10 prompts.</figcaption>
+  <a href="/images/blog/diffusion_urge_stein/urge_particle_scaling.webp"><img src="/images/blog/diffusion_urge_stein/urge_particle_scaling.webp" alt="ImageReward versus particle count for SD v1.5 and SDXL. URGE improves across the tested range but does not exceed FK Steering in every configuration." width="1400" height="500" loading="lazy"></a>
+  <figcaption>Figure 8 · Particle count is on the horizontal axis and ImageReward on the vertical axis; the two panels use SD v1.5 and SDXL. More particles provide additional candidates and selection opportunities. URGE’s score increases over the tested particle counts, although it does not exceed FK Steering in every configuration. Evaluation uses 10 prompts.</figcaption>
 </figure>
 
-What visual changes do these scores represent? Figure 8 selects “a toothbrush and a snowboard” and “a horse and a giraffe.” Look for **whether both objects appear separately or become fused into one object**. [[1, Table 5]](#ref_urge_en)
+What visual changes do these scores represent? Figure 9 selects “a toothbrush and a snowboard” and “a horse and a giraffe.” Look for **whether both objects appear separately or become fused into one object**. 
 
 <figure class="blog-figure">
-  <a href="/images/blog/diffusion_urge_stein/urge_image_examples_en.webp"><img src="/images/blog/diffusion_urge_stein/urge_image_examples_en.webp" alt="Two prompts with two objects each, comparing base SD v1.5, FK Steering with four particles, and URGE with four particles." width="1680" height="1610" loading="lazy"></a>
-  <figcaption>Figure 8 · Excerpts from Table 5 of <a href="#ref_urge_en">[1]</a>. The six generated images are unchanged; only selection, layout, and labels are adapted. FK Steering and URGE both use four particles. Read individual examples alongside aggregate metrics. Original images used under CC BY 4.0.</figcaption>
+  <a href="/images/blog/diffusion_urge_stein/urge_image_comparison_en.html" style="position:relative;display:block;overflow:hidden;aspect-ratio:1680/1430;"><img src="/images/blog/diffusion_urge_stein/urge_image_examples_en.webp" alt="Two prompts requesting two objects, comparing base SD v1.5, FK Steering with four particles, and URGE with four particles." width="1680" height="1610" loading="lazy" style="position:absolute;top:0;left:0;display:block;width:100%;max-width:none;height:auto;margin:0;border:0;border-radius:0;transform:translateY(-6.8322981366%);"></a>
+  <figcaption>Figure 9 · Compare the base model, FK Steering, and URGE under identical prompts requesting two objects. The upper row checks whether a toothbrush and a snowboard remain separate; the lower row checks whether a horse and a giraffe are blended. These examples connect scores to visible changes. The latter two methods both use four particles; individual images should be read alongside aggregate metrics.</figcaption>
 </figure>
 
 ### Stein: how many queries can two centered candidates save?
@@ -469,7 +499,7 @@ The Brownian experiment in [[2]](#ref_stein_en) compares centered and independen
 
 <figure class="blog-figure">
   <a href="/images/blog/diffusion_urge_stein/centering_experiment.webp"><img src="/images/blog/diffusion_urge_stein/centering_experiment.webp" alt="Two centered candidates become more efficient as the grid is refined. Independent candidates require much larger pools to reach similar normalizer estimation efficiency." width="1032" height="429" loading="lazy"></a>
-  <figcaption>Figure 9 · Figure 2 of <a href="#ref_stein_en">[2]</a>. The left fixes two candidates; the right increases the independent pool size. The metric is not the number of independent MH samples.</figcaption>
+  <figcaption>Figure 10 · How centering stabilizes normalizer estimation. The left panel fixes two candidates and compares adjusted NESS as the grid becomes finer. The right increases the number of independent candidates to examine how many queries match the efficiency of centered candidates. Higher values indicate more efficient normalizer estimation, not a count of independent MH outputs.</figcaption>
 </figure>
 
 With perturbed values and $$n=192$$, **two centered candidates reach 92.76%, compared with 31.40% for two independent candidates**. Independent pools need 128 and 256 candidates to reach 92.38% and 92.81%, respectively. In this setting, arranging dependence within the pool stabilizes weights more effectively than simply adding candidates. [[2, §5.1]](#ref_stein_en)
@@ -486,11 +516,11 @@ The Hopper experiment fixes the diffusion policy and critic, then tests whether 
 
 These are mean conditional KS distances across eight fixed states. **Guidance helps, but complete path correction still substantially improves agreement with the target**. The metric concerns a fixed critic’s score distribution; it cannot be interpreted as the same proportional improvement in actual robot returns. [[2, Table 2, Appendix H.3]](#ref_stein_en)
 
-Finally, return to the book and laptop. Figure 10 shows four prompts, each with two objects, using the same SD v1.5 backbone. Check whether both objects appear and remain distinct, rather than judging only visual appeal. [[2, §5.3]](#ref_stein_en)
+Finally, return to the book and laptop. Figure 11 shows four prompts, each with two objects, using the same SD v1.5 backbone. Check whether both objects appear and remain distinct, rather than judging only visual appeal. [[2, §5.3]](#ref_stein_en)
 
 <figure class="blog-figure">
-  <a href="/images/blog/diffusion_urge_stein/image_examples.webp"><img src="/images/blog/diffusion_urge_stein/image_examples.webp" alt="Examples from reference [2], comparing FK Steering, SVDD, URGE, and Stein Guidance with two and four candidates." width="1110" height="1200" loading="lazy"></a>
-  <figcaption>Figure 10 · Table 3 of <a href="#ref_stein_en">[2]</a>. Stein uses 11 complete proposals per image, while the particle methods shown use four particles. These are qualitative examples, not a comprehensive comparison at strictly equal computation.</figcaption>
+  <a href="/images/blog/diffusion_urge_stein/image_examples.webp"><img src="/images/blog/diffusion_urge_stein/image_examples.webp" alt="Two object examples comparing FK Steering, SVDD, URGE, and Stein Guidance with two and four candidates." width="1110" height="1200" loading="lazy"></a>
+  <figcaption>Figure 11 · Compare FK Steering, SVDD, URGE, and Stein Guidance with two or four candidates on four prompts requesting two objects. Check whether both objects appear and retain distinct identities. Stein uses 11 complete proposals per image; the particle methods shown use four particles. These qualitative examples do not establish a comprehensive ranking at strictly equal computation.</figcaption>
 </figure>
 
 ## 11. Keep the three jobs separate
@@ -501,12 +531,21 @@ URGE shows how retaining paths makes correction easier to compute. Stein Guidanc
 
 **Function values can reveal a direction without value derivatives. Avoiding shared ancestry still leaves a need for correction**. Keeping these roles clear tells us what extra computation actually improves.
 
-## References and figure sources
+## 12. Research question: guidance and correction without derivatives
+
+<aside class="blog-key-insight" aria-labelledby="research-question-en" markdown="1">
+<h4 id="research-question-en">Design guidance together with the information needed for correction</h4>
+
+**With access only to values of an approximate value function, how can we design guidance that moves toward promising regions while retaining a computable, exact path weight, so that the final correction also requires no value gradients, time derivatives, or Hessians?**
+
+</aside>
+
+Stein Guidance offers one answer by retaining the candidate pool and the selected index: differences between candidate values provide direction, while the pool average and the selected value provide the correction factor. Both operations arise from the same random construction. Here, “exact” refers to the weighting identity on the augmented space; a finite number of MH updates still leaves sampling error. [[2]](#ref_stein_en)
+
+A further research question is: **if candidate distributions are no longer Gaussian, or candidate pools adapt to the current state, can the same function queries still provide effective guidance, verifiable correction, and stable path weights?** A new design must establish more than a useful mean direction: its complete weight must recover the target distribution, and its fluctuations must be controlled as paths become deeper.
+
+## References
 
 <p id="ref_urge_en"><strong>[1] URGE.</strong> Chenyang Wang, Weizhong Wang, Yinuo Ren, Jose Blanchet, Yiping Lu. <em>Simple Approximation and Derivative Free Inference Time Scaling for Diffusion Models via Sequential Monte Carlo on Path Measures.</em> ICML 2026. <a href="https://proceedings.mlr.press/v306/wang26ih.html">Proceedings</a> · <a href="https://arxiv.org/abs/2605.17850">arXiv</a> · <a href="https://arxiv.org/html/2605.17850v1">Full text in HTML</a>.</p>
 
 <p id="ref_stein_en"><strong>[2] Stein Guidance.</strong> Youheng Zhu, Chenyang Wang, Minshuo Chen, Yiping Lu. <em>Stein Guidance without Gradients: Discretization Uniform Diffusion Inference Time Scaling beyond Particle SMC.</em> 2026. <a href="/files/SteinGuidance.pdf">Full paper (PDF)</a>.</p>
-
-<p id="ref_slides_en"><strong>[3] Seminar slides.</strong> Yiping Lu, <em>Diffusion Overview</em>, pp. 57–59: sequential rejection along individual paths, path correction for approximate values, and replacing derivatives with Stein’s identity. Figure 3 uses the original vector diagram from page 57, cropped to the mechanism and adapted with browser fonts and English labels.</p>
-
-Figures 1, 2, 4, 5, and 6 are teaching diagrams; Figure 3 comes from the slides above. Figures 7 and 8 use Figure 3 and Table 5 of [1] under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Figure 8 adapts selection, layout, and labels only. Figures 9 and 10 reproduce Figure 2 and Table 3 of [2]. Numerical examples of routes, candidate values, acceptance probabilities, and MH decisions illustrate mechanisms. Experimental numbers are attributed where they appear.

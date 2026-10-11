@@ -34,7 +34,7 @@ $$
 
 <figure class="blog-figure">
   <a href="/images/blog/diffusion_urge_stein/target.svg"><img src="/images/blog/diffusion_urge_stein/target.svg" alt="基础分布中只有书占80%，书与电脑同时出现占20%；分别乘以1和4的偏好后，两类归一化概率各为50%。" width="960" height="650"></a>
-  <figcaption>图 1 · 先乘偏好，再重新归一化。这里的概率与权重是教学数值，不是模型实验结果。所有配图都可以点击放大。</figcaption>
+  <figcaption>图 1 · 偏好怎样改变概率：基础模型生成“只有书”和“书与电脑”的概率为 80% 与 20%，分别乘以 1 与 4 后，两类加权质量相同，归一化后各占 50%。数值用于说明目标分布的构造。配图均可点击放大。</figcaption>
 </figure>
 
 这个采样目标与“找到最高分的一张图”有关，但并不相同。例如，独立生成多张后取最高分，一般不会得到上面的 $$\pi$$。下面的“校正正确”，都针对这个明确的分布目标。
@@ -61,7 +61,7 @@ $$
 
 <figure class="blog-figure">
   <a href="/images/blog/diffusion_urge_stein/path_weight.svg"><img src="/images/blog/diffusion_urge_stein/path_weight.svg" alt="两条不同路径到达同一个终点，沿途基础转移与实际提议的概率比可以不同。" width="960" height="660" loading="lazy"></a>
-  <figcaption>图 2 · 终点相同，路径权重仍可能不同。曲线为概念示意，纵向位置不代表图像质量。</figcaption>
+  <figcaption>图 2 · 两条路径到达同一个终点，沿途的基础转移概率与提议概率之比却可以不同。路径权重把这些比值相乘，再乘终点偏好，补偿 guidance 对整条路的抽样概率所作的改变。曲线高度不代表图像质量。</figcaption>
 </figure>
 
 离散时间里，设基础转移密度是 $$P_k$$，实际提议密度是 $$Q_k$$，二者使用相同的初始分布，并满足概率比所需的支持条件。对实际生成的路径记录
@@ -79,11 +79,27 @@ $$
 
 ## 4. 多条路径，可能已经变成一家人
 
-SMC 不断复制高权重粒子，淘汰低权重粒子。它能及时把计算放到有希望的地方，但复制也意味着：**不同粒子可能共享越来越长的生成历史**。
+SMC 不断复制高权重粒子，淘汰低权重粒子。复制的并不只是一个分数，而是粒子当前的状态，以及通向这个状态的整段历史。**所以，屏幕上还剩多少粒子，与它们保留了多少份独立的早期探索，是两件事。**
 
-想象四个人各自解题，每隔一会儿，都按评分挑一份草稿接着写。几轮以后，桌上仍有四份答卷，却可能都源自同一份早期草稿。后续可以各自探索，此前丢掉的多样性却不会自动回来。
+想象四个人各自解题，每隔一会儿，都按评分挑一份草稿接着写。几轮以后，桌上仍有四份答卷，却可能都源自同一份早期草稿。后面写得再不一样，最初的关键选择也已经被一起继承了。
 
-常用的 ESS 指标只看当前权重是否均匀，不记录祖先是谁。权重都一样、$$\mathrm{ESS}=N$$，也不能据此认定 $$N$$ 个粒子互相独立。这提示我们：增加去噪步时，能否不同时加重这种统计依赖？[[2, §1、附录 E]](#ref_stein)
+<figure class="blog-figure">
+  <a href="/images/blog/diffusion_urge_stein/genealogy.svg"><img src="/images/blog/diffusion_urge_stein/genealogy.svg" alt="左侧四个祖先 A、B、C、D 经两轮复制后只剩 A 的后代，但每一列仍有四个粒子；右侧四条完整提议分别使用独立随机性。" width="960" height="670" loading="lazy"></a>
+  <figcaption>图 3 · 粒子数保持为四，祖先家族却从四个减到两个，再减到一个。左侧字母和颜色标记早期祖先，连线表示继承关系；右侧每条完整提议各自生成，没有跨路径复制。左侧后代可以继续加入独立噪声，但共享前缀的随机性已经进入每个后代。</figcaption>
+</figure>
+
+沿左图看：第一轮只保留 A、C 的后代，B、D 的早期探索消失；第二轮只留下 A 家族。此时的四个粒子可以位于不同位置，却都受同一段早期随机历史影响。右图则让四次完整生成各用各的随机数，保留四份独立的探索机会。
+
+一个简化例子能说明这为什么影响统计精度。假设最终结果可写成 $$X_T^{(i)}=A+\varepsilon_i$$：$$A$$ 是大家继承的随机前缀，后续噪声 $$\varepsilon_i$$ 相互独立、同分布，并且独立于 $$A$$。平均 $$N$$ 个后代后，
+
+$$
+\operatorname{Var}\!\left(\frac1N\sum_{i=1}^N X_T^{(i)}\right)
+=\operatorname{Var}(A)+\frac{\operatorname{Var}(\varepsilon_1)}N.
+$$
+
+**后半程的独立噪声可以靠平均降低，大家共同继承的早期误差却不会被这次平均消掉。** 这是一个解释相关性的教学模型，不是所有扩散过程都具有这种加法形式。
+
+ESS 只看当前权重是否均匀。重采样后权重通常重新设为相等，因此即使四个粒子全是 A 家族，也可以有 $$\mathrm{ESS}=N$$。它没有记录家谱，不能据此认定粒子独立。增加去噪步若也增加重采样次数，就可能带来更多祖先合并的机会。[[2, §1、附录 E]](#ref_stein)
 
 <details class="blog-details" markdown="1">
 <summary>一个严格的反例：每步重采样，误差可能随深度累积</summary>
@@ -105,14 +121,14 @@ $$
 
 一个自然的替代是**逐步拒绝采样（sequential rejection sampling）**：从当前状态试走一步，按候选价值决定接受还是拒绝。拒绝后保留自己的前缀，只重新尝试这一步，而不是复制另一个人的历史。
 
-若有已知有效上界 $$0<H_{k+1}(y)\le M_k(x)$$，就从基础转移 $$P_k(x,\cdot)$$ 抽取候选 $$Y$$，以 $$H_{k+1}(Y)/M_k(x)$$ 的概率接受，重复到接受后再前进。**独立重跑整套路径生成程序，各条路径就没有跨路径的共同祖先**。这是下图右侧的机制。[[3, 第 57 页]](#ref_slides)
+若有已知有效上界 $$0<H_{k+1}(y)\le M_k(x)$$，就从基础转移 $$P_k(x,\cdot)$$ 抽取候选 $$Y$$，以 $$H_{k+1}(Y)/M_k(x)$$ 的概率接受，重复到接受后再前进。**独立重跑整套路径生成程序，各条路径就没有跨路径的共同祖先**。这是下图右侧的机制。
 
 <figure class="blog-figure">
   <div style="display:flex;flex-wrap:wrap;gap:0.8rem;">
-    <a href="/images/blog/diffusion_urge_stein/ppt_child_rejection.svg" style="flex:1 1 18rem;min-width:0;overflow:hidden;aspect-ratio:205/102;" aria-label="放大查看原图：SMC 复制父粒子"><img src="/images/blog/diffusion_urge_stein/ppt_child_rejection.svg" alt="PPT原图左半：SMC跨路径复制父粒子，后代共享历史。" width="1230" height="306" loading="lazy" style="width:200%;max-width:none;margin:0;border:0;border-radius:0;"></a>
-    <a href="/images/blog/diffusion_urge_stein/ppt_child_rejection.svg" style="flex:1 1 18rem;min-width:0;overflow:hidden;aspect-ratio:205/102;" aria-label="放大查看原图：只重试自己的下一步"><img src="/images/blog/diffusion_urge_stein/ppt_child_rejection.svg" alt="PPT原图右半：拒绝后保留当前前缀，只重试这一步。" width="1230" height="306" loading="lazy" style="width:200%;max-width:none;margin:0;border:0;border-radius:0;transform:translateX(-50%);"></a>
+    <a href="/images/blog/diffusion_urge_stein/ppt_child_rejection.svg" style="flex:1 1 18rem;min-width:0;overflow:hidden;aspect-ratio:205/102;" aria-label="放大查看：SMC 复制父粒子"><img src="/images/blog/diffusion_urge_stein/ppt_child_rejection.svg" alt="左侧：SMC跨路径复制父粒子，后代共享历史。" width="1230" height="306" loading="lazy" style="width:200%;max-width:none;margin:0;border:0;border-radius:0;"></a>
+    <a href="/images/blog/diffusion_urge_stein/ppt_child_rejection.svg" style="flex:1 1 18rem;min-width:0;overflow:hidden;aspect-ratio:205/102;" aria-label="放大查看：只重试自己的下一步"><img src="/images/blog/diffusion_urge_stein/ppt_child_rejection.svg" alt="右侧：拒绝后保留当前前缀，只重试这一步。" width="1230" height="306" loading="lazy" style="width:200%;max-width:none;margin:0;border:0;border-radius:0;transform:translateX(-50%);"></a>
   </div>
-  <figcaption>图 3 · 提取自《Diffusion Overview》第 57 页的原始矢量图，保留节点、连线与标注，窄屏时上下排列。左侧借用别人的前缀，右侧只重试自己的下一步。独立重复右侧程序，不会产生跨路径共同祖先；这不等于说一条路径内部的各步独立。</figcaption>
+  <figcaption>图 4 · 两种筛选方式如何处理失败的尝试。左侧 SMC 可以复制其他粒子的前缀，使多个后代继承相同历史；右侧拒绝后保留自己的当前状态，只重新尝试下一步。独立重复右侧程序不会产生跨路径的共同祖先，但一条路径内部的各步仍然相关。</figcaption>
 </figure>
 
 它也不同于后面“整条路径生成完以后，再做外层 MH 校正”：这里拒绝的是一个子步；后者接受或保留的是一条完整提议。
@@ -130,7 +146,7 @@ $$
 
 **中间判断像暂记的账：前一步记上，后一步扣回**。因此，中间价值不必等于真实未来价值，正确的未归一化目标仍由终点偏好决定。这里说的是权重构造的恒等式，不是有限粒子的 SMC 已经精确。[[2, 附录 E.2]](#ref_stein)
 
-只做局部拒绝则不同。每一步都把候选价值重新归一化成概率，分母是“从当前状态出发，下一步价值的真实平均”，不一定等于当前的近似预测。**相邻的价值项仍能相消，但预测与实际平均不一致留下的比值，通常消不掉**。[[2, §3、式 (10)–(11)]](#ref_stein)[[3, 第 58 页]](#ref_slides)
+只做局部拒绝则不同。每一步都把候选价值重新归一化成概率，分母是“从当前状态出发，下一步价值的真实平均”，不一定等于当前的近似预测。**相邻的价值项仍能相消，但预测与实际平均不一致留下的比值，通常消不掉**。[[2, §3、式 (10)–(11)]](#ref_stein)
 
 用一个两步教学例子就能看清。基础模型等概率选择路线 A、B；选定后各自到达不同终点，两个终点的真实偏好都为 1。因此目标应当各占一半。可是中途的预测把 A 评为 9、B 评为 1：
 
@@ -175,43 +191,57 @@ $$
 
 </details>
 
-### 显式 guidance 的另一笔成本：导数从哪里来？
+### 显式 guidance 的另一笔成本：为什么校正会碰到二阶导数？
 
-另一条路是直接把漂移改成 $$b+a\nabla\log H$$，其中 $$a=\sigma\sigma^\top$$，再校正完整路径。**指路需要一阶导数；若通过 Bellman 或 PDE 残差计算校正，还会出现时间导数与二阶空间导数**。[[3, 第 59 页]](#ref_slides)
+先看指路。把漂移改为 $$b+a\nabla\log H$$，其中 $$a=\sigma\sigma^\top$$，只需知道价值在当前位置往哪个方向上升，因此要算一阶导数。可是 $$H$$ 是近似的；走完整条路径以后，我们还要知道：**这些中途判断累计把抽样概率改偏了多少，最后该以多大权重保留这条路径？**
 
-为什么会多一阶？想比较“现在的预测”与“随机走一步以后的平均预测”，就必须考虑噪声怎样作用于曲率。一维、暂时忽略时间变化与漂移时，光滑条件下有
+上一段的离散校正已经给出了线索：每一步留下 $$G_k/H_k$$，其中 $$G_k=P_kH_{k+1}$$。分子是“按基础动力学走一步后，下一时刻价值的真实平均”，分母是“当前位置对未来的预测”。精确价值让两者一致；近似价值留下的差，就是要沿途累计的 Bellman 缺陷。
+
+**为什么算这个平均会遇到二阶导数？** 随机步既可能向左，也可能向右。向两边的一阶变化在平均时抵消，但两边共同向上或向下弯的部分会留下。暂时忽略时间与漂移，一维 Taylor 展开是
 
 $$
-\mathbb E[H(x+\sqrt h Z)]
-=H(x)+\frac h2 H''(x)+o(h),\qquad Z\sim N(0,1).
+H(x+\sqrt h Z)
+=H(x)+\sqrt h\,H'(x)Z+\frac h2 H''(x)Z^2+\cdots,
+\qquad Z\sim N(0,1).
 $$
 
-**坡顶和谷底的斜率都可以是零，但向两边随机走一步，前者平均变差，后者平均变好**。只看梯度分不出这件事，二阶导数才描述这种弯曲。完整的残差还要加上时间变化和基础漂移的作用。
+由于 $$\mathbb EZ=0$$、$$\mathbb EZ^2=1$$，在相应光滑性与可积性条件下，
+
+$$
+\mathbb E[H(x+\sqrt h Z)]-H(x)
+=\frac h2 H''(x)+o(h).
+$$
+
+例如 $$H_+(x)=e^{cx^2}$$ 与 $$H_-(x)=e^{-cx^2}$$，其中 $$c>0$$。在 $$x=0$$，它们的价值都为 1，梯度都为 0，因而给出同样的瞬时引导；但前者是谷底，后者是坡顶。随机走一小步，平均价值分别变为 $$1+ch+O(h^2)$$ 与 $$1-ch+O(h^2)$$。**相同的价值和梯度，需要方向相反的局部概率补偿；缺失的信息就在曲率里。**
+
+把时间变化、基础漂移和多维噪声一起放回去，每单位时间的相对缺陷就是
+
+$$
+\mathcal E_t(x)
+=\frac{\partial_tH_t+b_t\cdot\nabla H_t
++\tfrac12\operatorname{tr}(a_t\nabla^2H_t)}{H_t}(x).
+$$
+
+三项分别记录价值随时间的变化、基础漂移造成的变化，以及噪声遇到曲率时造成的平均变化。最后一项是 Hessian 与噪声协方差的收缩；未必需要显式存储整个 Hessian，但仍需二阶空间导数信息。
+
+**这与最后的接受或拒绝有什么关系？** 在固定起点、$$H_T=\phi$$、正且足够光滑的 $$H$$ 以及合法换测度等条件下，对漂移为 $$b+a\nabla\log H$$ 的连续时间提议，完整路径的未归一化校正权重满足
+
+$$
+R_H=H_0(x_0)\exp\!\left(\int_0^T\mathcal E_t(X_t)\,dt\right).
+$$
+
+终点偏好已经通过 $$H_T=\phi$$ 进入这个恒等式。剩下的指数项累积整条路上的概率补偿，最终进入新旧路径的 MH 权重比；若另有有效权重上界，也可以据此做完整路径拒绝采样。**接受概率的公式很简单，困难在于把其中的路径权重算出来。沿残差这条路线，梯度负责 guidance，时间导数与二阶空间导数参与 correction。** 离散时对应上一段的 $$\log(G_k/H_k)$$ 累积。[[2, §4、式 (11)]](#ref_stein)
 
 <details class="blog-details" markdown="1">
-<summary>残差校正的完整表达，以及不求 Hessian 的另一条路线</summary>
+<summary>为什么 URGE 又能避开显式 Hessian？</summary>
 
-在固定起点、$$H_T=\phi$$、$$H>0$$ 足够光滑且换测度合法时，记基础生成元
+上式把路径概率比整理成了价值函数的残差。URGE 保留实际漂移与噪声增量，直接用 Girsanov 路径比计算校正，因此可以绕开显式时间导数和 Hessian。若漂移本身采用 $$\nabla\log H$$，构造提议仍要计算价值梯度。**高阶导数是直接计算残差的成本，并不是所有校正方法都不可避免的成本。** [[1, §2.2–2.4]](#ref_urge)
 
-$$
-\mathcal L_t f=b_t\cdot\nabla f+\tfrac12\operatorname{tr}(a_t\nabla^2f).
-$$
-
-将连续时间 guidance 取为 $$a_t\nabla\log H_t$$，由 Itô 公式与 Girsanov 换测度，其路径校正可按本文记号整理成
-
-$$
-R_H=H_0(x_0)\exp\!\left(\int_0^T\mathcal E_t(X_t)\,dt\right),
-\qquad
-\mathcal E_t=\frac{(\partial_t+\mathcal L_t)H_t}{H_t}.
-$$
-
-因此，直接计算残差会用到 $$\partial_tH$$、$$\nabla H$$ 与 $$\nabla^2H$$。这与离散路径上留下的 $$\log(G_k/H_k)$$ 是对应的两种表达。[[2, §4、式 (11)]](#ref_stein)[[3, 第 58 至 59 页]](#ref_slides)
-
-**高阶导数并不是所有拒绝校正都必须付出的代价**。URGE 的 Girsanov 路径表达利用实际漂移和噪声，可以避开显式 Hessian 与 PDE 残差；但若漂移本身由 $$\nabla\log H$$ 构造，价值梯度仍要计算。这里区分的是计算同一类校正信息的不同路线。[[1, §2.2–2.4]](#ref_urge)
+连续时间的恒等式也不意味着任意离散实现自动精确。实际算法必须使用与其离散提议匹配的校正权重。
 
 </details>
 
-于是目标更明确了：**既不靠跨路径复制，也不要求价值完全准确，还希望引导和校正都只用函数值**。下一节先从最小的操作开始：向两边各试一次。
+现在要设计的是一对配套机制：**用函数值把路径引向好区域，同时留下可以用函数值算清的概率账本。** 下一节从两个对称候选开始，看看这两件事怎样共用同一批查询。
 
 ## 6. 热身：两个对称候选，就是有限差分
 
@@ -225,7 +255,7 @@ $$
 
 <figure class="blog-figure">
   <a href="/images/blog/diffusion_urge_stein/two_queries.svg"><img src="/images/blog/diffusion_urge_stein/two_queries.svg" alt="左右候选各距中心0.1，价值为9和11；中心差分斜率为10，按45%与55%选择，平均向右移动0.01。" width="960" height="820" loading="lazy"></a>
-  <figcaption>图 4 · 两点有限差分变成了选择概率。数值为教学示例；实际每次只选一个候选，0.01 是平均位移。</figcaption>
+  <figcaption>图 5 · 两侧候选的价值为 9 和 11，按比例选择就得到 45% 与 55% 的概率。每次实际只移动到一个候选，但重复抽样后的平均位移是向右 0.01；这个方向来自两点价值差，无需计算价值梯度。数值为教学示例。</figcaption>
 </figure>
 
 有限差分藏在哪里？两点相距 $$0.2$$，价值增加 $$2$$，所以斜率是 $$10$$。记 $$H^\pm=H(\mu\pm\delta)$$，平均位移有一个精确关系：
@@ -312,7 +342,7 @@ $$
 
 <figure class="blog-figure">
   <a href="/images/blog/diffusion_urge_stein/centered_pool.svg"><img src="/images/blog/diffusion_urge_stein/centered_pool.svg" alt="两个反向候选推广为五个整体平衡的方向，向量和为零；并行查询价值，随机选出其中一个候选。" width="960" height="860" loading="lazy"></a>
-  <figcaption>图 5 · 从双点对称到整组中心化。方向为教学示意；实际使用中心化高斯。红点表示本次选中的候选，不是加权均值。</figcaption>
+  <figcaption>图 6 · 从两个反向候选推广到五个整体平衡的候选：方向之和为零，各候选的价值可以并行查询，再按价值比例随机选出一个。红点是本次选中的候选；中心化还会抵消价值平均中的一阶噪声，使校正所用的归一化估计更稳定。箭头表示几何关系，实际方向由中心化高斯生成。</figcaption>
 </figure>
 
 给定候选池 $$U$$，选择产生的平均位移恰好为
@@ -367,7 +397,7 @@ $$
 
 <figure class="blog-figure">
   <a href="/images/blog/diffusion_urge_stein/outer_mh.svg"><img src="/images/blog/diffusion_urge_stein/outer_mh.svg" alt="完整提议独立生成，按新旧路径权重依次进行MH更新，拒绝时保留旧路径与旧权重。" width="960" height="680" loading="lazy"></a>
-  <figcaption>图 6 · 完整提议可以并行生成，接受与保留按顺序处理。图中权重与决定为教学示例。</figcaption>
+  <figcaption>图 7 · 完整提议先各自生成，再逐条比较新旧路径权重。接受时换成新路径；拒绝时保留旧路径和旧权重。因此，提议可以独立并行生成，MH 链的连续输出仍可能重复并相互相关。图中权重与决定为教学示例。</figcaption>
 </figure>
 
 **独立的是提议路径，一条 MH 链相邻的输出仍然相关**。有限次更新也仍有初始化误差；若需要独立输出，应独立重复整套程序。已知有效全路径权重上界时，可另用完整路径拒绝采样获得独立的精确有限网格样本；这里主要讨论固定计算预算的外层 MH。[[2, Algorithm 2、附录 G.2]](#ref_stein)
@@ -460,20 +490,20 @@ CLIP 衡量图文语义匹配，HPS 和 ImageReward 是学习得到的偏好评�
 
 上述评测使用 100 步 DDIM，噪声参数为 1，CFG 强度为 7.5，每隔 20 步重采样。[[1, 附录 C]](#ref_urge)
 
-下面的粒子扩展图在 10 个提示词上比较 SD v1.5 与 SDXL，不与上表 50 个提示词的汇总数值直接对齐。在测试的 $$N=2,3,4,6,8$$ 下，URGE 的 ImageReward 持续上升，多数配置高于 FK Steering；SD v1.5 的 $$N=2$$ 和 SDXL 的 $$N=6$$ 是例外。这是给定实验里的趋势，不是所有任务上的单调性保证。[[1, Figure 3]](#ref_urge)
+下面的粒子扩展图在 10 个提示词上比较 SD v1.5 与 SDXL，不与上表 50 个提示词的汇总数值直接对齐。在测试的 $$N=2,3,4,6,8$$ 下，URGE 的 ImageReward 持续上升，多数配置高于 FK Steering；SD v1.5 的 $$N=2$$ 和 SDXL 的 $$N=6$$ 是例外。这是给定实验里的趋势，不是所有任务上的单调性保证。
 
 </details>
 
 <figure class="blog-figure">
-  <a href="/images/blog/diffusion_urge_stein/urge_particle_scaling.webp"><img src="/images/blog/diffusion_urge_stein/urge_particle_scaling.webp" alt="URGE原论文Figure 3：SD v1.5和SDXL随粒子数增加的ImageReward，URGE在测试范围内持续提升，但不是每个配置都高于FK Steering。" width="1400" height="500" loading="lazy"></a>
-  <figcaption>图 7 · 更多粒子带来的实际收益。URGE 原论文 Figure 3，保留原图坐标、图例与基准线；评测使用 10 个提示词。</figcaption>
+  <a href="/images/blog/diffusion_urge_stein/urge_particle_scaling.webp"><img src="/images/blog/diffusion_urge_stein/urge_particle_scaling.webp" alt="SD v1.5和SDXL随粒子数增加的ImageReward，URGE在测试范围内持续提升，但不是每个配置都高于FK Steering。" width="1400" height="500" loading="lazy"></a>
+  <figcaption>图 8 · 横轴为粒子数，纵轴为 ImageReward，两个面板分别使用 SD v1.5 和 SDXL。增加粒子为生成过程提供更多候选和筛选机会；在这里测试的粒子数范围内，URGE 的评分持续上升，但并非每个配置都优于 FK Steering。评测使用 10 个提示词。</figcaption>
 </figure>
 
-分数对应怎样的视觉变化？图 8 选出“牙刷与单板滑雪板”和“马与长颈鹿”。重点看：**两个物体是否同时出现，还是被混成了一个物体**？[[1, Table 5]](#ref_urge)
+分数对应怎样的视觉变化？图 9 选出“牙刷与单板滑雪板”和“马与长颈鹿”。重点看：**两个物体是否同时出现，还是被混成了一个物体**？
 
 <figure class="blog-figure">
-  <a href="/images/blog/diffusion_urge_stein/urge_image_examples.webp"><img src="/images/blog/diffusion_urge_stein/urge_image_examples.webp" alt="两组双物体提示词，对比基础SD v1.5、四粒子FK Steering和四粒子URGE。" width="1680" height="1610" loading="lazy"></a>
-  <figcaption>图 8 · URGE 原论文 Table 5 节选。六张生成图片未改动，仅重新排版并添加中文标签。FK Steering 与 URGE 均为 4 个粒子；个别例子应结合汇总指标阅读。原图按 CC BY 4.0 使用。</figcaption>
+  <a href="/images/blog/diffusion_urge_stein/urge_image_comparison.html" style="position:relative;display:block;overflow:hidden;aspect-ratio:1680/1430;"><img src="/images/blog/diffusion_urge_stein/urge_image_examples.webp" alt="两组双物体提示词，对比基础 SD v1.5、四粒子 FK Steering 和四粒子 URGE。" width="1680" height="1610" loading="lazy" style="position:absolute;top:0;left:0;display:block;width:100%;max-width:none;height:auto;margin:0;border:0;border-radius:0;transform:translateY(-6.8322981366%);"></a>
+  <figcaption>图 9 · 相同双物体提示词下，比较基础模型、FK Steering 与 URGE 的输出。上排观察牙刷与滑雪板是否成为两个独立物体，下排观察马与长颈鹿是否被混合；这些例子展示了分数提升可能对应的视觉变化。后两种方法均使用 4 个粒子，个别图片应结合汇总指标阅读。</figcaption>
 </figure>
 
 ### Stein：两个中心化候选能省下多少查询？
@@ -482,7 +512,7 @@ CLIP 衡量图文语义匹配，HPS 和 ImageReward 是学习得到的偏好评�
 
 <figure class="blog-figure">
   <a href="/images/blog/diffusion_urge_stein/centering_experiment.webp"><img src="/images/blog/diffusion_urge_stein/centering_experiment.webp" alt="中心化两个候选随网格变细效率提高；独立候选需要远大的池才能达到相近的归一化常数估计效率。" width="1032" height="429" loading="lazy"></a>
-  <figcaption>图 9 · 文献 <a href="#ref_stein">[2]</a> Figure 2。左图固定两个候选，右图增加独立候选数。该指标不等于 MH 独立样本数。</figcaption>
+  <figcaption>图 10 · 中心化如何稳定归一化常数的估计。左图固定两个候选，比较网格加深时的 adjusted NESS；右图增加独立候选数，观察需要多少查询才能达到中心化候选的效率。指标越高表示该归一化估计越有效，并不表示 MH 输出中独立样本的数量。</figcaption>
 </figure>
 
 受扰动价值、$$n=192$$ 时，**两个中心化候选达到 92.76%，两个独立候选只有 31.40%**。独立候选增至 128 和 256，才分别达到 92.38% 和 92.81%。这说明在该设置中，安排好候选之间的关系，比单纯堆数量更能稳定权重。[[2, §5.1]](#ref_stein)
@@ -499,11 +529,11 @@ Hopper 实验固定扩散策略与 critic，检查动作的 critic 分数分布�
 
 表中是八个固定状态的平均条件 KS。**指路已经有用，但完整路径校正仍大幅改善目标分布的匹配**。这里测量的是固定 critic 的分数分布，不能直接解释为机器人实际回报提高了同样比例。[[2, Table 2、附录 H.3]](#ref_stein)
 
-最后回到书和电脑。图 10 在同一个 SD v1.5 骨干上展示四组双物体提示词。观察它们是否同时出现、保持独立，而不是只看一张图是否漂亮。[[2, §5.3]](#ref_stein)
+最后回到书和电脑。图 11 在同一个 SD v1.5 骨干上展示四组双物体提示词。观察它们是否同时出现、保持独立，而不是只看一张图是否漂亮。[[2, §5.3]](#ref_stein)
 
 <figure class="blog-figure">
-  <a href="/images/blog/diffusion_urge_stein/image_examples.webp"><img src="/images/blog/diffusion_urge_stein/image_examples.webp" alt="Stein论文双物体生成示例，对比FK Steering、SVDD、URGE以及两个和四个候选的Stein方法。" width="1110" height="1200" loading="lazy"></a>
-  <figcaption>图 10 · 文献 <a href="#ref_stein">[2]</a> Table 3。Stein 每张图使用 11 条完整提议，图中粒子方法使用 4 个粒子；这是定性示例，不是严格等算力的全面排名。</figcaption>
+  <a href="/images/blog/diffusion_urge_stein/image_examples.webp"><img src="/images/blog/diffusion_urge_stein/image_examples.webp" alt="双物体生成示例，对比FK Steering、SVDD、URGE以及两个和四个候选的Stein方法。" width="1110" height="1200" loading="lazy"></a>
+  <figcaption>图 11 · 四组双物体提示词下，比较 FK Steering、SVDD、URGE 与使用两个或四个候选的 Stein Guidance。重点检查两类物体是否同时出现并保持各自身份。Stein 每张图使用 11 条完整提议，图中粒子方法使用 4 个粒子；这些是定性例子，不构成严格等算力的全面排名。</figcaption>
 </figure>
 
 ## 11. 把三件事分开，算法就清楚了
@@ -514,13 +544,21 @@ URGE 说明，记录路径就能更方便地算清校正的账。Stein Guidance 
 
 **不用价值导数，不等于没有方向；不复制祖先，也不等于可以不校正**。把这些分工明确下来，才知道多出的计算究竟改善了什么。
 
-## 参考文献与图示来源
+## 12. 研究问题：怎样同时实现无导数引导与校正？
+
+<aside class="blog-key-insight" aria-labelledby="research-question" markdown="1">
+<h4 id="research-question">设计引导时，就把校正需要的信息一起设计出来</h4>
+
+**只允许查询近似价值函数的数值时，怎样设计 guidance，使生成过程既能向高价值区域移动，又能留下可计算的精确路径权重，让最终的 correction 同样不需要价值函数的梯度、时间导数或 Hessian？**
+
+</aside>
+
+Stein Guidance 给出的一个答案，是把候选池与选择编号保留下来：候选之间的价值差提供方向，候选价值的平均与选中值提供校正因子。无导数引导与无导数校正因此来自同一个随机构造。这里“精确”指扩展空间的加权恒等式；有限次 MH 更新仍有采样误差。[[2]](#ref_stein)
+
+进一步的研究是：**当候选分布不再是高斯，或者候选池随状态自适应变化时，能否仍然让同一批函数值同时支持有效引导、可验证的校正和稳定的路径权重？** 检验一个新设计，除了看平均移动方向，还要证明完整权重恢复了目标分布，并控制其波动是否会随路径加深而恶化。
+
+## 参考文献
 
 <p id="ref_urge"><strong>[1]URGE。</strong>Chenyang Wang, Weizhong Wang, Yinuo Ren, Jose Blanchet, Yiping Lu. <em>Simple Approximation and Derivative Free Inference Time Scaling for Diffusion Models via Sequential Monte Carlo on Path Measures.</em> ICML 2026。<a href="https://proceedings.mlr.press/v306/wang26ih.html">正式论文页面</a> · <a href="https://arxiv.org/abs/2605.17850">arXiv</a> · <a href="https://arxiv.org/html/2605.17850v1">HTML 全文</a>。</p>
 
 <p id="ref_stein"><strong>[2] Stein Guidance。</strong>Youheng Zhu, Chenyang Wang, Minshuo Chen, Yiping Lu. <em>Stein Guidance without Gradients: Discretization Uniform Diffusion Inference Time Scaling beyond Particle SMC.</em> 2026。<a href="/files/SteinGuidance.pdf">PDF 全文</a>。</p>
-
-<p id="ref_slides"><strong>[3]讨论班幻灯片。</strong>陆一平，<em>Diffusion Overview</em>，第 57 至 59 页：逐条路径拒绝采样、近似价值的路径校正，以及用 Stein 恒等式替代导数计算。图 3 提取自第 57 页原始矢量图，仅截取机制图区域并替换为浏览器通用字体。</p>
-
-图 1、2、4、5、6 为教学示意图；图 3 来自上述幻灯片。图 7、8 分别来自 URGE 原论文 Figure 3、Table 5，按 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 使用，图 8 仅作选图、排版与中文标签处理。图 9、10 摘自 文献 <a href="#ref_stein">[2]</a> Figure 2、Table 3。两条路线、候选价值、接受概率及 MH 决定的数值例子均用于教学，实验数值在相应段落注明出处。
-

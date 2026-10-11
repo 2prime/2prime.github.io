@@ -19,7 +19,7 @@
   </defs>
   <rect x="0" y="0" width="960" height="820" fill="#fcfbf8" rx="0" ry="0" />
   <line x1="48" y1="57" x2="86" y2="57" stroke="#842c36" stroke-width="3" stroke-linecap="round" />
-  <text x="102" y="65" fill="#842c36" font-size="24" text-anchor="start">04  FINITE DIFFERENCE WARM UP</text>
+  <text x="102" y="65" fill="#842c36" font-size="24" text-anchor="start">05  FINITE DIFFERENCE WARM UP</text>
   <text x="48" y="113" fill="#292a28" font-size="30" text-anchor="start">Two symmetric candidates form a finite difference</text>
   <text x="48" y="157" fill="#4f5551" font-size="23" text-anchor="start">Compare values and favor the more promising side.</text>
   <text x="184" y="219" fill="#4f5551" font-size="32" text-anchor="middle">H⁻ = 9</text>
