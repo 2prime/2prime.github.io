@@ -244,43 +244,108 @@ def genealogy():
 
 
 def two_queries():
-    d = Drawing("two_queries", 4, "对称双查询", "两次函数值查询，也能产生方向",
-                "教学示例。候选点关于均值 μ 对称，位移为正负根号 h 乘以 σZ。"
-                "若 H 正为四、H 负为一，则分别以百分之八十与百分之二十的概率选择，"
-                "并非每次都选择高价值点。此给定查询对的平均位移为零点六倍正向位移。"
-                "对称平均 S 等于两个函数值的均值；在平滑小步长展开中，相反的一阶扰动相互抵消。",
-                680)
-    d.text(48, 157, "先提出两个对称候选，再按价值比例随机选择。", 28, SLATE)
-    d.text(480, 208, "以下数值只用于说明抽样概率", 24, MUTED, "middle")
-    d.text(183, 252, "H⁻ = 1", 32, SLATE, "middle")
-    d.text(777, 252, "H⁺ = 4", 32, RED, "middle")
-    d.rect(82, 274, 204, 44, CLOUD, radius=4)
-    d.rect(675, 274, 204, 44, PALE_RED, radius=4)
-    d.text(184, 305, "选择概率 20%", 25, SLATE, "middle")
-    d.text(777, 305, "选择概率 80%", 25, RED, "middle")
-    d.line(145, 363, 815, 363, LINE, 3)
-    d.circle(184, 363, 12, SLATE)
-    d.circle(480, 363, 9, INK)
-    d.circle(776, 363, 12, RED)
-    d.text(184, 345, "Y⁻", 28, SLATE, "middle")
-    d.text(480, 341, "μ", 30, INK, "middle")
-    d.text(776, 345, "Y⁺", 28, RED, "middle")
-    d.line(461, 397, 207, 397, MUTED, 2, "muted")
-    d.line(499, 397, 753, 397, RED, 2, "red")
-    d.text(333, 435, "−√h σZ", 28, SLATE, "middle")
-    d.text(628, 435, "+√h σZ", 28, RED, "middle")
-    d.text(184, 486, "μ = x + h b(x)", 28, SLATE, "middle")
-    # Conditional on this query pair: (0.8 - 0.2) * delta = 0.6 * delta.
-    d.line(480, 474, 658, 474, RED, 4, "red")
-    d.text(663, 514, "本组候选的平均位移：0.6 √h σZ", 26, RED, "middle")
-    d.rect(48, 548, 864, 105, CLOUD, radius=4)
-    d.text(480, 591, "S = (H⁺ + H⁻) / 2", 31, INK, "middle")
-    d.text(480, 632, "平滑小步长下，相反的一阶波动相互抵消。", 27, SLATE, "middle")
+    d = Drawing("two_queries", 4, "有限差分热身", "两个对称候选，就是一次有限差分",
+                "一维教学示例。左候选为 μ 减零点一，价值为九；右候选为 μ 加零点一，价值为十一。"
+                "按价值比例抽样，选择左候选的概率为百分之四十五，右候选为百分之五十五。"
+                "两侧价值的中心差分斜率等于十一减九除以零点二，即十；平均价值也为十。"
+                "平均位移等于步幅平方乘以斜率再除以平均价值，即零点一的平方乘以十除以十，等于零点零一。"
+                "每次实际只选择左候选或右候选，零点零一是固定这对候选后重复抽样的平均位移。",
+                820)
+    d.text(48, 157, "比较两侧的价值，让抽样概率略微偏向高价值的一侧。", 28, SLATE)
+    d.text(184, 219, "H⁻ = 9", 32, SLATE, "middle")
+    d.text(776, 219, "H⁺ = 11", 32, RED, "middle")
+    d.text(480, 225, "价值差：11 − 9 = 2", 26, MUTED, "middle")
+    d.rect(82, 237, 204, 44, CLOUD, radius=4)
+    d.rect(674, 237, 204, 44, PALE_RED, radius=4)
+    d.text(184, 268, "选择概率 45%", 25, SLATE, "middle")
+    d.text(776, 268, "选择概率 55%", 25, RED, "middle")
+    d.line(145, 323, 815, 323, LINE, 3)
+    d.circle(184, 323, 12, SLATE)
+    d.circle(480, 323, 9, INK)
+    d.circle(776, 323, 12, RED)
+    d.text(184, 364, "μ − 0.1", 28, SLATE, "middle")
+    d.text(480, 364, "μ", 30, INK, "middle")
+    d.text(776, 364, "μ + 0.1", 28, RED, "middle")
+    d.line(184, 397, 776, 397, MUTED, 2)
+    d.line(184, 388, 184, 406, MUTED, 2)
+    d.line(776, 388, 776, 406, MUTED, 2)
+    d.text(480, 436, "两点间距：0.2", 27, SLATE, "middle")
+    d.rect(48, 466, 864, 120, CLOUD, radius=4)
+    d.text(264, 507, "中心差分斜率", 28, SLATE, "middle")
+    d.text(264, 553, "(11 − 9) / 0.2 = 10", 31, INK, "middle")
+    d.line(480, 485, 480, 567, LINE, 2)
+    d.text(696, 507, "平均价值", 28, SLATE, "middle")
+    d.text(696, 553, "(11 + 9) / 2 = 10", 31, INK, "middle")
+    d.rect(48, 612, 864, 144, PALE_RED, radius=4)
+    d.text(480, 650, "平均位移 = 步幅平方 × 斜率 ÷ 平均价值", 29, RED, "middle")
+    d.text(480, 698, "0.1² × 10 / 10 = 0.01", 36, RED, "middle")
+    d.text(480, 737, "也等于 55% × 0.1 + 45% × (−0.1)", 25, SLATE, "middle")
+    d.text(480, 797, "每次只选左点或右点；0.01 是重复抽样后的平均位移。", 26, SLATE, "middle")
+    return d.write()
+
+
+def centered_pool():
+    d = Drawing("centered_pool", 5, "并行 K 个候选", "从一对反向候选，到 K 个并行候选",
+                "几何教学示意。左图两个候选位于同一中心 μ 的两侧，方向正好相反。"
+                "右图五个候选都从中心 μ 出发，五个位移向量的和精确为零。"
+                "这些中心化方向在一组内相关，每个方向的边际分布仍为标准高斯。"
+                "所有候选的价值可以并行查询，再按各自价值占总价值的比例随机选出一个候选。"
+                "图中红色候选表示本次被抽中的点，实际下一步走到该候选，不使用候选的加权均值。"
+                "箭头只用于说明零和几何，并非论文实验数据或实际高斯随机样本。",
+                860)
+    d.text(48, 157, "以 K = 5 为例：方向整体相抵，查询可以同时进行。", 28, SLATE)
+    d.rect(48, 195, 282, 425, CLOUD, radius=4)
+    d.rect(354, 195, 558, 425, CLOUD, radius=4)
+    d.text(189, 237, "K = 2：一正一反", 27, SLATE, "middle")
+    d.text(633, 237, "K = 5：整体相抵", 27, SLATE, "middle")
+
+    # The two arrows have exactly opposite displacement vectors.
+    left_center = (189, 400)
+    for dx, dy in [(74, -73), (-74, 73)]:
+        x, y = left_center[0] + dx, left_center[1] + dy
+        d.line(*left_center, x, y, TEAL, 3, "teal")
+        d.circle(x, y, 8, PAPER, TEAL, 3)
+    d.circle(*left_center, 8, INK)
+    d.text(169, 393, "μ", 30, INK, "middle")
+    d.text(269, 301, "H₁", 28, TEAL, "middle")
+    d.text(109, 514, "H₂", 28, TEAL, "middle")
+    d.text(189, 593, "Z₂ = −Z₁", 28, SLATE, "middle")
+
+    # Pixel-space displacements sum to (0, 0) exactly. These are explanatory
+    # geometry, not Gaussian draws; the prose specifies the actual pool law.
+    right_center = (650, 400)
+    offsets = [(150, -15), (34, -122), (-116, -70), (-100, 83), (32, 124)]
+    assert sum(dx for dx, _ in offsets) == 0
+    assert sum(dy for _, dy in offsets) == 0
+    for index, (dx, dy) in enumerate(offsets, start=1):
+        x, y = right_center[0] + dx, right_center[1] + dy
+        color = RED if index == 2 else TEAL
+        d.line(*right_center, x, y, color, 3.5 if index == 2 else 2.7,
+               "red" if index == 2 else "teal")
+        d.circle(x, y, 9, color if index == 2 else PAPER, color, 3)
+        if index == 2:
+            d.circle(x, y, 17, "none", color, 2)
+    d.circle(*right_center, 8, INK)
+    d.text(638, 441, "μ", 30, INK, "middle")
+    for x, y, label, color in [(835, 394, "H₁", TEAL),
+                                (730, 281, "H₂", RED),
+                                (493, 324, "H₃", TEAL),
+                                (511, 511, "H₄", TEAL),
+                                (720, 550, "H₅", TEAL)]:
+        d.text(x, y, label, 28, color, "middle")
+    d.text(806, 315, "本次选中", 24, RED, "middle")
+    d.text(633, 593, "Z₁ + ⋯ + Z₅ = 0", 28, SLATE, "middle")
+
+    d.rect(48, 646, 864, 117, PALE_RED, radius=4)
+    d.text(480, 689, "并行查询所有价值 Hᵢ", 31, RED, "middle")
+    d.text(480, 736, "按 pᵢ = Hᵢ / ΣⱼHⱼ 随机选择一个候选", 29, RED, "middle")
+    d.text(480, 805, "组内相关；每个 Zᵢ 的边际分布仍是标准高斯。", 26, SLATE, "middle")
+    d.text(480, 842, "箭头是零和几何示意，红点是本次抽中的候选。", 25, MUTED, "middle")
     return d.write()
 
 
 def outer_mh():
-    d = Drawing("outer_mh", 5, "整条路径的 MH", "独立提议，逐条校正",
+    d = Drawing("outer_mh", 6, "整条路径的 MH", "独立提议，逐条校正",
                 "上方并行生成独立的完整提议轨迹，每条记录自身的重要性权重 R。"
                 "下方为按顺序处理的教学示例：旧路径权重为二，新提议权重为一，"
                 "接受概率为二分之一，本例抽样结果为拒绝，因此仍保留旧路径及权重二。"
@@ -319,7 +384,7 @@ def outer_mh():
 
 
 def main():
-    for generate in (target, path_weight, genealogy, two_queries, outer_mh):
+    for generate in (target, path_weight, genealogy, two_queries, centered_pool, outer_mh):
         print(generate())
 
 

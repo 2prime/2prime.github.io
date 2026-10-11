@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="860" viewBox="0 0 960 860" role="img" aria-labelledby="centered_pool-title centered_pool-desc" lang="zh-CN">
+  <title id="centered_pool-title">从一对反向候选，到 K 个并行候选</title>
+  <desc id="centered_pool-desc">几何教学示意。左图两个候选位于同一中心 μ 的两侧，方向正好相反。右图五个候选都从中心 μ 出发，五个位移向量的和精确为零。这些中心化方向在一组内相关，每个方向的边际分布仍为标准高斯。所有候选的价值可以并行查询，再按各自价值占总价值的比例随机选出一个候选。图中红色候选表示本次被抽中的点，实际下一步走到该候选，不使用候选的加权均值。箭头只用于说明零和几何，并非论文实验数据或实际高斯随机样本。</desc>
+  <defs>
+    <style>text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', 'FandolHei', sans-serif; font-weight: 400; text-rendering: optimizeLegibility; }</style>
+    <marker id="arrow-red" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11 Z" fill="#842c36" />
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11 Z" fill="#526b60" />
+    </marker>
+    <marker id="arrow-slate" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11 Z" fill="#4f5551" />
+    </marker>
+    <marker id="arrow-muted" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11 Z" fill="#696b65" />
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="960" height="860" fill="#fcfbf8" rx="0" ry="0" />
+  <line x1="48" y1="57" x2="86" y2="57" stroke="#842c36" stroke-width="3" stroke-linecap="round" />
+  <text x="102" y="65" fill="#842c36" font-size="24" text-anchor="start">05  并行 K 个候选</text>
+  <text x="48" y="113" fill="#292a28" font-size="34" text-anchor="start">从一对反向候选，到 K 个并行候选</text>
+  <text x="48" y="157" fill="#4f5551" font-size="28" text-anchor="start">以 K = 5 为例：方向整体相抵，查询可以同时进行。</text>
+  <rect x="48" y="195" width="282" height="425" fill="#f3f1ec" rx="4" ry="4" />
+  <rect x="354" y="195" width="558" height="425" fill="#f3f1ec" rx="4" ry="4" />
+  <text x="189" y="237" fill="#4f5551" font-size="27" text-anchor="middle">K = 2：一正一反</text>
+  <text x="633" y="237" fill="#4f5551" font-size="27" text-anchor="middle">K = 5：整体相抵</text>
+  <line x1="189" y1="400" x2="263" y2="327" stroke="#526b60" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-teal)" />
+  <circle cx="263" cy="327" r="8" fill="#fcfbf8" stroke="#526b60" stroke-width="3" />
+  <line x1="189" y1="400" x2="115" y2="473" stroke="#526b60" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-teal)" />
+  <circle cx="115" cy="473" r="8" fill="#fcfbf8" stroke="#526b60" stroke-width="3" />
+  <circle cx="189" cy="400" r="8" fill="#292a28" />
+  <text x="169" y="393" fill="#292a28" font-size="30" text-anchor="middle">μ</text>
+  <text x="269" y="301" fill="#526b60" font-size="28" text-anchor="middle">H₁</text>
+  <text x="109" y="514" fill="#526b60" font-size="28" text-anchor="middle">H₂</text>
+  <text x="189" y="593" fill="#4f5551" font-size="28" text-anchor="middle">Z₂ = −Z₁</text>
+  <line x1="650" y1="400" x2="800" y2="385" stroke="#526b60" stroke-width="2.7" stroke-linecap="round" marker-end="url(#arrow-teal)" />
+  <circle cx="800" cy="385" r="9" fill="#fcfbf8" stroke="#526b60" stroke-width="3" />
+  <line x1="650" y1="400" x2="684" y2="278" stroke="#842c36" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrow-red)" />
+  <circle cx="684" cy="278" r="9" fill="#842c36" stroke="#842c36" stroke-width="3" />
+  <circle cx="684" cy="278" r="17" fill="none" stroke="#842c36" stroke-width="2" />
+  <line x1="650" y1="400" x2="534" y2="330" stroke="#526b60" stroke-width="2.7" stroke-linecap="round" marker-end="url(#arrow-teal)" />
+  <circle cx="534" cy="330" r="9" fill="#fcfbf8" stroke="#526b60" stroke-width="3" />
+  <line x1="650" y1="400" x2="550" y2="483" stroke="#526b60" stroke-width="2.7" stroke-linecap="round" marker-end="url(#arrow-teal)" />
+  <circle cx="550" cy="483" r="9" fill="#fcfbf8" stroke="#526b60" stroke-width="3" />
+  <line x1="650" y1="400" x2="682" y2="524" stroke="#526b60" stroke-width="2.7" stroke-linecap="round" marker-end="url(#arrow-teal)" />
+  <circle cx="682" cy="524" r="9" fill="#fcfbf8" stroke="#526b60" stroke-width="3" />
+  <circle cx="650" cy="400" r="8" fill="#292a28" />
+  <text x="638" y="441" fill="#292a28" font-size="30" text-anchor="middle">μ</text>
+  <text x="835" y="394" fill="#526b60" font-size="28" text-anchor="middle">H₁</text>
+  <text x="730" y="281" fill="#842c36" font-size="28" text-anchor="middle">H₂</text>
+  <text x="493" y="324" fill="#526b60" font-size="28" text-anchor="middle">H₃</text>
+  <text x="511" y="511" fill="#526b60" font-size="28" text-anchor="middle">H₄</text>
+  <text x="720" y="550" fill="#526b60" font-size="28" text-anchor="middle">H₅</text>
+  <text x="806" y="315" fill="#842c36" font-size="24" text-anchor="middle">本次选中</text>
+  <text x="633" y="593" fill="#4f5551" font-size="28" text-anchor="middle">Z₁ + ⋯ + Z₅ = 0</text>
+  <rect x="48" y="646" width="864" height="117" fill="#f2e9e8" rx="4" ry="4" />
+  <text x="480" y="689" fill="#842c36" font-size="31" text-anchor="middle">并行查询所有价值 Hᵢ</text>
+  <text x="480" y="736" fill="#842c36" font-size="29" text-anchor="middle">按 pᵢ = Hᵢ / ΣⱼHⱼ 随机选择一个候选</text>
+  <text x="480" y="805" fill="#4f5551" font-size="26" text-anchor="middle">组内相关；每个 Zᵢ 的边际分布仍是标准高斯。</text>
+  <text x="480" y="842" fill="#696b65" font-size="25" text-anchor="middle">箭头是零和几何示意，红点是本次抽中的候选。</text>
+</svg>
