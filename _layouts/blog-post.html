@@ -2,26 +2,40 @@
 layout: modern
 ---
 
-<header class="page-intro blog-post-header">
+<header class="page-intro blog-post-header magi-article-header">
   <div class="shell">
-    <div class="magi-post-topline">
-      <a class="blog-back magi-back" data-blog-link href="{{ '/blog/' | relative_url }}" translate="no">← MAGI Blog</a>
-      <span class="magi-file-label" aria-hidden="true" translate="no">RESEARCH FILE / {{ page.date | date: '%Y.%m' }}</span>
+    <div class="magi-article-cover">
+      <div class="magi-post-topline">
+        <a class="blog-back magi-back" data-blog-link href="{{ '/blog/' | relative_url }}" translate="no">
+          <svg class="magi-article-emblem" viewBox="0 0 84 58" aria-hidden="true" focusable="false">
+            <path class="magi-emblem-link" d="M42 20v11M37 34l-14 7M47 34l14 7"/>
+            <path class="magi-emblem-unit magi-emblem-upper" d="M29 2h26l5 5v12l-5 5H29l-5-5V7Z"/>
+            <path class="magi-emblem-unit" d="M6 33h22l6 6v13H6l-4-4V37Z"/>
+            <path class="magi-emblem-unit" d="M56 33h22l4 4v11l-4 4H50V39Z"/>
+            <path class="magi-emblem-core" d="m42 27 7 6-7 6-7-6Z"/>
+          </svg>
+          <span>← MAGI Blog</span>
+        </a>
+        <span class="magi-file-label" aria-hidden="true" translate="no">RESEARCH FILE / {{ page.date | date: '%Y.%m' }}</span>
+      </div>
+      {% capture post_category_id %}{% include blog-category.html post=page %}{% endcapture %}
+      {% assign post_category = site.data.blog_categories | where: 'id', post_category_id | first %}
+      {% if post_category %}<a class="blog-post-category" data-blog-link href="{{ '/blog/' | relative_url }}?category={{ post_category.id }}#magi-archive" data-blog-en="{{ post_category.name }}" data-blog-zh="{{ post_category.name_zh }}" translate="no">{{ post_category.name }}</a>{% endif %}
+      <h1 id="post-title" lang="{% if page.title_en %}en{% else %}{{ page.lang | default: 'en' }}{% endif %}"{% if page.title_en %} data-blog-en="{{ page.title_en | escape }}" data-blog-zh="{{ page.title | escape }}"{% endif %} translate="no">{{ page.title_en | default: page.title | escape }}</h1>
+      {% if page.description %}<p class="blog-post-description" lang="{% if page.description_en %}en{% else %}{{ page.lang | default: 'en' }}{% endif %}"{% if page.description_en %} data-blog-en="{{ page.description_en | escape }}" data-blog-zh="{{ page.description | escape }}"{% endif %} translate="no">{{ page.description_en | default: page.description | escape }}</p>{% endif %}
+      <div class="magi-article-byline">
+        <div class="blog-post-meta">
+          <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y.%m.%d' }}</time>
+          <span aria-hidden="true">/</span><span translate="no">{{ page.author | default: site.author.name | escape }}</span>
+        </div>
+        {% if page.tags.size > 0 %}<div class="blog-tags" translate="no">{% for tag in page.tags %}{% assign tag_category = site.data.blog_categories | where: 'id', tag | first %}{% unless tag_category %}{% assign tag_en = page.tags_en[forloop.index0] %}<span{% if tag_en %} lang="en" data-blog-en="{{ tag_en | escape }}" data-blog-zh="{{ tag | escape }}"{% endif %}>{{ tag_en | default: tag | escape }}</span>{% endunless %}{% endfor %}</div>{% endif %}
+      </div>
+      <div class="magi-console-rule" aria-hidden="true"><span></span><span></span><span></span></div>
     </div>
-    <div class="blog-post-meta">
-      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y.%m.%d' }}</time>
-      <span aria-hidden="true">·</span><span translate="no">{{ page.author | default: site.author.name | escape }}</span>
-    </div>
-    {% capture post_category_id %}{% include blog-category.html post=page %}{% endcapture %}
-    {% assign post_category = site.data.blog_categories | where: 'id', post_category_id | first %}
-    {% if post_category %}<a class="blog-post-category" data-blog-link href="{{ '/blog/' | relative_url }}?category={{ post_category.id }}#magi-archive" data-blog-en="{{ post_category.name }}" data-blog-zh="{{ post_category.name_zh }}" translate="no">{{ post_category.name }}</a>{% endif %}
-    <h1 id="post-title" lang="{% if page.title_en %}en{% else %}{{ page.lang | default: 'en' }}{% endif %}"{% if page.title_en %} data-blog-en="{{ page.title_en | escape }}" data-blog-zh="{{ page.title | escape }}"{% endif %} translate="no">{{ page.title_en | default: page.title | escape }}</h1>
-    {% if page.description %}<p class="blog-post-description" lang="{% if page.description_en %}en{% else %}{{ page.lang | default: 'en' }}{% endif %}"{% if page.description_en %} data-blog-en="{{ page.description_en | escape }}" data-blog-zh="{{ page.description | escape }}"{% endif %} translate="no">{{ page.description_en | default: page.description | escape }}</p>{% endif %}
-    {% if page.tags.size > 0 %}<div class="blog-tags" translate="no">{% for tag in page.tags %}{% assign tag_category = site.data.blog_categories | where: 'id', tag | first %}{% unless tag_category %}{% assign tag_en = page.tags_en[forloop.index0] %}<span{% if tag_en %} lang="en" data-blog-en="{{ tag_en | escape }}" data-blog-zh="{{ tag | escape }}"{% endif %}>{{ tag_en | default: tag | escape }}</span>{% endunless %}{% endfor %}</div>{% endif %}
   </div>
 </header>
 
-<section class="section">
+<section class="section magi-article-section">
   <div class="shell blog-reading-grid">
     <article class="blog-prose" id="post-content" aria-labelledby="post-title" lang="{% if page.content_en %}en{% else %}{{ page.lang | default: 'en' }}{% endif %}" translate="no">
       {% if page.content_en %}
@@ -34,13 +48,14 @@ layout: modern
       {{ content }}
       {% endif %}
     </article>
-    <aside class="blog-sidebar" data-blog-toc hidden>
-      <span class="eyebrow">On this page</span>
+    <aside class="blog-sidebar magi-article-toc" data-blog-toc hidden>
+      <div class="magi-toc-heading"><span data-blog-en="Contents" data-blog-zh="文章目录" translate="no">Contents</span><span aria-hidden="true" translate="no">MAGI</span></div>
       <nav aria-label="Article contents"></nav>
     </aside>
   </div>
-  <div class="shell blog-post-footer">
+  <div class="shell blog-post-footer magi-article-footer">
     <a class="text-link" data-blog-link href="{{ '/blog/' | relative_url }}">All posts</a>
+    <a class="magi-back-to-top" href="#post-title" data-blog-en="Back to top ↑" data-blog-zh="返回顶部 ↑" translate="no">Back to top ↑</a>
     <a class="blog-edit-link" href="https://github.com/{{ site.repository }}/edit/master/{{ page.path }}" target="_blank" rel="noopener noreferrer">Edit on GitHub</a>
   </div>
 </section>
