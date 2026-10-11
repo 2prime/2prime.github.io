@@ -384,5 +384,11 @@
   "Graduate": "研究生课程",
   "Students and Mentoring": "学生与科研指导",
   "Control inspired acceleration for adversarial training.": "由控制理论启发的对抗训练加速。",
-  "Course archive": "课程归档"
+  "Course archive": "课程归档",
+  "Research keywords": "研究关键词",
+  "Diffusion Models": "扩散模型",
+  "Generative Model Inference": "生成式模型推理",
+  "Neural Network Optimizers": "神经网络优化器",
+  "Physical AI": "物理AI",
+  "Computational Mathematics": "计算数学"
 }

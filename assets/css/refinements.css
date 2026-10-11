@@ -176,3 +176,24 @@
   .teaching-school-nav { display: none; }
   .school-course-card { break-inside: avoid; }
 }
+
+/* Homepage research keywords follow the existing flat card palette. */
+.page-home .hero-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.5rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.page-home .hero-keywords li {
+  max-width: 100%;
+  margin: 0;
+  padding: 0.2rem 0.55rem;
+  color: var(--pku);
+  background: var(--cloud);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  font-size: 0.8rem;
+  line-height: 1.65;
+}

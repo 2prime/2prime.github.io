@@ -26,6 +26,13 @@ redirect_from:
         I develop mathematical foundations and scalable algorithms at the intersection of machine learning,
         numerical computation, applied probability, and scientific discovery.
       </p>
+      <ul class="hero-keywords" aria-label="Research keywords">
+        <li>Diffusion Models</li>
+        <li>Generative Model Inference</li>
+        <li>Neural Network Optimizers</li>
+        <li>Physical AI</li>
+        <li>Computational Mathematics</li>
+      </ul>
       <div class="button-row hero-actions">
         <a class="button" href="/research/"><span>Explore research</span><span aria-hidden="true">→</span></a>
         <a class="button scholar-button" href="https://scholar.google.com/citations?user=NmhvVBgAAAAJ" target="_blank" rel="noopener noreferrer">
