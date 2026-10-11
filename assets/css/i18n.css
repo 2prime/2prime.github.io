@@ -1,7 +1,7 @@
 /* The language control stays visible independently of the mobile menu. */
 .header-inner { gap: 1rem; }
-.institution-brand { flex: 0 1 248px; }
-.site-nav { margin-left: auto; gap: 0.9rem; }
+.institution-brand { flex: 0 1 222px; }
+.site-nav { margin-left: auto; gap: 0.7rem; }
 .header-controls { display: flex; align-items: center; gap: 0.65rem; flex: 0 0 auto; }
 .language-switch { display: inline-flex; align-items: center; gap: 2px; padding: 2px; border: 1px solid var(--line); border-radius: 4px; }
 .language-switch button { display: inline-flex; align-items: center; justify-content: center; min-width: 38px; min-height: 34px; padding: 0.3rem 0.45rem; color: var(--ink-soft); font: inherit; font-size: 0.77rem; font-weight: 500; line-height: 1.4; background: transparent; border: 0; border-radius: 2px; cursor: pointer; }

@@ -1,0 +1,32 @@
+---
+layout: modern
+---
+
+<header class="page-intro blog-post-header">
+  <div class="shell">
+    <a class="blog-back" href="{{ '/blog/' | relative_url }}">← All posts</a>
+    <div class="blog-post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y.%m.%d' }}</time>
+      <span aria-hidden="true">·</span><span>Yiping Lu</span>
+    </div>
+    <h1 id="post-title" lang="{{ page.lang | default: 'en' }}" translate="no">{{ page.title | escape }}</h1>
+    {% if page.description %}<p class="blog-post-description" lang="{{ page.lang | default: 'en' }}" translate="no">{{ page.description | escape }}</p>{% endif %}
+    {% if page.tags.size > 0 %}<div class="blog-tags" translate="no">{% for tag in page.tags %}<span>{{ tag | escape }}</span>{% endfor %}</div>{% endif %}
+  </div>
+</header>
+
+<section class="section">
+  <div class="shell blog-reading-grid">
+    <article class="blog-prose" id="post-content" aria-labelledby="post-title" lang="{{ page.lang | default: 'en' }}" translate="no">
+      {{ content }}
+    </article>
+    <aside class="blog-sidebar" data-blog-toc hidden>
+      <span class="eyebrow">On this page</span>
+      <nav aria-label="Article contents"></nav>
+    </aside>
+  </div>
+  <div class="shell blog-post-footer">
+    <a class="text-link" href="{{ '/blog/' | relative_url }}">All posts</a>
+    <a class="blog-edit-link" href="https://github.com/{{ site.repository }}/edit/master/{{ page.path }}" target="_blank" rel="noopener noreferrer">Edit on GitHub</a>
+  </div>
+</section>

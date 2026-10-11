@@ -1,0 +1,13 @@
+{% assign entry = include.post %}
+<article class="blog-card" data-blog-card>
+  <div class="blog-card-meta">
+    <time datetime="{{ entry.date | date_to_xmlschema }}">{{ entry.date | date: '%Y.%m.%d' }}</time>
+    {% if entry.tags.size > 0 %}<span aria-hidden="true">·</span><span translate="no">{{ entry.tags | first | escape }}</span>{% endif %}
+  </div>
+  <h3 lang="{{ entry.lang | default: 'en' }}" translate="no"><a href="{{ entry.url | relative_url }}">{{ entry.title | escape }}</a></h3>
+  <p class="blog-card-summary" lang="{{ entry.lang | default: 'en' }}" translate="no">{{ entry.description | default: entry.excerpt | strip_html | normalize_whitespace | truncate: 180 | escape }}</p>
+  <div class="blog-card-bottom">
+    <div class="blog-tags" translate="no">{% for tag in entry.tags limit: 3 %}<span>{{ tag | escape }}</span>{% endfor %}</div>
+    <span class="blog-card-arrow" aria-hidden="true">↗</span>
+  </div>
+</article>

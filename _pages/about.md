@@ -241,6 +241,25 @@ redirect_from:
   </div>
 </section>
 
+<section class="section" id="blog">
+  <div class="shell home-blog">
+    <div class="blog-heading-row">
+      <div>
+        <div class="eyebrow">Blog</div>
+        <h2>Latest posts</h2>
+      </div>
+      <a class="text-link" href="{{ '/blog/' | relative_url }}">All posts</a>
+    </div>
+    <div class="blog-grid">
+      {% for post in site.posts limit: 3 %}
+        {% include blog-card.html post=post %}
+      {% else %}
+        <p class="blog-empty">New notes will appear here.</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
 <section class="section" id="teaching">
   <div class="shell">
     <div class="section-head">

@@ -197,12 +197,15 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: single
-      author_profile: true
       read_time: true
-      comments: true
-      share: true
       related: true
+      layout: blog-post
+      nav_key: blog
+      mathjax: true
+      author_profile: false
+      comments: false
+      share: false
+      permalink: /blog/:title/
   # _pages
   - scope:
       path: ""

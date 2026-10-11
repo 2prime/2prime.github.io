@@ -1,14 +1,43 @@
 ---
-layout: archive
-title: "Blogs"
-permalink: /blogs/
-author_profile: true
+layout: modern
+title: Blog
+description: "Research notes and ideas by Yiping Lu."
+permalink: /blog/
+redirect_from:
+  - /blogs/
+nav_key: blog
 ---
 
-I'll update some of my notes here.
+<header class="page-intro">
+  <div class="shell">
+    <span class="page-number">07 · Writing</span>
+    <div class="blog-heading-row">
+      <h1>Blog</h1>
+      <a class="text-link" href="{{ '/blog/write/' | relative_url }}">Write a post</a>
+    </div>
+    <p class="blog-intro">Research notes, ideas, and things worth sharing.</p>
+  </div>
+</header>
 
-{% include base_path %}
-
-{% for post in site.blogs reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+<section class="section">
+  <div class="shell">
+    {% if site.posts.size > 0 %}
+    <div class="blog-tools" data-blog-tools hidden>
+      <label class="sr-only" for="blog-search">Search posts</label>
+      <input id="blog-search" type="search" placeholder="Search titles, notes, or tags" autocomplete="off">
+      <span class="blog-result-count" aria-live="polite" data-blog-count></span>
+    </div>
+    <div class="blog-grid" data-blog-list>
+      {% for post in site.posts %}
+        {% include blog-card.html post=post %}
+      {% endfor %}
+    </div>
+    <p class="blog-empty" data-blog-empty hidden>No matching posts. Try another search.</p>
+    {% else %}
+    <div class="blog-empty">
+      <p>New notes will appear here.</p>
+      <a class="text-link" href="{{ '/blog/write/' | relative_url }}">Write a post</a>
+    </div>
+    {% endif %}
+  </div>
+</section>

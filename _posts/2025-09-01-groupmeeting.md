@@ -1,5 +1,6 @@
 ---
 title: '2025 Fall SCiML Seminar'
+description: 'Scientific Machine Learning seminar information for Fall 2025.'
 date: 2025-09-01
 permalink: /posts/2025/09/SciML/
 tags:

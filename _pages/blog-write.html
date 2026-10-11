@@ -1,0 +1,81 @@
+---
+layout: modern
+title: Write a post
+description: "Write and preview a Markdown blog post with LaTeX mathematics."
+permalink: /blog/write/
+nav_key: blog
+sitemap: false
+---
+
+<header class="page-intro">
+  <div class="shell">
+    <a class="blog-back" href="{{ '/blog/' | relative_url }}">← All posts</a>
+    <span class="eyebrow">Markdown + LaTeX</span>
+    <h1>Write a post</h1>
+    <p class="blog-intro">Your draft stays in this browser. Publishing opens GitHub, where you sign in and confirm the commit.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="shell">
+    <noscript><p>Enable JavaScript to use the editor, or create a Markdown file directly in <a href="https://github.com/2prime/2prime.github.io/tree/master/_posts">_posts on GitHub</a>.</p></noscript>
+    <form class="blog-editor" id="blog-editor" data-repository="{{ site.repository }}" hidden>
+      <div class="blog-editor-fields">
+        <label class="blog-field-wide"><span>Title</span><input name="title" required maxlength="180" placeholder="Write your title"></label>
+        <label class="blog-field-wide"><span>Summary</span><textarea name="description" rows="2" maxlength="320" placeholder="A short introduction for the article card"></textarea></label>
+        <label><span>Date</span><input name="date" type="date" required></label>
+        <label><span>URL name</span><input name="slug" pattern="[a-z0-9]+(-[a-z0-9]+)*" required maxlength="100" placeholder="my-research-note" aria-describedby="blog-slug-help"><small id="blog-slug-help">Use lowercase English letters, numbers, and hyphens.</small></label>
+        <label><span>Tags</span><input name="tags" placeholder="Separate tags with commas" maxlength="240"></label>
+        <label><span>Article language</span><select name="lang"><option value="zh-CN">Chinese</option><option value="en">English</option></select></label>
+      </div>
+      <div class="blog-editor-panes">
+        <div class="blog-editor-source">
+          <label class="blog-pane-label" for="blog-body">Markdown</label>
+          <textarea name="body" id="blog-body" required spellcheck="false" aria-describedby="blog-math-help" translate="no">## 研究笔记
+
+在这里开始写作。可以使用 **粗体**、[链接](https://2prime.github.io/) 和 LaTeX 公式。
+
+行内公式：$$ E = mc^2 $$。
+
+## 一个公式
+
+$$
+\mathbb{E}[f(X)] = \int_{\mathbb{R}^d} f(x)\,p(x)\,\mathrm{d}x.
+$$
+
+## 接下来
+
+写下你的观察、推导或尚未解决的问题。
+</textarea>
+        </div>
+        <div class="blog-editor-preview">
+          <span class="blog-pane-label" id="preview-label">Preview</span>
+          <article class="blog-prose" id="blog-preview" aria-labelledby="preview-label" translate="no"></article>
+        </div>
+      </div>
+      <div class="blog-editor-actions">
+        <button class="button" type="submit">Publish on GitHub</button>
+        <button class="button button-outline" type="button" id="blog-download">Download Markdown</button>
+        <span class="blog-save-status" id="blog-save-status" role="status" translate="no"></span>
+      </div>
+      <p class="blog-publish-status" id="blog-publish-status" role="status" translate="no"></p>
+      <p class="blog-editor-note">No public article is created until you confirm in GitHub.</p>
+    </form>
+    <details class="blog-writing-tips tex2jax_ignore" open>
+      <summary>Writing tips</summary>
+      <p id="blog-math-help">Use $...$ for inline math and $$...$$ on separate lines for displayed equations. The editor prepares the Markdown for publishing.</p>
+      <pre translate="no"><code>行内公式：$a_i + b_j = c_{ij}$
+
+$$
+\begin{aligned}
+f(x) &amp;= x^2, \\
+f'(x) &amp;= 2x.
+\end{aligned}
+$$</code></pre>
+      <p>Images, links, lists, tables, and fenced code blocks use standard Markdown.</p>
+      <p>The exported file includes the title, date, summary, and tags. Add it to the _posts folder to publish.</p>
+    </details>
+  </div>
+</section>
+<script defer src="{{ '/assets/js/blog/markdown-it.min.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/js/blog-editor.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
