@@ -85,6 +85,9 @@ html[lang="zh-CN"] .page-intro .magi-wordmark { letter-spacing: -0.07em; }
 .magi-archive .blog-result-count { color: var(--magi-green); font-family: var(--magi-mono); }
 .magi-archive .blog-grid { gap: 1rem; }
 .magi-archive .blog-card { padding: 1.5rem; border: 1px solid var(--magi-line); border-top: 3px solid var(--magi-orange); border-radius: 0; background: var(--magi-panel); }
+.magi-archive .blog-card:only-child { grid-column: 1 / -1; }
+.magi-archive .blog-card:only-child h3 { max-width: 42ch; font-size: clamp(1.4rem, 3vw, 1.85rem); }
+.magi-archive .blog-card:only-child .blog-card-summary { max-width: 90ch; }
 .magi-archive .blog-card::before { position: absolute; top: -3px; right: -1px; width: 25px; height: 19px; content: ""; background: var(--magi-orange); clip-path: polygon(0 0, 100% 0, 100% 100%); pointer-events: none; }
 .magi-card-index { position: absolute; top: 1.6rem; right: 1.5rem; color: var(--magi-orange); font: 0.6rem/1.5 var(--magi-mono); }
 .magi-archive .blog-card-meta { min-height: 1.5em; margin-bottom: 1.15rem; padding-right: 6rem; color: var(--magi-green); font-family: var(--magi-mono); font-size: 0.68rem; }
