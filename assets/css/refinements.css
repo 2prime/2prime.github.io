@@ -198,37 +198,27 @@
   line-height: 1.65;
 }
 
-/* BICMR seminar: lecture details, reading outline, and downloadable notes. */
+/* BICMR course homepage: each meeting owns its outline and materials. */
 .school-course-card p.seminar-listing-date {
   margin-top: 0.55rem;
   color: var(--pku);
   font-size: 0.78rem;
 }
-.seminar-downloads { margin: 1.5rem 0 0.55rem; }
-.course-content .seminar-caption { color: var(--muted); font-size: 0.8rem; }
-.seminar-session {
-  margin: 1.4rem 0 1.7rem;
-  padding: 1.15rem 1.4rem;
-  background: var(--cloud);
-  border-left: 2px solid var(--pku);
-}
-.seminar-session p { margin: 0; }
-.seminar-session .seminar-session-date { margin-bottom: 0.35rem; color: var(--ink); font-weight: 600; }
-.seminar-outline > li, .seminar-topics > li { padding-left: 0.3rem; }
-.seminar-outline h4 { margin-bottom: 0.6rem; line-height: 1.65; }
-.seminar-outline p { margin-bottom: 0.6rem; }
-.course-content .seminar-keywords { color: var(--muted); font-size: 0.88rem; line-height: 1.8; }
-.seminar-rate { color: var(--pku); font-size: 0.9rem; }
-.seminar-topics h3 { margin-bottom: 0.45rem; }
-.seminar-topic-role { color: var(--pku); font-size: 0.72rem; }
-.seminar-topics p { margin: 0.6rem 0; }
-.seminar-materials li { padding-left: 0.3rem; }
-.seminar-materials p { margin: 0.35rem 0 1rem; font-size: 0.9rem; }
-.seminar-reading { margin-top: 1.7rem; padding-top: 1rem; border-top: 1px solid var(--line); }
-.seminar-reading summary { color: var(--pku); cursor: pointer; font-size: 0.92rem; }
-.seminar-reading[open] summary { margin-bottom: 1rem; }
+.seminar-downloads { margin: 1.15rem 0 0; }
+.course-content .seminar-caption { margin-top: 1.25rem; color: var(--muted); font-size: 0.82rem; }
+.seminar-lecture { padding: 0 0 1.35rem; border-bottom: 1px solid var(--line); }
+.seminar-lecture + .seminar-lecture { padding-top: 1.5rem; }
+.course-content .seminar-lecture h3 { margin: 0 0 0.75rem; font-size: 1.42rem; line-height: 1.5; }
+.seminar-lecture-meta { display: flex; flex-wrap: wrap; gap: 0.2rem 1.2rem; margin-bottom: 1.05rem; color: var(--muted); font-size: 0.8rem; }
+.seminar-lecture-meta time { color: var(--pku); }
+.seminar-lecture .seminar-outline { margin: 0 0 1.25rem; font-size: 0.94rem; }
+.seminar-lecture-materials .button { min-height: 40px; }
+.seminar-course-info { margin: 0; }
+.seminar-course-info > div { display: grid; grid-template-columns: 100px minmax(0, 1fr); gap: 1rem; margin-bottom: 0.9rem; }
+.seminar-course-info dt { color: var(--muted); font-size: 0.82rem; padding-top: 0.15rem; }
+.seminar-course-info dd { margin: 0; font-size: 0.94rem; }
+.seminar-reference { margin-top: 1.3rem; font-size: 0.86rem; }
 @media (max-width: 600px) {
-  .seminar-session { padding: 1rem; }
-  .seminar-downloads { align-items: stretch; }
-  .seminar-downloads .button { width: 100%; }
+  .seminar-lecture-meta { gap: 0.3rem 1rem; }
+  .seminar-course-info > div { grid-template-columns: 1fr; gap: 0.2rem; }
 }
