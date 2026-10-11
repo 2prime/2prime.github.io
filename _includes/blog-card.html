@@ -1,5 +1,6 @@
 {% assign entry = include.post %}
 <article class="blog-card" data-blog-card>
+  {% if include.file_number %}<span class="magi-card-index" aria-hidden="true" translate="no">FILE / {{ include.file_number | prepend: '00' | slice: -3, 3 }}</span>{% endif %}
   <div class="blog-card-meta">
     <time datetime="{{ entry.date | date_to_xmlschema }}">{{ entry.date | date: '%Y.%m.%d' }}</time>
     {% if entry.tags.size > 0 %}<span aria-hidden="true">·</span><span{% if entry.tags_en %} lang="en" data-blog-en="{{ entry.tags_en | first | escape }}" data-blog-zh="{{ entry.tags | first | escape }}"{% endif %} translate="no">{% if entry.tags_en %}{{ entry.tags_en | first | escape }}{% else %}{{ entry.tags | first | escape }}{% endif %}</span>{% endif %}
@@ -11,4 +12,5 @@
     <span class="blog-card-arrow" aria-hidden="true">↗</span>
   </div>
 </article>
+
 

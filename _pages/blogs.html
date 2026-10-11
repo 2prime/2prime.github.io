@@ -9,33 +9,40 @@ nav_key: blog
 ---
 
 <header class="page-intro magi-intro">
+  <div class="shell magi-system-bar" aria-hidden="true" translate="no">
+    <span>MAGI SYSTEM</span><span>SCALE LAB / RESEARCH ARCHIVE</span><span>07</span>
+  </div>
   <div class="shell magi-hero">
     <div class="magi-copy">
-      <span class="page-number">07 · SCALE Lab</span>
+      <span class="page-number magi-kicker">SCALE Lab · Research notes</span>
       <h1 class="magi-wordmark" translate="no">MAGI</h1>
       <p class="magi-expansion" lang="en" translate="no"><strong>M</strong>athematical <strong>A</strong>nalysis of<br><strong>G</strong>enerative <strong>I</strong>ntelligence</p>
       <p class="magi-description">Understanding generative AI through mathematics.</p>
       <div class="magi-actions">
+        <a class="text-link magi-button" href="#magi-archive">Explore the archive</a>
         <a class="text-link" data-blog-link href="{{ '/blog/write/' | relative_url }}">Write a post</a>
-        <a class="magi-origin" href="https://wiki.evageeks.org/Magi" target="_blank" rel="noopener noreferrer">Named after the MAGI system in Evangelion</a>
       </div>
     </div>
     <figure class="magi-figure">
       <div class="magi-frame">
-        <div class="magi-frame-label" aria-hidden="true" translate="no"><span>MAGI SYSTEM</span><span>01 / 02 / 03</span></div>
+        <div class="magi-frame-label" aria-hidden="true" translate="no"><span>MAGI / ORIGINAL INTERFACE</span><span>01 · 02 · 03</span></div>
         <a class="magi-image-link" href="https://wiki.evageeks.org/Magi" target="_blank" rel="noopener noreferrer" aria-label="Learn about the MAGI system in Evangelion">
           <img src="{{ '/images/blog/magi-system.jpg' | relative_url }}" alt="The MAGI interface in Evangelion, with Balthasar, Casper, and Melchior arranged around the central MAGI label." width="700" height="394" decoding="async" fetchpriority="high">
         </a>
-        <div class="magi-units" aria-hidden="true" translate="no"><span><b>01</b> MELCHIOR</span><span><b>02</b> BALTHASAR</span><span><b>03</b> CASPER</span></div>
+        <div class="magi-units" aria-hidden="true" translate="no"><span><b>01</b><em>MELCHIOR</em></span><span><b>02</b><em>BALTHASAR</em></span><span><b>03</b><em>CASPER</em></span></div>
       </div>
       <figcaption><span>MAGI system · Evangelion</span><a href="https://www.are.na/block/7193088" target="_blank" rel="noopener noreferrer">Image source</a></figcaption>
     </figure>
   </div>
+  <div class="shell magi-origin-row">
+    <a class="magi-origin" href="https://wiki.evageeks.org/Magi" target="_blank" rel="noopener noreferrer">Named after the MAGI system in Evangelion</a>
+    <span aria-hidden="true" translate="no">MATHEMATICS / GENERATIVE INTELLIGENCE</span>
+  </div>
 </header>
 
-<section class="section">
+<section class="section magi-archive" id="magi-archive" aria-labelledby="magi-archive-title">
   <div class="shell">
-    <div class="magi-archive-heading"><h2>Research notes</h2><span aria-hidden="true" translate="no">MAGI / ARCHIVE</span></div>
+    <div class="magi-archive-heading"><div><span class="magi-section-label" aria-hidden="true" translate="no">MAGI / ARCHIVE</span><h2 id="magi-archive-title">Research notes</h2></div><span class="magi-archive-total" aria-hidden="true" translate="no">{{ site.posts.size | prepend: '00' | slice: -3, 3 }}</span></div>
     {% if site.posts.size > 0 %}
     <div class="blog-tools" data-blog-tools hidden>
       <label class="sr-only" for="blog-search">Search posts</label>
@@ -44,7 +51,7 @@ nav_key: blog
     </div>
     <div class="blog-grid" data-blog-list>
       {% for post in site.posts %}
-        {% include blog-card.html post=post %}
+        {% include blog-card.html post=post file_number=forloop.index %}
       {% endfor %}
     </div>
     <p class="blog-empty" data-blog-empty hidden>No matching posts. Try another search.</p>
