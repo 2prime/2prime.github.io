@@ -73,9 +73,77 @@ $$
 
 **被引导抽得过于频繁的路径，权重要压下来；被抽得太少的路径，权重要补上去**。最终偏好告诉我们想要什么，概率比补偿实际怎样抽样。
 
-连续时间里对应 Girsanov 换测度。URGE 利用模拟时的漂移与随机增量计算路径权重，并在生成过程中重加权、重采样。把短路径权重按当前终点作条件平均，再取短时间极限，还能联系到粒子层面的校正势。[[1, §2.3、Theorem 3.3]](#ref_urge)
+连续时间里对应 Girsanov 换测度。URGE 利用模拟时的漂移与随机增量计算路径权重，并在生成过程中重加权、重采样。它本身也是 SMC，路径权重与粒子权重的关系可以展开下面的说明。[[1, §2.3]](#ref_urge)
 
-这里有一个重要区分：URGE 的路径权重避免了额外的 Hessian、score 或 PDE 残差计算；若引导本身写成 $$\nabla G$$，构造漂移仍需要这部分信息。**“校正不额外求高阶导数”与“引导也只用函数值”是两个层次**。后面的 Stein Guidance 要把它们接起来。有限粒子的结果也仍有采样误差，一致性结论有相应极限条件。[[1, Algorithm 1、Theorem 3.1]](#ref_urge)
+<details class="blog-details" id="urge-particle-relation" markdown="1">
+<summary>URGE 与粒子 SMC：对终点取条件平均，省下导数又多了什么方差？</summary>
+
+**一条路径记一笔账，还是同一终点先合并账目？** 两种方法都传播、加权、重采样。URGE 的权重依赖实际走过的路径；粒子视角把抵达同一终点的路径按条件概率平均，只保留当前状态需要的权重。这里讨论的粒子校正具体指 FK Corrector／AFDPS。
+
+在同一个提议律 $$Q$$ 下，记一段路径的权重为 $$W$$。给定终点后，把未观察到的路径平均掉，得到
+
+$$
+\overline W(x)=\mathbb E_Q[W\mid X_t=x].
+$$
+
+直觉上，终点都是同一个 $$x$$，最终统计就不必再区分它是绕远路还是走近路到达的。对任意合适的终点函数 $$f$$，条件期望的塔式法则给出
+
+$$
+\mathbb E_Q[Wf(X_t)]
+=\mathbb E_Q[\overline W(X_t)f(X_t)].
+$$
+
+所以，**先按路径加权再只看终点，与先对路径权重取条件平均再给终点加权，得到相同的加权边际分布**。归一化常数也相同，因为可以取 $$f=1$$。
+
+<figure class="blog-figure">
+  <a href="/images/blog/diffusion_urge_stein/urge_path_particle.svg"><img src="/images/blog/diffusion_urge_stein/urge_path_particle.svg" alt="四条等概率路径分别以权重 1、3 抵达终点 a，以权重 2、6 抵达终点 b；给定终点平均后，粒子权重分别为 2 和 4。路径权重方差 3.5 分解成终点权重方差 1 与条件路径方差 2.5。" width="1080" height="695" loading="lazy"></a>
+  <figcaption>补充图 · 左侧保留每条路径自己的权重；右侧把同一终点的路径按条件概率平均。这个教学例子中四条路径在提议下等概率，因此 1 与 3 平均成 2，2 与 6 平均成 4。两个终点归一化后的加权质量仍为三分之一与三分之二，但权重方差从 3.5 降到 1：被平均掉的 2.5，正是同一终点内部的路径噪声。</figcaption>
+</figure>
+
+对于 URGE 的短路径增量，论文在相应正则性与边际匹配条件下进一步得到
+
+$$
+\lim_{h\downarrow0}
+\frac{\mathbb E_Q[W_{t-h,t}\mid X_t=x]-1}{h}
+=\lambda_{\mathrm{particle}}(x,t),
+$$
+
+右边就是 FK Corrector／AFDPS 的粒子校正势。**有限区间上有精确的条件平均恒等式；与论文中粒子校正势的对应，则要取短时间极限。** 这不表示两个有限粒子实现每次重采样会选中同样的粒子。[[1, Theorem 3.3]](#ref_urge)
+
+**好处：用 Itô 公式，把导数账改写成路径上可直接记录的增量。** 设 $$\ell_t$$ 是中间偏好权重的对数，终点满足 $$\ell_T=\log\phi$$；引导后的提议写成 $$dX=(b+\sigma u)\,dt+\sigma\,dB^Q$$。URGE 的增量权重可写为
+
+$$
+\log W_{s,t}
+=\ell_t(X_t)-\ell_s(X_s)
+-\int_s^t u_\tau^\top dB_\tau^Q
+-\frac12\int_s^t\|u_\tau\|^2d\tau.
+$$
+
+这里用的是两端的函数值、实际漂移变化与已经模拟出的噪声。为什么它能替代包含导数的表达？Itô 公式把同一个函数增量写成
+
+$$
+d\ell_t(X_t)
+=\left[\partial_t\ell_t+(b+\sigma u)\cdot\nabla\ell_t
++\tfrac12\operatorname{tr}(\sigma\sigma^\top\nabla^2\ell_t)\right]dt
++(\sigma^\top\nabla\ell_t)^\top dB_t^Q.
+$$
+
+从右边看，有时间导数、梯度和 Hessian；沿已模拟的路径计算左边，只需函数值的差。结合 Girsanov 路径比，就能避免为校正额外求这些导数或边际 score。若构造 guidance 本身仍采用 $$u=\sigma^\top\nabla G$$，这部分已有的引导梯度仍要计算。
+
+**代价：同一终点下，走过哪条路仍会让权重波动。** 若 $$W$$ 二阶可积，全方差公式给出
+
+$$
+\operatorname{Var}_Q(W)
+=\operatorname{Var}_Q(\overline W(X_t))
++\mathbb E_Q[\operatorname{Var}_Q(W\mid X_t)]
+\ge\operatorname{Var}_Q(\overline W(X_t)).
+$$
+
+条件平均是一次 Rao–Blackwell 化：它消掉了终点相同、路径不同所带来的权重噪声。URGE 直接使用实际路径权重，省去了求这个条件平均或显式导数的成本，却保留了这部分额外方差；只要同一终点下权重确有波动，不等式就是严格的。
+
+**Itô 改写本身是恒等式，不会增加方差；增加的是相对于精确条件平均权重而言，保留路径随机性的代价。** 上面的比较针对同一提议下的原始权重，实际算法的最终误差还受离散化、导数估计、重采样和计算预算影响。
+
+</details>
 
 ## 4. 多条路径，可能已经变成一家人
 
