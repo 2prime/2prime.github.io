@@ -1,15 +1,18 @@
 {% assign entry = include.post %}
-<article class="blog-card" data-blog-card>
+{% capture entry_category_id %}{% include blog-category.html post=entry %}{% endcapture %}
+{% assign entry_category = site.data.blog_categories | where: 'id', entry_category_id | first %}
+{% capture entry_search %}{{ entry.title }} {{ entry.title_en }} {{ entry.description }} {{ entry.description_en }} {{ entry.tags | join: ' ' }} {{ entry.tags_en | join: ' ' }} {{ entry_category.name }} {{ entry_category.name_zh }}{% endcapture %}
+<article class="blog-card" data-blog-card data-blog-category-id="{{ entry_category_id }}" data-blog-search="{{ entry_search | normalize_whitespace | escape }}">
   {% if include.file_number %}<span class="magi-card-index" aria-hidden="true" translate="no">FILE / {{ include.file_number | prepend: '00' | slice: -3, 3 }}</span>{% endif %}
   <div class="blog-card-meta">
     <time datetime="{{ entry.date | date_to_xmlschema }}">{{ entry.date | date: '%Y.%m.%d' }}</time>
     {% if entry.author %}<span aria-hidden="true">·</span><span translate="no">{{ entry.author | escape }}</span>{% endif %}
-    {% if entry.tags.size > 0 %}<span aria-hidden="true">·</span><span{% if entry.tags_en %} lang="en" data-blog-en="{{ entry.tags_en | first | escape }}" data-blog-zh="{{ entry.tags | first | escape }}"{% endif %} translate="no">{% if entry.tags_en %}{{ entry.tags_en | first | escape }}{% else %}{{ entry.tags | first | escape }}{% endif %}</span>{% endif %}
+    {% if entry_category %}<span aria-hidden="true">·</span><span class="blog-card-category" data-blog-en="{{ entry_category.name }}" data-blog-zh="{{ entry_category.name_zh }}" translate="no">{{ entry_category.name }}</span>{% endif %}
   </div>
   <h3 translate="no"><a data-blog-link href="{{ entry.url | relative_url }}" lang="{% if entry.title_en %}en{% else %}{{ entry.lang | default: 'en' }}{% endif %}"{% if entry.title_en %} data-blog-en="{{ entry.title_en | escape }}" data-blog-zh="{{ entry.title | escape }}"{% endif %}>{{ entry.title_en | default: entry.title | escape }}</a></h3>
   <p class="blog-card-summary" lang="{% if entry.description_en %}en{% else %}{{ entry.lang | default: 'en' }}{% endif %}"{% if entry.description_en %} data-blog-en="{{ entry.description_en | strip_html | normalize_whitespace | truncate: 180 | escape }}" data-blog-zh="{{ entry.description | default: entry.excerpt | strip_html | normalize_whitespace | truncate: 180 | escape }}"{% endif %} translate="no">{{ entry.description_en | default: entry.description | default: entry.excerpt | strip_html | normalize_whitespace | truncate: 180 | escape }}</p>
   <div class="blog-card-bottom">
-    <div class="blog-tags" translate="no">{% for tag in entry.tags limit: 3 %}{% assign tag_en = entry.tags_en[forloop.index0] %}<span{% if tag_en %} lang="en" data-blog-en="{{ tag_en | escape }}" data-blog-zh="{{ tag | escape }}"{% endif %}>{{ tag_en | default: tag | escape }}</span>{% endfor %}</div>
+    <div class="blog-tags" translate="no">{% for tag in entry.tags limit: 3 %}{% assign tag_category = site.data.blog_categories | where: 'id', tag | first %}{% unless tag_category %}{% assign tag_en = entry.tags_en[forloop.index0] %}<span{% if tag_en %} lang="en" data-blog-en="{{ tag_en | escape }}" data-blog-zh="{{ tag | escape }}"{% endif %}>{{ tag_en | default: tag | escape }}</span>{% endunless %}{% endfor %}</div>
     <span class="blog-card-arrow" aria-hidden="true">↗</span>
   </div>
 </article>

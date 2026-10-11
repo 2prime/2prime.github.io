@@ -1,5 +1,6 @@
 ---
 title: "让扩散模型多想一会儿：从 URGE 到无导数 Stein Guidance"
+blog_category: probabilistic-modeling
 date: 2026-10-11 14:00:00 +0800
 description: "从共同祖先到独立拒绝，从近似价值的偏差到完整路径校正，再用两点有限差分和 Stein 恒等式理解无导数引导。"
 tags: ["扩散模型", "推理时计算", "URGE", "Stein Guidance"]

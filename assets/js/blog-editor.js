@@ -5,7 +5,7 @@
   var preview = document.getElementById('blog-preview');
   var status = document.getElementById('blog-save-status');
   var publishStatus = document.getElementById('blog-publish-status');
-  var fields = ['title', 'author', 'email', 'description', 'date', 'slug', 'tags', 'lang', 'body', 'title_en', 'description_en', 'body_en'];
+  var fields = ['title', 'author', 'email', 'description', 'date', 'slug', 'tags', 'blog_category', 'lang', 'body', 'title_en', 'description_en', 'body_en'];
   var storageKey = 'yiping-blog-draft-v1';
   var saveState = 'ready';
   var renderVersion = 0;
@@ -14,9 +14,19 @@
   function chinese() { return document.documentElement.lang === 'zh-CN'; }
   function copy(zh, en) { return chinese() ? zh : en; }
   function field(name) { return form.elements.namedItem(name); }
+  var categoryIds = Array.from(field('blog_category').options).map(function (option) { return option.value; }).filter(Boolean);
+  function plainTags(tags) { return (Array.isArray(tags) ? tags : String(tags || '').split(/[,，]/)).map(function (tag) { return tag.trim(); }).filter(function (tag) { return tag && !categoryIds.includes(tag); }); }
   function values() {
     var data = {};
     fields.forEach(function (name) { data[name] = field(name).value; });
+    return data;
+  }
+  function submissionValues() {
+    var data = values();
+    var tags = plainTags(data.tags);
+    // The review service already preserves tags; this carries taxonomy through approval.
+    if (categoryIds.includes(data.blog_category)) tags.push(data.blog_category);
+    data.tags = tags.join(', ');
     return data;
   }
   function showStatus() {
@@ -196,12 +206,13 @@
   }
   function documentText() {
     var data = values();
-    var tags = data.tags.split(/[,，]/).map(function (tag) { return tag.trim(); }).filter(Boolean);
+    var tags = plainTags(data.tags);
     return [
       '---', 'title: ' + JSON.stringify(data.title.trim()),
       'author: ' + JSON.stringify(data.author.trim()),
       'date: ' + data.date,
       'description: ' + JSON.stringify(data.description.trim()),
+      'blog_category: ' + JSON.stringify(data.blog_category),
       'tags: ' + JSON.stringify(tags),
       'lang: ' + JSON.stringify(data.lang),
       'permalink: /blog/' + data.slug + '/',
@@ -252,7 +263,13 @@
     }
     window.open(url, '_blank', 'noopener,noreferrer');
   });
-  window.blogEditor = { values: values, save: save, download: download, documentText: documentText, restore: function (data) { fields.forEach(function (name) { if (typeof data[name] === 'string') field(name).value = data[name]; }); if (Array.isArray(data.tags)) field('tags').value = data.tags.join(', '); field('slug').dataset.edited = 'true'; save(); render(); } };
+  window.blogEditor = { values: values, submissionValues: submissionValues, save: save, download: download, documentText: documentText, restore: function (data) {
+    fields.forEach(function (name) { if (typeof data[name] === 'string') field(name).value = data[name]; });
+    var tags = Array.isArray(data.tags) ? data.tags : String(data.tags || '').split(/[,，]/).map(function (tag) { return tag.trim(); });
+    field('tags').value = plainTags(tags).join(', ');
+    field('blog_category').value = categoryIds.includes(data.blog_category) ? data.blog_category : tags.find(function (tag) { return categoryIds.includes(tag); }) || '';
+    field('slug').dataset.edited = 'true'; save(); render();
+  } };
   document.getElementById('blog-preview-language').addEventListener('change', render);
   window.addEventListener('pagehide', save);
   document.addEventListener('visibilitychange', function () { if (document.hidden) save(); });

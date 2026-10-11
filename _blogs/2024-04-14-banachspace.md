@@ -1,5 +1,6 @@
 ---
 title: "Geometry of Banach Space"
+blog_category: learning-and-optimization
 permalink: /blog/2024-04-14-Banach-space
 excerpt: 'Type, Cotype and Absolute Summing Operator.'
 date: 2024-04-14

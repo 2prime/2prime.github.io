@@ -74,8 +74,8 @@
     busy = true; showService(); editor.save();
     try {
       if (!active) { active = {token:secureToken()}; persist(); }
-      var data = active.id ? await request('/api/submissions/' + active.id + '/resubmit', 'POST', {article:editor.values(), revision:active.revision}, active.token) :
-        await request('/api/submissions', 'POST', {article:editor.values(), statusToken:active.token, website:form.elements.namedItem('website').value});
+      var data = active.id ? await request('/api/submissions/' + active.id + '/resubmit', 'POST', {article:editor.submissionValues(), revision:active.revision}, active.token) :
+        await request('/api/submissions', 'POST', {article:editor.submissionValues(), statusToken:active.token, website:form.elements.namedItem('website').value});
       active.id = data.id; active.revision = data.revision; persist(); showReceipt();
       if (data.mailState === 'sent') message('稿件已保存，审核邮件已交给发信服务。请保存下方进度链接，文章目前尚未发表。', 'Your draft is saved and the review email has been accepted by the email service. Keep the status link below. The article is not published yet.');
       else message('稿件已保存，但邮件暂未确认发出。请打开进度页重发审核邮件，不要重复新建投稿。', 'Your draft is saved, but email sending was not confirmed. Open the status page to retry the email.');

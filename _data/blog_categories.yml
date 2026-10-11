@@ -1,0 +1,9 @@
+- id: probabilistic-modeling
+  name: Probabilistic Modeling
+  name_zh: 概率建模
+- id: learning-and-optimization
+  name: Learning and Optimization
+  name_zh: 学习与优化
+- id: physical-ai
+  name: Physical AI
+  name_zh: 物理 AI

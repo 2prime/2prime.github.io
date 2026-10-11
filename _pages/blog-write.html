@@ -30,6 +30,7 @@ sitemap: false
         <label><span>URL name</span><input name="slug" pattern="[a-z0-9]+(-[a-z0-9]+)*" required maxlength="80" placeholder="my-research-note" aria-describedby="blog-slug-help"><small id="blog-slug-help">Use lowercase English letters, numbers, and hyphens.</small></label>
         <label><span>Tags</span><input name="tags" placeholder="Separate tags with commas" maxlength="240"></label>
         <label><span>Article language</span><select name="lang"><option value="zh-CN">Chinese</option><option value="en">English</option></select></label>
+        <label class="blog-field-wide"><span>Blog category</span><select name="blog_category" required><option value="">Choose a category</option>{% for category in site.data.blog_categories %}<option value="{{ category.id }}">{{ category.name }}</option>{% endfor %}</select></label>
       </div>
       <div class="blog-editor-panes">
         <div class="blog-editor-source">

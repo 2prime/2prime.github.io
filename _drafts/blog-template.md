@@ -1,5 +1,7 @@
 ---
 title: "文章标题"
+# Choose probabilistic-modeling, learning-and-optimization, or physical-ai.
+blog_category: probabilistic-modeling
 description: "显示在博客卡片上的简短摘要。"
 tags: ["研究笔记"]
 lang: zh-CN

@@ -12,9 +12,12 @@ layout: modern
       <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y.%m.%d' }}</time>
       <span aria-hidden="true">·</span><span translate="no">{{ page.author | default: site.author.name | escape }}</span>
     </div>
+    {% capture post_category_id %}{% include blog-category.html post=page %}{% endcapture %}
+    {% assign post_category = site.data.blog_categories | where: 'id', post_category_id | first %}
+    {% if post_category %}<a class="blog-post-category" data-blog-link href="{{ '/blog/' | relative_url }}?category={{ post_category.id }}#magi-archive" data-blog-en="{{ post_category.name }}" data-blog-zh="{{ post_category.name_zh }}" translate="no">{{ post_category.name }}</a>{% endif %}
     <h1 id="post-title" lang="{% if page.title_en %}en{% else %}{{ page.lang | default: 'en' }}{% endif %}"{% if page.title_en %} data-blog-en="{{ page.title_en | escape }}" data-blog-zh="{{ page.title | escape }}"{% endif %} translate="no">{{ page.title_en | default: page.title | escape }}</h1>
     {% if page.description %}<p class="blog-post-description" lang="{% if page.description_en %}en{% else %}{{ page.lang | default: 'en' }}{% endif %}"{% if page.description_en %} data-blog-en="{{ page.description_en | escape }}" data-blog-zh="{{ page.description | escape }}"{% endif %} translate="no">{{ page.description_en | default: page.description | escape }}</p>{% endif %}
-    {% if page.tags.size > 0 %}<div class="blog-tags" translate="no">{% for tag in page.tags %}{% assign tag_en = page.tags_en[forloop.index0] %}<span{% if tag_en %} lang="en" data-blog-en="{{ tag_en | escape }}" data-blog-zh="{{ tag | escape }}"{% endif %}>{{ tag_en | default: tag | escape }}</span>{% endfor %}</div>{% endif %}
+    {% if page.tags.size > 0 %}<div class="blog-tags" translate="no">{% for tag in page.tags %}{% assign tag_category = site.data.blog_categories | where: 'id', tag | first %}{% unless tag_category %}{% assign tag_en = page.tags_en[forloop.index0] %}<span{% if tag_en %} lang="en" data-blog-en="{{ tag_en | escape }}" data-blog-zh="{{ tag | escape }}"{% endif %}>{{ tag_en | default: tag | escape }}</span>{% endunless %}{% endfor %}</div>{% endif %}
   </div>
 </header>
 

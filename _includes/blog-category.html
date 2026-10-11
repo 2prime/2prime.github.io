@@ -1,0 +1,16 @@
+{%- assign resolved_blog_category = '' -%}
+{%- for candidate_category in site.data.blog_categories -%}
+  {%- if include.post.blog_category == candidate_category.id -%}
+    {%- assign resolved_blog_category = candidate_category.id -%}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- if resolved_blog_category == '' -%}
+  {%- for candidate_category in site.data.blog_categories -%}
+    {%- if include.post.tags contains candidate_category.id -%}
+      {%- assign resolved_blog_category = candidate_category.id -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+{{- resolved_blog_category -}}

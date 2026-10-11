@@ -24,38 +24,45 @@ nav_key: blog
     </div>
     <figure class="magi-figure">
       <div class="magi-frame">
-        <div class="magi-frame-label" aria-hidden="true" translate="no"><span>MAGI / THREE MINDS</span><span>01 · 02 · 03</span></div>
-        <svg class="magi-diagram" viewBox="0 0 480 330" role="img" aria-label="MAGI system: Melchior, Balthasar, and Casper" xmlns="http://www.w3.org/2000/svg">
+        <div class="magi-frame-label" aria-hidden="true" translate="no"><span>MAGI / RESEARCH AREAS</span><span>SCALE LAB</span></div>
+        <svg class="magi-diagram" viewBox="0 0 480 330" role="group" aria-label="Browse blog categories" xmlns="http://www.w3.org/2000/svg">
           <g class="magi-diagram-guides" fill="none">
             <circle cx="240" cy="179" r="133" />
             <circle cx="240" cy="179" r="144" stroke-dasharray="2 7" />
             <path d="M240 4V322M8 165H472" stroke-dasharray="3 7" />
           </g>
           <g class="magi-diagram-links" fill="none"><path d="M240 143V168M177 214L187 204M293 204L303 214" /></g>
+          <a class="magi-category-node" href="{{ '/blog/' | relative_url }}?category=learning-and-optimization#magi-archive" data-blog-link="" data-blog-category="learning-and-optimization" aria-label="Learning and Optimization" tabindex="0">
           <g class="magi-node magi-node-balthasar">
             <path class="magi-node-outline" d="M166 20H314V108L276 143H204L166 108Z" />
             <path class="magi-node-rule" d="M181 32H217M223 32H233" />
             <text class="magi-node-name" x="240" y="55">BALTHASAR</text>
-            <text class="magi-node-number" x="240" y="108">02</text>
+            <text class="magi-node-category" x="240" y="84"><tspan x="240" y="84" data-blog-en="Learning and" data-blog-zh="学习与">Learning and</tspan><tspan x="240" y="110" data-blog-en="Optimization" data-blog-zh="优化">Optimization</tspan></text>
           </g>
+          </a>
+          <a class="magi-category-node" href="{{ '/blog/' | relative_url }}?category=physical-ai#magi-archive" data-blog-link="" data-blog-category="physical-ai" aria-label="Physical AI" tabindex="0">
           <g class="magi-node magi-node-casper">
             <path class="magi-node-outline" d="M25 184H150L177 214V280L150 307H25Z" />
             <path class="magi-node-rule" d="M39 196H75M81 196H91" />
             <text class="magi-node-name" x="100" y="224">CASPER</text>
-            <text class="magi-node-number" x="100" y="278">03</text>
+            <text class="magi-node-category" x="100" y="252"><tspan x="100" y="252" data-blog-en="Physical" data-blog-zh="物理">Physical</tspan><tspan x="100" y="279" data-blog-en="AI" data-blog-zh="人工智能">AI</tspan></text>
           </g>
+          </a>
+          <a class="magi-category-node" href="{{ '/blog/' | relative_url }}?category=probabilistic-modeling#magi-archive" data-blog-link="" data-blog-category="probabilistic-modeling" aria-label="Probabilistic Modeling" tabindex="0">
           <g class="magi-node magi-node-melchior">
             <path class="magi-node-outline" d="M330 184H455V307H330L303 280V214Z" />
             <path class="magi-node-rule" d="M403 196H439M387 196H397" />
             <text class="magi-node-name" x="380" y="224">MELCHIOR</text>
-            <text class="magi-node-number" x="380" y="278">01</text>
+            <text class="magi-node-category" x="380" y="252"><tspan x="380" y="252" data-blog-en="Probabilistic" data-blog-zh="概率">Probabilistic</tspan><tspan x="380" y="279" data-blog-en="Modeling" data-blog-zh="建模">Modeling</tspan></text>
           </g>
+          </a>
           <g class="magi-diagram-core">
             <path d="M213 168H267L293 204L267 240H213L187 204Z" />
             <text class="magi-core-title" x="240" y="205">MAGI</text>
             <text class="magi-core-label" x="240" y="223">SYSTEM</text>
           </g>
         </svg>
+        <p class="magi-category-hint">Click a panel to browse its posts.</p>
       </div>
       <figcaption class="magi-reference">
         <a class="magi-reference-image" href="{{ '/images/blog/magi-system.jpg' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="View original MAGI interface"><img src="{{ '/images/blog/magi-system.jpg' | relative_url }}" alt="The MAGI interface in Evangelion, with Balthasar, Casper, and Melchior arranged around the central MAGI label." width="700" height="394" decoding="async"></a>
@@ -69,7 +76,13 @@ nav_key: blog
 
 <section class="section magi-archive" id="magi-archive" aria-labelledby="magi-archive-title">
   <div class="shell">
-    <div class="magi-archive-heading"><div><span class="magi-section-label" aria-hidden="true" translate="no">MAGI / ARCHIVE</span><h2 id="magi-archive-title">Research notes</h2></div><span class="magi-archive-total" aria-hidden="true" translate="no">{{ site.posts.size | prepend: '00' | slice: -3, 3 }}</span></div>
+    <div class="magi-archive-heading"><div><span class="magi-section-label" aria-hidden="true" translate="no">MAGI / ARCHIVE</span><h2 id="magi-archive-title" tabindex="-1">Research notes</h2></div><span class="magi-archive-total" aria-hidden="true" translate="no">{{ site.posts.size | prepend: '00' | slice: -3, 3 }}</span></div>
+    <div class="magi-category-filters" role="group" aria-label="Blog categories" data-blog-categories hidden>
+      <button type="button" data-blog-category="all" aria-pressed="true"><span>All categories</span><span class="magi-category-count" data-blog-category-count="all" translate="no">0</span></button>
+      {% for category in site.data.blog_categories %}
+      <button type="button" data-blog-category="{{ category.id }}" aria-pressed="false"><span>{{ category.name }}</span><span class="magi-category-count" data-blog-category-count="{{ category.id }}" translate="no">0</span></button>
+      {% endfor %}
+    </div>
     {% if site.posts.size > 0 %}
     <div class="blog-tools" data-blog-tools hidden>
       <label class="sr-only" for="blog-search">Search posts</label>
