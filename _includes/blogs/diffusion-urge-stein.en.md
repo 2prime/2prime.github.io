@@ -298,48 +298,39 @@ A continuous time identity also does not make an arbitrary discretization exact.
 
 We therefore need two mechanisms designed together: **use function values to steer toward promising regions, while keeping a probability account that can also be computed from function values.** The next section starts with two symmetric candidates and shows how the same queries can serve both purposes.
 
-## 6. Warm up: two symmetric candidates are a finite difference
+## 6. Why do two symmetric candidates produce a log gradient?
 
-First reduce image space to one dimension. The base model supplies a tentative next position $$\mu$$, and we try a small displacement in each direction:
+**The symmetric difference supplies a directional derivative of value. Normalizing the selection probabilities divides it by the current value, giving $$\nabla H/H=\nabla\log H$$.**
 
-$$
-Y^+=\mu+\delta,\qquad Y^-=\mu-\delta,\qquad \delta>0.
-$$
-
-If the right candidate has value 11 and the left has value 9, sampling in proportion to value selects the right with probability 55% and the left with probability 45%. For $$\delta=0.1$$, the average displacement is $$0.55\times0.1+0.45\times(-0.1)=0.01$$.
-
-<figure class="blog-figure">
-  <a href="/images/blog/diffusion_urge_stein/two_queries_en.svg"><img src="/images/blog/diffusion_urge_stein/two_queries_en.svg" alt="Candidates at 0.1 to either side have values 9 and 11. Their central difference slope is 10. Selection probabilities of 45% and 55% produce an average rightward displacement of 0.01." width="960" height="820" loading="lazy"></a>
-  <figcaption>Figure 5 · Candidate values 9 and 11 give selection probabilities of 45% and 55%. Each draw moves to one candidate, but repeated draws have an average displacement of 0.01 to the right. The difference between two queried values supplies the direction without evaluating a value gradient. Numbers are illustrative.</figcaption>
-</figure>
-
-Where is the finite difference? Over a distance of $$0.2$$, value increases by $$2$$, so the slope is $$10$$. Write $$H^\pm=H(\mu\pm\delta)$$. The exact mean displacement is
+Write the position after the base drift as $$\mu=x+hb(x)$$. Draw a Gaussian perturbation $$\delta=\sqrt h\,\sigma Z$$ with $$Z\sim N(0,I)$$, then construct two symmetric candidates and query their values:
 
 $$
-\mathbb E[Y^J-\mu\mid\delta]
-=\delta\frac{H^+-H^-}{H^++H^-}
-=\delta^2\frac{(H^+-H^-)/(2\delta)}{(H^++H^-)/2}.
+Y^\pm=\mu\pm\delta,\qquad H^\pm=H(Y^\pm).
 $$
 
-In words: **mean displacement = squared step size × central difference slope ÷ average value**. Here, that is $$0.1^2\times10/10=0.01$$.
+Select one candidate with probability $$p_\pm=H^\pm/(H^++H^-)$$. Conditional on the current state and perturbation, the mean displacement is exactly
 
-For nearby candidates and smooth $$H$$, this approaches $$\delta^2H'(\mu)/H(\mu)=\delta^2(\log H)'(\mu)$$. The logarithm $$\log H$$ appears because selection depends on relative values: multiplying both 11 and 9 by 100 leaves the probabilities unchanged. [[2, §3.1.1]](#ref_stein_en)
+$$
+\mathbb E[Y^J-\mu\mid x,Z]
+=\delta\frac{H^+-H^-}{H^++H^-}.
+$$
 
-<details class="blog-details" markdown="1">
-<summary>Why does this recover the Doob guidance drift in high dimensions?</summary>
+Expand the two values to first order: **their difference cancels the constant term and leaves $$2\delta^\top\nabla H(\mu)$$, while their sum has leading term $$2H(\mu)$$**. For a small perturbation,
 
-Use a Gaussian direction: $$\mu=x+hb(x)$$, $$\delta=\sqrt h\,\sigma Z$$, $$Z\sim N(0,I)$$. Given the direction, the leading mean displacement is $$\delta\delta^\top\nabla\log H(\mu)$$. Using $$\mathbb E[ZZ^\top]=I$$ then gives
+$$
+\frac{H^+-H^-}{H^++H^-}
+\approx\frac{\delta^\top\nabla H(\mu)}{H(\mu)}
+=\delta^\top\nabla\log H(\mu).
+$$
+
+Substituting into the mean displacement gives the leading term $$\delta\delta^\top\nabla\log H(\mu)$$. Average over the random direction and use $$\mathbb E[\delta\delta^\top\mid x]=h\sigma\sigma^\top$$ to obtain
 
 $$
 \mathbb E[Y^J\mid x]
-=x+h[b(x)+\sigma\sigma^\top\nabla\log H(x)]+o(h).
+=\mu+h\sigma\sigma^\top\nabla\log H(\mu)+o(h).
 $$
 
-Both the candidate displacement and the change in selection probability have order $$\sqrt h$$; multiplying them gives an order $$h$$ guidance drift. This limit needs appropriate smoothness and integrability. It describes the leading mean drift, not an exact finite step transition law. [[2, equation (5), Appendix B.2.1]](#ref_stein_en)
-
-</details>
-
-Implementation has just three steps: **construct candidates, query values, and select one proportionally**. Gradients explain the mechanism but need not be computed by backpropagation.
+This is log gradient guidance scaled by the noise covariance. **Implementation only queries two function values and selects one candidate proportionally; the gradient appears in the analysis of the mean displacement and need not be computed.** The small step limit requires smooth positive $$H$$ and integrable remainder terms. It describes the leading mean drift; the finite step transition law still requires correction. [[2, §3.1.1, equation (5), Appendix B.2.1]](#ref_stein_en)
 
 ## 7. Stein’s identity: from two points to K parallel candidates
 
@@ -397,7 +388,7 @@ $$
 
 <figure class="blog-figure">
   <a href="/images/blog/diffusion_urge_stein/centered_pool_en.svg"><img src="/images/blog/diffusion_urge_stein/centered_pool_en.svg" alt="Two opposite candidates extend to five directions whose sum is zero. Values are queried in parallel, and one candidate is randomly selected." width="960" height="860" loading="lazy"></a>
-  <figcaption>Figure 6 · Two opposite candidates extend to five balanced candidates whose directions sum to zero. Query their values in parallel, then select one in proportion to value. The red point is the selected candidate. Centering also cancels first order noise in the average value, stabilizing the normalizer estimate used for correction. Arrows show the geometry; actual directions are centered Gaussians.</figcaption>
+  <figcaption>Figure 5 · Two opposite candidates extend to five balanced candidates whose directions sum to zero. Query their values in parallel, then select one in proportion to value. The red point is the selected candidate. Centering also cancels first order noise in the average value, stabilizing the normalizer estimate used for correction. Arrows show the geometry; actual directions are centered Gaussians.</figcaption>
 </figure>
 
 Given a candidate pool $$U$$, the mean displacement is exactly
@@ -452,7 +443,7 @@ On acceptance, move to the new path. On rejection, retain the old path and its o
 
 <figure class="blog-figure">
   <a href="/images/blog/diffusion_urge_stein/outer_mh_en.svg"><img src="/images/blog/diffusion_urge_stein/outer_mh_en.svg" alt="Complete proposals are independently generated and processed by MH using new and old path weights. Rejection retains the old path and weight." width="960" height="680" loading="lazy"></a>
-  <figcaption>Figure 7 · Generate complete proposals separately, then compare new and old path weights one proposal at a time. Acceptance replaces the path; rejection retains the old path and its weight. Proposals can therefore be generated independently in parallel, while successive MH outputs may repeat and remain correlated. Weights and decisions are illustrative.</figcaption>
+  <figcaption>Figure 6 · Generate complete proposals separately, then compare new and old path weights one proposal at a time. Acceptance replaces the path; rejection retains the old path and its weight. Proposals can therefore be generated independently in parallel, while successive MH outputs may repeat and remain correlated. Weights and decisions are illustrative.</figcaption>
 </figure>
 
 **Proposal paths are independent; consecutive outputs from one MH chain remain correlated**. A finite number of updates also leaves initialization error. Independent outputs require independent repetitions of the full procedure. With a known valid bound on the complete path weight, rejection of entire paths can instead give independent exact samples from the finite grid target. Here we focus on outer MH with a fixed computation budget. [[2, Algorithm 2, Appendix G.2]](#ref_stein_en)
@@ -551,14 +542,14 @@ The scaling figure below compares SD v1.5 and SDXL on 10 prompts, so it should n
 
 <figure class="blog-figure">
   <a href="/images/blog/diffusion_urge_stein/urge_particle_scaling.webp"><img src="/images/blog/diffusion_urge_stein/urge_particle_scaling.webp" alt="ImageReward versus particle count for SD v1.5 and SDXL. URGE improves across the tested range but does not exceed FK Steering in every configuration." width="1400" height="500" loading="lazy"></a>
-  <figcaption>Figure 8 · Particle count is on the horizontal axis and ImageReward on the vertical axis; the two panels use SD v1.5 and SDXL. More particles provide additional candidates and selection opportunities. URGE’s score increases over the tested particle counts, although it does not exceed FK Steering in every configuration. Evaluation uses 10 prompts.</figcaption>
+  <figcaption>Figure 7 · Particle count is on the horizontal axis and ImageReward on the vertical axis; the two panels use SD v1.5 and SDXL. More particles provide additional candidates and selection opportunities. URGE’s score increases over the tested particle counts, although it does not exceed FK Steering in every configuration. Evaluation uses 10 prompts.</figcaption>
 </figure>
 
-What visual changes do these scores represent? Figure 9 selects “a toothbrush and a snowboard” and “a horse and a giraffe.” Look for **whether both objects appear separately or become fused into one object**. 
+What visual changes do these scores represent? Figure 8 selects “a toothbrush and a snowboard” and “a horse and a giraffe.” Look for **whether both objects appear separately or become fused into one object**. 
 
 <figure class="blog-figure">
   <a href="/images/blog/diffusion_urge_stein/urge_image_comparison_en.html" style="position:relative;display:block;overflow:hidden;aspect-ratio:1680/1430;"><img src="/images/blog/diffusion_urge_stein/urge_image_examples_en.webp" alt="Two prompts requesting two objects, comparing base SD v1.5, FK Steering with four particles, and URGE with four particles." width="1680" height="1610" loading="lazy" style="position:absolute;top:0;left:0;display:block;width:100%;max-width:none;height:auto;margin:0;border:0;border-radius:0;transform:translateY(-6.8322981366%);"></a>
-  <figcaption>Figure 9 · Compare the base model, FK Steering, and URGE under identical prompts requesting two objects. The upper row checks whether a toothbrush and a snowboard remain separate; the lower row checks whether a horse and a giraffe are blended. These examples connect scores to visible changes. The latter two methods both use four particles; individual images should be read alongside aggregate metrics.</figcaption>
+  <figcaption>Figure 8 · Compare the base model, FK Steering, and URGE under identical prompts requesting two objects. The upper row checks whether a toothbrush and a snowboard remain separate; the lower row checks whether a horse and a giraffe are blended. These examples connect scores to visible changes. The latter two methods both use four particles; individual images should be read alongside aggregate metrics.</figcaption>
 </figure>
 
 ### Stein: how many queries can two centered candidates save?
@@ -567,7 +558,7 @@ The Brownian experiment in [[2]](#ref_stein_en) compares centered and independen
 
 <figure class="blog-figure">
   <a href="/images/blog/diffusion_urge_stein/centering_experiment.webp"><img src="/images/blog/diffusion_urge_stein/centering_experiment.webp" alt="Two centered candidates become more efficient as the grid is refined. Independent candidates require much larger pools to reach similar normalizer estimation efficiency." width="1032" height="429" loading="lazy"></a>
-  <figcaption>Figure 10 · How centering stabilizes normalizer estimation. The left panel fixes two candidates and compares adjusted NESS as the grid becomes finer. The right increases the number of independent candidates to examine how many queries match the efficiency of centered candidates. Higher values indicate more efficient normalizer estimation, not a count of independent MH outputs.</figcaption>
+  <figcaption>Figure 9 · How centering stabilizes normalizer estimation. The left panel fixes two candidates and compares adjusted NESS as the grid becomes finer. The right increases the number of independent candidates to examine how many queries match the efficiency of centered candidates. Higher values indicate more efficient normalizer estimation, not a count of independent MH outputs.</figcaption>
 </figure>
 
 With perturbed values and $$n=192$$, **two centered candidates reach 92.76%, compared with 31.40% for two independent candidates**. Independent pools need 128 and 256 candidates to reach 92.38% and 92.81%, respectively. In this setting, arranging dependence within the pool stabilizes weights more effectively than simply adding candidates. [[2, §5.1]](#ref_stein_en)
@@ -584,11 +575,11 @@ The Hopper experiment fixes the diffusion policy and critic, then tests whether 
 
 These are mean conditional KS distances across eight fixed states. **Guidance helps, but complete path correction still substantially improves agreement with the target**. The metric concerns a fixed critic’s score distribution; it cannot be interpreted as the same proportional improvement in actual robot returns. [[2, Table 2, Appendix H.3]](#ref_stein_en)
 
-Finally, return to the book and laptop. Figure 11 shows four prompts, each with two objects, using the same SD v1.5 backbone. Check whether both objects appear and remain distinct, rather than judging only visual appeal. [[2, §5.3]](#ref_stein_en)
+Finally, return to the book and laptop. Figure 10 shows four prompts, each with two objects, using the same SD v1.5 backbone. Check whether both objects appear and remain distinct, rather than judging only visual appeal. [[2, §5.3]](#ref_stein_en)
 
 <figure class="blog-figure">
   <a href="/images/blog/diffusion_urge_stein/image_examples.webp"><img src="/images/blog/diffusion_urge_stein/image_examples.webp" alt="Two object examples comparing FK Steering, SVDD, URGE, and Stein Guidance with two and four candidates." width="1110" height="1200" loading="lazy"></a>
-  <figcaption>Figure 11 · Compare FK Steering, SVDD, URGE, and Stein Guidance with two or four candidates on four prompts requesting two objects. Check whether both objects appear and retain distinct identities. Stein uses 11 complete proposals per image; the particle methods shown use four particles. These qualitative examples do not establish a comprehensive ranking at strictly equal computation.</figcaption>
+  <figcaption>Figure 10 · Compare FK Steering, SVDD, URGE, and Stein Guidance with two or four candidates on four prompts requesting two objects. Check whether both objects appear and retain distinct identities. Stein uses 11 complete proposals per image; the particle methods shown use four particles. These qualitative examples do not establish a comprehensive ranking at strictly equal computation.</figcaption>
 </figure>
 
 ## 11. Keep the three jobs separate

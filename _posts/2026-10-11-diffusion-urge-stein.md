@@ -312,48 +312,39 @@ $$
 
 现在要设计的是一对配套机制：**用函数值把路径引向好区域，同时留下可以用函数值算清的概率账本。** 下一节从两个对称候选开始，看看这两件事怎样共用同一批查询。
 
-## 6. 热身：两个对称候选，就是有限差分
+## 6. 两个对称候选，为什么产生对数梯度？
 
-先把图像空间缩成一维。基础模型决定下一步的大致位置 $$\mu$$，我们向左右各试一点：
+**对称差分给出价值的方向导数，选择概率的归一化再除以当前价值，因此出现的是 $$\nabla H/H=\nabla\log H$$。**
 
-$$
-Y^+=\mu+\delta,\qquad Y^-=\mu-\delta,\qquad \delta>0.
-$$
-
-如果右边价值是 11，左边是 9，按价值比例抽样，就有 55% 的机会选右边、45% 选左边。取 $$\delta=0.1$$，平均位移为 $$0.55\times0.1+0.45\times(-0.1)=0.01$$。
-
-<figure class="blog-figure">
-  <a href="/images/blog/diffusion_urge_stein/two_queries.svg"><img src="/images/blog/diffusion_urge_stein/two_queries.svg" alt="左右候选各距中心0.1，价值为9和11；中心差分斜率为10，按45%与55%选择，平均向右移动0.01。" width="960" height="820" loading="lazy"></a>
-  <figcaption>图 5 · 两侧候选的价值为 9 和 11，按比例选择就得到 45% 与 55% 的概率。每次实际只移动到一个候选，但重复抽样后的平均位移是向右 0.01；这个方向来自两点价值差，无需计算价值梯度。数值为教学示例。</figcaption>
-</figure>
-
-有限差分藏在哪里？两点相距 $$0.2$$，价值增加 $$2$$，所以斜率是 $$10$$。记 $$H^\pm=H(\mu\pm\delta)$$，平均位移有一个精确关系：
+具体地，记基础漂移后的位置为 $$\mu=x+hb(x)$$，取一个高斯扰动 $$\delta=\sqrt h\,\sigma Z$$，其中 $$Z\sim N(0,I)$$。构造两个对称候选，并查询它们的价值：
 
 $$
-\mathbb E[Y^J-\mu\mid\delta]
-=\delta\frac{H^+-H^-}{H^++H^-}
-=\delta^2\frac{(H^+-H^-)/(2\delta)}{(H^++H^-)/2}.
+Y^\pm=\mu\pm\delta,\qquad H^\pm=H(Y^\pm).
 $$
 
-也就是：**平均位移 = 步幅平方 × 中心差分斜率 ÷ 两侧平均价值**。在例子中，它等于 $$0.1^2\times10/10=0.01$$。
+按概率 $$p_\pm=H^\pm/(H^++H^-)$$ 选择一个候选。给定当前状态与扰动，平均位移恰好是
 
-两点足够接近、$$H$$ 足够光滑时，这个表达接近 $$\delta^2H'(\mu)/H(\mu)=\delta^2(\log H)'(\mu)$$。之所以出现 $$\log H$$，是因为选择关心相对价值：把 11 和 9 同时乘以 100，概率不会变化。[[2, §3.1.1]](#ref_stein)
+$$
+\mathbb E[Y^J-\mu\mid x,Z]
+=\delta\frac{H^+-H^-}{H^++H^-}.
+$$
 
-<details class="blog-details" markdown="1">
-<summary>高维扩散里，为什么恢复了 Doob 引导漂移？</summary>
+对两侧函数值作一阶展开：**相减时，常数项相消，留下 $$2\delta^\top\nabla H(\mu)$$；相加时，主项是 $$2H(\mu)$$**。所以小扰动下，
 
-把方向换成高斯方向：$$\mu=x+hb(x)$$，$$\delta=\sqrt h\,\sigma Z$$，$$Z\sim N(0,I)$$。给定方向时，平均位移的主导项是 $$\delta\delta^\top\nabla\log H(\mu)$$。再利用 $$\mathbb E[ZZ^\top]=I$$，得到
+$$
+\frac{H^+-H^-}{H^++H^-}
+\approx\frac{\delta^\top\nabla H(\mu)}{H(\mu)}
+=\delta^\top\nabla\log H(\mu).
+$$
+
+代回平均位移，便得到主项 $$\delta\delta^\top\nabla\log H(\mu)$$。再对随机方向取平均，利用 $$\mathbb E[\delta\delta^\top\mid x]=h\sigma\sigma^\top$$，得到
 
 $$
 \mathbb E[Y^J\mid x]
-=x+h[b(x)+\sigma\sigma^\top\nabla\log H(x)]+o(h).
+=\mu+h\sigma\sigma^\top\nabla\log H(\mu)+o(h).
 $$
 
-候选位移和选择概率的偏移都是 $$\sqrt h$$ 量级，相乘就形成 $$h$$ 量级的引导漂移。这个极限需要相应光滑性与可积性；它说明一阶平均漂移，不表示有限步的整个转移分布已经精确。[[2, 式 (5)、附录 B.2.1]](#ref_stein)
-
-</details>
-
-执行时只有三件事：**构造候选、查询价值、按比例选一个**。梯度出现在解释中，不需要通过反向传播计算。
+这就是按噪声协方差调整后的对数梯度引导。**执行时只查询两次函数值，再按比例选一个候选；梯度来自对平均位移的分析，不需要实际计算。** 上述小步长结论要求 $$H$$ 光滑、为正且余项可积，描述的是一阶平均漂移，有限步的转移分布仍需校正。[[2, §3.1.1、式 (5)、附录 B.2.1]](#ref_stein)
 
 ## 7. Stein 恒等式：把两点推广到 K 个并行候选
 
@@ -411,7 +402,7 @@ $$
 
 <figure class="blog-figure">
   <a href="/images/blog/diffusion_urge_stein/centered_pool.svg"><img src="/images/blog/diffusion_urge_stein/centered_pool.svg" alt="两个反向候选推广为五个整体平衡的方向，向量和为零；并行查询价值，随机选出其中一个候选。" width="960" height="860" loading="lazy"></a>
-  <figcaption>图 6 · 从两个反向候选推广到五个整体平衡的候选：方向之和为零，各候选的价值可以并行查询，再按价值比例随机选出一个。红点是本次选中的候选；中心化还会抵消价值平均中的一阶噪声，使校正所用的归一化估计更稳定。箭头表示几何关系，实际方向由中心化高斯生成。</figcaption>
+  <figcaption>图 5 · 从两个反向候选推广到五个整体平衡的候选：方向之和为零，各候选的价值可以并行查询，再按价值比例随机选出一个。红点是本次选中的候选；中心化还会抵消价值平均中的一阶噪声，使校正所用的归一化估计更稳定。箭头表示几何关系，实际方向由中心化高斯生成。</figcaption>
 </figure>
 
 给定候选池 $$U$$，选择产生的平均位移恰好为
@@ -466,7 +457,7 @@ $$
 
 <figure class="blog-figure">
   <a href="/images/blog/diffusion_urge_stein/outer_mh.svg"><img src="/images/blog/diffusion_urge_stein/outer_mh.svg" alt="完整提议独立生成，按新旧路径权重依次进行MH更新，拒绝时保留旧路径与旧权重。" width="960" height="680" loading="lazy"></a>
-  <figcaption>图 7 · 完整提议先各自生成，再逐条比较新旧路径权重。接受时换成新路径；拒绝时保留旧路径和旧权重。因此，提议可以独立并行生成，MH 链的连续输出仍可能重复并相互相关。图中权重与决定为教学示例。</figcaption>
+  <figcaption>图 6 · 完整提议先各自生成，再逐条比较新旧路径权重。接受时换成新路径；拒绝时保留旧路径和旧权重。因此，提议可以独立并行生成，MH 链的连续输出仍可能重复并相互相关。图中权重与决定为教学示例。</figcaption>
 </figure>
 
 **独立的是提议路径，一条 MH 链相邻的输出仍然相关**。有限次更新也仍有初始化误差；若需要独立输出，应独立重复整套程序。已知有效全路径权重上界时，可另用完整路径拒绝采样获得独立的精确有限网格样本；这里主要讨论固定计算预算的外层 MH。[[2, Algorithm 2、附录 G.2]](#ref_stein)
@@ -565,14 +556,14 @@ CLIP 衡量图文语义匹配，HPS 和 ImageReward 是学习得到的偏好评�
 
 <figure class="blog-figure">
   <a href="/images/blog/diffusion_urge_stein/urge_particle_scaling.webp"><img src="/images/blog/diffusion_urge_stein/urge_particle_scaling.webp" alt="SD v1.5和SDXL随粒子数增加的ImageReward，URGE在测试范围内持续提升，但不是每个配置都高于FK Steering。" width="1400" height="500" loading="lazy"></a>
-  <figcaption>图 8 · 横轴为粒子数，纵轴为 ImageReward，两个面板分别使用 SD v1.5 和 SDXL。增加粒子为生成过程提供更多候选和筛选机会；在这里测试的粒子数范围内，URGE 的评分持续上升，但并非每个配置都优于 FK Steering。评测使用 10 个提示词。</figcaption>
+  <figcaption>图 7 · 横轴为粒子数，纵轴为 ImageReward，两个面板分别使用 SD v1.5 和 SDXL。增加粒子为生成过程提供更多候选和筛选机会；在这里测试的粒子数范围内，URGE 的评分持续上升，但并非每个配置都优于 FK Steering。评测使用 10 个提示词。</figcaption>
 </figure>
 
-分数对应怎样的视觉变化？图 9 选出“牙刷与单板滑雪板”和“马与长颈鹿”。重点看：**两个物体是否同时出现，还是被混成了一个物体**？
+分数对应怎样的视觉变化？图 8 选出“牙刷与单板滑雪板”和“马与长颈鹿”。重点看：**两个物体是否同时出现，还是被混成了一个物体**？
 
 <figure class="blog-figure">
   <a href="/images/blog/diffusion_urge_stein/urge_image_comparison.html" style="position:relative;display:block;overflow:hidden;aspect-ratio:1680/1430;"><img src="/images/blog/diffusion_urge_stein/urge_image_examples.webp" alt="两组双物体提示词，对比基础 SD v1.5、四粒子 FK Steering 和四粒子 URGE。" width="1680" height="1610" loading="lazy" style="position:absolute;top:0;left:0;display:block;width:100%;max-width:none;height:auto;margin:0;border:0;border-radius:0;transform:translateY(-6.8322981366%);"></a>
-  <figcaption>图 9 · 相同双物体提示词下，比较基础模型、FK Steering 与 URGE 的输出。上排观察牙刷与滑雪板是否成为两个独立物体，下排观察马与长颈鹿是否被混合；这些例子展示了分数提升可能对应的视觉变化。后两种方法均使用 4 个粒子，个别图片应结合汇总指标阅读。</figcaption>
+  <figcaption>图 8 · 相同双物体提示词下，比较基础模型、FK Steering 与 URGE 的输出。上排观察牙刷与滑雪板是否成为两个独立物体，下排观察马与长颈鹿是否被混合；这些例子展示了分数提升可能对应的视觉变化。后两种方法均使用 4 个粒子，个别图片应结合汇总指标阅读。</figcaption>
 </figure>
 
 ### Stein：两个中心化候选能省下多少查询？
@@ -581,7 +572,7 @@ CLIP 衡量图文语义匹配，HPS 和 ImageReward 是学习得到的偏好评�
 
 <figure class="blog-figure">
   <a href="/images/blog/diffusion_urge_stein/centering_experiment.webp"><img src="/images/blog/diffusion_urge_stein/centering_experiment.webp" alt="中心化两个候选随网格变细效率提高；独立候选需要远大的池才能达到相近的归一化常数估计效率。" width="1032" height="429" loading="lazy"></a>
-  <figcaption>图 10 · 中心化如何稳定归一化常数的估计。左图固定两个候选，比较网格加深时的 adjusted NESS；右图增加独立候选数，观察需要多少查询才能达到中心化候选的效率。指标越高表示该归一化估计越有效，并不表示 MH 输出中独立样本的数量。</figcaption>
+  <figcaption>图 9 · 中心化如何稳定归一化常数的估计。左图固定两个候选，比较网格加深时的 adjusted NESS；右图增加独立候选数，观察需要多少查询才能达到中心化候选的效率。指标越高表示该归一化估计越有效，并不表示 MH 输出中独立样本的数量。</figcaption>
 </figure>
 
 受扰动价值、$$n=192$$ 时，**两个中心化候选达到 92.76%，两个独立候选只有 31.40%**。独立候选增至 128 和 256，才分别达到 92.38% 和 92.81%。这说明在该设置中，安排好候选之间的关系，比单纯堆数量更能稳定权重。[[2, §5.1]](#ref_stein)
@@ -598,11 +589,11 @@ Hopper 实验固定扩散策略与 critic，检查动作的 critic 分数分布�
 
 表中是八个固定状态的平均条件 KS。**指路已经有用，但完整路径校正仍大幅改善目标分布的匹配**。这里测量的是固定 critic 的分数分布，不能直接解释为机器人实际回报提高了同样比例。[[2, Table 2、附录 H.3]](#ref_stein)
 
-最后回到书和电脑。图 11 在同一个 SD v1.5 骨干上展示四组双物体提示词。观察它们是否同时出现、保持独立，而不是只看一张图是否漂亮。[[2, §5.3]](#ref_stein)
+最后回到书和电脑。图 10 在同一个 SD v1.5 骨干上展示四组双物体提示词。观察它们是否同时出现、保持独立，而不是只看一张图是否漂亮。[[2, §5.3]](#ref_stein)
 
 <figure class="blog-figure">
   <a href="/images/blog/diffusion_urge_stein/image_examples.webp"><img src="/images/blog/diffusion_urge_stein/image_examples.webp" alt="双物体生成示例，对比FK Steering、SVDD、URGE以及两个和四个候选的Stein方法。" width="1110" height="1200" loading="lazy"></a>
-  <figcaption>图 11 · 四组双物体提示词下，比较 FK Steering、SVDD、URGE 与使用两个或四个候选的 Stein Guidance。重点检查两类物体是否同时出现并保持各自身份。Stein 每张图使用 11 条完整提议，图中粒子方法使用 4 个粒子；这些是定性例子，不构成严格等算力的全面排名。</figcaption>
+  <figcaption>图 10 · 四组双物体提示词下，比较 FK Steering、SVDD、URGE 与使用两个或四个候选的 Stein Guidance。重点检查两类物体是否同时出现并保持各自身份。Stein 每张图使用 11 条完整提议，图中粒子方法使用 4 个粒子；这些是定性例子，不构成严格等算力的全面排名。</figcaption>
 </figure>
 
 ## 11. 把三件事分开，算法就清楚了
