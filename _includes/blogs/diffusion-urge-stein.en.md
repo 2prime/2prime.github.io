@@ -400,11 +400,94 @@ $$
 
 Finite queries replace the expectations in ideal value tilting. For $$K=2$$, $$Z_1=(G_1-G_2)/\sqrt2=-Z_2$$, recovering the finite difference construction. Odd values of $$K$$ work too; candidates need not be arranged in pairs. [[2, equations (7)–(8)]](#ref_stein_en)
 
-### Why does centering also help correction?
+<h3 id="centering-taylor-en">Why does centering improve the variance by one order in h?</h3>
 
-The same queries serve two purposes: **the value weighted directions indicate where to move, while the average value supplies normalization information**.
+**Candidate perturbations have size $$\sqrt h$$. Centering cancels the first order random term in the Taylor expansion exactly, leaving second order fluctuations of size $$h$$. Squaring their size changes the variance from order $$h$$ to order $$h^2$$.** Here is the calculation. [[2, Remark 2]](#ref_stein_en)
 
-If all candidate values are equal, directions summing to zero give exactly zero mean guidance. For the average value $$S=K^{-1}\sum_iH(Y_i)$$, the first order fluctuation also cancels because $$\sum_iZ_i=0$$, leaving smaller fluctuations controlled by curvature. Under the uniform smoothness and positive value bounds in [[2]](#ref_stein_en), the variance of the normalized average improves from $$O(h/K)$$ for independent candidates to $$O(h^2/(K-1))$$. [[2, Remark 2, Assumption 3]](#ref_stein_en)
+Fix the current state, so $$\mu,\sigma$$ are known. We study fluctuations of the average candidate value $$S=K^{-1}\sum_iH(\mu+\sqrt h\,\sigma Z_i)$$. Write its true mean as $$G_h=\mathbb ES$$, and abbreviate
+
+$$
+g=\sigma^\top\nabla H(\mu),\qquad
+A=\sigma^\top\nabla^2H(\mu)\sigma,\qquad
+\bar Z=\frac1K\sum_iZ_i.
+$$
+
+Expand each candidate value to second order, average, and subtract the expectation:
+
+$$
+\begin{aligned}
+S-G_h
+&=\sqrt h\,g^\top\bar Z\\
+&\quad+\frac h{2K}\sum_{i=1}^K
+\left(Z_i^\top AZ_i-\operatorname{tr}A\right)+r_h.
+\end{aligned}
+$$
+
+The first line is **first order noise from the gradient**; the second is **second order noise from curvature**. The following asymptotic formulas hold for fixed $$K$$ as $$h\to0$$. If $$H$$ is twice continuously differentiable with bounded Hessian, the remainder $$r_h$$ has root mean square size $$o(h)$$.
+
+**Independent candidates: the first order term vanishes only in expectation.** When the $$Z_i$$ are independent, $$\mathbb E\bar Z=0$$, but each realized $$\bar Z$$ is still random, with $$\operatorname{Cov}(\bar Z)=I/K$$. The first order term therefore usually determines the leading variance:
+
+$$
+\operatorname{Var}(S_{\mathrm{iid}})
+=\frac{h\|g\|^2+o(h)}{K}.
+$$
+
+**Centered candidates: the first order term vanishes in every draw.** The construction above guarantees $$\sum_iZ_i=0$$, so the entire term $$\sqrt h\,g^\top\bar Z$$ disappears. The leading remaining random term has coefficient $$h$$ rather than $$\sqrt h$$. Calculating the variance of this quadratic term gives
+
+$$
+\operatorname{Var}(S_{\mathrm{centered}})
+=\frac{h^2}{2(K-1)}\|A\|_F^2+o(h^2).
+$$
+
+Here $$\|A\|_F^2$$ is the sum of squared matrix entries. **The extra order in $$h$$ comes from reducing the fluctuation size from $$\sqrt h$$ to $$h$$ and then squaring it. It does not require more candidates.**
+
+Each centered direction remains marginally standard Gaussian, so both constructions satisfy $$\mathbb ES=G_h$$ and estimate the same normalizing constant. If $$G_h$$ has a uniform positive lower bound, division by $$G_h^2$$ preserves these variance orders: the variance of the normalized average $$S/G_h$$ improves from $$O(h/K)$$ to $$O(h^2/(K-1))$$. This concerns random error; the smoothing difference between $$G_h$$ and $$H(\mu)$$ can still be $$O(h)$$. If $$g=0$$, the independent construction's first order term already vanishes.
+
+<details class="blog-details" markdown="1">
+<summary>Calculate the coefficient: why is the denominator K−1?</summary>
+
+The centered directions are correlated:
+
+$$
+\operatorname{Cov}(Z_i,Z_j)=-\frac{I}{K-1},
+\qquad i\ne j.
+$$
+
+Write $$q_i=Z_i^\top AZ_i$$. The Gaussian fourth moment formula gives
+
+$$
+\operatorname{Var}(q_i)=2\|A\|_F^2,\qquad
+\operatorname{Cov}(q_i,q_j)
+=\frac{2\|A\|_F^2}{(K-1)^2}\quad(i\ne j).
+$$
+
+Include both the diagonal and cross terms when computing the variance of the average:
+
+$$
+\begin{aligned}
+\operatorname{Var}\!\left(\frac1K\sum_iq_i\right)
+&=\frac{2\|A\|_F^2}{K^2}
+\left(K+\frac{K(K-1)}{(K-1)^2}\right)\\
+&=\frac{2\|A\|_F^2}{K-1}.
+\end{aligned}
+$$
+
+Multiplying by the squared Taylor coefficient $$h^2/4$$ gives $$h^2\|A\|_F^2/[2(K-1)]$$. Negative correlation between directions cancels the linear noise, but the quadratic terms have positive covariance, so the calculation must use their actual joint distribution. [[2, Appendix B.3]](#ref_stein_en)
+
+**There is also a bound beyond the leading asymptotic term.** Let $$F(z)=H(\mu+\sqrt h\,\sigma z)$$. If $$F$$ and its derivatives through order two are square integrable under the standard Gaussian law, and $$G_h>0$$, [[2, Theorem 8]](#ref_stein_en) gives, for every $$K\ge2$$,
+
+$$
+\operatorname{Var}\!\left(\frac S{G_h}\right)
+\le
+\frac{h^2}{2(K-1)G_h^2}
+\mathbb E\left\|
+\sigma^\top\nabla^2H(\mu+\sqrt h\,\sigma Z)\sigma
+\right\|_F^2.
+$$
+
+A uniform bound on this relative curvature term yields the uniform $$O(h^2/(K-1))$$ guarantee. **The Hessian appears only in the error analysis. Constructing candidates, computing $$S$$, and correcting the path still use only function values.**
+
+</details>
 
 <details class="blog-details" markdown="1">
 <summary>Why can guidance remain biased when the value estimators are unbiased?</summary>

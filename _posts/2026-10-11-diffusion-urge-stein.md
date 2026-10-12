@@ -414,11 +414,94 @@ $$
 
 这就是用有限次查询，替换理想价值倾斜中的期望。$$K=2$$ 时，$$Z_1=(G_1-G_2)/\sqrt2=-Z_2$$，恰好回到刚才的有限差分。构造也支持奇数 $$K$$，不必成对分组。[[2, 式 (7)–(8)]](#ref_stein)
 
-### 为什么中心化还帮助校正？
+<h3 id="centering-taylor">为什么中心化让方差多改善一阶 h？</h3>
 
-同一组查询做了两件事：**价值加权的方向告诉我们往哪走，平均价值告诉我们这一步怎样归一化**。
+**候选扰动是 $$\sqrt h$$ 量级。中心化把泰勒展开中的一阶随机项精确消掉，留下 $$h$$ 量级的二阶波动；波动平方以后，方差就从 $$h$$ 量级变成 $$h^2$$ 量级。** 下面把这个计算写出来。[[2, Remark 2]](#ref_stein)
 
-如果所有候选价值相同，零和方向让平均引导恰好为零。对于平均价值 $$S=K^{-1}\sum_iH(Y_i)$$，一阶波动也因 $$\sum_iZ_i=0$$ 消失，只留下由曲率控制的更小波动。在文献 [[2]](#ref_stein) 的统一光滑性与正值界条件下，归一化平均值的方差由独立候选的 $$O(h/K)$$ 改善为 $$O(h^2/(K-1))$$。[[2, Remark 2、Assumption 3]](#ref_stein)
+固定当前状态，将 $$\mu,\sigma$$ 视为已知。我们关心的是候选价值平均 $$S=K^{-1}\sum_iH(\mu+\sqrt h\,\sigma Z_i)$$ 的波动，记它的真实均值为 $$G_h=\mathbb ES$$，并简写
+
+$$
+g=\sigma^\top\nabla H(\mu),\qquad
+A=\sigma^\top\nabla^2H(\mu)\sigma,\qquad
+\bar Z=\frac1K\sum_iZ_i.
+$$
+
+对每个候选的价值作二阶泰勒展开，再取平均并减去期望，得到
+
+$$
+\begin{aligned}
+S-G_h
+&=\sqrt h\,g^\top\bar Z\\
+&\quad+\frac h{2K}\sum_{i=1}^K
+\left(Z_i^\top AZ_i-\operatorname{tr}A\right)+r_h.
+\end{aligned}
+$$
+
+第一行是**梯度带来的一阶噪声**，第二行是**曲率带来的二阶噪声**。以下渐近式固定 $$K$$、令 $$h\to0$$；当 $$H$$ 二阶连续可微且 Hessian 有界时，余项 $$r_h$$ 的均方根是 $$o(h)$$。
+
+**独立候选：一阶项只在期望中为零。** 若 $$Z_i$$ 相互独立，虽然 $$\mathbb E\bar Z=0$$，单次抽样的 $$\bar Z$$ 仍然随机，而且 $$\operatorname{Cov}(\bar Z)=I/K$$。因此，一阶项通常主导方差：
+
+$$
+\operatorname{Var}(S_{\mathrm{iid}})
+=\frac{h\|g\|^2+o(h)}{K}.
+$$
+
+**中心化候选：一阶项在每次抽样时都为零。** 上面的构造保证 $$\sum_iZ_i=0$$，所以 $$\sqrt h\,g^\top\bar Z$$ 整项消失。剩下的主导随机项前面是 $$h$$，不再是 $$\sqrt h$$。将二次项的方差算出，便得到
+
+$$
+\operatorname{Var}(S_{\mathrm{centered}})
+=\frac{h^2}{2(K-1)}\|A\|_F^2+o(h^2).
+$$
+
+这里 $$\|A\|_F^2$$ 是矩阵元素的平方和。**多出来的一阶 $$h$$，来自随机波动由 $$\sqrt h$$ 降到 $$h$$，再对它平方；不是靠增加候选数量得到的。**
+
+每个中心化方向仍是标准高斯，因此两种构造都满足 $$\mathbb ES=G_h$$，估计的是同一个归一化常数。若 $$G_h$$ 有统一正下界，除以 $$G_h^2$$ 不改变上述方差的阶，于是归一化平均值 $$S/G_h$$ 的方差从 $$O(h/K)$$ 改善为 $$O(h^2/(K-1))$$。这说的是随机误差；$$G_h$$ 与 $$H(\mu)$$ 之间的平滑差异仍可为 $$O(h)$$。若 $$g=0$$，独立候选的一阶项本来也为零。
+
+<details class="blog-details" markdown="1">
+<summary>把系数算完整：分母为什么是 K−1？</summary>
+
+中心化方向彼此相关：
+
+$$
+\operatorname{Cov}(Z_i,Z_j)=-\frac{I}{K-1},
+\qquad i\ne j.
+$$
+
+记 $$q_i=Z_i^\top AZ_i$$。高斯四阶矩公式给出
+
+$$
+\operatorname{Var}(q_i)=2\|A\|_F^2,\qquad
+\operatorname{Cov}(q_i,q_j)
+=\frac{2\|A\|_F^2}{(K-1)^2}\quad(i\ne j).
+$$
+
+因此，计算平均值的方差时，要把对角项和交叉项都加起来：
+
+$$
+\begin{aligned}
+\operatorname{Var}\!\left(\frac1K\sum_iq_i\right)
+&=\frac{2\|A\|_F^2}{K^2}
+\left(K+\frac{K(K-1)}{(K-1)^2}\right)\\
+&=\frac{2\|A\|_F^2}{K-1}.
+\end{aligned}
+$$
+
+再乘泰勒二次项前系数的平方 $$h^2/4$$，就得到 $$h^2\|A\|_F^2/[2(K-1)]$$。方向之间的负相关消掉了一阶噪声，但二次项的协方差为正，所以这里要使用它们的实际联合分布。[[2, 附录 B.3]](#ref_stein)
+
+**不只看渐近主项，也有真正的上界。** 令 $$F(z)=H(\mu+\sqrt h\,\sigma z)$$。当 $$F$$ 及其前两阶导数在标准高斯分布下平方可积，且 $$G_h>0$$ 时，文献 [[2, Theorem 8]](#ref_stein) 给出对每个 $$K\ge2$$ 成立的界：
+
+$$
+\operatorname{Var}\!\left(\frac S{G_h}\right)
+\le
+\frac{h^2}{2(K-1)G_h^2}
+\mathbb E\left\|
+\sigma^\top\nabla^2H(\mu+\sqrt h\,\sigma Z)\sigma
+\right\|_F^2.
+$$
+
+相对曲率项有统一上界时，就得到统一的 $$O(h^2/(K-1))$$ 保证。**这里出现 Hessian 是为了分析误差；实际构造候选、计算 $$S$$ 和路径校正时，仍然只使用函数值。**
+
+</details>
 
 <details class="blog-details" markdown="1">
 <summary>函数值估计无偏，为什么最后的引导仍可能有偏？</summary>
