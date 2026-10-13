@@ -38,5 +38,8 @@
   "Contact": "联系邮箱",
   "Reference course: Statistical Learning (IEMS 402)": "参考课程：Statistical Learning（IEMS 402）",
   "Lecture 2 notes (PDF)": "第二讲讲义（PDF）",
-  "Lecture 2 · Computation in Probability Space: Foundations of Generative Modeling": "第二讲 · 概率空间中的计算：生成式建模基础"
+  "Lecture 2 · Computation in Probability Space: Foundations of Generative Modeling": "第二讲 · 概率空间中的计算：生成式建模基础",
+  "Home reading": "课后阅读",
+  "1. Random vectors are nearly orthogonal in high dimensions (proof)": "1. 高维随机向量几乎垂直（完整证明）",
+  "2. Random projections preserve pairwise distances (Johnson–Lindenstrauss, proof)": "2. 随机投影保持两两距离（Johnson–Lindenstrauss，完整证明）"
 }
