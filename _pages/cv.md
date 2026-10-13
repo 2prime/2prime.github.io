@@ -111,11 +111,6 @@ redirect_from:
         <h3>Area Chair</h3>
         <p>Service for major machine learning conferences including ICML, NeurIPS, ICLR, and AISTATS.</p>
       </article>
-      <article class="fact-card">
-        <div class="project-meta">Community</div>
-        <h3>Scientific ML leadership</h3>
-        <p>Tutorials, seminars, workshops, and interdisciplinary community building.</p>
-      </article>
     </div>
   </div>
 </section>
