@@ -9,9 +9,9 @@ description: "Research by Yiping Lu on inference time scaling, scientific machin
 <header class="page-intro">
   <div class="shell">
     <span class="page-number">01 · Research</span>
-    <h1>Structure makes scaling possible.</h1>
+    <h1>Structure enables generative AI to scale.</h1>
     <div class="research-intro-block">
-      <p>I study when more data, model capacity, optimization effort, or inference computation can be converted into predictable improvements.</p>
+      <p>I study when more data, model capacity, optimization effort, or inference computation can be converted into predictable improvements in generative AI.</p>
     </div>
   </div>
 </header>
