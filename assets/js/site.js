@@ -18,19 +18,39 @@
   }
 
   document.querySelectorAll('[data-visitor-map]').forEach(function (widget) {
-    const map = widget.querySelector('[data-visitor-map-image]');
+    const embed = widget.querySelector('[data-visitor-map-widget]');
     const fallback = widget.querySelector('[data-visitor-map-fallback]');
-    if (!map || !fallback) return;
+    const script = widget.querySelector('[data-visitor-map-script]');
+    if (!embed || !fallback) return;
+
+    let map = null;
+    let timeout;
+    const observer = new MutationObserver(inspectMap);
 
     function updateMap() {
-      const available = map.naturalWidth > 0;
-      map.hidden = !available;
+      const available = !!map && map.naturalWidth > 0;
+      embed.hidden = !available;
       fallback.hidden = available;
+      if (available) {
+        clearTimeout(timeout);
+        observer.disconnect();
+      }
     }
 
-    map.addEventListener('load', updateMap);
-    map.addEventListener('error', updateMap);
-    if (map.complete) updateMap();
+    function inspectMap() {
+      const image = embed.querySelector('span > img');
+      if (!image || image === map) return;
+      map = image;
+      map.alt = 'World map of visitor locations';
+      map.addEventListener('load', updateMap);
+      map.addEventListener('error', updateMap);
+      if (map.complete) updateMap();
+    }
+
+    observer.observe(embed, { childList: true, subtree: true });
+    if (script) script.addEventListener('error', updateMap);
+    timeout = setTimeout(updateMap, 12000);
+    inspectMap();
   });
 
   const papers = Array.from(document.querySelectorAll('.paper'));
