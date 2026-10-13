@@ -745,7 +745,7 @@ p { margin-bottom: 1rem; }
 .footer-grid .footer-label { margin-bottom: 0.65rem; color: var(--muted); font-size: 0.62rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; }
 .footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.3rem 1.5rem; padding-top: 1rem; color: var(--muted); font-size: 0.72rem; border-top: 1px solid var(--line); }
 
-/* Visitor map: retain the existing ClustrMaps site and footer palette. */
+/* Visitor map: Flag Counter with the existing footer palette. */
 .footer-visitor { width: min(100%, 280px); margin-top: 1.1rem; }
 .footer-visitor .footer-label { display: block; }
 .footer-grid .visitor-map-link { display: block; width: 100%; margin: 0; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
