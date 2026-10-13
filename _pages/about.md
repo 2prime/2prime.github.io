@@ -23,7 +23,7 @@ redirect_from:
         Peking University.
       </p>
       <p class="hero-focus">
-        I develop mathematical foundations and scalable algorithms at the intersection of machine learning,
+        I develop mathematical foundations and scalable algorithms for generative AI at the intersection of machine learning,
         numerical computation, applied probability, and scientific discovery.
       </p>
       <ul class="hero-keywords" aria-label="Research keywords">
