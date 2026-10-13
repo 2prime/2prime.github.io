@@ -17,6 +17,22 @@
     });
   }
 
+  document.querySelectorAll('[data-visitor-map]').forEach(function (widget) {
+    const map = widget.querySelector('[data-visitor-map-image]');
+    const fallback = widget.querySelector('[data-visitor-map-fallback]');
+    if (!map || !fallback) return;
+
+    function updateMap() {
+      const available = map.naturalWidth > 0;
+      map.hidden = !available;
+      fallback.hidden = available;
+    }
+
+    map.addEventListener('load', updateMap);
+    map.addEventListener('error', updateMap);
+    if (map.complete) updateMap();
+  });
+
   const papers = Array.from(document.querySelectorAll('.paper'));
   const filterButtons = Array.from(document.querySelectorAll('.filter-button'));
   const search = document.querySelector('.publication-search');

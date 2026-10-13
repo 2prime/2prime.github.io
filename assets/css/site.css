@@ -745,6 +745,19 @@ p { margin-bottom: 1rem; }
 .footer-grid .footer-label { margin-bottom: 0.65rem; color: var(--muted); font-size: 0.62rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; }
 .footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.3rem 1.5rem; padding-top: 1rem; color: var(--muted); font-size: 0.72rem; border-top: 1px solid var(--line); }
 
+/* Visitor map: retain the existing ClustrMaps site and footer palette. */
+.footer-visitor { width: min(100%, 280px); margin-top: 1.1rem; }
+.footer-visitor .footer-label { display: block; }
+.footer-grid .visitor-map-link { display: block; width: 100%; margin: 0; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.footer-grid .visitor-map-link:hover { text-decoration: none; border-color: var(--pku); }
+.visitor-map-image { display: block; width: 100%; height: auto; }
+.visitor-map-image[hidden], .footer-visitor .visitor-map-fallback[hidden] { display: none; }
+.footer-grid .visitor-map-fallback { display: grid; min-height: 132px; place-items: center; margin: 0; padding: 1rem; color: var(--muted); font-size: 0.75rem; text-align: center; }
+.footer-grid .visitor-map-caption { margin: 0.45rem 0 0; font-size: 0.68rem; line-height: 1.5; }
+.footer-grid .visitor-stats-link { display: inline-block; margin: 0.2rem 0 0; font-size: 0.72rem; }
+.footer-grid .visitor-stats-link span { color: inherit; }
+.visitor-map-link:focus-visible, .visitor-stats-link:focus-visible { outline: 2px solid var(--pku); outline-offset: 3px; }
+
 /* Tablet */
 @media (max-width: 960px) {
   .header-inner { gap: 1rem; }

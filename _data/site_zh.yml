@@ -390,5 +390,10 @@
   "Generative Model Inference": "生成式模型推理",
   "Neural Network Optimizers": "神经网络优化器",
   "Physical AI": "物理AI",
-  "Computational Mathematics": "计算数学"
+  "Computational Mathematics": "计算数学",
+  "Visitor map": "访客地图",
+  "World map of visitor locations": "世界访客分布地图",
+  "Map temporarily unavailable": "地图暂时无法显示",
+  "Approximate locations from visitor IPs": "根据访客 IP 显示大致地区",
+  "View visitor statistics": "查看访问统计"
 }
