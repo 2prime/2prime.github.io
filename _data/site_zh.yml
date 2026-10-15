@@ -395,5 +395,14 @@
   "World map of visitor locations": "世界访客分布地图",
   "Map temporarily unavailable": "地图暂时无法显示",
   "Approximate locations from visitor IPs": "根据访客 IP 显示大致地区",
-  "View visitor statistics": "查看访问统计"
+  "View visitor statistics": "查看访问统计",
+  "Featured slides · October 2026": "专题讲义 · 2026 年 10 月",
+  "Bellman Defect Correction": "Bellman 缺陷修正",
+  "Inference Time Algorithms for SciML and GenAI": "科学机器学习与生成式人工智能的推理时算法",
+  "How can extra inference computation improve a fixed model? This talk connects Bellman defect correction in scientific computing with diffusion sampling, explains the variance cost of shared ancestry in SMC, and develops sequential rejection and Stein guidance with a final path correction.": "固定模型后，如何把更多推理计算转化为更可靠的结果？本报告从科学计算中的 Bellman 缺陷修正出发，解释 SMC 共同祖先带来的方差问题，并介绍序贯拒绝采样、Stein 无导数引导与整条路径的最终修正。",
+  "PDF · 55 slides · English": "PDF · 55 页 · 英文",
+  "View Bellman Defect Correction slides": "查看 Bellman 缺陷修正讲义",
+  "Title slide: Bellman Defect Correction, by Yiping Lu at Peking University": "讲义封面：Bellman 缺陷修正，北京大学陆一平",
+  "Download PDF": "下载 PDF"
 }
+

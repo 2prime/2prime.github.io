@@ -222,3 +222,34 @@
   .seminar-lecture-meta { gap: 0.3rem 1rem; }
   .seminar-course-info > div { grid-template-columns: 1fr; gap: 0.2rem; }
 }
+
+/* Featured Bellman defect correction slides on the Talks page. */
+.page-talks .featured-talk {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.9fr);
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  background: var(--cloud);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--pku);
+}
+.featured-talk-copy { min-width: 0; }
+.featured-talk h2 { margin: 0 0 0.6rem; font-size: clamp(1.7rem, 2.7vw, 2.15rem); line-height: 1.2; }
+.featured-talk-subtitle { margin: 0 0 1rem; color: var(--pku); font-size: 1.05rem; line-height: 1.55; }
+.featured-talk-description { margin: 0 0 1.1rem; color: var(--ink-soft); font-size: 0.92rem; line-height: 1.85; }
+.featured-talk-meta { margin: 0 0 1rem; color: var(--muted); font-size: 0.75rem; }
+.featured-talk-cover { display: block; min-width: 0; padding: 5px; background: #fff; border: 1px solid var(--line); }
+.featured-talk-cover:hover { border-color: var(--pku); }
+.featured-talk-cover img { display: block; width: 100%; height: auto; }
+.featured-talk .featured-talk-primary { color: #fff; background: var(--pku); border-color: var(--pku); }
+.featured-talk .featured-talk-primary:hover { color: #fff; background: var(--pku-deep); border-color: var(--pku-deep); }
+.featured-talk .button, .featured-talk .text-link { min-height: 44px; }
+@media (max-width: 760px) {
+  .page-talks .featured-talk { grid-template-columns: 1fr; gap: 1.5rem; padding: 1.4rem; }
+  .featured-talk-cover { max-width: 520px; }
+}
+@media (max-width: 400px) {
+  .page-talks .featured-talk { padding: 1.1rem; }
+}
+
