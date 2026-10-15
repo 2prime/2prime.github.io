@@ -405,5 +405,9 @@
   "Title slide: Bellman Defect Correction, by Yiping Lu at Peking University": "讲义封面：Bellman 缺陷修正，北京大学陆一平",
   "Download PDF": "下载 PDF",
   "Bellman defect correction connects scientific computing, diffusion sampling, and LLM reasoning. This talk explains shared ancestry in SMC, develops sequential rejection and Stein guidance with a final path correction, and presents joint ICML 2026 work with Youheng Zhu on approximate reward models.": "Bellman 缺陷修正连接科学计算、扩散采样与 LLM 推理。本报告解释 SMC 的共同祖先问题，介绍序贯拒绝采样、Stein 无导数引导与最终路径修正，并纳入与 Youheng Zhu 合作的 ICML 2026 工作，分析近似奖励模型如何改善推理计算复杂度。",
-  "PDF · 57 slides · English": "PDF · 57 页 · 英文"
+  "PDF · 57 slides · English": "PDF · 57 页 · 英文",
+  "A matrix operator norm perspective on neural network optimization, connecting Adam, Lion, and Muon to learning rate scaling as networks grow in width. Joint work with Ruihan Xu and Jiajin Li.": "从矩阵算子范数的视角理解神经网络优化，将 Adam、Lion 和 Muon 与网络宽度增长时的学习率缩放联系起来。本报告基于与 Ruihan Xu 和 Jiajin Li 的合作研究。",
+  "PDF · 51 slides · English": "PDF · 51 页 · 英文",
+  "View Dimension Dependence of Neural Optimizers slides": "查看《神经网络优化器的维度依赖》讲义",
+  "Title slide: On the Scaling of Neural Optimizers, by Yiping Lu at Peking University": "讲义封面：神经网络优化器的尺度规律，北京大学陆一平"
 }

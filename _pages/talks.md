@@ -36,6 +36,27 @@ description: "Selected research talks, tutorials, and lecture slides by Yiping L
   </div>
 </section>
 
+<section class="section" id="neural-optimizer-dimension" aria-labelledby="optimizer-talk-title">
+  <div class="shell">
+    <article class="featured-talk">
+      <div class="featured-talk-copy">
+        <div class="eyebrow">Optimization · 2026</div>
+        <h2 id="optimizer-talk-title">Dimension Dependence of Neural Optimizers</h2>
+        <p class="featured-talk-subtitle">Operator norm geometry, width scaling, and learning rate transfer.</p>
+        <p class="featured-talk-description">A matrix operator norm perspective on neural network optimization, connecting Adam, Lion, and Muon to learning rate scaling as networks grow in width. Joint work with Ruihan Xu and Jiajin Li.</p>
+        <p class="featured-talk-meta">PDF · 51 slides · English</p>
+        <div class="button-row">
+          <a class="button featured-talk-primary" href="/files/row_norm_pku.pdf">View slides</a>
+          <a class="text-link" href="/files/row_norm_pku.pdf" download="Dimension_Dependence_of_Neural_Optimizers.pdf">Download PDF</a>
+        </div>
+      </div>
+      <a class="featured-talk-cover" href="/files/row_norm_pku.pdf" aria-label="View Dimension Dependence of Neural Optimizers slides">
+        <img src="/assets/images/neural_optimizer_dimension_cover.webp" alt="Title slide: On the Scaling of Neural Optimizers, by Yiping Lu at Peking University" width="1200" height="675" loading="lazy" decoding="async">
+      </a>
+    </article>
+  </div>
+</section>
+
 <section class="section">
   <div class="shell">
     <div class="section-head">
@@ -50,12 +71,6 @@ description: "Selected research talks, tutorials, and lecture slides by Yiping L
         <h3>Machine Learning Theory and Mathematics in the Era of Infinite GPUs</h3>
         <p>A research agenda for turning scale into mathematical and computational reliability.</p>
         <a class="text-link" href="/files/infGPU.pdf">View slides</a>
-      </article>
-      <article class="talk-card">
-        <div class="talk-meta">Optimization · 2026</div>
-        <h3>Dimension Dependence of Neural Optimizers</h3>
-        <p>Operator norm geometry, width scaling, and learning rate transfer.</p>
-        <a class="text-link" href="/files/row_norm_pku.pdf">View slides</a>
       </article>
       <article class="talk-card">
         <div class="talk-meta">Scientific ML · 2026</div>
