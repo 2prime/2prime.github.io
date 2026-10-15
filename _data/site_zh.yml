@@ -403,6 +403,7 @@
   "PDF · 55 slides · English": "PDF · 55 页 · 英文",
   "View Bellman Defect Correction slides": "查看 Bellman 缺陷修正讲义",
   "Title slide: Bellman Defect Correction, by Yiping Lu at Peking University": "讲义封面：Bellman 缺陷修正，北京大学陆一平",
-  "Download PDF": "下载 PDF"
+  "Download PDF": "下载 PDF",
+  "Bellman defect correction connects scientific computing, diffusion sampling, and LLM reasoning. This talk explains shared ancestry in SMC, develops sequential rejection and Stein guidance with a final path correction, and presents joint ICML 2026 work with Youheng Zhu on approximate reward models.": "Bellman 缺陷修正连接科学计算、扩散采样与 LLM 推理。本报告解释 SMC 的共同祖先问题，介绍序贯拒绝采样、Stein 无导数引导与最终路径修正，并纳入与 Youheng Zhu 合作的 ICML 2026 工作，分析近似奖励模型如何改善推理计算复杂度。",
+  "PDF · 57 slides · English": "PDF · 57 页 · 英文"
 }
-

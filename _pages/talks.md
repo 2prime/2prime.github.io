@@ -22,14 +22,14 @@ description: "Selected research talks, tutorials, and lecture slides by Yiping L
         <div class="eyebrow">Featured slides · October 2026</div>
         <h2 id="bellman-talk-title">Bellman Defect Correction</h2>
         <p class="featured-talk-subtitle">Inference Time Algorithms for SciML and GenAI</p>
-        <p class="featured-talk-description">How can extra inference computation improve a fixed model? This talk connects Bellman defect correction in scientific computing with diffusion sampling, explains the variance cost of shared ancestry in SMC, and develops sequential rejection and Stein guidance with a final path correction.</p>
-        <p class="featured-talk-meta">PDF · 55 slides · English</p>
+        <p class="featured-talk-description">Bellman defect correction connects scientific computing, diffusion sampling, and LLM reasoning. This talk explains shared ancestry in SMC, develops sequential rejection and Stein guidance with a final path correction, and presents joint ICML 2026 work with Youheng Zhu on approximate reward models.</p>
+        <p class="featured-talk-meta">PDF · 57 slides · English</p>
         <div class="button-row">
-          <a class="button featured-talk-primary" href="/files/bellman_defect_correction.pdf">View slides</a>
-          <a class="text-link" href="/files/bellman_defect_correction.pdf" download="Bellman_Defect_Correction.pdf">Download PDF</a>
+          <a class="button featured-talk-primary" href="/files/bellman_defect_correction.pdf?v=20261015llm">View slides</a>
+          <a class="text-link" href="/files/bellman_defect_correction.pdf?v=20261015llm" download="Bellman_Defect_Correction.pdf">Download PDF</a>
         </div>
       </div>
-      <a class="featured-talk-cover" href="/files/bellman_defect_correction.pdf" aria-label="View Bellman Defect Correction slides">
+      <a class="featured-talk-cover" href="/files/bellman_defect_correction.pdf?v=20261015llm" aria-label="View Bellman Defect Correction slides">
         <img src="/assets/images/bellman_defect_correction_cover.webp" alt="Title slide: Bellman Defect Correction, by Yiping Lu at Peking University" width="1200" height="676" decoding="async">
       </a>
     </article>
