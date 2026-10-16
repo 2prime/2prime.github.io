@@ -13,7 +13,7 @@ venue: "BICMR, Peking University"
 show_institution: false
 date: "2026-10-12"
 bilingual: true
-mathjax: false
+mathjax: true
 ---
 
 <p>A reading seminar on learning theory, diffusion models, and language models, with shared topics in scaling laws and neural network optimization.</p>
@@ -52,8 +52,126 @@ mathjax: false
   </div>
   <div class="seminar-home-reading">
     <h4>Home reading</h4>
-    <p><a href="/teaching/2026-ML-Theory-Seminar/reading-orthogonality/">1. Random vectors are nearly orthogonal in high dimensions (proof)</a></p>
-    <p><a href="/teaching/2026-ML-Theory-Seminar/reading-random-projection/">2. Random projections preserve pairwise distances (Johnson–Lindenstrauss, proof)</a></p>
+    <details class="seminar-reading" id="reading-orthogonality">
+      <summary translate="no">
+        <span lang="en">1. Random vectors are nearly orthogonal in high dimensions (complete proof)</span>
+        <span lang="zh-CN">1. 高维随机向量几乎垂直（完整证明）</span>
+      </summary>
+      <div class="seminar-reading-body" translate="no">
+        <div lang="zh-CN">
+          <p><strong>动机。</strong>高维随机方向的内积是大量独立、均值为零的坐标贡献之和，因而集中在零附近。</p>
+          <p><strong>定理（Rademacher 方向）。</strong>令 \(U,V\) 独立均匀取自 \(\{-1/\sqrt d,1/\sqrt d\}^d\)。则</p>
+          <div class="seminar-reading-math">\[
+            \mathbb P(|\langle U,V\rangle|\ge\varepsilon)\le2e^{-d\varepsilon^2/2}.
+          \]</div>
+          <p><strong>证明。</strong>写 \(U_i=\xi_i/\sqrt d,V_i=\eta_i/\sqrt d\)，令 \(\zeta_i=\xi_i\eta_i\)。则 \(\zeta_i\) 独立且均匀取 \(\pm1\)，因此</p>
+          <div class="seminar-reading-math">\[
+            \mathbb E e^{\lambda\sum_i\zeta_i}=(\cosh\lambda)^d\le e^{d\lambda^2/2}.
+          \]</div>
+          <p>最后一步来自 \((\log\cosh\lambda)''\le1\)。对指数变量应用 Markov，再取 \(\lambda=\varepsilon\)，得到单侧尾界 \(e^{-d\varepsilon^2/2}\)；负尾相同，两侧相加即得。</p>
+          <p><strong>推论（同时近似正交）。</strong>若独立抽取 \(N\) 个上述方向，则</p>
+          <div class="seminar-reading-math">\[
+            \mathbb P\left(\max_{i&lt;j}|\langle U^{(i)},U^{(j)}\rangle|\ge\varepsilon\right)\le N(N-1)e^{-d\varepsilon^2/2}.
+          \]</div>
+          <p>证明对全部 \(\binom N2\) 对取 union bound。</p>
+          <p><strong>球面均匀方向。</strong>对独立均匀的 \(U,V\in S^{d-1}\)，旋转不变性允许固定 \(U=e_1\)，并用 \(V=G/\|G\|\)（\(G\) 为标准高斯向量）。设 \(S=\sum_{i=2}^dG_i^2\)，由高斯尾界及 \(\mathbb E e^{-aS}=(1+2a)^{-(d-1)/2}\) 得</p>
+          <div class="seminar-reading-math">\[
+            \mathbb P(|\langle U,V\rangle|\ge\varepsilon)\le2(1-\varepsilon^2)^{(d-1)/2}\le2e^{-(d-1)\varepsilon^2/2}.
+          \]</div>
+          <p>这里 \(0&lt;\varepsilon&lt;1\)。</p>
+        </div>
+        <div lang="en">
+          <p><strong>Motivation.</strong> The inner product of high-dimensional random directions is a sum of many independent, mean-zero coordinate contributions, so it concentrates near zero.</p>
+          <p><strong>Theorem (Rademacher directions).</strong> Let \(U,V\) be independent and uniform on \(\{-1/\sqrt d,1/\sqrt d\}^d\). Then</p>
+          <div class="seminar-reading-math">\[
+            \mathbb P(|\langle U,V\rangle|\ge\varepsilon)\le2e^{-d\varepsilon^2/2}.
+          \]</div>
+          <p><strong>Proof.</strong> Write \(U_i=\xi_i/\sqrt d,V_i=\eta_i/\sqrt d\), and set \(\zeta_i=\xi_i\eta_i\). The variables \(\zeta_i\) are independent and uniform on \(\{-1,1\}\), hence</p>
+          <div class="seminar-reading-math">\[
+            \mathbb E e^{\lambda\sum_i\zeta_i}=(\cosh\lambda)^d\le e^{d\lambda^2/2}.
+          \]</div>
+          <p>The last inequality follows from \((\log\cosh\lambda)''\le1\). Apply Markov's inequality to the exponential and choose \(\lambda=\varepsilon\) to obtain the one-sided bound \(e^{-d\varepsilon^2/2}\). The lower tail is identical; adding the two bounds proves the claim.</p>
+          <p><strong>Corollary (simultaneous near orthogonality).</strong> For \(N\) independent directions of this form,</p>
+          <div class="seminar-reading-math">\[
+            \mathbb P\left(\max_{i&lt;j}|\langle U^{(i)},U^{(j)}\rangle|\ge\varepsilon\right)\le N(N-1)e^{-d\varepsilon^2/2}.
+          \]</div>
+          <p>Apply the union bound to all \(\binom N2\) pairs.</p>
+          <p><strong>Uniform directions on the sphere.</strong> For independent uniform \(U,V\in S^{d-1}\), rotational invariance allows us to fix \(U=e_1\) and write \(V=G/\|G\|\), where \(G\) is a standard Gaussian vector. Set \(S=\sum_{i=2}^dG_i^2\). The Gaussian tail bound and \(\mathbb E e^{-aS}=(1+2a)^{-(d-1)/2}\) give</p>
+          <div class="seminar-reading-math">\[
+            \mathbb P(|\langle U,V\rangle|\ge\varepsilon)\le2(1-\varepsilon^2)^{(d-1)/2}\le2e^{-(d-1)\varepsilon^2/2}.
+          \]</div>
+          <p>Here \(0&lt;\varepsilon&lt;1\).</p>
+        </div>
+      </div>
+    </details>
+    <details class="seminar-reading" id="reading-random-projection">
+      <summary translate="no">
+        <span lang="en">2. Random projections preserve pairwise distances (Johnson–Lindenstrauss, complete proof)</span>
+        <span lang="zh-CN">2. 随机投影保持两两距离（Johnson–Lindenstrauss，完整证明）</span>
+      </summary>
+      <div class="seminar-reading-body" translate="no">
+        <div lang="zh-CN">
+          <p><strong>动机。</strong>虽然 \(k&lt;d\) 的线性映射不能保留整个 \(\mathbb R^d\) 的所有向量长度，但可以同时保留事先固定的有限点集的两两距离。</p>
+          <p><strong>引理（卡方集中）。</strong>若 \(Z_1,\ldots,Z_k\) 独立标准高斯，\(0&lt;\varepsilon&lt;1\)，则</p>
+          <div class="seminar-reading-math">\[
+            \mathbb P\left(\left|\frac1k\sum_{i=1}^kZ_i^2-1\right|\ge\varepsilon\right)\le2e^{-k\varepsilon^2/8}.
+          \]</div>
+          <p><strong>证明。</strong>高斯积分给出 \(\mathbb Ee^{\lambda Z^2}=(1-2\lambda)^{-1/2}\)（\(\lambda&lt;1/2\)）。上尾 Chernoff 取 \(\lambda=\varepsilon/[2(1+\varepsilon)]\)，得到</p>
+          <div class="seminar-reading-math">\[
+            e^{-k[\varepsilon-\log(1+\varepsilon)]/2}\le e^{-k\varepsilon^2/8}.
+          \]</div>
+          <p>下尾取 \(\lambda=-\varepsilon/[2(1-\varepsilon)]\)，得到</p>
+          <div class="seminar-reading-math">\[
+            e^{-k[-\varepsilon-\log(1-\varepsilon)]/2}\le e^{-k\varepsilon^2/4}.
+          \]</div>
+          <p>合并两侧即得。</p>
+          <p><strong>定理（Gaussian Johnson–Lindenstrauss）。</strong>给定 \(N\ge2\) 个固定点 \(x_1,\ldots,x_N\in\mathbb R^d\)，令 \(A\in\mathbb R^{k\times d}\) 的元素独立服从 \(N(0,1/k)\)。若</p>
+          <div class="seminar-reading-math">\[
+            k\ge\frac8{\varepsilon^2}\log\frac{N(N-1)}{\delta},
+          \]</div>
+          <p>则以至少 \(1-\delta\) 的概率，对所有 \(i,j\) 同时有</p>
+          <div class="seminar-reading-math">\[
+            (1-\varepsilon)\|x_i-x_j\|_2^2\le\|Ax_i-Ax_j\|_2^2\le(1+\varepsilon)\|x_i-x_j\|_2^2.
+          \]</div>
+          <p><strong>证明。</strong>对任意固定非零 \(v\)，\(Av\) 的各坐标独立且服从 \(N(0,\|v\|^2/k)\)。所以</p>
+          <div class="seminar-reading-math">\[
+            \frac{\|Av\|_2^2}{\|v\|_2^2}\stackrel d=\frac1k\sum_{i=1}^kZ_i^2.
+          \]</div>
+          <p>由引理，每个固定向量的失败概率至多 \(2e^{-k\varepsilon^2/8}\)。把 \(v\) 取为所有 \(x_i-x_j\)，对至多 \(\binom N2\) 对取 union bound，失败概率至多 \(N(N-1)e^{-k\varepsilon^2/8}\le\delta\)。</p>
+          <p><strong>量词的区别。</strong>点集必须先于 \(A\) 固定。如果看见 \(A\) 后再挑选向量，就能选到 \(\ker A\) 中的非零向量，距离保持不再成立。</p>
+        </div>
+        <div lang="en">
+          <p><strong>Motivation.</strong> A linear map with \(k&lt;d\) cannot preserve the lengths of every vector in \(\mathbb R^d\), but it can simultaneously preserve the pairwise distances of a fixed finite set of points.</p>
+          <p><strong>Lemma (chi-squared concentration).</strong> If \(Z_1,\ldots,Z_k\) are independent standard Gaussian variables and \(0&lt;\varepsilon&lt;1\), then</p>
+          <div class="seminar-reading-math">\[
+            \mathbb P\left(\left|\frac1k\sum_{i=1}^kZ_i^2-1\right|\ge\varepsilon\right)\le2e^{-k\varepsilon^2/8}.
+          \]</div>
+          <p><strong>Proof.</strong> Gaussian integration gives \(\mathbb Ee^{\lambda Z^2}=(1-2\lambda)^{-1/2}\) for \(\lambda&lt;1/2\). For the upper Chernoff bound, take \(\lambda=\varepsilon/[2(1+\varepsilon)]\) to obtain</p>
+          <div class="seminar-reading-math">\[
+            e^{-k[\varepsilon-\log(1+\varepsilon)]/2}\le e^{-k\varepsilon^2/8}.
+          \]</div>
+          <p>For the lower tail, take \(\lambda=-\varepsilon/[2(1-\varepsilon)]\) to obtain</p>
+          <div class="seminar-reading-math">\[
+            e^{-k[-\varepsilon-\log(1-\varepsilon)]/2}\le e^{-k\varepsilon^2/4}.
+          \]</div>
+          <p>Combine the two bounds.</p>
+          <p><strong>Theorem (Gaussian Johnson–Lindenstrauss).</strong> Fix \(N\ge2\) points \(x_1,\ldots,x_N\in\mathbb R^d\), and let the entries of \(A\in\mathbb R^{k\times d}\) be independent \(N(0,1/k)\) variables. If</p>
+          <div class="seminar-reading-math">\[
+            k\ge\frac8{\varepsilon^2}\log\frac{N(N-1)}{\delta},
+          \]</div>
+          <p>then, with probability at least \(1-\delta\), all pairs \(i,j\) simultaneously satisfy</p>
+          <div class="seminar-reading-math">\[
+            (1-\varepsilon)\|x_i-x_j\|_2^2\le\|Ax_i-Ax_j\|_2^2\le(1+\varepsilon)\|x_i-x_j\|_2^2.
+          \]</div>
+          <p><strong>Proof.</strong> For each fixed nonzero \(v\), the coordinates of \(Av\) are independent \(N(0,\|v\|^2/k)\) variables. Thus</p>
+          <div class="seminar-reading-math">\[
+            \frac{\|Av\|_2^2}{\|v\|_2^2}\stackrel d=\frac1k\sum_{i=1}^kZ_i^2.
+          \]</div>
+          <p>The lemma bounds the failure probability for each fixed vector by \(2e^{-k\varepsilon^2/8}\). Apply it to all differences \(v=x_i-x_j\) and use the union bound over at most \(\binom N2\) pairs. The total failure probability is at most \(N(N-1)e^{-k\varepsilon^2/8}\le\delta\).</p>
+          <p><strong>The order of quantifiers.</strong> The point set must be fixed before drawing \(A\). Choosing a vector after observing \(A\) can produce a nonzero vector in \(\ker A\), for which distance preservation fails.</p>
+        </div>
+      </div>
+    </details>
   </div>
 </section>
 <section class="seminar-lecture" aria-labelledby="lecture-2">
@@ -72,3 +190,77 @@ mathjax: false
   </div>
 </section>
 <p class="seminar-caption">Details of subsequent meetings will be announced.</p>
+
+<style>
+  .seminar-home-reading .seminar-reading {
+    margin: 0.75rem 0;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--paper);
+    min-width: 0;
+  }
+  .seminar-home-reading .seminar-reading > summary {
+    padding: 0.9rem 1rem;
+    color: var(--pku);
+    font-weight: 600;
+    line-height: 1.65;
+    cursor: pointer;
+    overflow-wrap: anywhere;
+  }
+  .seminar-home-reading .seminar-reading > summary:hover {
+    background: var(--cloud);
+  }
+  .seminar-home-reading .seminar-reading > summary:focus-visible {
+    outline: 2px solid var(--pku);
+    outline-offset: 3px;
+  }
+  .seminar-home-reading .seminar-reading[open] > summary {
+    border-bottom: 1px solid var(--line);
+    background: var(--cloud);
+  }
+  .seminar-home-reading .seminar-reading-body {
+    padding: 1.1rem 1.2rem;
+    line-height: 1.85;
+    overflow-wrap: break-word;
+    min-width: 0;
+  }
+  .seminar-home-reading .seminar-reading-body > div > :last-child {
+    margin-bottom: 0;
+  }
+  .seminar-home-reading .seminar-reading-math {
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0.2rem 0;
+  }
+  html:not([lang^="zh"]) .seminar-home-reading [lang="zh-CN"],
+  html[lang^="zh"] .seminar-home-reading [lang="en"] {
+    display: none;
+  }
+  @media (max-width: 600px) {
+    .seminar-home-reading .seminar-reading-body { padding: 0.9rem; }
+  }
+  @media print {
+    .seminar-home-reading .seminar-reading { border: 0; }
+    .seminar-home-reading .seminar-reading:not([open]) > .seminar-reading-body { display: block; }
+  }
+</style>
+<script>
+  (function () {
+    var readings = Array.from(document.querySelectorAll('.seminar-home-reading .seminar-reading'));
+    function refreshMath(reading) {
+      if (!reading.open || !window.MathJax || !window.MathJax.Hub) return;
+      var language = document.documentElement.lang.indexOf('zh') === 0 ? 'zh-CN' : 'en';
+      var proof = reading.querySelector('.seminar-reading-body > [lang="' + language + '"]');
+      if (proof) window.MathJax.Hub.Queue(['Rerender', window.MathJax.Hub, proof]);
+    }
+    function refreshOpenReadings() {
+      readings.forEach(refreshMath);
+    }
+    readings.forEach(function (reading) {
+      reading.addEventListener('toggle', function () { refreshMath(reading); });
+    });
+    document.addEventListener('site:languagechange', refreshOpenReadings);
+    window.addEventListener('load', refreshOpenReadings);
+  })();
+</script>
