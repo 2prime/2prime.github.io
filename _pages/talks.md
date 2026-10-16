@@ -22,7 +22,7 @@ description: "Selected research talks, tutorials, and lecture slides by Yiping L
         <div class="eyebrow">Featured slides · October 2026</div>
         <h2 id="bellman-talk-title">Bellman Defect Correction</h2>
         <p class="featured-talk-subtitle">Inference Time Algorithms for SciML and GenAI</p>
-        <p class="featured-talk-description">Bellman defect correction connects scientific computing, diffusion sampling, and LLM reasoning. This talk explains shared ancestry in SMC, develops sequential rejection and Stein guidance with a final path correction, and presents joint ICML 2026 work with Youheng Zhu on approximate reward models.</p>
+        <p class="featured-talk-description" data-blog-en="Bellman defect correction provides a “predict first, then correct” framework for designing principled algorithms for scientific computing, diffusion sampling, scientific discovery, and LLM reasoning." data-blog-zh="基于 Bellman 缺陷修正的“先预测、后修正”框架，为科学计算、扩散采样、科学发现与 LLM 推理设计具有理论依据的算法。">Bellman defect correction provides a “predict first, then correct” framework for designing principled algorithms for scientific computing, diffusion sampling, scientific discovery, and LLM reasoning.</p>
         <p class="featured-talk-meta">PDF · 57 slides · English</p>
         <div class="button-row">
           <a class="button featured-talk-primary" href="/files/bellman_defect_correction.pdf?v=20261015llm">View slides</a>
@@ -43,7 +43,7 @@ description: "Selected research talks, tutorials, and lecture slides by Yiping L
         <div class="eyebrow">Optimization · 2026</div>
         <h2 id="optimizer-talk-title">Dimension Dependence of Neural Optimizers</h2>
         <p class="featured-talk-subtitle">Operator norm geometry, width scaling, and learning rate transfer.</p>
-        <p class="featured-talk-description">A matrix operator norm perspective on neural network optimization, connecting Adam, Lion, and Muon to learning rate scaling as networks grow in width. Joint work with Ruihan Xu and Jiajin Li.</p>
+        <p class="featured-talk-description" data-blog-en="A matrix operator norm perspective on neural network optimization, connecting Adam, Lion, and Muon to learning rate scaling as networks grow in width." data-blog-zh="从矩阵算子范数的视角理解神经网络优化，将 Adam、Lion 和 Muon 与网络宽度增长时的学习率缩放联系起来。">A matrix operator norm perspective on neural network optimization, connecting Adam, Lion, and Muon to learning rate scaling as networks grow in width.</p>
         <p class="featured-talk-meta">PDF · 51 slides · English</p>
         <div class="button-row">
           <a class="button featured-talk-primary" href="/files/row_norm_pku.pdf">View slides</a>
