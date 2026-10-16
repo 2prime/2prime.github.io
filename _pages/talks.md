@@ -19,7 +19,7 @@ description: "Selected research talks, tutorials, and lecture slides by Yiping L
   <div class="shell">
     <article class="featured-talk">
       <div class="featured-talk-copy">
-        <div class="eyebrow">Featured slides · October 2026</div>
+        <div class="eyebrow" data-blog-en="Inference Algorithms · October 2026" data-blog-zh="推理算法 · 2026 年 10 月">Inference Algorithms · October 2026</div>
         <h2 id="bellman-talk-title">Bellman Defect Correction</h2>
         <p class="featured-talk-subtitle">Inference Time Algorithms for SciML and GenAI</p>
         <p class="featured-talk-description" data-blog-en="Bellman defect correction provides a “predict first, then correct” framework for designing principled algorithms for scientific computing, diffusion sampling, scientific discovery, and LLM reasoning." data-blog-zh="基于 Bellman 缺陷修正的“先预测、后修正”框架，为科学计算、扩散采样、科学发现与 LLM 推理设计具有理论依据的算法。">Bellman defect correction provides a “predict first, then correct” framework for designing principled algorithms for scientific computing, diffusion sampling, scientific discovery, and LLM reasoning.</p>
