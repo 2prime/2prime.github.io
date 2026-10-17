@@ -27,7 +27,7 @@ description: "Selected research talks, tutorials, and lecture slides by Yiping L
         <div class="button-row">
           <a class="button featured-talk-primary" href="/files/bellman_defect_correction.pdf?v=20261015llm">View slides</a>
           <a class="text-link" href="/files/bellman_defect_correction.pdf?v=20261015llm" download="Bellman_Defect_Correction.pdf">Download PDF</a>
-          <a class="text-link" href="/files/diffusion_models_30min.pdf?v=20261017minimax" data-blog-en="Short version · 30 min" data-blog-zh="Short version · 30 分钟" aria-label="View the 30 minute short version of Bellman Defect Correction">Short version · 30 min</a>
+          <a class="text-link" href="/files/diffusion_models_30min.pdf?v=20261017jose" data-blog-en="Short version · 30 min" data-blog-zh="Short version · 30 分钟" aria-label="View the 30 minute short version of Bellman Defect Correction">Short version · 30 min</a>
         </div>
       </div>
       <a class="featured-talk-cover" href="/files/bellman_defect_correction.pdf?v=20261015llm" aria-label="View Bellman Defect Correction slides">
