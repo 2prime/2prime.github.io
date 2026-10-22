@@ -40,7 +40,7 @@ description: "Selected publications by Yiping Lu in machine learning, scientific
         <div class="paper-year">2026</div>
         <div>
           <h3><a href="/files/QuadraticDikinwalk.pdf">Quadratic Mixing for the Lee–Sidford Dikin Walk</a></h3>
-          <p class="paper-authors"><strong>Yiping Lu</strong></p>
+          <p class="paper-authors"><strong>Yiping Lu</strong>, arxiv forever</p>
           <p class="paper-note">High dimensional sampling and interior point geometry.</p>
         </div>
         <span class="paper-tag">Sampling</span>
