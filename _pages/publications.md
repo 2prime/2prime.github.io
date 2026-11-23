@@ -36,6 +36,16 @@ description: "Selected publications by Yiping Lu in machine learning, scientific
     </div>
 
     <div class="paper-list">
+      <article class="paper" data-category="generative probability">
+        <div class="paper-year">2026</div>
+        <div>
+          <h3><a href="/files/SteinGuidance.pdf">Stein Guidance without Gradients: Discretization Uniform Diffusion Inference Time Scaling beyond Particle SMC</a></h3>
+          <p class="paper-authors">Youheng Zhu, Chenyang Wang, Minshuo Chen, <strong>Yiping Lu</strong></p>
+          <p class="paper-note">Value queries guide diffusion sampling, and a Metropolis–Hastings step corrects the entire trajectory. <a href="/blog/diffusion-urge-stein/">Blog post</a></p>
+        </div>
+        <span class="paper-tag">Generative AI</span>
+      </article>
+
       <article class="paper" data-category="probability optimization">
         <div class="paper-year">2026</div>
         <div>

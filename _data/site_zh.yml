@@ -192,6 +192,8 @@
   "Deep Learning": "深度学习",
   "Monte Carlo": "蒙特卡洛",
   "Operator Learning": "算子学习",
+  "Value queries guide diffusion sampling, and a Metropolis–Hastings step corrects the entire trajectory.": "通过价值函数查询引导扩散采样，再用 Metropolis–Hastings 步骤校正整条轨迹。",
+  "Blog post": "博客文章",
   "High dimensional sampling and interior point geometry.": "高维采样与内点几何。",
   "Fragility hidden by benign average case behavior.": "良好平均表现所掩盖的脆弱性。",
   "Uniqueness in the Harrison–Reiman class and a completely S class obstruction.": "Harrison–Reiman 类中的唯一性与完全 S 类中的障碍。",
